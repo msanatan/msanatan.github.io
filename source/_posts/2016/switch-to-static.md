@@ -21,20 +21,20 @@ little thing I found online http://nilclass.com/courses/what-is-a-static-website
 
 Why switch?
 
-1. Flow
+1. Flow <br />
 I get to write like I code. Once upon a time I had many an IDEs for many a
 languages and frameworks. I got pretty tired of it and started to go deeper
 into Vim and pretty much consolidate my development tools into one great text
 editor. And yes, Vim has spellcheck. Also get to use Git for my blogs. This
 level of version control is only a plus.
-* Costs... but really customisation
+2. Costs... but really customisation <br />
 Stop using WordPress. For my purposes, it's just not that special. The
 cost wasn't that high for the entire yearly period, but that money can be used
 elsewhere, like for DigitalOcean droplets or a Steam sale. WordPress is very
 configurable and has a large community of people developing for and supporting
 it. I'm much more comfortable with Python/JavaScript than that behemoth of a
 blog. Makes sense to play on your strengths.
-* Speed
+3. Speed <br />
 Not a big deal for me, I thought WP Super Cache did a good job to be fair. And
 that makes perfect sense as that plugin generate static pages to be served to
 your users. But if you're not using something of that nature, then a static
