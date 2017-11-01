@@ -1,6 +1,7 @@
 ---
 title: Things to do After Setting up Hexo
 date: 2017-10-31 23:38:00
+updated: 2017-11-02 13:13:00
 categories:
 - [web]
 tags:
@@ -23,7 +24,25 @@ would further leverage my strengths by staying roughly in the same context and
 flow as my other work.
 
 After reformatting my blog posts to work with Hexo, here are some things I did
-to make it 10x more user friendly:
+to make it 10x more user friendly and inline with expectations:
+
+## Multiple Categories Without Heirarchy
+You may be like me and first define your categories for a blog post as follows:
+
+```yaml
+categories:
+- react
+- api
+```
+
+The output of that would be to create a category "react" with a subcategory
+"api". If you want two independent categories simply change them to this:
+
+```yaml
+categories:
+- [react]
+- [api]
+```
 
 ## Parse Posts in Subfolders
 Since my Pelican days, I needed to have some order in my blogging life. I could
