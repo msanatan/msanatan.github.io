@@ -80,6 +80,9 @@ marked:
   smartLists: true
   smartypants: false
 
+sitemap:
+  path: sitemap.xml
+
 ## Themes: https://hexo.io/themes/
 theme: cactus-dark
 
