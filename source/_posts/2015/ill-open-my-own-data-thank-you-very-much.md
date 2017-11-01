@@ -16,7 +16,7 @@ Freedom of Information Unit is neither efficient nor transparent?
 Information publicly available isn't in a form you can easily use? Well
 my friend, web scraping might just be for you!
 
-# New web scraper on the block
+## New web scraper on the block
 So I'm taking data from this
 page: http://www.ttconnect.gov.tt/gortt/portal/ttconnect/SharedDetail/?WCM_GLOBAL_CONTEXT=/gortt/wcm/connect/gortt+web+content/TTConnect/Home/Government+Ministries.
 It provides links to contact information of each Government Ministry.
@@ -62,7 +62,7 @@ scraper in this [gist](https://gist.github.com/msanatan/f42ab4e1a3f63ae65138 "G
 encapsulation and I deliberately designed that code snippet with project
 scalability in mind!
 
-# Impatience is a virtue, take the reins
+## Impatience is a virtue, take the reins
 Now we've gone through the what, let's discuss the why (hmm... shouldn't
 this be the other way around?). Trinidad and Tobago has a civilian led
 Open Data portal - http://data.tt/. It's growing quite well and I urge
@@ -81,7 +81,7 @@ for Open Data](http://www.w3.org/DesignIssues/LinkedData.html) of
 course! Get familiar with it, and put the data you have available in
 perspective.
 
-# Scrape for a more open nation, a more open world
+## Scrape for a more open nation, a more open world
 Hopefully you'll understand why I spent some time writing this scraper,
 it's not just for hacking's sake. It's the start of a collection of
 government data that can be shared with anyone, anywhere. And I want you

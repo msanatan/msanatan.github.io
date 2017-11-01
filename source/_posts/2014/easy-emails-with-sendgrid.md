@@ -21,7 +21,7 @@ quick Node.js scripting was good enough for the task. One of the things
 that needed to be done was to send an email after some data was
 processed.
 
-# SendGrid to the rescue
+## SendGrid to the rescue
 So maybe I found out the server needed to send emails a few hours before
 a demonstration... I needed something that was quick to setup and easy
 to use. With some light googling I came across
@@ -59,7 +59,7 @@ your message with the right tags and switch 'text' in the Email object
 to 'html'. All this and so much more is covered in the
 [docs](https://github.com/sendgrid/sendgrid-nodejs "SendGrid for Node.js").
 
-# SendGrid is not alone
+## SendGrid is not alone
 This is just the solution that I used, don't limit yourself to just
 SendGrid. There are an abundance of email delivery service providers out
 there - MailChimp, mailgun, Mailjet, the list is really long! Their free

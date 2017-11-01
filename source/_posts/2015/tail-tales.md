@@ -24,7 +24,7 @@ surprise it just stopped tailing. Well that sucked. This time I was
 decided to watch it attentively and noticed that it stopped following
 the file when the old content is archived and it got emptied.
 
-# Why tail no follow?
+## Why tail no follow?
 Even with the same name, the properties of the file will change. Unix
 file systems store the contents of the file and the metadata about the
 file in two separate data structures. The metadata is called an inode.
@@ -37,7 +37,7 @@ following. You can easily test it: create a file, check the inode
 number, use a text editor and add something, save changes and recheck
 the inode number and you'll see it's different.
 
-# The Solution
+## The Solution
 To circumvent this issue, you simply need to make the following change
 
 ```sh

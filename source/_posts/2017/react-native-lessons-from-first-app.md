@@ -22,7 +22,7 @@ As I'm still learning RN I've been focusing on developing the right way. While
 I don't have all the answers to my questions just yet, here are some concerns
 and issues I had and the decisions I made to address them.
 
-# Code Sharing Across Platforms
+## Code Sharing Across Platforms
 When you start a RN project you'll see two files: index.android.js and
 index.ios.js. No hard guesses why each of them are there but... it's not like
 we're going to write the same code twice. So the first thing I did was create an
@@ -69,7 +69,7 @@ platform specific setup to do. At worst it would have platform specific
 componenents which could be easily segmented at the component level using the
 Platform module.
 
-# Application Structure
+## Application Structure
 Ionic and Xamarin have strong opinions about how applications should be
 developed, your app's structure comes as part of the package in a way. React has
 a philosophy which applies to both the DOM and Native elements but does not
@@ -108,7 +108,7 @@ The top-level components are global ones that can be reused anywhere in the app.
 Scenes refer to a page in the application and could have components, services
 and styles that are specific to it. Services would contain your APIs.
 
-# Theming
+## Theming
 One of the things I really liked about Ionic was its natural beauty. A default
 app looked georgous and that made the whole world happy. There's no real
 escaping from styling an application but there can be better foundations
@@ -137,7 +137,7 @@ around the List:
 </ScrollView>
 ```
 
-# Event Handlers
+## Event Handlers
 If a parent component passes down a function to child component for an event
 handler, React would not [automatically bind
 'this'](https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding).
@@ -151,7 +151,7 @@ I manually bind the event handlers in the component's constructor. Your best bet
 is to use ES7's class properties with the arrow function which would
 automatically bind 'this' for you.
 
-# So Much More To Go
+## So Much More To Go
 Even though I'd like for this information to be useful I'm hoping that it's
 really obvious to you because that means I'm on the right path. React and React
 Native are fun but the rabbit hole goes deep. But sure to read the myriad of

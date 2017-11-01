@@ -4,7 +4,6 @@ date: 2015/01/11 15:13
 categories: [i'm real]
 ---
 
-# There's too much chaos in my coffee
 Every year I keep my distance from the resolutions frenzy. I'm not a guy
 for structure and rule books (no, I am still a law-abiding citizen). So
 telling myself "I'm changing my life with these 5 steps!" was never
@@ -25,7 +24,7 @@ was a good year** (graduated, good times with loved ones, found my
 passion in Computer Science, got a sexy job, etc) but it wasn't all that
 I wanted it to be... it didn't feel like a **great** year.
 
-# Extra spoon of chaos, please
+## Extra spoon of chaos, please
 One year later, I'm looking for chaos again. Not like last year though,
 more like the chaos you get from a rudimentary understanding of Chaos
 Theory. I'm treating my future as a dynamical system, and I'm making a

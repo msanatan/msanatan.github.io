@@ -28,7 +28,7 @@ With about two days notice, we were tasked with creating a technological
 solution that would raise awareness of waste production and disposal,
 and make it easier to mitigate this national problem.
 
-# No country for slow coders
+## No country for slow coders
 Did I mentioned we had only eight hours to code? The pace was on from
 the get go. We were put in a cozy room at the top of the Queen's Park
 Oval and got a chance at the beginning to talk things through with some
@@ -66,7 +66,7 @@ are what life is about: doing what you love in a lovely environment. But
 moments don't last forever, that 8pm deadline came full speed and we
 were set to present.
 
-# Hackathons are for hacking and so much more
+## Hackathons are for hacking and so much more
 Code by itself is cool and all, but what's the point if it's of no value
 to people? As the norm with other hackathons each person had to present
 their solution for up to 5 minutes, speaking to two judges and the YoPro

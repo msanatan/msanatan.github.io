@@ -38,7 +38,7 @@ the people!*
 
  
 
-# Your future lies in your school bags, your environment, socioeconomic background and other things that shouldn't matter
+## Your future lies in your school bags, your environment, socioeconomic background and other things that shouldn't matter
 My journey to becoming the tech enthusiast I am today was a long one. I
 grew up with a computer to play with and two computer literate parents
 who were happy to show us how to use it. At that time (let's say 1995 -
@@ -52,7 +52,7 @@ Government should help bring about a society that facilitates
 personal development so that the next person doesn't have to be lucky to
 develop their passions.
 
-## A MOOC for me, a MOOC for you
+### A MOOC for me, a MOOC for you
 Massive Open Online Courses (MOOCs) are no longer powered by the hype
 machine we saw around 2012 or so. Questions were asked when data
 suggests that a lot of students don't complete their courses and that
@@ -103,7 +103,7 @@ the other students now get another way to reinforce what they need to
 learn. Also, as our university is focused on meeting our economic needs,
 so would the courses they upload - it makes everything easier.
 
-# Open Data and the Developer Community
+## Open Data and the Developer Community
 There once was an Open Data website for government... Yes there was. As
 expected for Open Data initiatives it was called data.gov.tt - pretty
 cool. Unfortunately it no longer seems up, I guess no one to support it

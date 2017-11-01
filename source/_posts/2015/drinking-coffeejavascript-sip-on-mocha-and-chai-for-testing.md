@@ -24,7 +24,7 @@ practices. Testing gives us confidence that our program works and makes
 it easy to see if any code change messed something up. It's also good
 for your skin!
 
-# All these drinks are keeping me warm
+## All these drinks are keeping me warm
 [Mocha](http://mochajs.org/ "Mocha") seems the be on top of the food
 chain when it comes to testing frameworks for JavaScript. It's a test
 runner - a healthy dose of automation that allows you to focus on
@@ -41,7 +41,7 @@ itself a "BDD / TDD assertion library". While Test Driven Development is
 pretty well-known, not so much is known about Behaviour Driven
 Development.
 
-## Detour - TDD & BDD
+### Detour - TDD & BDD
 As a recap with TDD you:
 1. Write some test for features
 2. Watch those tests fail (because you haven't written those
@@ -65,7 +65,7 @@ most salient visible change you'll see is how you write tests,
 BDD testing tools use more natural language syntax than their TDD
 counterparts.
 
-# Do you even code? ([gym prank voice](https://youtu.be/H2Diy0RNe_c?t=103))
+## Do you even code? ([gym prank voice](https://youtu.be/H2Diy0RNe_c?t=103))
 These days I've been working with CoffeeScript because it makes me smile
 :). Since I can't release every bit of code I write (secret agent coder)
 I decided to do some testing for a Finite State Machine (FSM) acceptor I
@@ -78,7 +78,7 @@ state, a set of accepting/finishing states (where the sequence of inputs
 are allowed to stop) and transition rules that say how we can move from
 one state to another.
 
-## Let's give it a go
+### Let's give it a go
 So we setup a class with all the attributes to model a FSM:
 
 ```coffeescript
@@ -169,7 +169,7 @@ models. Chai has some useful
 test your server HTTP responses. It helped me feel better about my
 express app's behaviour.
 
-# Some useful reading
+## Some useful reading
 I'm quite happy with my experience of testing with Mocha and Chai. Now
 remember these are just tools for a software development methodology.
 Let's try digging deeper into TDD and BDD. I'm particularly interested

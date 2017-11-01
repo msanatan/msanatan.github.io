@@ -24,7 +24,7 @@ create games myself! I mean, we need to give them exercises that'll push and
 entertain them, right? One of the games they worked on was Tic Tac Toe. Creating
 it in Pygame was fun, so I thought I'd share how to do it.
 
-# Simple Design
+## Simple Design
 This Tic Tac Toe iteration will be pretty simple:
 
 * X plays before O
@@ -33,7 +33,7 @@ This Tic Tac Toe iteration will be pretty simple:
 * Only 2 player, no AI
 * After the game is done and winner announced (if any), a user can restart
 
-# Setup
+## Setup
 As it's a one screen game the setup for this is pretty basic. We'll keep all the
 code in one file.
 
@@ -73,7 +73,7 @@ the fonts we'll be using (one for the Xs and Os and two for the game over
 screen); setup the screen size and window title; and create the Clock object to
 keep track of time and manage the framerate.
 
-# Drawing the Board
+## Drawing the Board
 Before my mind settled into one of the many ways we can represent a game of
 Tic Tac Toe, I decided to get a visual result to kick it off. What's Tic Tac Toe
 without 9 cells? Let's draw that first:
@@ -125,7 +125,7 @@ may want to consider the `pump` function. Check the
 [documentation](https://www.pygame.org/docs/ref/event.html#pygame.event.pump)
 which talks more about polling events.
 
-# Drawing Letters
+## Drawing Letters
 Pygame make heavy use of rectangles, the Rect class is absolutely amazing and
 there's honestly no reason to be representing positions with tuples aside from
 utter simplicity - you lose out on so many spectacular methods and attributes!
@@ -146,7 +146,7 @@ def draw_letter(screen, letter, colour, position_rect):
     screen.blit(player_choice, choice_rect)
 ```
 
-# Board Mechanics
+## Board Mechanics
 So far we know we'll have 9 Pygame rectangles, we'll store them in a lists of
 lists, similar to a matrix. A 3x3 double list would allow us to easily check for
 winners later on. Along with the rectangle, each cell should say whether a
@@ -190,7 +190,7 @@ We show the numbers first to give the users a visual clue of what to press to
 play. A blank board to someone who doesn't know the setup would not be
 particularly helpful.
 
-# Actually Playing
+## Actually Playing
 With our visual cues setup, we need to game to accept user input. Before we jump
 into mapping key presses to board positions, let's see all the mechanics and
 think about the game loop. Within the loop we accept user input, update the
@@ -330,7 +330,7 @@ def render(screen, screen_size, game, clock):
     clock.tick(60)
 ```
 
-# Getting the Winner
+## Getting the Winner
 Now that we're able to play and switch players, we should look at determining
 the winner or the other end result - a stalemate. Let's start with the win
 function. It's simple enough, a player wins if she has 3 in a row, 3 in a column
@@ -414,7 +414,7 @@ current logic, a game can be won and stalemate at the same time. At this point
 we want to use these variables to show the user who won, and all allow them to
 restart the match by hitting spacebar.
 
-## Wrapping It Up
+### Wrapping It Up
 Let's allow the game to be played over and over again, we'll do this by
 rendering two messages: the first stating who won if someone did, the second
 informing the user to press spacebar to restart. After that we'll modify the
@@ -526,7 +526,7 @@ your source code to
 [mine](https://gist.github.com/msanatan/fc7eb982e3f7f5842f19c8e6d5a3759d). There
 are slight differences in the order but this is everything.
 
-# One More Thing
+## One More Thing
 I'm sure the vast majority of your friends won't be going on the command line to
 run Python files and play your game. Let's package it in a format they
 can easily use. [cx_Freeze](https://anthony-tuininga.github.io/cx_Freeze/) takes
@@ -556,7 +556,7 @@ installer I run `python setup.py bdist_dmg`. For Windows OSes your last arugment
 will be bdist_msi. If you just want an executable without an installer, simply
 use 'build' as the last argument. Definitely read the docs and play with it!
 
-# Next Steps
+## Next Steps
 Well done on making it through this tutorial, you got a fully functional game on
 your hands! There are some ways we can improve it, try your hand at the
 following:

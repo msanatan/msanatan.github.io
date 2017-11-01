@@ -23,7 +23,7 @@ part. When people finally started to come (Trinbagonians, no Caribbean
 people, can't help but ignore a starting time) I quickly realised I had
 no choice. There was just an energy that pulled me in...
 
-# All day, all night (La gente está muy loca)
+## All day, all night (La gente está muy loca)
 Once it kicked off on Friday, it kept going until the very end on Sunday
 night. After some quick ice breakers that got us to talk with each other
 and release those creative juices, the pitches came on. This Startup
@@ -74,7 +74,7 @@ this time. The one sure techie thing that didn't change was the food -
 pizza and fried chicken. Tasted great as expected but I'm still waiting
 for those healthier food companies to step their sponsorship game up!
 
-# So what about the startups?
+## So what about the startups?
 Well we didn't work long hours for nothing. I did settle down with a
 team on Saturday morning. We were working on a service called 'What
 Next?'. Inspired by the personal experience of someone having to figure
@@ -101,7 +101,7 @@ done!
 
 ![Mobile Donate swag team](/images/startup_weekend_winners.jpg)
 
-# What about you?
+## What about you?
 After I recovered (I can't stress how tired I was!) I had some talks
 with friends and family about it all. It was clear, to get the most out
 of this experience I should actually **start a company**. I'm part

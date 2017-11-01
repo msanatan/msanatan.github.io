@@ -23,7 +23,7 @@ still blossoming. Meetups have happened, Startup Weekend is definitely a
 hit and now I can speak of something new that I will definitely be
 involved with later on: JavaScript User Group!
 
-# I JavaScripts too... kinda
+## I JavaScripts too... kinda
 I am not a professional JavaScript developer. Actually I am not even a
 professional developer at the moment. I am not even the biggest fan of
 JavaScript as a language. But as a moderate user of Node.js and happy
@@ -52,7 +52,7 @@ pampered with at Edinburgh, I still found myself learning new things and
 engaging about software development. Something about great minds and
 pizza makes a super combination.
 
-# The Journey Ahead
+## The Journey Ahead
 The interesting part that kicked off was the open discussion after the
 JS "broadcast". Aside from the "JavaScript is pretty much evil" vs
 "JavaScript makes the world go 'round" fun debate, there was a desire

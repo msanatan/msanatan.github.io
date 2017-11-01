@@ -30,7 +30,7 @@ web dev and I'm decent with other things".
 
 Person: Oh... Ok...
 
-# We're not all the same. We just happen to eat lots of pizza for some reason
+## We're not all the same. We just happen to eat lots of pizza for some reason
 One issue I have with this mobile app development bombardment is that
 it's a pretty myopic view of a software developer's capabilities
 and passion. Believe it or not, the idea of creating the next app
@@ -59,7 +59,7 @@ anymore
 
 ![No Thanks](/images/seinfeld_no_thanks.gif)
 
-# I am not ranting... not purposefully, I think
+## I am not ranting... not purposefully, I think
 I understand why, a smart phone is in almost everyone's hands and apps
 are therefore pervasive. Plus the world is enamoured with startup
 companies making more apps. I get it... but if we're so passionate about
@@ -72,7 +72,7 @@ gaps. For some reason a million regional software developers care about
 music and have to make an app for it (we Caribbeans do love our music
 though). Again, it's all good. Just not me.
 
-## Yes, I am ranting
+### Yes, I am ranting
 As a culture we tend to consume and not value indigenous creations.
 People in T&T seek validation from abroad. It's why the next Usain Bolt
 will probably never come from our twin islands. It was admittedly part
@@ -95,7 +95,7 @@ the word "innovation" appears more than "technology" or "the" or
 "Schmetterling") but I feel strongly that our main hindrance to "app
 heaven" is in our attitudes, not creative abilities.
 
-# Before we close
+## Before we close
 "I bet this guy hasn't made apps before" - Been through some Android
 tutorials and used PhoneGap about 3/4 times. So not never but not a lot,
 I wouldn't call myself an app developer for the projects I've done.

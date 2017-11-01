@@ -31,7 +31,7 @@ and PayPal, this talk really gave some insight into the company's
 transformation while adopting Node.js, and ultimately developing
 Kraken.js.
 
-# The only real development is human development
+## The only real development is human development
 The technical details about using Node.js and adapting PayPal's existing
 infrastructure was really cool, what you'll hear about Node.js' power
 will convert you if you're a non-believer. But what's really important
