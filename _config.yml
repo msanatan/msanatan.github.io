@@ -83,6 +83,11 @@ marked:
 sitemap:
   path: sitemap.xml
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
 ## Themes: https://hexo.io/themes/
 theme: cactus-dark
 
