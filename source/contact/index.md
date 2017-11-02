@@ -24,6 +24,7 @@ in contact.
     <fieldset class="field field-button">
         <input type="text" name="_gotcha" style="display:none" />
         <input type="hidden" name="_subject" value="Message via http://msanatan.com" />
+        <input type="hidden" name="_next" value="http://msanatan.com" />
         <input type="submit" class="contact-button" value="Send" />
     </fieldset>
 </form>
