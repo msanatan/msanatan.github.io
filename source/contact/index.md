@@ -10,11 +10,11 @@ in contact.
     method="POST"
     id="contact">
     <fieldset class="field">
-        <label for="name">Name (required)</label>
+        <label for="name">Name</label>
         <input type="text" name="name" class="contact-text-input" required />
     </fieldset>
     <fieldset class="field">
-        <label for="_replyto">Email (required)</label>
+        <label for="_replyto">Email</label>
         <input type="email" name="_replyto" class="contact-text-input" required />
     </fieldset>
     <fieldset class="field">
