@@ -305,7 +305,7 @@ def update(game, keys_pressed):
 It's straightforward. If someone pressed a number, including those on the numpad
 (the keys with KP before the number), then save the player on that location and
 set the someone_played flag to True. Returning someone_played will allow us to
-swithc players after someone plays.
+switch players after someone plays.
 
 The render function is now updated to show what's on the board: X, O or the
 keyboard number we set at the beginning. We'll draw X in blue and O in green.
