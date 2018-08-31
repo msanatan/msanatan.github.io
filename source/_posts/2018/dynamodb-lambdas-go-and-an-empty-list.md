@@ -1,6 +1,6 @@
 ---
 title: DynamoDB, Lamdbas, Go and an Empty List
-date: 2018-08-31 16:00:00
+date: 2018-08-31 17:45:00
 categories:
 - [api]
 - [web]
