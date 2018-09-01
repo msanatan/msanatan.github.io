@@ -1,5 +1,5 @@
 ---
-title: Small Website? Go Flask, and use Blueprints
+title: Small Website? Go Flask, And Use Blueprints
 date: 2014/10/31 23:40
 categories:
 - [web]
@@ -12,16 +12,9 @@ tags:
 - python
 ---
 
-It seems I've got into web development more and more. As I'm sticking to
-a language [I know and love](http://https://www.python.org/ "Python"),
-I'm using [Flask](http://flask.pocoo.org/ "Flask") - a super awesome
-microframework  based on the powerful Werkzeug and Jinja2 libraries. Why
-not [Django](https://www.djangoproject.com/ "Django")? No particular
-reason, I've used it before and just prefer how easy it is to get up and
-running with Flask!
+It seems I've got into web development more and more. As I'm sticking to a language [I know and love](https://www.python.org/ "Python"), I'm using [Flask](http://flask.pocoo.org/ "Flask") - a super awesome microframework  based on the powerful Werkzeug and Jinja2 libraries. Why not [Django](https://www.djangoproject.com/ "Django")? No particular reason, I've used it before and just prefer how easy it is to get up and running with Flask!
 
-For those too lazy to follow the links (shame on you!) here's a basic
-Hello World in Flask to make you excited:
+For those too lazy to follow the links (shame on you!) here's a basic Hello World in Flask to make you excited:
 
 ```python
 from flask import Flask
@@ -35,17 +28,13 @@ if __name__ == "__main__":
     app.run()
 ```
 
-## Blueprints for large projects, blueprints for small projects
+## Blueprints For Large Projects, Blueprints For Small Projects
+
 ![Organise - Flask Todo App](/images/organise_flask_todo.png)
 
-In this post I'll show you how you can apply blueprints to small
-projects, like the todo example you go through in the Flask tutorial.
-Blueprints allow for a more modular Flask app, they can encapsulate
-related tasks and be reused in an application by changing URL prefixes.
-The Flask docs do a great job of explaining it!
+In this post I'll show you how you can apply blueprints to small projects, like the todo example you go through in the Flask tutorial. Blueprints allow for a more modular Flask app, they can encapsulate related tasks and be reused in an application by changing URL prefixes. The Flask docs do a great job of explaining it!
 
-Instead of dealing with raw SQL, I prefer to use Flask-SQLAlchemy so I
-can utilise an ORM. The model for a todo is as simple as you expect it:
+Instead of dealing with raw SQL, I prefer to use Flask-SQLAlchemy so I can utilise an ORM. The model for a todo is as simple as you expect it:
 
 ```python
 class Todo(db.Model):
@@ -61,9 +50,7 @@ class Todo(db.Model):
         return 'Todo: %r' % self.title
 ```
 
-And the change from defining views for a Flask app to views for a
-blueprint isn't that alarming. Here's the initialisation and the 3 basic
-views for a todo:
+And the change from defining views for a Flask app to views for a blueprint isn't that alarming. Here's the initialisation and the 3 basic views for a todo:
 
 ```python
 todos = Blueprint('todos', __name__, template_folder='/../templates')
@@ -92,11 +79,7 @@ def delete_todo(t_id):
     return redirect(url_for('todos.index'))
 ```
 
-I also created a blueprint to handle static pages, like the home and
-about page. If you structure your Flask app [like a
-package](http://flask.pocoo.org/docs/0.10/patterns/packages/#larger-applications "Large Flask Application Patterns"),
-then in your **init.py** of your views module you can define your
-404 view function as follows:
+I also created a blueprint to handle static pages, like the home and about page. If you structure your Flask app [like a package](http://flask.pocoo.org/docs/0.10/patterns/packages/#larger-applications "Large Flask Application Patterns"), then in your **init.py** of your views module you can define your 404 view function as follows:
 
 ```python
 @app.errorhandler(404)
@@ -107,12 +90,7 @@ def page_not_found(e):
 All in all, you got a well organised flask app!
 
 ## Random Notes
-I'm no web designer, and that site is somehow visually tolerable.
-Checkout [Bootswatch](http://bootswatch.com/ "Bootswatch") for some free
-themes that replaces Bootstrap's standard ones. Technically this was
-supposed to be a weekend hack... but a great El Clásico occurred and
-life drove me in other directions, until about Sunday evening when I
-finally started coding this up!
 
-Lastly, you can get the complete source code right
-here: https://github.com/msanatan/organise
+I'm no web designer, and that site is somehow visually tolerable. Checkout [Bootswatch](https://bootswatch.com/ "Bootswatch") for some free themes that replaces Bootstrap's standard ones. Technically this was supposed to be a weekend hack... but a great El Clásico occurred and life drove me in other directions, until about Sunday evening when I finally started coding this up!
+
+Lastly, you can get the complete source code right here: <https://github.com/msanatan/organise>

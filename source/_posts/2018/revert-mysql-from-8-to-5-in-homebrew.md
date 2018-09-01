@@ -1,5 +1,5 @@
 ---
-title: Revert MySQL from 8 to 5.7 in Homebrew
+title: Revert MySQL From 8 To 5.7 In Homebrew
 date: 2018-08-15 12:30:00
 categories:
 - [macos]
@@ -10,11 +10,7 @@ tags:
 - homebrew
 ---
 
-So I did a brew upgrade to MySQL that bumped it up to version 8. Holy crap, that
-messed up almost everything. There are a lot of backward incompatible changes
-in this new version, so the best solution for me to be productive again was to
-revert. Uninstall, reinstall version 5.7. That never worked. After some googling
-I eventually came across the solution this problem:
+So I did a brew upgrade to MySQL that bumped it up to version 8. Holy crap, that messed up almost everything. There are a lot of backward incompatible changes in this new version, so the best solution for me to be productive again was to revert. Uninstall, reinstall version 5.7. That never worked. After some googling I eventually came across the solution this problem:
 
 ```bash
 # You got to remove this!
@@ -29,9 +25,7 @@ brew install mysql@5.7
 brew services start mysql@5.7
 ```
 
-More than likely you won't be able to use MySQL on the command line even though
-the service was started. So with `vim ~/.bash_profile` or the text editor of
-your choice, add the following lines:
+More than likely you won't be able to use MySQL on the command line even though the service was started. So with `vim ~/.bash_profile` or the text editor of your choice, add the following lines:
 
 ```bash
 export MYSQL_PATH=/usr/local/opt/mysql\@5.7

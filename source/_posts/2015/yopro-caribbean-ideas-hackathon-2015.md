@@ -13,83 +13,18 @@ tags:
 - yopro
 ---
 
-Yesterday I took part in a quick fire hackathon hosted by
-[YoPro](http://www.eypglobal.com/) and [Caribbean
-Ideas](http://caribbeanideas.com/). I was one of five developers who sat
-down for roughly eight hours to tackle our nation's waste problem. A
-recent documentary by National Geographic stated that Trinidad and
-Tobago was the top producer of garbage per capita in the world... with a
-cool 32lbs of rubbish per person, per day. To be fair, that figure seems
-really high and [has not been accepted by the local solid waste
-management agency](http://www.newsday.co.tt/news/0,211023.html). Even
-so, there's a gap in our infrastructure and our culture that prevents us
-from being a green society - no statistics are needed to prove that.
-With about two days notice, we were tasked with creating a technological
-solution that would raise awareness of waste production and disposal,
-and make it easier to mitigate this national problem.
+Yesterday I took part in a quick fire hackathon hosted by [YoPro](http://www.eypglobal.com/) and [Caribbean Ideas](http://caribbeanideas.com/). I was one of five developers who sat down for roughly eight hours to tackle our nation's waste problem. A recent documentary by National Geographic stated that Trinidad and Tobago was the top producer of garbage per capita in the world... with a cool 32lbs of rubbish per person, per day. To be fair, that figure seems really high and [has not been accepted by the local solid waste management agency](http://www.newsday.co.tt/news/0,211023.html). Even so, there's a gap in our infrastructure and our culture that prevents us from being a green society - no statistics are needed to prove that. With about two days notice, we were tasked with creating a technological solution that would raise awareness of waste production and disposal, and make it easier to mitigate this national problem.
 
-## No country for slow coders
-Did I mentioned we had only eight hours to code? The pace was on from
-the get go. We were put in a cozy room at the top of the Queen's Park
-Oval and got a chance at the beginning to talk things through with some
-really pleasant staff who organised the event. It came as an ideation
-session for me (and I assume for others as well) as I've only
-done research but had no idea what to implement. It took me a bit over
-an hour to map out my idea. I remember seeing the other participants
-coding already and that pretty much encouraged me to get on with it (in
-my head I was like: oh $#!&).
+## No Country For Slow Coders
 
-My solution was to make a T&T-centric recycle management system for
-organisations. Give them a web app where they could make
-arrangements with a recycling company and then reward with them with a
-badge and put them on a leaderboard. Given the timeframe I couldn't work
-on the incentives (if it wasn't for a last-minute conversation I
-wouldn't even put in the leaderboard prototype!) but I'll code and
-design some more and host the app on OpenShift ^_^. You can see some
-of the code on [GitHub](https://github.com/msanatan/icangreen). Since I
-couldn't push the commits (Internet restrictions) and time was running
-out I barely cared to use version control properly... I promise I'm a
-better developer with more time!
+Did I mentioned we had only eight hours to code? The pace was on from the get go. We were put in a cozy room at the top of the Queen's Park Oval and got a chance at the beginning to talk things through with some really pleasant staff who organised the event. It came as an ideation session for me (and I assume for others as well) as I've only done research but had no idea what to implement. It took me a bit over an hour to map out my idea. I remember seeing the other participants coding already and that pretty much encouraged me to get on with it (in my head I was like: oh $#!&).
 
-Despite hearing the clock ticking away in your mind, it was all a
-delightful experience. In traditional style we were fed with pizzas (I
-was such a healthy boy this week, pizza why you so tasty???), given
-beers and other drinks, and mentors to help us out through it all. For
-the members of YoPro this was just one part of a whole day event. So
-when it was time for their cocktail session we got pushed outside the
-room and into the stands. While that may sound horrible, it was actually
-one of the best parts. Think about it for a second: the sun is setting,
-the breeze is blowing, the moments you look away from the screen you get
-to watch some amateur cricketers get in the game AND we still had all
-the pizza to ourselves! Couldn't help but think that these moments
-are what life is about: doing what you love in a lovely environment. But
-moments don't last forever, that 8pm deadline came full speed and we
-were set to present.
+My solution was to make a T&T-centric recycle management system for organisations. Give them a web app where they could make arrangements with a recycling company and then reward with them with a badge and put them on a leaderboard. Given the timeframe I couldn't work on the incentives (if it wasn't for a last-minute conversation I wouldn't even put in the leaderboard prototype!) but I'll code and design some more and host the app on OpenShift ^_^. You can see some of the code on [GitHub](https://github.com/msanatan/icangreen). Since I couldn't push the commits (Internet restrictions) and time was running out I barely cared to use version control properly... I promise I'm a better developer with more time!
 
-## Hackathons are for hacking and so much more
-Code by itself is cool and all, but what's the point if it's of no value
-to people? As the norm with other hackathons each person had to present
-their solution for up to 5 minutes, speaking to two judges and the YoPro
-members as our audience. After everyone presented, the judges asked each
-developer questions and gave us feedback on issues with our model.
-Luckily no personal attacks, it would have sucked if my afro got in the
-way of my work lol. Soon after twas the time to announce the winner. It
-wasn't me, fellow code monkey Nicholas Mendez won with a pretty nifty
-web app that would help any citizen recycle a lot easier and make it a
-habit. And honestly, losing didn't bother me one bit. I came for a
-competition and got a community.
+Despite hearing the clock ticking away in your mind, it was all a delightful experience. In traditional style we were fed with pizzas (I was such a healthy boy this week, pizza why you so tasty???), given beers and other drinks, and mentors to help us out through it all. For the members of YoPro this was just one part of a whole day event. So when it was time for their cocktail session we got pushed outside the room and into the stands. While that may sound horrible, it was actually one of the best parts. Think about it for a second: the sun is setting, the breeze is blowing, the moments you look away from the screen you get to watch some amateur cricketers get in the game AND we still had all the pizza to ourselves! Couldn't help but think that these moments are what life is about: doing what you love in a lovely environment. But moments don't last forever, that 8pm deadline came full speed and we were set to present.
 
-Throughout the hackathon all competitors were on good terms, going
-through our struggles separately yet side by side. Funnily enough all
-developers there, including the mentors, were on the [Caribbean
-Developers](https://www.facebook.com/groups/devcarib/) Facebook group.
-This hackathon pulled us from our online community and gave us an
-experience that kept us engaged and brought us together. To me, that was
-the best value possible. Having thoroughly enjoyed the event, it further
-highlighted the need for more activities catered to software developers.
-Are you willing to help fill that gap? I know I am, and if you're
-interested I'll advise you to look out for
-[namespace](http://namespaceappclub.github.io/) - a movement to remove
-the silos in T&T and build a community. But that's another blog post
-soon come. For now, I'm a happy Caribbean guy who's eager for
-another hackathon. Bring it on :) and happy hacking everyone!
+## Hackathons Are For Hacking And So Much More
+
+Code by itself is cool and all, but what's the point if it's of no value to people? As the norm with other hackathons each person had to present their solution for up to 5 minutes, speaking to two judges and the YoPro members as our audience. After everyone presented, the judges asked each developer questions and gave us feedback on issues with our model. Luckily no personal attacks, it would have sucked if my afro got in the way of my work lol. Soon after twas the time to announce the winner. It wasn't me, fellow code monkey Nicholas Mendez won with a pretty nifty web app that would help any citizen recycle a lot easier and make it a habit. And honestly, losing didn't bother me one bit. I came for a competition and got a community.
+
+Throughout the hackathon all competitors were on good terms, going through our struggles separately yet side by side. Funnily enough all developers there, including the mentors, were on the [Caribbean Developers](https://www.facebook.com/groups/devcarib/) Facebook group. This hackathon pulled us from our online community and gave us an experience that kept us engaged and brought us together. To me, that was the best value possible. Having thoroughly enjoyed the event, it further highlighted the need for more activities catered to software developers. Are you willing to help fill that gap? I know I am, and if you're interested I'll advise you to look out for [namespace](http://namespaceappclub.github.io/) - a movement to remove the silos in T&T and build a community. But that's another blog post soon come. For now, I'm a happy Caribbean guy who's eager for another hackathon. Bring it on :) and happy hacking everyone!

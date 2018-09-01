@@ -1,5 +1,5 @@
 ---
-title: Death to the Buzzword, Long live Development
+title: Death To The Buzzword, Long Live Development
 date: 2016/03/17 22:09
 categories:
 - [caribbean]
@@ -7,172 +7,40 @@ categories:
 - [trinidad and tobago]
 ---
 
-There was a time last year that you saw the word ICT every other week or
-so in the newspapers. Even before elections where it's expected that
-whoever is in government inappropriately uses funds for "projects" as a
-form of pseudo-campaigning and paying off friends *cough* contractors
-(I'm not talking about the last administration in particular but a trend
-that'll continue unless we implement legislation to curb pre-election
-spending), there was something "happening" in the "ICT" space.
+There was a time last year that you saw the word ICT every other week or so in the newspapers. Even before elections where it's expected that whoever is in government inappropriately uses funds for "projects" as a form of pseudo-campaigning and paying off friends *cough* contractors (I'm not talking about the last administration in particular but a trend that'll continue unless we implement legislation to curb pre-election spending), there was something "happening" in the "ICT" space.
 
-Well ICTs (Information and Communications Technologies) is an umbrella
-term for various types of technology - the networking aspects, different
-types of applications, databases, etc. Basically it's the perfect
-buzzword. It can literally mean anything in technology. Now that all the
-hype is over it's clear it meant nothing at all... But it doesn't have
-to be that way. Despite the liberal use of the term ICT (and its
-celebrity cousin "innovation") some good things were put into place that
-can really take off. Here are some ventures that I think can be worked
-on... with the plus side being that a lot of work is already done :)
+Well ICTs (Information and Communications Technologies) is an umbrella term for various types of technology - the networking aspects, different types of applications, databases, etc. Basically it's the perfect buzzword. It can literally mean anything in technology. Now that all the hype is over it's clear it meant nothing at all... But it doesn't have to be that way. Despite the liberal use of the term ICT (and its celebrity cousin "innovation") some good things were put into place that can really take off. Here are some ventures that I think can be worked on... with the plus side being that a lot of work is already done :)
 
- 
+* \[Disclaimer\] Not too long ago I was an employee for the Public Sector of Trinidad and Tobago involved in technology at many levels, primarily in a policy role. This post is in no way intended to criticise administrations past or present as the cause for our lagging technological development. It's just a brief overview of initiatives which I have always been excited for and how we can push forward to help both government, the local software development community and of course, the people!*
 
-*\[Disclaimer\] Not too long ago I was an employee for the Public Sector
-of Trinidad and Tobago involved in technology at many levels, primarily
-in a policy role. This post is in no way intended to criticise
-administrations past or present as the cause for our lagging
-technological development. It's just a brief overview of initiatives
-which I have always been excited for and how we can push forward to help
-both government, the local software development community and of course,
-the people!*
+## Your Future Lies In Your School Bags, Your Environment, Socioeconomic Background And Other Things That Shouldn't Matter
 
- 
+My journey to becoming the tech enthusiast I am today was a long one. I grew up with a computer to play with and two computer literate parents who were happy to show us how to use it. At that time (let's say 1995 - 2005) computers were uncommon in my country, less so having an Internet connection, so I was really lucky to get that exposure. I was also lucky to attend schools with computers and IT training (again, all in the context of the time). I'm lucky for parents who supported my interests. Many other people didn't/don't have that level of exposure and encouragement to follow their technological interests like I can. Government should help bring about a society that facilitates personal development so that the next person doesn't have to be lucky to develop their passions.
 
-## Your future lies in your school bags, your environment, socioeconomic background and other things that shouldn't matter
-My journey to becoming the tech enthusiast I am today was a long one. I
-grew up with a computer to play with and two computer literate parents
-who were happy to show us how to use it. At that time (let's say 1995 -
-2005) computers were uncommon in my country, less so having an Internet
-connection, so I was really lucky to get that exposure. I was also lucky
-to attend schools with computers and IT training (again, all in the
-context of the time). I'm lucky for parents who supported my interests.
-Many other people didn't/don't have that level of exposure and
-encouragement to follow their technological interests like I can.
-Government should help bring about a society that facilitates
-personal development so that the next person doesn't have to be lucky to
-develop their passions.
+### A MOOC For Me, A MOOC For You
 
-### A MOOC for me, a MOOC for you
-Massive Open Online Courses (MOOCs) are no longer powered by the hype
-machine we saw around 2012 or so. Questions were asked when data
-suggests that a lot of students don't complete their courses and that
-the majority of participants already have some form of higher
-education (see this
-[paper](http://poseidon01.ssrn.com/delivery.php?ID=281020070003095004110007081019116024050069081053008091070113114125006103085106106031021010033037006104035121114126118006084092045011032005017027021096006110030099026037014034078009064088112015027087068015100099029001023028091022118073113126027092081001&EXT=pdf)
-for example, and there are even [supply
-side](http://news.psu.edu/story/395292/2016/02/29/research/mooc-instructors-may-need-more-support-successful-courses)
-problems we don't highlight as much). Yet, it's an avenue worth
-exploring even for the sole reason being that we're exploring it
-already. Yes! Do you know about www.knowledge.tt? Trinidad and Tobago's
-government partnered with Coursera and Khan Academy to develop a national MOOC
-platform. I say it's avenue worth exploring because unlike back in the day we
-do have a lot more people with access to computers and the Internet. Even if
-it's a mobile phone because the website is quite responsive (and pretty!). It's
-free, we love nothing more. And in my view, it's not being used to its full
-potential.
+Massive Open Online Courses (MOOCs) are no longer powered by the hype machine we saw around 2012 or so. Questions were asked when data suggests that a lot of students don't complete their courses and that the majority of participants already have some form of higher education (see this [paper](http://poseidon01.ssrn.com/delivery.php?ID=281020070003095004110007081019116024050069081053008091070113114125006103085106106031021010033037006104035121114126118006084092045011032005017027021096006110030099026037014034078009064088112015027087068015100099029001023028091022118073113126027092081001&EXT=pdf) for example, and there are even [supply side](http://news.psu.edu/story/395292/2016/02/29/research/mooc-instructors-may-need-more-support-successful-courses) problems we don't highlight as much). Yet, it's an avenue worth exploring even for the sole reason being that we're exploring it already. Yes! Do you know about www.knowledge.tt? Trinidad and Tobago's government partnered with Coursera and Khan Academy to develop a national MOOC platform. I say it's avenue worth exploring because unlike back in the day we do have a lot more people with access to computers and the Internet. Even if it's a mobile phone because the website is quite responsive (and pretty!). It's free, we love nothing more. And in my view, it's not being used to its full potential.
 
-1. There seems to be no theme in the choice of courses offered. From
-what's available I have no idea what are the priority educational
-items for the government or this platform. Not necessarily a crime,
-the more the merrier to be honest. Yet still, it gives off an
-impression of "photo-shoot initiative" - something just for
-the camera. I would expect the government to curate their platform
-to treat with economic needs and observed professional skills gaps.
-2. A lot of the courses are not locally produced. Again, not a bad
-thing - it's good to learn from other teaching styles and pick
-up different cultural nuances in the process. At the same time... if
-the majority of courses are from Coursera and Khan Academy, why
-should I not go there directly? There isn't enough local content
-available yet to use the platform fully.
-3. Mobile site but no mobile app. I'm not an advocate for making a
-mobile app for the heck of it but I find it strange there's not
-one available. Push notifications, integration with calendars, being
-able to watch a video easily while in public transport - this kind
-of platform is begging for an application.
+1. There seems to be no theme in the choice of courses offered. From what's available I have no idea what are the priority educational items for the government or this platform. Not necessarily a crime, the more the merrier to be honest. Yet still, it gives off an impression of "photo-shoot initiative" - something just for the camera. I would expect the government to curate their platform to treat with economic needs and observed professional skills gaps.
+2. A lot of the courses are not locally produced. Again, not a bad thing - it's good to learn from other teaching styles and pick up different cultural nuances in the process. At the same time... if the majority of courses are from Coursera and Khan Academy, why should I not go there directly? There isn't enough local content available yet to use the platform fully.
+3. Mobile site but no mobile app. I'm not an advocate for making a mobile app for the heck of it but I find it strange there's not one available. Push notifications, integration with calendars, being able to watch a video easily while in public transport - this kind of platform is begging for an application.
 
-There's hope all the same. One of the partners of the knowledge.tt
-platform is the University of Trinidad and Tobago. Can there be a better
-source of local content for higher education in Trinidad and Tobago?
-Here's my policy
+There's hope all the same. One of the partners of the knowledge.tt platform is the University of Trinidad and Tobago. Can there be a better source of local content for higher education in Trinidad and Tobago? Here's my policy
 
-UTT must upload and maintain at least 5 courses a year to knowledge.tt
-platform. This ensures that we claim our space on our platform. Plus,
-there's the rudimentary benefit to UTT students who can now access their
-course content at their luxury. Bad students would skip class anyway,
-the other students now get another way to reinforce what they need to
-learn. Also, as our university is focused on meeting our economic needs,
-so would the courses they upload - it makes everything easier.
+UTT must upload and maintain at least 5 courses a year to knowledge.tt platform. This ensures that we claim our space on our platform. Plus, there's the rudimentary benefit to UTT students who can now access their course content at their luxury. Bad students would skip class anyway, the other students now get another way to reinforce what they need to learn. Also, as our university is focused on meeting our economic needs, so would the courses they upload - it makes everything easier.
 
-## Open Data and the Developer Community
-There once was an Open Data website for government... Yes there was. As
-expected for Open Data initiatives it was called data.gov.tt - pretty
-cool. Unfortunately it no longer seems up, I guess no one to support it
-(don't believe it existed? look at the
-[archives](http://web.archive.org/web/20160308001307/http://data.gov.tt/)).
-It's a shame, Open Data can help by not just solving problems for
-citizens but also building a more trustful relationship with each other.
-Nothing says love than truth; transparency goes a long way. But that's
-OK, we don't need to be caught up with maintaining a government-owned
-open data portal as there's a civilian initiative
-called [data.tt](http://data.tt/)! There are not many datasets
-available, but it's a start. There's even some government data on it. We
-desperately need to put more datasets on the portal, and also ensure
-that they're consistently updated. Trinidad and Tobago can lead the way
-by having a government backed, civilian managed open data portal.
+## Open Data And The Developer Community
 
-What I really like about the open data push was that government reached
-out to the software developer community. I can't recall another instance
-when this happened. There were some meetings explaining government's
-open data plan and it all culminated into a hackathon (DevCA 2015 -
-government was allowed this regional initiative!). I remember being
-there, quite a good turn out and a good display of skills. And I think
-we could use some more. Not just for open data, but for government and
-citizen needs. Hackathons can achieve the following major wins:
+There once was an Open Data website for government... Yes there was. As expected for Open Data initiatives it was called data.gov.tt - pretty cool. Unfortunately it no longer seems up, I guess no one to support it (don't believe it existed? look at the [archives](http://web.archive.org/web/20160308001307/http://data.gov.tt/)). It's a shame, Open Data can help by not just solving problems for citizens but also building a more trustful relationship with each other. Nothing says love than truth; transparency goes a long way. But that's OK, we don't need to be caught up with maintaining a government-owned open data portal as there's a civilian initiative called [data.tt](http://data.tt/)! There are not many datasets available, but it's a start. There's even some government data on it. We desperately need to put more datasets on the portal, and also ensure that they're consistently updated. Trinidad and Tobago can lead the way by having a government backed, civilian managed open data portal.
 
-* State agencies can provide a process which needs to be digitised. It
-could be for internal or citizen facing processes. Local developers,
-like other non-developer citizens, also get frustrated by slow
-service times in the public sector and are more than happy to guide
-our country into a better digital world. The winning team or person
-has to commit to making the product a reality, we all know 2 days
-won't be enough.
-* Newly open data can get be used creatively on launch, so that it
-will power a service or give useful information to the public
-and more. For example, let the Customs and Exercise Division release
-data about shipments received which were checked to be legitimate
-and shipments with some illegal items. A machine-learning oriented
-hackathon could produce systems that could recommend which shipments
-to check based on their profile. Wouldn't that be nifty?
-* Developers can help transform some take data in not so developer
-friendly formats and create APIs. The real power is in API
-development for us, the more data is accessible the better for all
-the services that currently rely on it and new services that can
-integrate the new data and offer a better experience for the public.
+What I really like about the open data push was that government reached out to the software developer community. I can't recall another instance when this happened. There were some meetings explaining government's open data plan and it all culminated into a hackathon (DevCA 2015 - government was allowed this regional initiative!). I remember being there, quite a good turn out and a good display of skills. And I think we could use some more. Not just for open data, but for government and citizen needs. Hackathons can achieve the following major wins:
 
-Just because coders are willing to code doesn't mean we'll do it for
-free. This isn't a one way street and software developers must get
-something in return. This means at the minimum the development of policy
-and legislation for electronic signatures and payments and the
-formulation of an open data policy. We do need government to commit to
-their own initiatives, if they don't why should we? There are many other
-open issues for other IT professionals as well, for example protection
-for ethical hackers. How can government encourage the development of
-data centres that can be accessed by developers so that we can provide
-reliable local services without a foreign cloud? This is probably a
-requirement to sell services to government, and it will also make good
-use of the [IXP](https://en.wikipedia.org/wiki/Internet_exchange_point)
-we have here. Government should keep up the meetings they had with
-developers for the open data initiative - we are interested in your
-plans for the country and we're happy to let you know what can be done
-to better develop the software industry.
+* State agencies can provide a process which needs to be digitised. It could be for internal or citizen facing processes. Local developers, like other non-developer citizens, also get frustrated by slow service times in the public sector and are more than happy to guide our country into a better digital world. The winning team or person has to commit to making the product a reality, we all know 2 days won't be enough.
+* Newly open data can get be used creatively on launch, so that it will power a service or give useful information to the public and more. For example, let the Customs and Exercise Division release data about shipments received which were checked to be legitimate and shipments with some illegal items. A machine-learning oriented hackathon could produce systems that could recommend which shipments to check based on their profile. Wouldn't that be nifty?
+* Developers can help transform some take data in not so developer friendly formats and create APIs. The real power is in API development for us, the more data is accessible the better for all the services that currently rely on it and new services that can integrate the new data and offer a better experience for the public.
 
-Seeing the word ICTs plastered all over the newspapers doesn't really
-help much, actually it doesn't help at all. We need real action to show
-you're committed to more than just a press release, to prove that you're
-committed to the country. The available talent in our nation is only
-trumped by the multitude of opportunities out there that can make a
-positive impact on the livelihood of our people. I know my suggestions
-aren't necessarily easy or straightforward, but that's the thing about
-community - reach out to us because we are here to help :).
+Just because coders are willing to code doesn't mean we'll do it for free. This isn't a one way street and software developers must get something in return. This means at the minimum the development of policy and legislation for electronic signatures and payments and the formulation of an open data policy. We do need government to commit to their own initiatives, if they don't why should we? There are many other open issues for other IT professionals as well, for example protection for ethical hackers. How can government encourage the development of data centres that can be accessed by developers so that we can provide reliable local services without a foreign cloud? This is probably a requirement to sell services to government, and it will also make good use of the [IXP](https://en.wikipedia.org/wiki/Internet_exchange_point) we have here. Government should keep up the meetings they had with developers for the open data initiative - we are interested in your plans for the country and we're happy to let you know what can be done to better develop the software industry.
+
+Seeing the word ICTs plastered all over the newspapers doesn't really help much, actually it doesn't help at all. We need real action to show you're committed to more than just a press release, to prove that you're committed to the country. The available talent in our nation is only trumped by the multitude of opportunities out there that can make a positive impact on the livelihood of our people. I know my suggestions aren't necessarily easy or straightforward, but that's the thing about community - reach out to us because we are here to help :).
 
 Happy hacking everyone!
