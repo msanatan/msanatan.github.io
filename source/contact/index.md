@@ -3,8 +3,7 @@ title: Contact
 date: 2017-11-01 17:17:49
 ---
 
-Questions or feedback on my writings and/or interests? I'm always happy to get
-in contact.
+Questions or feedback on my writings and/or interests? I'm always happy to get in contact.
 
 <form action="https://formspree.io/msanatan@gmail.com"
     method="POST"
