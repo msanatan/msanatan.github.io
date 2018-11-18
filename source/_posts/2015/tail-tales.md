@@ -5,6 +5,7 @@ categories:
 - [linux]
 tags:
 - linux
+- bash
 ---
 
 Not too long ago I found myself in a little jam using the tail command. I needed to keep tabs on a log file which would be archived and emptied when it reaches a certain size. Since the script I was writing would need all the contents that was logged and not only what was currently in the file, I had this running in the background:

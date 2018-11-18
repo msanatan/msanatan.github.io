@@ -6,7 +6,7 @@ categories:
 tags:
 - homebrew
 - mac
-- python
+- bash
 ---
 
 Hey everyone! This one is the Mac users out there. While working on some Python projects I encountered an unusual error:
