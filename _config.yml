@@ -4,7 +4,7 @@
 
 # Site
 title: Marcus Sanatan
-subtitle: Creative Caribbean Coder
+subtitle: Caribbean Creative Coder
 description: Musings of Marcus Sanatan, a blog made in the Caribbean with &hearts;
 author: Marcus Sanatan
 language: en
@@ -12,7 +12,7 @@ timezone: America/Port_of_Spain
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://msanatan.com
+url: https://msanatan.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -89,7 +89,7 @@ feed:
   limit: 20
 
 ## Themes: https://hexo.io/themes/
-theme: cactus-dark
+theme: cactus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
