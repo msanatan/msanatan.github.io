@@ -11,7 +11,7 @@ Hi! I'm Marcus Sanatan, a web and game developer from Trinidad and Tobago. The t
 * Mobile Development with Flutter
 * Back-end Development with Go and Python
 * Caribbean Development
-* Puppies - I actually don't blog about them but who doesn't love them?
+* Puppies! I actually don't blog about them but who doesn't love them?
 
 I also write for another blog, [Stack Abuse](https://stackabuse.com/author/marcus/). Those articles are pretty much programming tutorials, with Python as my language of choice.
 
