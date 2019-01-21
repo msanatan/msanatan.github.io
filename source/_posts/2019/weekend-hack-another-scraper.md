@@ -1,6 +1,7 @@
 ---
 title: Weekend Hack, Another Scraper
 date: 2019-01-20 21:38:00
+updated: 2019-01-20 23:10:00
 categories:
 - [web]
 tags:
@@ -8,11 +9,9 @@ tags:
 - python
 ---
 
-So I recently started to write programming articles for another website. I thought it'd be a good idea to link the articles in my website. I've set it up here: <https://msanatan.com/other-writing/>.
+So I recently started to write programming articles for another website. I thought it'd be a good idea to link the articles in my website. I've set it up here: <https://msanatan.com/categories/other/>.
 
-Hexo allows data from JSON or YAML files to be loaded into the templates. It's an awesome feature I've yet to master, specifically when it comes to page pagination. The goal is to use those posts on a page that behaves just like the [archives](https://msanatan.com/archives/). A workaround is being looked at for now. In any case, I got the scraper done pretty easily.
-
-The scraper consists 3 parts:
+The first thing I needed to do was get all my articles in one go. The scraper consists 3 parts:
 
 * Parse the HTML to get the articles from my user page \- <https://stackabuse.com/author/marcus>
 * Dump it to JSON
@@ -20,7 +19,7 @@ The scraper consists 3 parts:
 
 ## Parsing
 
-For parsing I used [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/), definitely one of the most popular scarping libraries out there. I skipped on `lxml` as the page is very simple, there was no need for fancy XPath. This function returns all the posts in a list of dictionaries. I'm not copying the content, so all I need are the names, links and dates.
+For parsing I used [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/), definitely one of the most popular scarping libraries for Python. I skipped on `lxml` as the page is very simple, there was no need for fancy XPath. This function returns all the posts in a list of dictionaries. I'm not copying the content, so all I need are the names, links and dates.
 
 ```python
 def parse_posts(author_url):
@@ -63,9 +62,9 @@ def parse_posts(author_url):
         return []
 ```
 
-## Saving as JSON
+## Saving Data
 
-Python makes this dead simple. For convenience we call the `parse_posts` function in our JSON saving one:
+I needed to convert the data to markdown so that Hexo can use it. I figured that allowing JSON and CSV formats as well, this scraper could be of more use to others. Doesn't matter too much, Python makes saving in each file type dead simple:
 
 ```python
 def get_posts_json(filename, author_url):
@@ -76,7 +75,6 @@ def get_posts_json(filename, author_url):
         json.dump(posts, json_file, indent=4)
 
 
-# Fine, I also created a CSV one. Not for me but someone always needs a CSV copy
 def get_posts_csv(filename, author_url):
     '''Saves CSV file for stack abuse articles'''
     posts = parse_posts(author_url)
@@ -87,6 +85,26 @@ def get_posts_csv(filename, author_url):
         csv_writer.writerow(headers)
         for post in posts:
             csv_writer.writerow([post['title'], post['link'], post['date']])
+
+
+def get_posts_markdown(author_url):
+    '''Saves posts as markdown files to work in Hexo'''
+    posts = parse_posts(author_url)
+    logging.info('Retrieved {} posts'.format(len(posts)))
+    # As markdown produces many files, it's neater to have them in one folder
+    pathlib.Path('articles').mkdir(exist_ok=True)
+    for post in posts:
+        # Use the slug as it's a more appropriate file name
+        post_slug = slugify(post['title'])
+        with open('articles/{}.md'.format(post_slug), 'w') as f:
+            f.writelines([
+                '---\n',
+                'title: {}\n'.format(post['title']),
+                'date: {}\n'.format(post['date']),
+                'categories: [other]\n',
+                'link: {}\n'.format(post['link']),
+                '---\n',
+            ])
 ```
 
 ## Command Line Arguments
@@ -106,13 +124,15 @@ def main():
                         help='Writer whose articles you want', required=True)
 
     # The user selects what format they would like the data in. A file can't be
-    # JSON and CSV at the same time (I don't care if they can, I really don't)
-    # so we make these options mutually exclusive. One or the other
+    # JSON and CSV or CSV and Markdown at the same time so we make these options
+    # mutually exclusive.
     group = parser.add_mutually_exclusive_group()
     group.add_argument('--csv', action='store_true',
                        help='Save data in CSV format')
     group.add_argument('--json', action='store_true',
                        help='Save data in JSON format')
+    group.add_argument('--markdown', action='store_true',
+                       help='Save data as Markdown articles for Hexo')
 
     # A simple way to manage log levels in your app!
     parser.add_argument('-l', '--loglevel', dest='loglevel',
@@ -136,6 +156,8 @@ def main():
         get_posts_csv('stackabuse_articles.csv', author_url)
     elif args.json:
         get_posts_json('stackabuse_articles.json', author_url)
+    elif args.markdown:
+        get_posts_markdown(author_url)
     # Put a default case for that one user who'll try to break it :-/
     else:
         print(json.dumps(parse_posts(author_url)))
@@ -143,22 +165,14 @@ def main():
 
 ## Conclusion
 
-When I run `python3 stackabuse_scraper.py -a marcus --json` I get the following JSON output:
+When I run `python3 stackabuse_scraper.py -a marcus --markdown` I get the following Markdown file as  output:
 
-```json
-[
-    {
-        "title": "Building a GraphQL API with Django",
-        "link": "https://stackabuse.com/building-a-graphql-api-with-django/",
-        "date": "2018-12-10"
-    },
-    {
-        "title": "Saving Text, JSON, and CSV to a File in Python",
-        "link": "https://stackabuse.com/saving-text-json-and-csv-to-a-file-in-python/",
-        "date": "2018-11-28"
-    }
-]
-```
+    ---
+    title: Building a GraphQL API with Django
+    date: 2018-12-10
+    categories: [other]
+    link: https://stackabuse.com/building-a-graphql-api-with-django/
+    ---
 
 Exactly what I wanted and usable with Hexo! This was just some of the annotated code, you can find the full script at <https://github.com/msanatan/stackabuse_scraper>. That's all I got through to this weekend, till next time
 
