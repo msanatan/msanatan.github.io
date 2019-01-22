@@ -8,7 +8,7 @@ tags:
 - hexo
 - node.js
 - javascript
-- static website
+- static websites
 - blog
 ---
 

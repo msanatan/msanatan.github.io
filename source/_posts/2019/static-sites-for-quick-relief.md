@@ -4,7 +4,7 @@ date: 2019-01-14 18:00:00
 categories:
 - [web]
 tags:
-- static sites
+- static websites
 - web
 - hexo
 ---
