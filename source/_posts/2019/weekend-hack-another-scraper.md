@@ -1,7 +1,7 @@
 ---
 title: Weekend Hack, Another Scraper
 date: 2019-01-20 21:38:00
-updated: 2019-01-20 23:10:00
+updated: 2019-02-02 01:04:00
 categories:
 - [web]
 tags:
@@ -14,7 +14,7 @@ So I recently started to write programming articles for another website. I thoug
 The first thing I needed to do was get all my articles in one go. The scraper consists 3 parts:
 
 * Parse the HTML to get the articles from my user page \- <https://stackabuse.com/author/marcus>
-* Dump it to JSON
+* Save each article as Markdown files with a `link` property
 * Allow users to specify which author to scrape via command line arguments
 
 ## Parsing
