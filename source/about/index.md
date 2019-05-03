@@ -4,12 +4,12 @@ date: 2017-10-31 18:32:15
 updated: 2019-01-14 23:50:00
 ---
 
-Hi! I'm Marcus Sanatan, a web and game developer from Trinidad and Tobago. The things that grab my interest and will most likely blog about are (in no particular order):
+Hi! I'm Marcus Sanatan, a software developer from Trinidad and Tobago. The things that grab my interest and will most likely blog about are (in no particular order):
 
-* Game Development (Phaser, Kontra and Godot)
-* Front-end Development with Vue.js
-* Mobile Development with Flutter
-* Back-end Development with Go and Python
+* Back-end Development with Go and Python (Flask, Django)
+* Game Development (Phaser, Kontra and Unity)
+* Front-end Development with React.js
+* Mobile Development with React Native
 * Caribbean Development
 * Puppies! I actually don't blog about them but who doesn't love them?
 
