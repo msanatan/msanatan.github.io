@@ -1,5 +1,5 @@
 ---
-title: Things I Learned Making My First Godot Game
+title: Thoughts After Making My First Godot Game
 date: 2019-11-25 07:57:00
 categories:
 - [games]
@@ -15,15 +15,7 @@ The open source bit is pretty cool not just for philosophical reasons, it reduce
 
 This post is just a write up on what I liked about Godot, what I didn't like about Godot, and whatever interesting experiences came up while creating my first game.
 
-## November Game Project 2019 - AV: Execute
-
-I started to play Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would definitely have it's 8-directional movement. Heck, let's just make it a game about viruses. In the end, I came up with [AV: Execute](https://msanatan.itch.io/av-execute).
-
-![Screenshot of AV Execute](/images/av-execute.png)
-
-It's your standard fare swarm shooter - you're in an arena and your goal is to derezz as many viruses that comes your way. The last high score I recall getting was 400, not bad. All the code is available on [GitHub](https://github.com/msanatan/AV-Execute) and the super basic artwork was done by yours truly.
-
-Admittedly, I haven't used Godot before attempting this game. So figuring out a structure way to learn the engine was the first step.
+I haven't used Godot before attempting this game. Figuring out a structured way to learn the engine was the first step.
 
 ## Learning Path
 
@@ -45,4 +37,24 @@ I had a positive experience with Udemy when learning React, Phaser and Unity. I 
 
 ### Udemy Course - Discovering Godot: Make Video Games in Python-like GDScript
 
+This course is done by two people who are super popular on Udemy and other platforms - Ben Tristem and Yann Burrett. They both made careers out of teaching people how to create games with different engines, they do a good job at it too. After looking at the alternatives I figured this course was the best bit.
 
+Having read the Godot tutorial and other blogs, and coupled with my familiarity with Python, it may be too basic at times. I found myself skipping over things like what are if-statements. It's not a problem that's it there, it was meant for beginners after all. But you have a similar Python background you may find yourself skipping over those bits too.
+
+However, don't make a habit of skipping over things. The details about Godot were invaluable. As much as I read about the framework, this course does a great job of at least reinforcing how the engine works.
+
+The first tutorial was to build a game called Loony Lips. It's a simple game that generates a random sentence given 4 user inputs. It was super simple, the small scope was perfect. After that tutorial, Godot finally clicked for me.
+
+The next tutorial for the course was a platformer. I always like to create something after completing a section in an online course, it's a nice way to validate what I learned. So before moving onto the next class, I decided to make AV: Execute.
+
+## November Game Project 2019 - AV: Execute
+
+I started to play Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would definitely have it's 8-directional movement. Heck, let's just make it a game about viruses. In the end, I came up with [AV: Execute](https://msanatan.itch.io/av-execute).
+
+![Screenshot of AV Execute](/images/av-execute.png)
+
+It's your standard fare swarm shooter - you're in an arena and your goal is to derezz as many viruses that comes your way. The last high score I recall getting was 400, not bad. All the code is available on [GitHub](https://github.com/msanatan/AV-Execute) and the super basic artwork was done by yours truly.
+
+
+
+## macOS Catalina - Bloody Hell
