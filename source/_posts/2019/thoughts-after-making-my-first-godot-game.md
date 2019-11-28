@@ -1,6 +1,6 @@
 ---
 title: Thoughts After Making My First Godot Game
-date: 2019-11-25 07:57:00
+date: 2019-11-28 07:30:00
 categories:
 - [games]
 - [game development]
@@ -11,21 +11,21 @@ tags:
 
 [Godot](https://godotengine.org/) is a 2D and 3D game engine that has been on my radar for quite some time. Reviews for it are mostly positive, the scripting language is similar to Python (yay), and it's open source.
 
-The open source bit is pretty cool not just for philosophical reasons, it reduces your cost of development. For those living in countries with currencies weaker than USD, what may be a low monthly subscription or generous revenue cap still makes a sizeable dent in disposable income.
+The open source bit is pretty cool not just for philosophical reasons. It reduces your cost of development. For those living in countries with currencies weaker than USD, what may be a low monthly subscription or generous revenue cap still makes a sizeable dent in disposable income.
 
-This post is just a write up on what I liked about Godot, what I didn't like about Godot, and whatever interesting experiences came up while creating my first game.
+This post is just a write up on what I liked about Godot, what I didn't like about Godot; all the interesting experiences that came up while creating my first game.
 
-I haven't used Godot before attempting this game. Figuring out a structured way to learn the engine was the first step.
+To start this journey, I first determined a structured way to learn the engine.
 
 ## Learning Path
 
 I'm a web developer, hence why most of my previous ventures into game development have come through [Phaser](https://phaser.io/). I did tutorials for Unity and Unreal before, but those were a couple of years back so using Godot felt as close to a brand new experience as it could have been.
 
-As with most new Godot users, my journey began with their [getting started](https://docs.godotengine.org/en/3.1/getting_started/step_by_step/index.html) guide. I read everything from the introduction to my first Godot game tutorial. It's necessary reading to get an understanding of the engine's design and key features. Admittedly, it took me a while to truly understand all the information.
+As with most new Godot users, my starting point was their [getting started](https://docs.godotengine.org/en/3.1/getting_started/step_by_step/index.html) guide. I read everything from the introduction to my first Godot game tutorial. It's necessary reading to get an understanding of the engine's design and key features. Admittedly, it took me a while to truly understand all the information.
 
-I enjoyed the tutorial game that was created, it's casual enough to be fun. The export section also shows you how to make it Android friendly - you create an app in your first try!
+I enjoyed the tutorial game that was created, it's casual enough to be fun. The export section also shows you how to make it Android friendly - you create an app on your first try!
 
-However, after finishing that game I did not feel confident enough to go on my project. Even after looking at the simple example [projects created by the Godot team](https://github.com/godotengine/godot-demo-projects), I felt as if I needed more of a guiding hand.
+However, after finishing that game I did not feel confident enough to go on a project of my own. Even after looking at the [example games created by the Godot team](https://github.com/godotengine/godot-demo-projects), I felt as if I needed a guiding hand.
 
 ### Blogs and YouTube Videos
 
@@ -45,11 +45,11 @@ However, don't make a habit of skipping over things. The details about Godot wer
 
 The first tutorial was to build a game called Loony Lips. It's a simple game that generates a random sentence given 4 user inputs. It was super simple, the small scope was perfect. After that tutorial, Godot finally clicked for me.
 
-The next tutorial for the course was a platformer. I always like to create something after completing a section in an online course, it's a nice way to validate what I learned. So before moving onto the next class, I decided to make AV: Execute.
+The next tutorial for the course was a platformer. I always like to create something after completing a section in an online course, it's a nice way to validate what I learned. So before moving onto the next class, I decided to make **AV: Execute**.
 
 ## November Game Project 2019 - AV: Execute
 
-I started to play Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would have its 8-directional movement. Heck, let's just make it a game about viruses. In the end, I came up with [AV: Execute](https://msanatan.itch.io/av-execute).
+I began playing Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would have its 8-directional movement. Heck, let's just make it a game about viruses. In the end, I came up with [AV: Execute](https://msanatan.itch.io/av-execute).
 
 ![Screenshot of AV Execute](/images/av-execute.png)
 
@@ -63,7 +63,7 @@ Making this game was fun. Godot is a good example of high quality open source so
 
 My experience with Unity was so annoying at times. Crashes were not so frequent that I couldn't learn how to make games with Unity. It did happen enough times for me to notice it, and to be annoyed with it. Godot doesn't give me any problems while running. I'm sure Unity in 2019 is probably much more stable now than a couple of years back, will let you know when I get into it again :-).
 
-Godot is extremely lightweight, compared to Unity and Unreal at least. The application takes up about 68 MB of space! Unity after installing took up close to 1GB. Unreal I believe came up to roughly 8GB. For comparative features, this is simply marvelous. It's also not a RAM hog like the others. So yes, you can use Godot with your 1 million Chrome tabs and it will be fine.
+Godot is extremely lightweight, compared to Unity and Unreal at least. The application takes up about 68 MB of space! Unity after installing took up close to 1GB. Unreal I believe came up to roughly 8GB. For comparative features, this is simply marvellous. It's also not a RAM hog like the others. So yes, you can use Godot with your 1 million Chrome tabs and it will be fine.
 
 ### Scenes and Nodes
 
@@ -123,16 +123,56 @@ Electron and Cordova do a job of export HTML5 games to desktop and mobile apps r
 
 Those were the key benefits for me. Let's have a look at some of the pain points, thankfully there are not as extensive!
 
-## Things I Did Not Love
+## Things I Did Not Love As Much
 
 Unfortunately, not everything was sunshine and rainbows. The positives certainly outweighed the negatives, but you might want to keep this in mind when considering Godot. As per usual, your mileage may vary.
 
 ### macOS Catalina - Bloody Hell
 
+My experience with Godot before upgrading to Catalina and after upgrading were remarkably different. I did the tutorials in Mojave and experienced little to no problems. These are some issues that Mac users may encounter when using Godot 3.1 on Catalina.
+
 #### Version Control GUIs
+
+I usually favour making small commit messages with descriptions of what changed and why. This helps to provide context when looking at why your code behaves a certain way and makes reverting less daunting. That doesn't change with Godot.
+
+However, as I make various configuration changes alongside code changes, using the command line to make granular commits became tedious at times. I'm very comfortable with the command line, I figured I would be more efficient with a GUI.
+
+I downloaded [SourceTree](https://www.sourcetreeapp.com/) and [GitHub Desktop](https://desktop.github.com/), hoping to do a quick evaluation of the two so I can get to the main task at hand. Unfortunately, I could not run either of them.
+
+I got the "can’t be opened because Apple cannot check it for malicious software". My settings allow me to run software from anywhere, and I did not see the usual "Open Anyway" button in the security settings. They should sign their apps when making releases so this would never be a problem.
+
+In the end, I used my default code editor, [VSCodium](https://vscodium.com/) - VS Code without Microsoft's telemetry. It worked for the project and the time. I believe new releases of SourceTree and GitHub Desktop are signed, so I'll give them a sometime soon.
 
 #### Freezes When Moving Between Screens
 
+I work with an extra monitor, on a great day two extra monitors. Life is better with more monitors! Godot looks great on each screen when it loads. Usually, I have my code on one screen, and I have the game running on the other. This allows me to see the debug messages I play with a scene.
+
+Life after Catalina brought inconsistency to that flow. There are times I drag the running game to the second screen and it suddenly appears all blacked out. Restarting the player seems to fix it, but I rather not perform this ritual when debugging my game.
+
 #### No Windows Taskbar Icons - Wine Doesn't Work
 
+Windows taskbar icon needs images in the special `.ico` format. That's fine, [imagemagick](https://imagemagick.org/index.php) makes it easy to create those files from a PNG. However, for that .ico to be used when exporting, you will need to point Godot to your installation of [rcedit](https://github.com/electron/rcedit) - a tool that can change resources in an `.exe` file. Godot has a helpful [guide](https://docs.godotengine.org/en/3.1/getting_started/workflow/export/changing_application_icon_for_windows.html#doc-changing-application-icon-for-windows) on this process.
+
+On Mac and Linux, to install and use rcedit we need to have [wine](https://www.winehq.org/) installed. Wine may be fully working in Catalina hopefully by January 2020, you can read this [thread](https://forum.winehq.org/viewtopic.php?f=9&t=32590) for more information.
+
+Till then, to get Windows taskbar icons on Mac you'll need a Linux desktop VM or access to a Windows machine.
+
 ### Exported PCK Files
+
+Admittedly this is not the end of the world. Linux and Window exports in Godot come with a `.pck` file, which contains the resources for the game. It's also meant to facilitate updates to a released game, for example, DLC.
+
+For a small project like this, I felt it should be fine for Godot to embed the PCK in the executable binary. I imagine a user would prefer seeing one `.exe` file instead of two files to run a game. This feature used to be available in Godot 2.0.
+
+It was intentionally removed in version 3.0 onwards for simplicity reasons. However, one GitHub [issue](https://github.com/godotengine/godot/issues/14471) led to a [pull request](https://github.com/godotengine/godot/pull/24086), and it seems that version 3.2 will re-enable this feature.
+
+For now, I export my Windows and Linux builds as a zip file that contains the executable and the PCK.
+
+## Conclusion
+
+I enjoyed building this game with Godot. I was able to get into the paradigm of how things work quickly. I felt as if the engine gives me a lot of ways to make a polished game that can be shared on many platforms.
+
+It's also a nice sign that the pain points are specific to Mac, and will be resolved soon if not resolved already.
+
+Going forward, I would like to finish my course to learn more fundamental Godot concepts. I also want to make games specifically for the iOS and Android, and have them on their stores.
+
+Happy game developing!
