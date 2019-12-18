@@ -1,6 +1,6 @@
 ---
 title: Lessons from Creating My First Godot Game
-date: 2019-12-17 10:45:00
+date: 2019-12-17 22:45:00
 categories:
 - [games]
 - [game development]
