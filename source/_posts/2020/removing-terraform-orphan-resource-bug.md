@@ -1,6 +1,6 @@
 ---
 title: Removing Terraform Orphan Resource Bug
-date: 2020-18-02 20:15:00
+date: 2020-02-18 20:15:00
 categories:
 - [web]
 - [api]
