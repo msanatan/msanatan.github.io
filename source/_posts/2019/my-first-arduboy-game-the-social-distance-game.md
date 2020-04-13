@@ -1,7 +1,6 @@
 ---
 title: My First Arduboy Game - The Social Distance Game
-date: 2020-04-14 08:00:00
-categories:
+date: 2020-04-13 10:30:00
 categories:
 - [games]
 - [game development]
@@ -12,7 +11,9 @@ tags:
 
 It's a pretty strange time all around the world as we manoeuvre through the COVID-19 pandemic. Right before my country's lockdown began, I collected my long-awaited Arduboy.
 
-I guess this game's idea was natural. You play as an adorable sprite called Ghostie (why not?) and try your best to avoid contact with the various pedestrians.
+I guess this game's idea was natural. You play as an adorable sprite called Ghostie (why not?) and try your best to avoid contact with the various pedestrians. Here's a screenshot of my first Arduboy game \- The Social Distance Game:
+
+![Screenshot of Social Distance Game](/images/my-first-arduboy-game-the-social-distance-game/screenshot01.png)
 
 Like life, it's unfair so don't stress about racking up high points. We should try to stay home as well!
 
