@@ -2,12 +2,9 @@
 title: Micro Games With Kontra.js
 date: 2018-08-31 20:40:00
 categories:
-- [games]
 - [game development]
-- [web]
 tags:
 - javascript
-- game development
 - kontra
 - js13k
 ---

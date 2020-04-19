@@ -2,11 +2,10 @@
 title: My First Arduboy Game - The Social Distance Game
 date: 2020-04-13 10:30:00
 categories:
-- [games]
 - [game development]
 tags:
-- arduboy
 - c++
+- arduboy
 ---
 
 It's a pretty strange time all around the world as we manoeuvre through the COVID-19 pandemic. Right before my country's lockdown began, I collected my long-awaited Arduboy.

@@ -2,12 +2,12 @@
 title: Revert MySQL From 8 To 5.7 In Homebrew
 date: 2018-08-15 12:30:00
 categories:
-- [macos]
+- [mac]
+- [database]
 tags:
-- database
-- mysql
-- macos
+- bash
 - homebrew
+- mysql
 ---
 
 So I did a brew upgrade to MySQL that bumped it up to version 8. Holy crap, that messed up almost everything. There are a lot of backward incompatible changes in this new version, so the best solution for me to be productive again was to revert. Uninstall, reinstall version 5.7. That never worked. After some googling I eventually came across the solution this problem:

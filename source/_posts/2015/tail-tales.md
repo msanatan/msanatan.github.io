@@ -4,7 +4,6 @@ date: 2015/12/26 14:12
 categories:
 - [linux]
 tags:
-- linux
 - bash
 ---
 

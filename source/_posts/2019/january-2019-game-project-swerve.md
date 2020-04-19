@@ -2,12 +2,9 @@
 title: 'January 2019 Game Project: Swerve'
 date: 2019-02-03 20:30:00
 categories:
-- [games]
 - [game development]
-- [web]
 tags:
 - javascript
-- game development
 - kontra
 ---
 

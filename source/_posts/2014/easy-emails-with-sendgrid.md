@@ -3,14 +3,10 @@ title: Easy Emails With SendGrid
 date: 2014-11-09 12:32
 categories:
 - [web]
-- [weekend hack]
 tags:
 - coffeescript
-- email
-- email as a service
 - javascript
 - node.js
-- sendgrid
 ---
 
 Was doing a little hacking for a buddy, started off with a mobile app (based on this little PhoneGap [experiment](https://github.com/msanatan/medinform "medinform")) and I ended up coding the server as well. It didn't have to do much so some quick Node.js scripting was good enough for the task. One of the things that needed to be done was to send an email after some data was processed.

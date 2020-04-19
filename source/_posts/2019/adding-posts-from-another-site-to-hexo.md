@@ -4,10 +4,8 @@ date: 2019-02-03 14:14:00
 categories:
 - [web]
 tags:
-- hexo
 - javascript
-- static websites
-- blog
+- hexo
 ---
 
 Hey everyone!

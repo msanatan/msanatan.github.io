@@ -2,12 +2,10 @@
 title: 'Phaser, ES2015 And Breakout'
 date: 2017-11-06 23:52:01
 categories:
-- [games]
 - [game development]
 - [web]
 tags:
 - javascript
-- game development
 - phaser
 ---
 

@@ -2,13 +2,10 @@
 title: Of Context, Animations And Pong
 date: 2015/08/26 19:48
 categories:
-- [game development]
+- [web]
 tags:
-- animation
-- canvas
 - html5
 - javascript
-- scoping
 ---
 
 Hello people of good testing habits, thought I'd share with you some simple errors that could come your way if you're not careful with JavaScript. I'm getting to get to grips with the canvas element, starting with some basic 2D animations. What better way to do this than make a game? Don't answer that question... So I read tutorials and docs galore to develop a pong clone to my liking.

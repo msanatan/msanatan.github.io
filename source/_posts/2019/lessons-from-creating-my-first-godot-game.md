@@ -2,11 +2,9 @@
 title: Lessons from Creating My First Godot Game
 date: 2019-12-17 22:45:00
 categories:
-- [games]
 - [game development]
 tags:
 - godot
-- game development
 ---
 
 Hello aspiring game devs! As you know from my previous post I've been getting into Godot, and I'm pretty excited.

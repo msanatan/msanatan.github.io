@@ -2,12 +2,9 @@
 title: 'October 2019 Game Project: Approximately'
 date: 2019-10-06 14:45:00
 categories:
-- [games]
 - [game development]
-- [web]
 tags:
 - javascript
-- game development
 - phaser
 ---
 

@@ -2,14 +2,10 @@
 title: DynamoDB, Lamdbas, Go And An Empty List
 date: 2018-08-31 17:45:00
 categories:
-- [api]
 - [web]
 tags:
+- golang
 - aws
-- serverless
-- go
-- nosql
-- dynamodb
 ---
 
 Hello AWS Denizens,

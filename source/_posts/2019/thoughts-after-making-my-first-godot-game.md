@@ -2,11 +2,9 @@
 title: Thoughts After Making My First Godot Game
 date: 2019-11-28 07:12:00
 categories:
-- [games]
 - [game development]
 tags:
 - godot
-- game development
 ---
 
 [Godot](https://godotengine.org/) is a 2D and 3D game engine that has been on my radar for quite some time. Reviews for it are mostly positive, the scripting language is similar to Python (yay), and it's open source.

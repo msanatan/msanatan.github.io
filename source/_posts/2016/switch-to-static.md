@@ -6,8 +6,6 @@ categories:
 tags:
 - python
 - pelican
-- static websites
-- blog
 ---
 
 So if you've ever looked at this blog in recent history you might find things have changed just a bit. The change is a lot more than a theme, my blog is now a static website. A static website serves content exactly as it's stored on the server (e.g. this blog post is an HTML file which is available on the server). My blog was first built on WordPress, which is dynamic - content is generated upon request by calling the blog post stored in the database. If you fancy a visual guide to explain explain what it is, I recommend this pretty little thing I found online <http://nilclass.com/courses/what-is-a-static-website/#1>.

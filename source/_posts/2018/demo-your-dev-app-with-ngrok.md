@@ -4,8 +4,7 @@ date: 2018/01/01
 categories:
 - [web]
 tags:
-- ngrok
-- app development
+- bash
 ---
 
 Hey developers,

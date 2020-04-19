@@ -5,8 +5,8 @@ updated: 2019-02-02 01:04:00
 categories:
 - [web]
 tags:
-- web scraping
 - python
+- beautiful soup
 ---
 
 So I recently started to write programming articles for another website. I thought it'd be a good idea to link the articles in my website. I've set it up here: <https://msanatan.com/categories/other/>.

@@ -1,7 +1,7 @@
 ---
 title: Throwing 2015 Into Chaos With Goals
 date: 2015/01/11 15:13
-categories: [i'm real]
+categories: [personal]
 ---
 
 Every year I keep my distance from the resolutions frenzy. I'm not a guyfor structure and rule books (no, I am still a law-abiding citizen). Sotelling myself "I'm changing my life with these 5 steps!" was nevergoing to fly with me. Of course my parents, teachers and friends allencouraged me to have goals and we talked about them year in, year out.It was just that though, something to talk about. Not really goals, morelike objectives that are nifty additions to my "be a better person"mantra.

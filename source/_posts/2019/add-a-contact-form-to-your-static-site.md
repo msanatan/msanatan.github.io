@@ -4,10 +4,8 @@ date: 2019-09-09 07:57:00
 categories:
 - [web]
 tags:
-- hexo
 - javascript
-- static websites
-- blog
+- hexo
 ---
 
 Hey Static Website developers!

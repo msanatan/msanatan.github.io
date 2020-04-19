@@ -2,13 +2,10 @@
 title: My First Startup Weekend TT - Improving Lives
 date: 2015/06/20 22:41
 categories:
-- [caribbean]
-- [startup]
-- [trinidad and tobago]
-- [weekend hack]
+- [community]
 tags:
-- startup
-- startup weekend
+- developers
+- trinidad and tobago
 ---
 
 Just about to take it easy from some long weeks at work, I got a call from my friend Abigail on a fateful Friday afternoon. "Coming [Startup Weekend](http://www.up.co/communities/trinidad-and-tobago/trinidadandtobago/startup-weekend/6183)?". I was really tired but a bit curious from all the others I've missed. "Yeah, pick me up". And that's why I came. No real burning desires to become an entrepreneur, no desires to see if people will like an idea I got lying around in my head. It seemed like a cool thing to do. Truth be told, even after arriving I still didn't decide if I wanted to take part. When people finally started to come (Trinbagonians, no Caribbean people, can't help but ignore a starting time) I quickly realised I had no choice. There was just an energy that pulled me in...

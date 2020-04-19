@@ -2,12 +2,10 @@
 title: Fun With Pygame
 date: 2017/10/05
 categories:
-- [games]
 - [game development]
 - [tutorial]
 tags:
 - python
-- game development
 - pygame
 ---
 

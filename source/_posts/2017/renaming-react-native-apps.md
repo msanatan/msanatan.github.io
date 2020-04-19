@@ -3,12 +3,11 @@ title: Renaming React Native Apps
 date: 2017/05/10
 categories:
 - [mobile]
-- [web]
+- [tutorial]
 tags:
+- javascript
 - react
 - react native
-- javascript
-- app development
 ---
 
 I am recently getting into the React framework (let's be real, it's barely a library) and using React Native. I'm not interested in starting flame wars, before this I thoroughly enjoyed using Angular and Ionic. React does seem to be easier to get up and running, and it seems to suit my thinking a lot better as well.

@@ -5,11 +5,9 @@ updated: 2017-11-02 13:13:00
 categories:
 - [web]
 tags:
-- hexo
-- node.js
 - javascript
-- static websites
-- blog
+- node.js
+- hexo
 ---
 
 So I've just migrated my blog from Pelican to [Hexo](https://hexo.io/) (details about why I switched from WordPress can be found [here](/2016/09/27/switch-to-static/)). Hexo, like Pelican, is a static website generator. It's built on Node.js and what I really love Hexo's built-in support for GitHub Markdown syntax. There is honestly no Markdown like GH's own. Given that I am now fully immersed in JavaScript, VS Code is my main editor which has an awesome GH Markdown preview out of the box, and I've found myself writing loads of GH Markdown content for various purposes... I felt a switch to Hexo would further leverage my strengths by staying roughly in the same context and flow as my other work.

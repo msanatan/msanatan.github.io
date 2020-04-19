@@ -2,12 +2,11 @@
 title: React Classes And Autobinding
 date: 2017-11-03 09:51:49
 categories:
-- [mobile]
 - [web]
+- [tutorial]
 tags:
-- react
-- react native
 - javascript
+- react
 ---
 
 So a lot of people when starting off React have to deal with JavaScript's `this` and binding. It's not a problem, it's just how functions and objects behave. If you're not to familiar with JavaScript you may not be aware of how context works. `this` is determined by the object a function is called in. Let's go it through with the common example that forces React developers to deal with binding: handling events. Want to skip the context (get it?) - go [here](#Class-Properties).

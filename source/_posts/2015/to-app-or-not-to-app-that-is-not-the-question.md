@@ -2,12 +2,9 @@
 title: To App, Or Not To App? That Is Not The Question
 date: 2015/11/07 14:55
 categories:
-- [caribbean]
-- [i'm real]
-- [trinidad and tobago]
+- [community]
 tags:
-- apps
-- caribbean
+- developers
 - trinidad and tobago
 ---
 

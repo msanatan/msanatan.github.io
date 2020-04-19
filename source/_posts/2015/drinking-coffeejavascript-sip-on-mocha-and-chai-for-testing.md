@@ -2,15 +2,12 @@
 title: Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing
 date: 2015/04/08 21:19
 categories:
-- [weekend hack]
+- [web]
 - [tutorial]
 tags:
-- bdd
-- chai
 - coffeescript
 - javascript
-- mocha
-- tdd
+- node.js
 - testing
 ---
 

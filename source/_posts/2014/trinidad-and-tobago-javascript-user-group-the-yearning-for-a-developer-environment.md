@@ -2,13 +2,10 @@
 title: Trinidad And Tobago JavaScript User Group & The Yearning For A Developer Environment
 date: 2014/12/07 15:49
 categories:
-- [caribbean]
-- [tech talk]
+- [community]
 tags:
-- developer community
-- javascript
+- developers
 - trinidad and tobago
-- user group
 ---
 
 Hey everyone, something quite cool happened yesterday. I have been away from Trinidad and Tobago for the last five years O\_o, so while I have to catch up a lot on the tech scene here I have also had the experience of participating in thriving tech communities. I am going to shamelessly promote Edinburgh (where I did undergraduate studies) with this lovely video: <https://www.youtube.com/watch?v=7BQ8wYrotZY>

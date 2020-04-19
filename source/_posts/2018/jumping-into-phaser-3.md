@@ -2,12 +2,9 @@
 title: Jumping Into Phaser 3
 date: 2018-06-17 11:10:00
 categories:
-- [games]
 - [game development]
-- [web]
 tags:
 - javascript
-- game development
 - phaser
 ---
 

@@ -4,7 +4,6 @@ date: 2018-03-01 00:07:58
 categories:
 - [database]
 tags:
-- database
 - mysql
 ---
 

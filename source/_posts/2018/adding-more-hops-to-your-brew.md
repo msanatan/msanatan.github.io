@@ -4,14 +4,13 @@ date: 2018/03/25
 categories:
 - [mac]
 tags:
-- homebrew
-- mac
 - bash
+- homebrew
 ---
 
 Hey everyone! This one is the Mac users out there. While working on some Python projects I encountered an unusual error:
 
-```
+```plaintext
 dyld: Library not loaded: @executable_path/../.Python
   Referenced from: /Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6
   Reason: image not found

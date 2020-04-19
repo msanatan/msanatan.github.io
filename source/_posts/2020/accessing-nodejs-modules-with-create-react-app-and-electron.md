@@ -2,12 +2,11 @@
 title: Accessing Node.js Modules with Create React App and Electron
 date: 2020-04-19 10:45:00
 categories:
-- [app]
+- [desktop]
 tags:
+- javascript
 - react
 - electron
-- javascript
-- app development
 ---
 
 I recently got an <a rel="nofollow noopener" target="_blank" href="https://arduboy.com/">Arduboy</a>, a hackable handheld that I can make games for. There are a lot of awesome games as well, and as an inconsistent but avid gamer, I do want to play the best ones. Unfortunately at the time, the only way for me to do so on a Mac was to clone a game from Github and compile it with the <a rel="nofollow noopener" target="_blank" href="https://www.arduino.cc/en/main/software">Arduino IDE</a>.

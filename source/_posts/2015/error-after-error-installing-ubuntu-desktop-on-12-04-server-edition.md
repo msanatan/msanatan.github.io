@@ -2,11 +2,9 @@
 title: Error After Error Installing Ubuntu Desktop on 12.04 Server Edition
 date: 2015/04/20 18:47
 categories:
-- [linux]
+- [server]
 tags:
 - linux
-- ubuntu
-- virtualisation
 ---
 
 While configuring a VM with Ubuntu Server 12.04, I thought I should put a GUI for other users (and fine, myself too). Yea I know it's not the latest version of Ubuntu but Precise is perfect for what's going to be hosted on it and it's a Long Term Support (LTS) release so I'm good with updates till 2017.

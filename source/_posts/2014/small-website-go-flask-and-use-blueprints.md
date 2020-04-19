@@ -3,13 +3,10 @@ title: Small Website? Go Flask, And Use Blueprints
 date: 2014/10/31 23:40
 categories:
 - [web]
-- [weekend hack]
 - [tutorial]
 tags:
-- bootswatch
-- flask
-- flask blueprints
 - python
+- flask
 ---
 
 It seems I've got into web development more and more. As I'm sticking to a language [I know and love](https://www.python.org/ "Python"), I'm using [Flask](http://flask.pocoo.org/ "Flask") - a super awesome microframework  based on the powerful Werkzeug and Jinja2 libraries. Why not [Django](https://www.djangoproject.com/ "Django")? No particular reason, I've used it before and just prefer how easy it is to get up and running with Flask!

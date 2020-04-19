@@ -3,14 +3,11 @@ title: Kraken.js And PayPal's Open Source Revolution
 date: 2014/11/10 22:32
 categories:
 - [web]
-- [tech talk]
 tags:
 - javascript
 - kraken.js
 - node.js
-- open source software
 - oss
-- paypal
 ---
 
 Talks are always a good way to keep up with a field of study And with technology, there is an abundant of talks you can access all over the interwebz. For the record, O'Reilly has a large pool of webcasts which you can watch for free. Don't hold back on learning something new!

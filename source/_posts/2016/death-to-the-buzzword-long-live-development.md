@@ -2,9 +2,7 @@
 title: Death To The Buzzword, Long Live Development
 date: 2016/03/17 22:09
 categories:
-- [caribbean]
-- [hackathon]
-- [trinidad and tobago]
+- [personal]
 ---
 
 There was a time last year that you saw the word ICT every other week or so in the newspapers. Even before elections where it's expected that whoever is in government inappropriately uses funds for "projects" as a form of pseudo-campaigning and paying off friends *cough* contractors (I'm not talking about the last administration in particular but a trend that'll continue unless we implement legislation to curb pre-election spending), there was something "happening" in the "ICT" space.

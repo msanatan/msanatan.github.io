@@ -2,15 +2,10 @@
 title: YoPro & Caribbean Ideas Hackathon 2015
 date: 2015/05/24 15:48
 categories:
-- [caribbean]
-- [hackathon]
-- [weekend hack]
+- [community]
 tags:
-- caribbean ideas
-- coding
-- hackathon
-- waste management
-- yopro
+- developers
+- trinidad and tobago
 ---
 
 Yesterday I took part in a quick fire hackathon hosted by [YoPro](http://www.eypglobal.com/) and [Caribbean Ideas](http://caribbeanideas.com/). I was one of five developers who sat down for roughly eight hours to tackle our nation's waste problem. A recent documentary by National Geographic stated that Trinidad and Tobago was the top producer of garbage per capita in the world... with a cool 32lbs of rubbish per person, per day. To be fair, that figure seems really high and [has not been accepted by the local solid waste management agency](http://www.newsday.co.tt/news/0,211023.html). Even so, there's a gap in our infrastructure and our culture that prevents us from being a green society - no statistics are needed to prove that. With about two days notice, we were tasked with creating a technological solution that would raise awareness of waste production and disposal, and make it easier to mitigate this national problem.

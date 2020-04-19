@@ -3,9 +3,8 @@ title: Encoding and Returning Large JSON in Golang
 date: 2020-04-19 16:30:00
 categories:
 - [web]
-- [api]
 tags:
-- go
+- golang
 ---
 
 Go is speedy. Compilation takes seconds, and it does a great job of managing things concurrently. In my current job, I write a fair amount of backend services in Go and it's been working great for us.

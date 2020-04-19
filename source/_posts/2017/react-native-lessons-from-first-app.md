@@ -3,12 +3,10 @@ title: 'React Native: Lessons From First App'
 date: 2017/06/18
 categories:
 - [mobile]
-- [web]
 tags:
+- javascript
 - react
 - react native
-- javascript
-- app development
 ---
 
 React is pretty easy to get into and the community tends to encourage intelligent design principles for highly reusable code. Coming from a background in Ionic and Xamarin, I had high standards for what a cross-platform solution needs to provide to get me using it. React Native can more than match up with the other frameworks. I created another [GitHub API interfacing app](https://github.com/msanatan/GitHubProjects) which simply allows you to search for GitHub users, select a repository and view the README for that repo. As I'm still learning RN I've been focusing on developing the right way. While I don't have all the answers to my questions just yet, here are some concerns and issues I had and the decisions I made to address them.
