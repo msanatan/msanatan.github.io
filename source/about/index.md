@@ -6,11 +6,12 @@ updated: 2019-01-14 23:50:00
 
 Hi! I'm Marcus Sanatan, a software developer from Trinidad and Tobago. The things that grab my interest and will most likely blog about are (in no particular order):
 
-* Back-end Development with Go and Python (Flask, Django)
-* Game Development (Godot and Phaser)
+* Back-end Development with Go, Node.js (Express.js) and Python (Flask, Django)
+* Game Development (Phaser and Godot)
 * Front-end Development with React.js. I like TypeScript as well
 * Mobile Development with React Native
 * Caribbean Development
+* Video games
 * Puppies! I actually don't blog about them but who doesn't love them?
 
 I also write for another blog, [Stack Abuse](https://stackabuse.com/author/marcus/). Those articles are pretty much programming tutorials. And I've been editing some other article for the platform as well. Check them out!
