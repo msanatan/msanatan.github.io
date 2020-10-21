@@ -5,6 +5,7 @@ categories:
 - [game development]
 tags:
 - javascript
+- typescript
 - phaser
 ---
 
