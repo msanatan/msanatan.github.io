@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Citizen of the world: You want information to be publicly accessible? Freedom of Information Unit is neither efficient nor transparent? Information publicly available isn&#39;t in a form you can easil">
+<meta property="og:type" content="article">
+<meta property="og:title" content="I&#39;ll Open My Own Data, Thank You Very Much">
+<meta property="og:url" content="https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="Citizen of the world: You want information to be publicly accessible? Freedom of Information Unit is neither efficient nor transparent? Information publicly available isn&#39;t in a form you can easil">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-02-21T13:37:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="open data">
+<meta property="article:tag" content="web scraping">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>I&#39;ll Open My Own Data, Thank You Very Much</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2015/01/11/throwing-2015-into-chaos-with-goals/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&text=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&is_video=false&description=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=I&#39;ll Open My Own Data, Thank You Very Much&body=Check out this article: https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&name=I&#39;ll Open My Own Data, Thank You Very Much&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&t=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#New-Web-Scraper-On-The-Block"><span class="toc-number">1.</span> <span class="toc-text">New Web Scraper On The Block</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Impatience-Is-A-Virtue-Take-The-Reins"><span class="toc-number">2.</span> <span class="toc-text">Impatience Is A Virtue, Take The Reins</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scrape-For-A-More-Open-Nation-A-More-Open-World"><span class="toc-number">3.</span> <span class="toc-text">Scrape For A More Open Nation, A More Open World</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        I&#39;ll Open My Own Data, Thank You Very Much
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2015-02-21T13:37:00.000Z" itemprop="datePublished">2015-02-21</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/personal/">personal</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/open-data/" rel="tag">open data</a>, <a class="tag-link-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-link-link" href="/tags/web-scraping/" rel="tag">web scraping</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Citizen of the world: You want information to be publicly accessible? Freedom of Information Unit is neither efficient nor transparent? Information publicly available isn&#39;t in a form you can easily use? Well my friend, web scraping might just be for you!</p>
+<h2 id="New-Web-Scraper-On-The-Block"><a href="#New-Web-Scraper-On-The-Block" class="headerlink" title="New Web Scraper On The Block"></a>New Web Scraper On The Block</h2><p>So I&#39;m taking data from this page: <a target="_blank" rel="noopener" href="https://www.ttconnect.gov.tt/gortt/portal/ttconnect/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOK9A40MTD0tjQ38Aw0sDYyCPA1dDUy9jd2DDIEKIlEUBLm7ARW4mhp6eIcZGxgYEKffAAdwJKg_ODVPP1w_Cq8yLwMMBZjOBCvA446C3NCICs9MRwCWELx4/dl5/d5/L2dBISEvZ0FBIS9nQSEh/?WCM_GLOBAL_CONTEXT=/gortt/wcm/connect/gortt+web+content/TTConnect/Home/Government+Ministries">https://www.ttconnect.gov.tt/gortt/portal/ttconnect/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOK9A40MTD0tjQ38Aw0sDYyCPA1dDUy9jd2DDIEKIlEUBLm7ARW4mhp6eIcZGxgYEKffAAdwJKg_ODVPP1w_Cq8yLwMMBZjOBCvA446C3NCICs9MRwCWELx4/dl5/d5/L2dBISEvZ0FBIS9nQSEh/?WCM_GLOBAL_CONTEXT=/gortt/wcm/connect/gortt+web+content/TTConnect/Home/Government+Ministries</a>. It provides links to contact information of each Government Ministry. Pretty straightforward and could be useful to complement some other data. Having wrote web scrapers before, I stuck to what I know best: Python 2.7 with lxml and requests. Many alternatives exist - considering Python alone you can use Beautiful Soup, Scrapy, webscraping and other libraries. Other languages got myriads of choices as well, you&#39;re not short of options.</p>
+<p>It can be pretty simple too! Just look at the following code snippet:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">scrape_ministry</span>(<span class="params">url</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;Given a url, scrape the website and return a Ministry object&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        page = requests.get(url, headers=HEADERS)</span><br><span class="line">    <span class="keyword">except</span> requests.exceptions.RequestException:</span><br><span class="line">        <span class="built_in">print</span> <span class="string">&#x27;Could not reach the website&#x27;</span></span><br><span class="line">        <span class="keyword">raise</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        tree = html.fromstring(page.text)</span><br><span class="line">        content = tree.xpath(<span class="string">&#x27;//div[@class=&quot;portletMainContent&quot;]&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">        name = content.xpath(<span class="string">&#x27;./h3/text()&#x27;</span>)[<span class="number">0</span>].strip()</span><br><span class="line">        remaining_text = [x.strip().replace(<span class="string">&#x27;\r\n&#x27;</span>, <span class="string">&#x27; &#x27;</span>) <span class="keyword">for</span> x <span class="keyword">in</span> content.xpath(<span class="string">&#x27;.//p/text()&#x27;</span>)]</span><br><span class="line">        address = remaining_text[<span class="number">0</span>].split(<span class="string">&#x27;Address:&#x27;</span>)[<span class="number">1</span>].strip()</span><br><span class="line">        telephone = parse_tel_nums(remaining_text[<span class="number">1</span>], <span class="string">&#x27;Telephone:&#x27;</span>)</span><br><span class="line">        fax = parse_tel_nums(remaining_text[<span class="number">2</span>], <span class="string">&#x27;Fax:&#x27;</span>)</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            website = content.xpath(<span class="string">&#x27;p/a/text()&#x27;</span>)[<span class="number">0</span>].strip()</span><br><span class="line">        <span class="keyword">except</span> IndexError:</span><br><span class="line">            website = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> Ministry(name, address, telephone, fax, website)</span><br></pre></td></tr></table></figure>
+
+<p>That&#39;s where the main scraping occurs. After the requests library is used to retrieve the HTML of the webpage, I use lxml to manoeuvre through the HTML and take the information I want. XPath isn&#39;t hard to learn, most of it should make sense once you know basic HTML. In all fairness the data I scraped was relatively well structured and easy - I&#39;ve seen some ugly ones where these few lines won&#39;t do. Check out the entire scraper in this [gist](<a target="_blank" rel="noopener" href="https://gist.github.com/msanatan/f42ab4e1a3f63ae65138">https://gist.github.com/msanatan/f42ab4e1a3f63ae65138</a> &quot;Government Ministry web scraper&quot;. Don&#39;t be alarmed by the class and all the functions, I like encapsulation and I deliberately designed that code snippet with project scalability in mind!</p>
+<h2 id="Impatience-Is-A-Virtue-Take-The-Reins"><a href="#Impatience-Is-A-Virtue-Take-The-Reins" class="headerlink" title="Impatience Is A Virtue, Take The Reins"></a>Impatience Is A Virtue, Take The Reins</h2><p>Now we&#39;ve gone through the what, let&#39;s discuss the why (hmm... shouldn&#39;t this be the other way around?). Trinidad and Tobago has a civilian led Open Data portal - <a target="_blank" rel="noopener" href="https://data.tt/">https://data.tt/</a>. It&#39;s growing quite well and I urge you all to show support by using the data, and offering to lend a hand if you can :). There is room for a lot more data though, and sometimes the available data is only stored in a proprietary format. <strong>Open Data shouldn&#39;t be best accessible by proprietary software!</strong> So no to .xls and (a softer) no to .xlsx - an open standard led by a commercial entity may not be entirely interest free...</p>
+<p>And so I came up with my solution - do some web scraping and save it in vendor neutral formats like CSV and JSON (RDF for later). The goal is create 3 star and 5 star Open Data for anyone to use. 3/5 star? What am I talking about? I&#39;m talking about Sir Tim Berners-Lee&#39;s <a target="_blank" rel="noopener" href="http://www.w3.org/DesignIssues/LinkedData.html">star scheme for Open Data</a> of course! Get familiar with it, and put the data you have available in perspective.</p>
+<h2 id="Scrape-For-A-More-Open-Nation-A-More-Open-World"><a href="#Scrape-For-A-More-Open-Nation-A-More-Open-World" class="headerlink" title="Scrape For A More Open Nation, A More Open World"></a>Scrape For A More Open Nation, A More Open World</h2><p>Hopefully you&#39;ll understand why I spent some time writing this scraper, it&#39;s not just for hacking&#39;s sake. It&#39;s the start of a collection of government data that can be shared with anyone, anywhere. And I want you to do the same! Let&#39;s make APIs for what we want to know. If the door to Open Data is closed, make your own key :)</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#New-Web-Scraper-On-The-Block"><span class="toc-number">1.</span> <span class="toc-text">New Web Scraper On The Block</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Impatience-Is-A-Virtue-Take-The-Reins"><span class="toc-number">2.</span> <span class="toc-text">Impatience Is A Virtue, Take The Reins</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scrape-For-A-More-Open-Nation-A-More-Open-World"><span class="toc-number">3.</span> <span class="toc-text">Scrape For A More Open Nation, A More Open World</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&text=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&is_video=false&description=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=I&#39;ll Open My Own Data, Thank You Very Much&body=Check out this article: https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&title=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&name=I&#39;ll Open My Own Data, Thank You Very Much&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2015/02/21/ill-open-my-own-data-thank-you-very-much/&t=I&#39;ll Open My Own Data, Thank You Very Much"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

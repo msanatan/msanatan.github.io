@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Hello people of good testing habits, thought I&#39;d share with you some simple errors that could come your way if you&#39;re not careful with JavaScript. I&#39;m getting to get to grips with the canv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Of Context, Animations And Pong">
+<meta property="og:url" content="https://msanatan.com/2015/08/26/of-context-animations-and-pong/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="Hello people of good testing habits, thought I&#39;d share with you some simple errors that could come your way if you&#39;re not careful with JavaScript. I&#39;m getting to get to grips with the canv">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-08-26T23:48:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="html5">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Of Context, Animations And Pong</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2015/11/07/to-app-or-not-to-app-that-is-not-the-question/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2015/06/20/my-first-startup-weekend-tt-improving-lives/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2015/08/26/of-context-animations-and-pong/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&text=Of Context, Animations And Pong"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&is_video=false&description=Of Context, Animations And Pong"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Of Context, Animations And Pong&body=Check out this article: https://msanatan.com/2015/08/26/of-context-animations-and-pong/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&name=Of Context, Animations And Pong&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&t=Of Context, Animations And Pong"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Of Context, Animations And Pong
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2015-08-26T23:48:00.000Z" itemprop="datePublished">2015-08-26</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/web/">web</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/html5/" rel="tag">html5</a>, <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Hello people of good testing habits, thought I&#39;d share with you some simple errors that could come your way if you&#39;re not careful with JavaScript. I&#39;m getting to get to grips with the canvas element, starting with some basic 2D animations. What better way to do this than make a game? Don&#39;t answer that question... So I read tutorials and docs galore to develop a pong clone to my liking.</p>
+<p>My HTML5 pong clone took about 200 lines of code, not too many bells and whistles but it worked :). And that lovely script had a function I happily stole from <a target="_blank" rel="noopener" href="https://robots.thoughtbot.com/pong-clone-in-javascript">thoughtbot&#39;s pong tutorial</a> (you should read their blog, really good stuff!):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">animate = <span class="built_in">window</span>.requestAnimationFrame ||</span><br><span class="line">  <span class="built_in">window</span>.webkitRequestAnimationFrame ||</span><br><span class="line">  <span class="built_in">window</span>.mozRequestAnimationFrame ||</span><br><span class="line">  <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.setTimeout(callback, <span class="number">1000</span> / <span class="built_in">this</span>.FPS);</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Most modern browsers support the requestAnimationFrame function but it never hurts to cover your bases. Wanting to be able to have menus, settings and other stuff you find in games, I decided to encapsulate and expand my little pong clone. Part of that had me moving the animation function scope to the game engine&#39;s object scope. It seems simple enough, just put it in like this:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GameEngine.prototype.animate = <span class="built_in">window</span>.requestAnimationFrame ||</span><br><span class="line">  <span class="built_in">window</span>.webkitRequestAnimationFrame ||</span><br><span class="line">  <span class="built_in">window</span>.mozRequestAnimationFrame ||</span><br><span class="line">  <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.setTimeout(callback, <span class="number">1000</span> / <span class="built_in">this</span>.FPS);</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Done! Well, if you want to get this error (in Google Chrome): <strong>Uncaught TypeError: Illegal invocation</strong>. We can&#39;t just take native methods (console.log and the like) and assign them to an object&#39;s property. This is because of the function&#39;s context - the object within which the function is executed. The requestAnimationFrame needs to be executed in the context of the window object, the above code will execute the function in the context of the GameEngine&#39;s object. Luckily the solution is to simply bind the functions to the window object:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GameEngine.prototype.animate = (<span class="built_in">window</span>.requestAnimationFrame ||</span><br><span class="line">  <span class="built_in">window</span>.webkitRequestAnimationFrame ||</span><br><span class="line">  <span class="built_in">window</span>.mozRequestAnimationFrame ||</span><br><span class="line">  <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.setTimeout(callback, <span class="number">1000</span> / <span class="built_in">this</span>.FPS);</span><br><span class="line">  &#125;).bind(<span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
+
+<p>That way the window context will be used when calling any of them. In my code I use <code>bind(this)</code>, which also works. Why? By default the bind function will set &#39;this&#39; to the window object for those native functions.</p>
+<p>Fun fact - there is a global variable named FPS that&#39;s passed to the GameEngine object, hence why this code will work if the last function is called even though the scope of &#39;this&#39; will be the window (I know that&#39;s cheating!). Alternatively, we could keep the definition of GameEngine&#39;s animate without using bind, and use JavaScript&#39;s call function when we execute it. So instead of using the animate function like <code>engine.animate(step)</code> we leave out bind and write <code>engine.animate.call(window, step)</code>. Can&#39;t say you don&#39;t got options!</p>
+<p>For what it&#39;s worth, it got me a working pong game. You can play it <a target="_blank" rel="noopener" href="https://msanatan.github.io/pong/">here</a> (with the code <a target="_blank" rel="noopener" href="https://github.com/msanatan/pong">here</a>).</p>
+<p>Happy ponging!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2015/08/26/of-context-animations-and-pong/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&text=Of Context, Animations And Pong"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&is_video=false&description=Of Context, Animations And Pong"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Of Context, Animations And Pong&body=Check out this article: https://msanatan.com/2015/08/26/of-context-animations-and-pong/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&title=Of Context, Animations And Pong"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&name=Of Context, Animations And Pong&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2015/08/26/of-context-animations-and-pong/&t=Of Context, Animations And Pong"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

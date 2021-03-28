@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="I recently got an Arduboy, a hackable handheld that I can make games for. There are a lot of awesome games as well, and as an inconsistent but avid gamer, I do want to play the best ones. Unfortunatel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Accessing Node.js Modules with Create React App and Electron">
+<meta property="og:url" content="https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="I recently got an Arduboy, a hackable handheld that I can make games for. There are a lot of awesome games as well, and as an inconsistent but avid gamer, I do want to play the best ones. Unfortunatel">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://msanatan.com/images/accessing-nodejs-modules-with-create-react-app-and-electron/screenshot01.png">
+<meta property="og:image" content="https://msanatan.com/images/accessing-nodejs-modules-with-create-react-app-and-electron/screenshot02.png">
+<meta property="article:published_time" content="2020-04-19T14:45:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="react">
+<meta property="article:tag" content="electron">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://msanatan.com/images/accessing-nodejs-modules-with-create-react-app-and-electron/screenshot01.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Accessing Node.js Modules with Create React App and Electron</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2020/04/19/encoding-and-returning-large-json-in-golang/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2020/04/13/my-first-arduboy-game-the-social-distance-game/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&text=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&is_video=false&description=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Accessing Node.js Modules with Create React App and Electron&body=Check out this article: https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&name=Accessing Node.js Modules with Create React App and Electron&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&t=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Installing"><span class="toc-number">1.</span> <span class="toc-text">Installing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Developing-in-Electron"><span class="toc-number">2.</span> <span class="toc-text">Developing in Electron</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Accessing-Node-js-Modules"><span class="toc-number">3.</span> <span class="toc-text">Accessing Node.js Modules</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Moving-Forward"><span class="toc-number">4.</span> <span class="toc-text">Moving Forward</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Accessing Node.js Modules with Create React App and Electron
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-04-19T14:45:00.000Z" itemprop="datePublished">2020-04-19</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/desktop/">desktop</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/electron/" rel="tag">electron</a>, <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link-link" href="/tags/react/" rel="tag">react</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>I recently got an <a rel="nofollow noopener" target="_blank" href="https://arduboy.com/">Arduboy</a>, a hackable handheld that I can make games for. There are a lot of awesome games as well, and as an inconsistent but avid gamer, I do want to play the best ones. Unfortunately at the time, the only way for me to do so on a Mac was to clone a game from Github and compile it with the <a rel="nofollow noopener" target="_blank" href="https://www.arduino.cc/en/main/software">Arduino IDE</a>.</p>
+<p>I asked the Arduboy community, and it seems that some software is coming for Mac but I don&#39;t know when. I found some libraries that I could use to upload games to the Arduboy, the easiest one was <a rel="nofollow noopener" target="_blank" href="https://github.com/noopkat/avrgirl-arduino">avrgirl-arduino</a>. Writing a script to do it via the CLI was easy thanks to this awesome library. I figured I&#39;d make an app for it as well.</p>
+<p>The app was made with React using the <code>create-react-app</code> tool, and bundled with Electron. The tricky part was setting it up so that I could develop the app in Electron rather than in the browser. The next hurdle was getting the app to access Node.js modules like <code>fs</code> and <code>avrgirl-arduino</code>. If you&#39;re a similar situation, this bit of info might help.</p>
+<p>We&#39;ll spin up the basic React app and hook it up to Electron. We&#39;ll then configure it to access Node.js modules. Note that I&#39;ve only tested this on my Mac (running Catalina) so your mileage may vary on other OSes and version. Let&#39;s begin with setting up the app!</p>
+<h2 id="Installing"><a href="#Installing" class="headerlink" title="Installing"></a>Installing</h2><p>The first step is to create the app. As recommended, we use <code>npx</code> to run <code>create-react-app</code> instead of installing it globally:</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app super-app</span><br></pre></td></tr></table></figure>
+
+<p>If you&#39;re like me and make Github repositories first, just run:</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app .</span><br></pre></td></tr></table></figure>
+
+<p>Drink some tea or coffee while that&#39;s happening. Even with decent internet and a good machine, this sure takes a while...</p>
+<p>When I first did that, the scrips were completed but none of the React code was added. It seems that I had an older version of <code>create-react-app</code> installed locally. Even when I uninstalled it with <code>npm</code>, it still existed in my <code>/usr/local/bin</code>. So if the code doesn&#39;t load for you, be sure to remove any global installs of <code>create-react-app</code>.</p>
+<p>Now in your app directory, let&#39;s install a few more packages:</p>
+<p><a rel="nofollow noopener" target="_blank" href="https://www.electronjs.org/">Electron</a> which is used to build the app</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev electron</span><br></pre></td></tr></table></figure>
+
+<p><a rel="nofollow noopener" target="_blank" href="https://github.com/kimmobrunfeldt/concurrently">Concurrently</a> and <a rel="nofollow noopener" target="_blank" href="https://github.com/jeffbski/wait-on">Wait-on</a> which are helper utilities we use in our scripts to develop Electron apps with a debugger.</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev concurrently wait-on</span><br></pre></td></tr></table></figure>
+
+<p><a rel="nofollow noopener" target="_blank" href="https://github.com/harrysolovay/rescripts">Rescripts</a> which is used to modify <code>create-react-app</code>&#39;s webpack configuration, without ejecting the app. We need this to access Node.js libraries.</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev @rescripts/cli @rescripts/rescript-env</span><br></pre></td></tr></table></figure>
+
+<p>Now that everything is installed, let&#39;s set up our app to use Electron for development.</p>
+<h2 id="Developing-in-Electron"><a href="#Developing-in-Electron" class="headerlink" title="Developing in Electron"></a>Developing in Electron</h2><p>By default, you develop React apps in the browser. Since we&#39;re using Electron to make it a desktop app, it&#39;s best we develop in Electron than in the browser. As Electron is built upon the Chromium engine, we want to develop with their developer tools as well.</p>
+<p>Let&#39;s start by adding an <code>electron.js</code> file in our <code>public</code> folder. This will become the main point of entry for our app.</p>
+<p>Create a new file with this content as <code>public/electron.js</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; app, BrowserWindow &#125; = <span class="built_in">require</span>(<span class="string">&#x27;electron&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if we&#x27;re running Electron while developing</span></span><br><span class="line"><span class="comment">// It&#x27;s never a good idea to run developer tools in public</span></span><br><span class="line"><span class="keyword">const</span> isDev = process.mainModule.filename.indexOf(<span class="string">&#x27;app.asar&#x27;</span>) === -<span class="number">1</span> ||</span><br><span class="line">    process.mainModule.filename.indexOf(<span class="string">&#x27;app&#x27;</span>) === -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createWindow</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> appWindow = <span class="keyword">new</span> BrowserWindow(&#123;</span><br><span class="line">        width: <span class="number">1024</span>,</span><br><span class="line">        height: <span class="number">768</span>,</span><br><span class="line">        webPreferences: &#123;</span><br><span class="line">            nodeIntegration: <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// If we are in dev mode, load the React app where it&#x27;s run by default</span></span><br><span class="line">    <span class="comment">// Otherwise load the compiled app from the build folder</span></span><br><span class="line">    appWindow.loadURL(isDev ? <span class="string">&#x27;http://localhost:3000&#x27;</span> : <span class="string">&#x27;../build/index.html&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (isDev) &#123;</span><br><span class="line">        <span class="comment">// Open dev tools alongside our running app</span></span><br><span class="line">        appWindow.webContents.openDevTools();</span><br><span class="line">    &#125;</span><br><span class="line">    appWindow.on(<span class="string">&#x27;closed&#x27;</span>, <span class="function">() =&gt;</span> appWindow = <span class="literal">null</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">&#x27;ready&#x27;</span>, createWindow);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Quit when all windows are closed.</span></span><br><span class="line">app.on(<span class="string">&#x27;window-all-closed&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// This is taken from their tutorial: https://www.electronjs.org/docs/tutorial/first-app</span></span><br><span class="line">    <span class="comment">// On macOS it is common for applications and their menu bar</span></span><br><span class="line">    <span class="comment">// to stay active until the user quits explicitly with Cmd + Q</span></span><br><span class="line">    <span class="keyword">if</span> (process.platform !== <span class="string">&#x27;darwin&#x27;</span>) &#123;</span><br><span class="line">        app.quit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">&#x27;activate&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// This is taken from their tutorial: https://www.electronjs.org/docs/tutorial/first-app</span></span><br><span class="line">    <span class="comment">// On macOS it&#x27;s common to re-create a window in the app when the</span></span><br><span class="line">    <span class="comment">// dock icon is clicked and there are no other windows open.</span></span><br><span class="line">    <span class="keyword">if</span> (BrowserWindow.getAllWindows().length === <span class="number">0</span>) &#123;</span><br><span class="line">        createWindow();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>For those curious, I created the <code>isDev</code> function based on <a rel="nofollow noopener" target="_blank" href="https://github.com/electron/electron/issues/7714#issuecomment-310885608">this response</a> to a Github issue.</p>
+<p>So far so good! Let&#39;s continue by making two edits to your <code>package.json</code>. The first is to make the <code>electron.js</code> file we just created the starting point of our app. In <code>package.json</code>, add a <code>main</code> property like this:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;main&quot;: &quot;public/electron.js&quot;,</span><br></pre></td></tr></table></figure>
+
+<p>We also want to add a script that runs our app in Electron while developing. Add a new script called <code>app-dev</code> like this:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;app-dev&quot;: &quot;concurrently \&quot;BROWSER=none npm run start\&quot; \&quot;wait-on http://localhost:3000 &amp;&amp; electron .\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Your <code>package.json</code> should look like this:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;react-electron-app&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.1.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;private&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;public/electron.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;@testing-library/jest-dom&quot;</span>: <span class="string">&quot;^4.2.4&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@testing-library/react&quot;</span>: <span class="string">&quot;^9.5.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@testing-library/user-event&quot;</span>: <span class="string">&quot;^7.2.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;react&quot;</span>: <span class="string">&quot;^16.13.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;react-dom&quot;</span>: <span class="string">&quot;^16.13.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;react-scripts&quot;</span>: <span class="string">&quot;3.4.1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;start&quot;</span>: <span class="string">&quot;react-scripts start&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;build&quot;</span>: <span class="string">&quot;react-scripts build&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test&quot;</span>: <span class="string">&quot;react-scripts test&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;eject&quot;</span>: <span class="string">&quot;react-scripts eject&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;app-dev&quot;</span>: <span class="string">&quot;concurrently \&quot;BROWSER=none npm run start\&quot; \&quot;wait-on http://localhost:3000 &amp;&amp; electron .\&quot;&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;eslintConfig&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;extends&quot;</span>: <span class="string">&quot;react-app&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;browserslist&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;production&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;&gt;0.2%&quot;</span>,</span><br><span class="line">      <span class="string">&quot;not dead&quot;</span>,</span><br><span class="line">      <span class="string">&quot;not op_mini all&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;development&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;last 1 chrome version&quot;</span>,</span><br><span class="line">      <span class="string">&quot;last 1 firefox version&quot;</span>,</span><br><span class="line">      <span class="string">&quot;last 1 safari version&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;@rescripts/cli&quot;</span>: <span class="string">&quot;0.0.14&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@rescripts/rescript-env&quot;</span>: <span class="string">&quot;0.0.12&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;concurrently&quot;</span>: <span class="string">&quot;^5.1.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;electron&quot;</span>: <span class="string">&quot;^8.2.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;wait-on&quot;</span>: <span class="string">&quot;^4.0.2&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>We have everything set up to run it locally. We should use our script to launch the app in React, and then bring up an Electron window with the Chromium debugger. Let&#39;s run our NPM script:</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run app-dev</span><br></pre></td></tr></table></figure>
+
+<p>This is what we see:</p>
+<p><img src="/images/accessing-nodejs-modules-with-create-react-app-and-electron/screenshot01.png" alt="Screenshot of running Electron app with debugger"></p>
+<p>Success! It has the same live reloading you have when developing in the browser. As you make changes to your code, your app is updated. When I develop, I usually have my debugger in a separate window so that my app has all of its real estate.</p>
+<p>Now that we got most things set up for development, let&#39;s see how we can use Node.js module in our React apps in Electron.</p>
+<h2 id="Accessing-Node-js-Modules"><a href="#Accessing-Node-js-Modules" class="headerlink" title="Accessing Node.js Modules"></a>Accessing Node.js Modules</h2><p>If you were like me and needed access to a Node.js module, you&#39;re out of luck. React is configured to run in the browser. This is set up by a webpack configuration that&#39;s managed by <code>create-react-app</code>. If we want to edit it, we can always eject the app and manage the configuration and build system ourselves.</p>
+<p>When you eject your app, you get access to all the internals that build the app. However, managing all those libraries and configurations can be tedious. I rather keep <code>create-react-app</code>&#39;s defaults so I can focus on my business logic over other technical issues. That&#39;s why we installed <code>rescripts</code> earlier.</p>
+<p>We are going to use <code>rescripts</code> to change our webpack configuration so that React knows it&#39;s running in Electron and not in the browser. By using <code>rescripts</code>, we don&#39;t have to eject our application!</p>
+<p>In the project folder&#39;s root directory, create a new file <code>.rescriptsrc.js</code> and add the following code:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    config.target = <span class="string">&#x27;electron-renderer&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> config;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This script modifies the webpack config used by React and changes its target to <code>electron-renderer</code> which would give us access to Node.js modules.</p>
+<p>Now in your <code>package.json</code>, we need to change the <code>scripts</code> property such that every place we use <code>react-scripts</code> will now have <code>rescripts</code>. Therefore, these lines:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;start&quot;: &quot;react-scripts start&quot;,</span><br><span class="line">  &quot;build&quot;: &quot;react-scripts build&quot;,</span><br><span class="line">  &quot;test&quot;: &quot;react-scripts test&quot;,</span><br><span class="line">  &quot;eject&quot;: &quot;react-scripts eject&quot;,</span><br><span class="line">  &quot;app-dev&quot;: &quot;concurrently \&quot;BROWSER=none npm run start\&quot; \&quot;wait-on http://localhost:3000 &amp;&amp; electron .\&quot;&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Should be changed to this:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;start&quot;: &quot;rescripts start&quot;,</span><br><span class="line">  &quot;build&quot;: &quot;rescripts build&quot;,</span><br><span class="line">  &quot;test&quot;: &quot;rescripts test&quot;,</span><br><span class="line">  &quot;eject&quot;: &quot;rescripts eject&quot;,</span><br><span class="line">  &quot;app-dev&quot;: &quot;concurrently \&quot;BROWSER=none npm run start\&quot; \&quot;wait-on http://localhost:3000 &amp;&amp; electron .\&quot;&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Before we write code to test that it works, be sure that Electron is configured correctly as well. In the <code>createWindow()</code> function of <code>public/electron.js</code>, when you create a new <code>BrowserWindow</code> object you must have the following properties set:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">webPreferences: &#123;</span><br><span class="line">    nodeIntegration: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>That property inserts the <code>require</code> function into the DOM. By default, it&#39;s set to <code>false</code>. Our earlier example code already sets it to true but just be sure you do the same in future projects!</p>
+<p>Let&#39;s try to use a Node.js module in our React code to see if it works. If you still have the app running from earlier, exit so that we can start the app using <code>rescripts</code>. We&#39;ll use the <code>fs</code> module to list all the files and folders in the current directory.</p>
+<p>In <code>src/App.js</code> add the following code before the function that creates the main <code>App</code> component:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">window</span>.require(<span class="string">&#x27;fs&#x27;</span>).promises;</span><br><span class="line">fs.readdir(<span class="string">&#x27;./&#x27;</span>).</span><br><span class="line">  then(<span class="function">(<span class="params">files</span>) =&gt;</span> &#123;</span><br><span class="line">    files.forEach(<span class="function"><span class="params">file</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(file);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;).</span><br><span class="line">  <span class="keyword">catch</span>(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.error(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>In our app, our debugger should now look like this:</p>
+<p><img src="/images/accessing-nodejs-modules-with-create-react-app-and-electron/screenshot02.png" alt="Screenshot of running Electron app using the fs Node.js module to list files and folders in the current directory"></p>
+<p>Sweet! The debugger shows the logs of the files and folders in the current directory, proving we got Node.js integration working as we need it to.</p>
+<h2 id="Moving-Forward"><a href="#Moving-Forward" class="headerlink" title="Moving Forward"></a>Moving Forward</h2><p>This got me into a pretty happy place. It&#39;s helping me build my Arduboy game uploader and I&#39;ll probably continue to use this setup for future Desktop apps I&#39;m building with React. You can see the code for this tutorial here: <a rel="nofollow noopener" target="_blank" href="https://github.com/msanatan/react-electron-app">https://github.com/msanatan/react-electron-app</a>.</p>
+<p>Happy app developing!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Installing"><span class="toc-number">1.</span> <span class="toc-text">Installing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Developing-in-Electron"><span class="toc-number">2.</span> <span class="toc-text">Developing in Electron</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Accessing-Node-js-Modules"><span class="toc-number">3.</span> <span class="toc-text">Accessing Node.js Modules</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Moving-Forward"><span class="toc-number">4.</span> <span class="toc-text">Moving Forward</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&text=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&is_video=false&description=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Accessing Node.js Modules with Create React App and Electron&body=Check out this article: https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&title=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&name=Accessing Node.js Modules with Create React App and Electron&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/&t=Accessing Node.js Modules with Create React App and Electron"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

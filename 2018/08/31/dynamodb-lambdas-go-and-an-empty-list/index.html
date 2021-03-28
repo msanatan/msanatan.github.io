@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Hello AWS Denizens, Serverless architecture has come into the forefront as my workplace leverages lambdas to great effect. Some of the projects we work at involve a variety of AWS services like AppSyn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DynamoDB, Lamdbas, Go And An Empty List">
+<meta property="og:url" content="https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="Hello AWS Denizens, Serverless architecture has come into the forefront as my workplace leverages lambdas to great effect. Some of the projects we work at involve a variety of AWS services like AppSyn">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-08-31T21:45:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="golang">
+<meta property="article:tag" content="aws">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>DynamoDB, Lamdbas, Go And An Empty List</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2018/08/31/micro-games-with-kontrajs/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2018/08/15/revert-mysql-from-8-to-5-in-homebrew/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&text=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&is_video=false&description=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=DynamoDB, Lamdbas, Go And An Empty List&body=Check out this article: https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&name=DynamoDB, Lamdbas, Go And An Empty List&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&t=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problema-Numero-Uno"><span class="toc-number">1.</span> <span class="toc-text">Problema Numero Uno</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problema-Numero-Dos"><span class="toc-number">2.</span> <span class="toc-text">Problema Numero Dos</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        DynamoDB, Lamdbas, Go And An Empty List
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2018-08-31T21:45:00.000Z" itemprop="datePublished">2018-08-31</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/web/">web</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/aws/" rel="tag">aws</a>, <a class="tag-link-link" href="/tags/golang/" rel="tag">golang</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Hello AWS Denizens,</p>
+<p>Serverless architecture has come into the forefront as my workplace leverages lambdas to great effect. Some of the projects we work at involve a variety of AWS services like AppSync (GraphQL), DynamoDB and Cloudwatch to name a few. While doing some API development, I ran into an issue setting up a lambda to resolve a GraphQL query.</p>
+<p>Here&#39;s the scenario:</p>
+<ul>
+<li>We got a GraphQL schema that defines an Item</li>
+<li>Item is stored in DynamoDB</li>
+<li>Item has many properties, including a property <code>subItems</code> of list type of SubItems</li>
+<li>We need to write a mutation for the <code>items</code> that adds a new element to <code>subItems</code><ul>
+<li>We&#39;ll override the current list with the one we provide</li>
+</ul>
+</li>
+<li>This logic will be used in a lambda written in Go for some preprocessing of data</li>
+</ul>
+<p>I found this following helpful guide online that showed how to update a list contained in a type like Item using the <code>SET</code> operator: <a target="_blank" rel="noopener" href="https://medium.com/@joshua.a.kahn/building-a-dynamodb-list-resolver-for-aws-appsync-eb42d30a8791">https://medium.com/@joshua.a.kahn/building-a-dynamodb-list-resolver-for-aws-appsync-eb42d30a8791</a>. Naturally, I thought it should be a simple matter of recreating the Velocity logic in Go and I&#39;d be OK.</p>
+<h2 id="Problema-Numero-Uno"><a href="#Problema-Numero-Uno" class="headerlink" title="Problema Numero Uno"></a>Problema Numero Uno</h2><p>The first error told me I&#39;m not able to add to a list that doesn&#39;t exist. NoSQL is flexible but not magical. Velocity has lots of features to cater for this. My first update expression was this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;SET subItems &#x3D; list_append(subItems, :subItem)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>And was now this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;SET subItems &#x3D; list_append(if_not_exists(subItems, :emptyList), :subItem)&quot;&#96;</span><br></pre></td></tr></table></figure>
+
+<p>Our attribute values are <code>:subItem</code>, a list with the new element, and <code>:emptyList</code>, which is pretty self explanatory.</p>
+<h2 id="Problema-Numero-Dos"><a href="#Problema-Numero-Dos" class="headerlink" title="Problema Numero Dos"></a>Problema Numero Dos</h2><p>If you&#39;re using the AWS Go SDK, you&#39;ll probably think to create an attribute value that&#39;s an empty Go slice. Trust me, wont&#39; work. By default, the SDK sets empty lists to NULL (see here <a target="_blank" rel="noopener" href="https://github.com/aws/aws-sdk-go/issues/682">https://github.com/aws/aws-sdk-go/issues/682</a>). After playing around for a bit I was able to get an empty slice accepted:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">itemsArray := <span class="built_in">make</span>([]SubItems, <span class="number">1</span>)</span><br><span class="line">itemsArray[<span class="number">0</span>] = subItemVariable</span><br><span class="line"></span><br><span class="line">emptyList := <span class="built_in">make</span>([]*dynamodb.AttributeValue, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">av, err := dynamodbattribute.MarshalMap(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>&#123;&#125;&#123;</span><br><span class="line">  <span class="string">&quot;:subItems&quot;</span>: itemsArray,</span><br><span class="line">&#125;)</span><br><span class="line">av[<span class="string">&quot;:emptyList&quot;</span>] = &amp;dynamodb.AttributeValue&#123;L: emptyList&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Seems that adding the empty slice after the initial data was marshalled works just fine, once we use the same structs the MarshalMap function uses.</p>
+<p>Happy hacking!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problema-Numero-Uno"><span class="toc-number">1.</span> <span class="toc-text">Problema Numero Uno</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problema-Numero-Dos"><span class="toc-number">2.</span> <span class="toc-text">Problema Numero Dos</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&text=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&is_video=false&description=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=DynamoDB, Lamdbas, Go And An Empty List&body=Check out this article: https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&title=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&name=DynamoDB, Lamdbas, Go And An Empty List&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2018/08/31/dynamodb-lambdas-go-and-an-empty-list/&t=DynamoDB, Lamdbas, Go And An Empty List"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

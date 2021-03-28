@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="So I&#39;ve just migrated my blog from Pelican to Hexo (details about why I switched from WordPress can be found here). Hexo, like Pelican, is a static website generator. It&#39;s built on Node.js and">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Things To Do After Setting Up Hexo">
+<meta property="og:url" content="https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="So I&#39;ve just migrated my blog from Pelican to Hexo (details about why I switched from WordPress can be found here). Hexo, like Pelican, is a static website generator. It&#39;s built on Node.js and">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-11-01T03:38:00.000Z">
+<meta property="article:modified_time" content="2017-11-02T17:13:00.000Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="node.js">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Things To Do After Setting Up Hexo</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2017/11/03/react-classes-and-autobinding/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2017/10/05/fun-with-pygame/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&text=Things To Do After Setting Up Hexo"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&is_video=false&description=Things To Do After Setting Up Hexo"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Things To Do After Setting Up Hexo&body=Check out this article: https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&name=Things To Do After Setting Up Hexo&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&t=Things To Do After Setting Up Hexo"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Multiple-Categories-Without-Heirarchy"><span class="toc-number">1.</span> <span class="toc-text">Multiple Categories Without Heirarchy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Parse-Posts-In-Subfolders"><span class="toc-number">2.</span> <span class="toc-text">Parse Posts In Subfolders</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configure-The-Markdown-Renderer-To-Handle-Line-Breaks"><span class="toc-number">3.</span> <span class="toc-text">Configure The Markdown Renderer To Handle Line Breaks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Choose-A-Theme"><span class="toc-number">4.</span> <span class="toc-text">Choose A Theme</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Add-Local-Search"><span class="toc-number">5.</span> <span class="toc-text">Add Local Search</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Add-Sitemap"><span class="toc-number">6.</span> <span class="toc-text">Add Sitemap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Add-RSS-Feed"><span class="toc-number">7.</span> <span class="toc-text">Add RSS Feed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Future-Developments"><span class="toc-number">8.</span> <span class="toc-text">Future Developments</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Things To Do After Setting Up Hexo
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2017-11-01T03:38:00.000Z" itemprop="datePublished">2017-10-31</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/web/">web</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/hexo/" rel="tag">hexo</a>, <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link-link" href="/tags/node-js/" rel="tag">node.js</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>So I&#39;ve just migrated my blog from Pelican to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> (details about why I switched from WordPress can be found <a href="/2016/09/27/switch-to-static/">here</a>). Hexo, like Pelican, is a static website generator. It&#39;s built on Node.js and what I really love Hexo&#39;s built-in support for GitHub Markdown syntax. There is honestly no Markdown like GH&#39;s own. Given that I am now fully immersed in JavaScript, VS Code is my main editor which has an awesome GH Markdown preview out of the box, and I&#39;ve found myself writing loads of GH Markdown content for various purposes... I felt a switch to Hexo would further leverage my strengths by staying roughly in the same context and flow as my other work.</p>
+<p>After reformatting my blog posts to work with Hexo, here are some things I did to make it 10x more user friendly and inline with expectations:</p>
+<h2 id="Multiple-Categories-Without-Heirarchy"><a href="#Multiple-Categories-Without-Heirarchy" class="headerlink" title="Multiple Categories Without Heirarchy"></a>Multiple Categories Without Heirarchy</h2><p>You may be like me and first define your categories for a blog post as follows:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">react</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">api</span></span><br></pre></td></tr></table></figure>
+
+<p>The output of that would be to create a category &quot;react&quot; with a subcategory &quot;api&quot;. If you want two independent categories simply change them to this:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> [<span class="string">react</span>]</span><br><span class="line"><span class="bullet">-</span> [<span class="string">api</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Parse-Posts-In-Subfolders"><a href="#Parse-Posts-In-Subfolders" class="headerlink" title="Parse Posts In Subfolders"></a>Parse Posts In Subfolders</h2><p>Since my Pelican days, I needed to have some order in my blogging life. I could never be OK with a single folder storing myriads of Markdown files, my brain won&#39;t cope. So I split my posts by year. For Hexo to read the posts in these subfolders and not just the regular root directory you&#39;ll have to modify this field in _config.xml (or whatever configuration file you&#39;re using):</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:layout/:title.md</span> <span class="comment"># File name of new posts</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Configure-The-Markdown-Renderer-To-Handle-Line-Breaks"><a href="#Configure-The-Markdown-Renderer-To-Handle-Line-Breaks" class="headerlink" title="Configure The Markdown Renderer To Handle Line Breaks"></a>Configure The Markdown Renderer To Handle Line Breaks</h2><p>I&#39;m someone who keeps my code before the 80 character mark, thank you PEP 8! My Markdown files are no different of course. By default, Hexo would add <code>&lt;br /&gt;</code> tags for every line break I use - it looked hideous and disjointed. In your configuration file add the following so that the Mardown renderer does not generate those erroneous line breaks.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">breaks:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Choose-A-Theme"><a href="#Choose-A-Theme" class="headerlink" title="Choose A Theme"></a>Choose A Theme</h2><p>While the default theme is... serviceable... Hexo has a fairly vibrant community that has <a target="_blank" rel="noopener" href="https://hexo.io/themes/">created lots of themes</a> that anyone is able to use. You&#39;ll get well over 100 options to choose from - all free! They also have a straightforward guide to <a target="_blank" rel="noopener" href="https://hexo.io/docs/themes.html">create themes as well</a>. When adding a theme, the growing consensus is to use <a target="_blank" rel="noopener" href="http://jr0cket.co.uk/hexo/using-git-submodules-for-custom-hexo-theme.html">Git Submodules instead of cloning</a> for management purposes.</p>
+<h2 id="Add-Local-Search"><a href="#Add-Local-Search" class="headerlink" title="Add Local Search"></a>Add Local Search</h2><p><a target="_blank" rel="noopener" href="https://github.com/PaicHyperionDev/hexo-generator-search">hexo-generator-search</a> is an awesome plugin that generates search data for your website. It produces an XML or JSON file that can be used for local searching. The <a target="_blank" rel="noopener" href="https://github.com/probberechts/cactus-dark">Cactus Dark</a> theme I&#39;m using to kick off my Hexo setup has support for this plugin. Now readers have another alternative to tags and categories to find content on my site!</p>
+<h2 id="Add-Sitemap"><a href="#Add-Sitemap" class="headerlink" title="Add Sitemap"></a>Add Sitemap</h2><p>Search engines and web crawlers love sitemaps, they tell them exactly how the content of a website relate to each other. <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-sitemap">hexo-generator-sitemap</a> would generate a new sitemap as you generate new content and publish.</p>
+<h2 id="Add-RSS-Feed"><a href="#Add-RSS-Feed" class="headerlink" title="Add RSS Feed"></a>Add RSS Feed</h2><p><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> as you would expect generates the atom.xml for those who live off RSS feeds.</p>
+<h2 id="Future-Developments"><a href="#Future-Developments" class="headerlink" title="Future Developments"></a>Future Developments</h2><p>The flexibility of Hexo cannot be understated. There are some features I miss from my WordPress days that I&#39;d love to see again. First of them all would be setting up a Contact page. Totally doable with the help of <a target="_blank" rel="noopener" href="https://formspree.io/">Formspree</a>, a service that allows for such with a smooth user experience. I&#39;d also want to get back user comments. Why not use Disqus? I don&#39;t trust them with my data. So what&#39;s possible then? Check out <a target="_blank" rel="noopener" href="https://staticman.net/">Staticman</a>, another service that was created to give static websites wings. With these tools we can handle the dynamic elements of our website while we continue to enjoy the benefits of it being static.</p>
+<p>Happy hexoing!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Multiple-Categories-Without-Heirarchy"><span class="toc-number">1.</span> <span class="toc-text">Multiple Categories Without Heirarchy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Parse-Posts-In-Subfolders"><span class="toc-number">2.</span> <span class="toc-text">Parse Posts In Subfolders</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configure-The-Markdown-Renderer-To-Handle-Line-Breaks"><span class="toc-number">3.</span> <span class="toc-text">Configure The Markdown Renderer To Handle Line Breaks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Choose-A-Theme"><span class="toc-number">4.</span> <span class="toc-text">Choose A Theme</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Add-Local-Search"><span class="toc-number">5.</span> <span class="toc-text">Add Local Search</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Add-Sitemap"><span class="toc-number">6.</span> <span class="toc-text">Add Sitemap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Add-RSS-Feed"><span class="toc-number">7.</span> <span class="toc-text">Add RSS Feed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Future-Developments"><span class="toc-number">8.</span> <span class="toc-text">Future Developments</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&text=Things To Do After Setting Up Hexo"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&is_video=false&description=Things To Do After Setting Up Hexo"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Things To Do After Setting Up Hexo&body=Check out this article: https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&title=Things To Do After Setting Up Hexo"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&name=Things To Do After Setting Up Hexo&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2017/10/31/things-to-do-after-setting-up-hexo/&t=Things To Do After Setting Up Hexo"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

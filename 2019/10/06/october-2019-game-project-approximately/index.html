@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="To be honest, this is really more of an August - October game project. It started at the end of Jammin 2019 and I was finally able to close it off in October. The theme for that jam was Growth, so the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="October 2019 Game Project: Approximately">
+<meta property="og:url" content="https://msanatan.com/2019/10/06/october-2019-game-project-approximately/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="To be honest, this is really more of an August - October game project. It started at the end of Jammin 2019 and I was finally able to close it off in October. The theme for that jam was Growth, so the">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-10-06T18:45:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="phaser">
+<meta property="article:tag" content="typescript">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>October 2019 Game Project: Approximately</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2019/11/26/how-to-use-node-js-modules-with-npm-and-package-json/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2019/09/18/how-to-use-the-node-js-repl/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&text=October 2019 Game Project: Approximately"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&is_video=false&description=October 2019 Game Project: Approximately"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=October 2019 Game Project: Approximately&body=Check out this article: https://msanatan.com/2019/10/06/october-2019-game-project-approximately/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&name=October 2019 Game Project: Approximately&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&t=October 2019 Game Project: Approximately"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tech-Things"><span class="toc-number">1.</span> <span class="toc-text">Tech Things</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reflections"><span class="toc-number">2.</span> <span class="toc-text">Reflections</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        October 2019 Game Project: Approximately
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-10-06T18:45:00.000Z" itemprop="datePublished">2019-10-06</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/game-development/">game development</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link-link" href="/tags/phaser/" rel="tag">phaser</a>, <a class="tag-link-link" href="/tags/typescript/" rel="tag">typescript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>To be honest, this is really more of an August - October game project. It started at the end of <a target="_blank" rel="noopener" href="https://itch.io/jam/jammin-2019">Jammin 2019</a> and I was finally able to close it off in October. The theme for that jam was Growth, so the game plays on that concept with a super simple puzzler.</p>
+<p>You&#39;ll be presented with a group of balls on the top half of the screen, and you&#39;ll need to guess their colletive size on the bottom half of the screen. You can increase/grow the size of the current ball you got, and add up to 2 more balls as well. Check it out!</p>
+<p><a target="_blank" rel="noopener" href="https://msanatan.itch.io/approximately">https://msanatan.itch.io/approximately</a></p>
+<h2 id="Tech-Things"><a href="#Tech-Things" class="headerlink" title="Tech Things"></a>Tech Things</h2><p>This project was done with <a target="_blank" rel="noopener" href="http://phaser.io/">Phaser 3</a> and <a target="_blank" rel="noopener" href="http://www.typescriptlang.org/">TypeScript</a>. Phaser was not needed for this game as it doesn&#39;t need a game loop. However, it was a good opportunity to try Phaser 3&#39;s scaling options and see how they work on mobile devices.</p>
+<p>As the user interacts with a mouse on desktop, touch automatically works on mobile. The <code>FIT</code> mode was the best option for this game, and with little effort everything was mobile friendly!</p>
+<p>I used <a target="_blank" rel="noopener" href="https://parceljs.org/">Parcel</a> to bundle the code as it&#39;s dead simple. That simplicity sacrifices speed as building the app could take anywhere from 2 - 10 seconds. For a larger web game, I rather invest some time getting webpack optimised.</p>
+<p>Uploading the game to <a target="_blank" rel="noopener" href="https://itch.io/">https://itch.io</a> was pretty straightforward, at least for a free one. As itch provides a stream of just released games (and there are many new indie games released all the time, what a beautiful platform), I got a few more players than I expected. That was pretty cool.</p>
+<p><strong>Note</strong>: If you&#39;re deploying a web game on itch then you&#39;ll have to add <code>--public-url &#39;.&#39;</code> when building the app. Itch can host your web games but they need to use relative URLs. By default, parcel builds with absolute URLs.</p>
+<h2 id="Reflections"><a href="#Reflections" class="headerlink" title="Reflections"></a>Reflections</h2><p>I really enjoyed working on this! Phaser has always been one of those intuitive frameworks that I got attached too.</p>
+<p>The scaling options open so many doors for mobile friendly games, I&#39;m honestly pretty excited by what can be done. Credit to the Phaser devs for making it so easy.</p>
+<p>I&#39;m also all for TypeScript in my Phaser games. It isn&#39;t necessary to get something going, even a large game can be done comfortably with standard EcmaScript. However, those errors I got about functions not being available for a certain type and being able see the types of function arguments were so helpful. All little time savings add up!</p>
+<p>There&#39;s a lot of work that can be done to improve this game: more levels, menu, music and saving progress to name a few. The play time is about 5 minutes, somewhat reflective of the time I used to develop it. You can get the code here: <a target="_blank" rel="noopener" href="https://github.com/msanatan/approximately">https://github.com/msanatan/approximately</a></p>
+<p>Happy game developing!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tech-Things"><span class="toc-number">1.</span> <span class="toc-text">Tech Things</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reflections"><span class="toc-number">2.</span> <span class="toc-text">Reflections</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&text=October 2019 Game Project: Approximately"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&is_video=false&description=October 2019 Game Project: Approximately"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=October 2019 Game Project: Approximately&body=Check out this article: https://msanatan.com/2019/10/06/october-2019-game-project-approximately/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&title=October 2019 Game Project: Approximately"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&name=October 2019 Game Project: Approximately&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2019/10/06/october-2019-game-project-approximately/&t=October 2019 Game Project: Approximately"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

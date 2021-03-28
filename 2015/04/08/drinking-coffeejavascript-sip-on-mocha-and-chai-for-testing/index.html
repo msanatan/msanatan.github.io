@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="So on the road to deeper JavaScript use and appreciation (the latter is the tricky one but so far it&#39;s not too bad), I reached the point where I needed to step my testing game up. Most programmers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Drinking Coffee&#x2F;JavaScript? Sip On Mocha And Chai For testing">
+<meta property="og:url" content="https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="So on the road to deeper JavaScript use and appreciation (the latter is the tricky one but so far it&#39;s not too bad), I reached the point where I needed to step my testing game up. Most programmers">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-04-09T01:19:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="coffeescript">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="node.js">
+<meta property="article:tag" content="testing">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2015/04/20/error-after-error-installing-ubuntu-desktop-on-12-04-server-edition/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2015/02/21/ill-open-my-own-data-thank-you-very-much/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&text=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&is_video=false&description=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing&body=Check out this article: https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&name=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&t=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#All-These-Drinks-Are-Keeping-Me-Warm"><span class="toc-number">1.</span> <span class="toc-text">All These Drinks Are Keeping Me Warm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Detour-TDD-amp-BDD"><span class="toc-number">1.1.</span> <span class="toc-text">Detour - TDD &amp; BDD</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Do-You-Even-Code-Gym-Prank-Voice"><span class="toc-number">2.</span> <span class="toc-text">Do You Even Code? (Gym Prank Voice)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Let-39-s-Give-It-A-Go"><span class="toc-number">2.1.</span> <span class="toc-text">Let&#39;s Give It A Go</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Some-Useful-Reading"><span class="toc-number">3.</span> <span class="toc-text">Some Useful Reading</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2015-04-09T01:19:00.000Z" itemprop="datePublished">2015-04-08</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/tutorial/">tutorial</a> › <a class="category-link" href="/categories/web/">web</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/coffeescript/" rel="tag">coffeescript</a>, <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link-link" href="/tags/node-js/" rel="tag">node.js</a>, <a class="tag-link-link" href="/tags/testing/" rel="tag">testing</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>So on the road to deeper JavaScript use and appreciation (the latter is the tricky one but so far it&#39;s not too bad), I reached the point where I needed to step my testing game up. Most programmers see it as a tedious process or feel bogged down by the deadline proximity and remaining features to implement. While I mostly code as a hobby, I have production code out in the wild so I better uphold good software development practices. Testing gives us confidence that our program works and makes it easy to see if any code change messed something up. It&#39;s also good for your skin!</p>
+<h2 id="All-These-Drinks-Are-Keeping-Me-Warm"><a href="#All-These-Drinks-Are-Keeping-Me-Warm" class="headerlink" title="All These Drinks Are Keeping Me Warm"></a>All These Drinks Are Keeping Me Warm</h2><p><a target="_blank" rel="noopener" href="http://mochajs.org/" title="Mocha">Mocha</a> seems the be on top of the food chain when it comes to testing frameworks for JavaScript. It&#39;s a test runner - a healthy dose of automation that allows you to focus on writing and running test cases. It has a pretty neat way of dealing with asynchronous code by adding a callback and function call that lets it know to wait for a result. You can find similar behaviour and features with the <a target="_blank" rel="noopener" href="http://jasmine.github.io/" title="Jasmine">Jasmine</a> testing framework (which has a nearly identical API).</p>
+<p><a target="_blank" rel="noopener" href="http://chaijs.com/" title="Chai">Chai</a> is an assertion library that can be used with testing frameworks. Assertion libraries are what you write the tests with. If you&#39;re following the links you&#39;ll notice that Chai calls itself a &quot;BDD / TDD assertion library&quot;. While Test Driven Development is pretty well-known, not so much is known about Behaviour Driven Development.</p>
+<h3 id="Detour-TDD-amp-BDD"><a href="#Detour-TDD-amp-BDD" class="headerlink" title="Detour - TDD &amp; BDD"></a>Detour - TDD &amp; BDD</h3><p>As a recap with TDD you:</p>
+<ol>
+<li>Write some test for features</li>
+<li>Watch those tests fail (because you haven&#39;t written those features yet). If they pass figure out what sorcery is affecting your code before continuing - what&#39;s a test if it can&#39;t detect failure?</li>
+<li>Implement those features until you get to the point of passing those tests</li>
+<li>Clean up the code, for example refactoring to the original/ideal design while running those test to make sure nothing broke. Rinse and repeat!</li>
+</ol>
+<p>With BDD you do the same thing... uhhh what? Of course it&#39;s not just that, the Agile Alliance has <a target="_blank" rel="noopener" href="http://guide.agilealliance.org/guide/bdd.html" title="BDD - Agile Alliance">a lot more to say</a> about their differences. The idea is that BDD describes the behaviour of the feature being implemented, not just its result. The requirements of the project map more closely to the tests you&#39;ll write in BDD than in TDD. So while testing we&#39;re actually thinking about how the system works. The most salient visible change you&#39;ll see is how you write tests, BDD testing tools use more natural language syntax than their TDD counterparts.</p>
+<h2 id="Do-You-Even-Code-Gym-Prank-Voice"><a href="#Do-You-Even-Code-Gym-Prank-Voice" class="headerlink" title="Do You Even Code? (Gym Prank Voice)"></a>Do You Even Code? (<a target="_blank" rel="noopener" href="https://youtu.be/H2Diy0RNe_c?t=103">Gym Prank Voice</a>)</h2><p>These days I&#39;ve been working with CoffeeScript because it makes me smile :). Since I can&#39;t release every bit of code I write (secret agent coder) I decided to do some testing for a Finite State Machine (FSM) acceptor I wrote not too long ago. For those not familiar with FSMs (or FSA, A for Automata) here&#39;s a quick primer:</p>
+<p>An FSM is a (very) simple model of computation. An FSM has a set of states that it can be in, inputs for the states (alphabet), a start state, a set of accepting/finishing states (where the sequence of inputs are allowed to stop) and transition rules that say how we can move from one state to another.</p>
+<h3 id="Let-39-s-Give-It-A-Go"><a href="#Let-39-s-Give-It-A-Go" class="headerlink" title="Let&#39;s Give It A Go"></a>Let&#39;s Give It A Go</h3><p>So we setup a class with all the attributes to model a FSM:</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FSM</span></span></span><br><span class="line"></span><br><span class="line">  constructor: <span class="function"><span class="params">(@states=[], @initialState=<span class="literal">null</span>, @transitions=[], @acceptingStates=[])</span> -&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>and add a method to accept inputs, in this case an array of the inputs:</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">accepts: <span class="function"><span class="params">(sequence, currentState=@initialState, trace=<span class="literal">false</span>)</span> -&gt;</span></span><br><span class="line">  <span class="keyword">for</span> input <span class="keyword">in</span> sequence</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">      currentState = @accept input, currentState, trace</span><br><span class="line">    <span class="keyword">catch</span> e</span><br><span class="line">      <span class="keyword">if</span> trace <span class="keyword">then</span> <span class="built_in">console</span>.log e.toString()</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  <span class="keyword">return</span> currentState <span class="keyword">in</span> @acceptingStates</span><br></pre></td></tr></table></figure>
+
+<p>As you can see there&#39;s a function called accept which given an input character and the current state returns the next state or an error if no such state is possible. And here&#39;s how painless testing this function with BDD syntax could be:</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">describe <span class="string">&#x27;FSM accepts&#x27;</span>, <span class="function">-&gt;</span></span><br><span class="line">  it <span class="string">&#x27;should not accept 1&#x27;</span>, <span class="function">-&gt;</span></span><br><span class="line">    fsm1.accepts([<span class="number">1</span>]).should.be.<span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  it <span class="string">&#x27;should not accept 2&#x27;</span>, <span class="function">-&gt;</span></span><br><span class="line">    fsm1.accepts([<span class="number">2</span>]).should.be.<span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  it <span class="string">&#x27;should accept 12&#x27;</span>, <span class="function">-&gt;</span></span><br><span class="line">    fsm1.accepts([<span class="number">1</span>, <span class="number">2</span>]).should.be.<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  it <span class="string">&#x27;should not accept 121&#x27;</span>, <span class="function">-&gt;</span></span><br><span class="line">    fsm1.accepts([<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>]).should.be.<span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  it <span class="string">&#x27;should accept 12222&#x27;</span>, <span class="function">-&gt;</span></span><br><span class="line">    fsm1.accepts([<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>]).should.be.<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  it <span class="string">&#x27;should not accept 1211&#x27;</span>, <span class="function">-&gt;</span></span><br><span class="line">    fsm1.accepts([<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>]).should.be.<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>Not bad for the basics right? Describe what you&#39;re testing and then get on with it. But wait, there&#39;s more! It&#39;s a good practice to isolate the environment on every test; in this case, we should have an FSM instance for each test case. By repeatedly initialising the FSM we&#39;re sure that any side effects from a previous test would not matter in the current one. Mocha has a simple hook for just that:</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">beforeEach -&gt;</span><br><span class="line">  fsm1 = <span class="keyword">new</span> FSM states, initialState, transitions, acceptingStates</span><br></pre></td></tr></table></figure>
+
+<p>With the above code we create a new FSM instance for each test. There are 3 other hooks available to you:</p>
+<ul>
+<li>afterEach - code that runs after every test case</li>
+<li>before - code that runs <strong>before any</strong> tests begin</li>
+<li>after - code that runs <strong>after all</strong> tests are completed</li>
+</ul>
+<p>Before I move on I&#39;ll highlight another code snippet. This test uses TDD syntax instead:</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">describe <span class="string">&#x27;FSM accept&#x27;</span>, <span class="function">-&gt;</span></span><br><span class="line">  it <span class="string">&#x27;should throw an error for bad initial input&#x27;</span>, <span class="function">-&gt;</span></span><br><span class="line">    expect(<span class="function">-&gt;</span> fsm1.accept <span class="number">2</span>, <span class="string">&#x27;A&#x27;</span>).to.<span class="keyword">throw</span> BadInputError</span><br></pre></td></tr></table></figure>
+
+<p>I wanted to test that the error is thrown when it should. Note that I wrap the fsm1.accept 2, &#39;A&#39; in a function (using <code>-&gt;</code> for those not CoffeeScript savvy). That&#39;s because Chai tests if a function returns an error; just putting fsm1.accept would in essence make Chai test the result. This seems to be a common thing many people overlook, do yourself a favour and read them docs! <a target="_blank" rel="noopener" href="https://gist.github.com/msanatan/1588c51ea0b71b3fc823" title="FSM Gist">Here</a>&#39;s the gist with all this code.</p>
+<p>Don&#39;t think that this elegant testing is just for elegant mathematical models. Chai has some useful <a target="_blank" rel="noopener" href="http://chaijs.com/plugins" title="Chai Plugins">plugins</a> that could help you test your server HTTP responses. It helped me feel better about my express app&#39;s behaviour.</p>
+<h2 id="Some-Useful-Reading"><a href="#Some-Useful-Reading" class="headerlink" title="Some Useful Reading"></a>Some Useful Reading</h2><p>I&#39;m quite happy with my experience of testing with Mocha and Chai. Now remember these are just tools for a software development methodology. Let&#39;s try digging deeper into TDD and BDD. I&#39;m particularly interested in BDD as it&#39;s newer to me. Here are some links that may be useful to you:</p>
+<ul>
+<li>Introducing BDD - <a target="_blank" rel="noopener" href="https://dannorth.net/introducing-bdd/">https://dannorth.net/introducing-bdd/</a></li>
+<li>What&#39;s in a Story - <a target="_blank" rel="noopener" href="https://dannorth.net/whats-in-a-story/">https://dannorth.net/whats-in-a-story/</a></li>
+<li>Behaviour Driven Development with Javascript - <a target="_blank" rel="noopener" href="https://github.com/gajus/gajus.com-blog/blob/master/posts/behaviour-driven-development-with-javascript/index.md">https://github.com/gajus/gajus.com-blog/blob/master/posts/behaviour-driven-development-with-javascript/index.md</a></li>
+<li>3 misconceptions about BDD - <a target="_blank" rel="noopener" href="https://www.thoughtworks.com/insights/blog/3-misconceptions-about-bdd">https://www.thoughtworks.com/insights/blog/3-misconceptions-about-bdd</a></li>
+</ul>
+<p>My next step is to use the BDD development paradigm from project start to completion, I&#39;ve only used testing tools after substantial code was already written. The requirements aware approach of BDD appeals to me more than TDD, which has come has come under lots of criticism. David Hansson, creator of Ruby on Rails, has an interesting blog post on <a target="_blank" rel="noopener" href="http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html">why he came off TDD</a>. Would BDD eliminate his problems? Probably not, its TDD roots are the core of his issues. Even so, I&#39;ll keep his qualms in mind and try it out myself! In any case, getting our hands dirty with testing would only help our software development processes and results. Happy hacking :).</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#All-These-Drinks-Are-Keeping-Me-Warm"><span class="toc-number">1.</span> <span class="toc-text">All These Drinks Are Keeping Me Warm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Detour-TDD-amp-BDD"><span class="toc-number">1.1.</span> <span class="toc-text">Detour - TDD &amp; BDD</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Do-You-Even-Code-Gym-Prank-Voice"><span class="toc-number">2.</span> <span class="toc-text">Do You Even Code? (Gym Prank Voice)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Let-39-s-Give-It-A-Go"><span class="toc-number">2.1.</span> <span class="toc-text">Let&#39;s Give It A Go</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Some-Useful-Reading"><span class="toc-number">3.</span> <span class="toc-text">Some Useful Reading</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&text=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&is_video=false&description=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing&body=Check out this article: https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&title=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&name=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2015/04/08/drinking-coffeejavascript-sip-on-mocha-and-chai-for-testing/&t=Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

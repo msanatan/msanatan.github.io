@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="It&#39;s a pretty strange time all around the world as we manoeuvre through the COVID-19 pandemic. Right before my country&#39;s lockdown began, I collected my long-awaited Arduboy. I guess this game&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My First Arduboy Game - The Social Distance Game">
+<meta property="og:url" content="https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="It&#39;s a pretty strange time all around the world as we manoeuvre through the COVID-19 pandemic. Right before my country&#39;s lockdown began, I collected my long-awaited Arduboy. I guess this game&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://msanatan.com/images/my-first-arduboy-game-the-social-distance-game/screenshot01.png">
+<meta property="article:published_time" content="2020-04-13T14:30:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="arduboy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://msanatan.com/images/my-first-arduboy-game-the-social-distance-game/screenshot01.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>My First Arduboy Game - The Social Distance Game</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2020/04/08/how-to-create-a-web-server-in-node-js-with-the-http-module/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&text=My First Arduboy Game - The Social Distance Game"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&is_video=false&description=My First Arduboy Game - The Social Distance Game"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=My First Arduboy Game - The Social Distance Game&body=Check out this article: https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&name=My First Arduboy Game - The Social Distance Game&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&t=My First Arduboy Game - The Social Distance Game"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Setting-up-on-Mac"><span class="toc-number">1.</span> <span class="toc-text">Setting up on Mac</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Community-and-Github"><span class="toc-number">2.</span> <span class="toc-text">The Community and Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Re-learning-C"><span class="toc-number">3.</span> <span class="toc-text">Re-learning C++</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Better-Development-Experience"><span class="toc-number">4.</span> <span class="toc-text">A Better Development Experience</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Art-and-Sound"><span class="toc-number">5.</span> <span class="toc-text">Art and Sound</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Another-One"><span class="toc-number">6.</span> <span class="toc-text">Another One</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        My First Arduboy Game - The Social Distance Game
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-04-13T14:30:00.000Z" itemprop="datePublished">2020-04-13</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/game-development/">game development</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/arduboy/" rel="tag">arduboy</a>, <a class="tag-link-link" href="/tags/c/" rel="tag">c++</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>It&#39;s a pretty strange time all around the world as we manoeuvre through the COVID-19 pandemic. Right before my country&#39;s lockdown began, I collected my long-awaited Arduboy.</p>
+<p>I guess this game&#39;s idea was natural. You play as an adorable sprite called Ghostie (why not?) and try your best to avoid contact with the various pedestrians. Here&#39;s a screenshot of my first Arduboy game - The Social Distance Game:</p>
+<p><img src="/images/my-first-arduboy-game-the-social-distance-game/screenshot01.png" alt="Screenshot of Social Distance Game"></p>
+<p>Like life, it&#39;s unfair so don&#39;t stress about racking up high points. We should try to stay home as well!</p>
+<p>You can check out the game on <a rel="nofollow noopener" target="_blank" href="https://msanatan.itch.io/the-social-distance-game">itch.io</a>, or just play it on this emulator:</p>
+<p><a target="_blank" rel="noopener" href="https://felipemanga.github.io/ProjectABE/?url=https://community.arduboy.com/uploads/short-url/tDhSFHoyFSrMawGHAXNMEYPkgs5.hex">https://felipemanga.github.io/ProjectABE/?url=https://community.arduboy.com/uploads/short-url/tDhSFHoyFSrMawGHAXNMEYPkgs5.hex</a></p>
+<p>This was my first game for the Arduboy. While simple to conceive and execute, I&#39;ve learnt a lot. If you&#39;re new or considering getting the Arduboy, I hope my reflections will help out!</p>
+<h2 id="Setting-up-on-Mac"><a href="#Setting-up-on-Mac" class="headerlink" title="Setting up on Mac"></a>Setting up on Mac</h2><p>When I first got the Arduboy, it came loaded with a really fun game called <a rel="nofollow noopener" target="_blank" href="https://community.arduboy.com/t/sirene-tenth-team-a-r-g-game/2206">Sirène</a>. I wanted to play a few other games as the catalogue really impressed me.</p>
+<p>On the main website it has a <a rel="nofollow noopener" target="_blank" href="https://arduboy.com/upload-games/">list of software</a> to upload Arduboy binaries (a .hex file or the community created .arduboy file).</p>
+<p>Unfortunately, at this point in time I can only use the <a rel="nofollow noopener" target="_blank" href="https://www.arduino.cc/en/Main/Software#download">Arduino IDE</a>. The IDE is easy to use and works well but I imagine it&#39;s a lot less convenient than the dedicated loaders.</p>
+<p>Well, I&#39;m experimenting with a Python and Node.js script to see which works better for me. If either works out, I&#39;ll make a small GUI for it.</p>
+<p>In any case, <a rel="nofollow noopener" target="_blank" href="https://community.arduboy.com/t/arduboy-uploader-for-mac/8728">I asked the community about it</a>. Seems that with a bit of patience I&#39;ll have my game loader on Mac!</p>
+<h2 id="The-Community-and-Github"><a href="#The-Community-and-Github" class="headerlink" title="The Community and Github"></a>The Community and Github</h2><p>While talking about setting up on the Mac, I&#39;ve mentioned the community a lot. The community is one of the strengths of the Arduboy. The members are active, helpful, respectful and sometimes inspiring.</p>
+<p>When developing this game, the community forum was one of my most important resources. A lot of questions you have are probably already there. When you ask a question, it&#39;s safe to expect a genuinely helpful response.</p>
+<p>Another major resource for me to figure out how to make games were Github repositories. Arduboy and Open Source were married from the start. As someone who hasn&#39;t touched C++ in a while, the plethora of example code helped me determine the best way forward more than once.</p>
+<p>On that note...</p>
+<h2 id="Re-learning-C"><a href="#Re-learning-C" class="headerlink" title="Re-learning C++"></a>Re-learning C++</h2><p>I last consistently coded in C++ 10 years ago. My oh my, how things have changed. Arduino also doesn&#39;t have the standard C++ libraries which probably reduced the familiarity a bit more as well.</p>
+<p>I spent a good bit of time making this game on re-learning C++ and trying to catch up with modern best practices. I actually want to spend some time learning it from scratch once more. The best developers don&#39;t keep swimming in shallow water, at some point I have to do a deep dive into the language and the Arduino ecosystem to be really competent.</p>
+<h2 id="A-Better-Development-Experience"><a href="#A-Better-Development-Experience" class="headerlink" title="A Better Development Experience"></a>A Better Development Experience</h2><p>The Arduino IDE was my gateway to playing games as well as developing them. The tutorials used them, and their integration made it pretty sensible to use.</p>
+<p>If you don&#39;t mind having one big file with all your code.</p>
+<p>At most, my file was about 400 lines long which is pretty manageable. And yet, it still felt wrong. Admittedly I didn&#39;t spend a lot of time getting to know the IDE&#39;s short cuts and customizations. Truth is, I don&#39;t want to.</p>
+<p>I&#39;m pretty happy with <a rel="nofollow noopener" target="_blank" href="https://vscodium.com/">VS Codium</a>(VS Code without the Microsoft tracking and other non-OSS bits). Thankfully, there&#39;s an excellent but preview VS Codium extension aptly called &quot;Arduino&quot;. It can compile and upload your game (using the IDE it seems).</p>
+<p>The extension was created by Microsoft, they&#39;re doing a good job! What about the reason for switching to VS Codium? Well, the extension is under the MIT license. The privacy policy...</p>
+<h2 id="Art-and-Sound"><a href="#Art-and-Sound" class="headerlink" title="Art and Sound"></a>Art and Sound</h2><p>Pixel art is fun, and the sprites for this game were pretty simple. However, the standard for art and music is <a rel="nofollow noopener" target="_blank" href="https://www.youtube.com/watch?v=bSXqe7TXcM8">pretty darn high</a>.</p>
+<p>This game I used a lot of different things. The sprites were created in <a rel="nofollow noopener" target="_blank" href="https://www.piskelapp.com/">Piskel</a>. It&#39;s free, online and easy to use. Animations are quite cool too.</p>
+<p>However, it&#39;s a bit hard to manage when you got a lot of sprites. Piskel would do a lot better by being able to create folders. I guess that&#39;s where we come in and help out in OSS right?</p>
+<p>I also looked away from Piskel because writing text was hard. Fonts that work for a screen that&#39;s 128px wide and 64px long are few and far between. Drawing letters are a bit tricky for me right now.</p>
+<p>At this time I went back to <a rel="nofollow noopener" target="_blank" href="https://www.gimp.org/">Gimp</a>, which I experimented with for pixel art a bit over a year ago. I used the monospace fonts to write the text for my basic title screen. Given the scope of this mini-game, it was fine.</p>
+<p>Art is one part of a good game. Music is right up there as well! I have the least amount of experience in this domain. Thankfully some good folks created a track editor for Arduboy games: <a target="_blank" rel="noopener" href="http://teamarg.github.io/trackerEditor/">http://teamarg.github.io/trackerEditor/</a>. I only wanted one sound effect and got it pretty easily. It didn&#39;t&#39; work in Chrome but all was well in Firefox.</p>
+<h2 id="Another-One"><a href="#Another-One" class="headerlink" title="Another One"></a>Another One</h2><p>Working on this game got me more excited about the Arduboy and the community I&#39;ve now become a part of. My partner and I wrote down a few ideas of what to build, but I think I&#39;ll work on a platformer next.</p>
+<p>Happy gaming everyone!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Setting-up-on-Mac"><span class="toc-number">1.</span> <span class="toc-text">Setting up on Mac</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Community-and-Github"><span class="toc-number">2.</span> <span class="toc-text">The Community and Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Re-learning-C"><span class="toc-number">3.</span> <span class="toc-text">Re-learning C++</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Better-Development-Experience"><span class="toc-number">4.</span> <span class="toc-text">A Better Development Experience</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Art-and-Sound"><span class="toc-number">5.</span> <span class="toc-text">Art and Sound</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Another-One"><span class="toc-number">6.</span> <span class="toc-text">Another One</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&text=My First Arduboy Game - The Social Distance Game"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&is_video=false&description=My First Arduboy Game - The Social Distance Game"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=My First Arduboy Game - The Social Distance Game&body=Check out this article: https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&title=My First Arduboy Game - The Social Distance Game"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&name=My First Arduboy Game - The Social Distance Game&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2020/04/13/my-first-arduboy-game-the-social-distance-game/&t=My First Arduboy Game - The Social Distance Game"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

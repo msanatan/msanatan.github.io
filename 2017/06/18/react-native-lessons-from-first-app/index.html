@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="React is pretty easy to get into and the community tends to encourage intelligent design principles for highly reusable code. Coming from a background in Ionic and Xamarin, I had high standards for wh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native: Lessons From First App">
+<meta property="og:url" content="https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="React is pretty easy to get into and the community tends to encourage intelligent design principles for highly reusable code. Coming from a background in Ionic and Xamarin, I had high standards for wh">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-06-18T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="react">
+<meta property="article:tag" content="react native">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>React Native: Lessons From First App</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2017/10/05/fun-with-pygame/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2017/05/10/renaming-react-native-apps/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&text=React Native: Lessons From First App"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&is_video=false&description=React Native: Lessons From First App"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React Native: Lessons From First App&body=Check out this article: https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&name=React Native: Lessons From First App&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&t=React Native: Lessons From First App"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-Sharing-Across-Platforms"><span class="toc-number">1.</span> <span class="toc-text">Code Sharing Across Platforms</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Application-Structure"><span class="toc-number">2.</span> <span class="toc-text">Application Structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Theming"><span class="toc-number">3.</span> <span class="toc-text">Theming</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#React-Native-Elements-And-Lists"><span class="toc-number">3.1.</span> <span class="toc-text">React Native Elements And Lists</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Event-Handlers"><span class="toc-number">4.</span> <span class="toc-text">Event Handlers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#So-Much-More-To-Go"><span class="toc-number">5.</span> <span class="toc-text">So Much More To Go</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        React Native: Lessons From First App
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2017-06-18T04:00:00.000Z" itemprop="datePublished">2017-06-18</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/mobile/">mobile</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link-link" href="/tags/react/" rel="tag">react</a>, <a class="tag-link-link" href="/tags/react-native/" rel="tag">react native</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>React is pretty easy to get into and the community tends to encourage intelligent design principles for highly reusable code. Coming from a background in Ionic and Xamarin, I had high standards for what a cross-platform solution needs to provide to get me using it. React Native can more than match up with the other frameworks. I created another <a target="_blank" rel="noopener" href="https://github.com/msanatan/GitHubProjects">GitHub API interfacing app</a> which simply allows you to search for GitHub users, select a repository and view the README for that repo. As I&#39;m still learning RN I&#39;ve been focusing on developing the right way. While I don&#39;t have all the answers to my questions just yet, here are some concerns and issues I had and the decisions I made to address them.</p>
+<h2 id="Code-Sharing-Across-Platforms"><a href="#Code-Sharing-Across-Platforms" class="headerlink" title="Code Sharing Across Platforms"></a>Code Sharing Across Platforms</h2><p>When you start a RN project you&#39;ll see two files: index.android.js and index.ios.js. No hard guesses why each of them are there but... it&#39;s not like we&#39;re going to write the same code twice. So the first thing I did was create an index.js file which would have the logic for the app. Now all I need my platform specific index files to do is reference the index.js file.</p>
+<p>The index.js file has the component which kicks off the application:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  StackNavigator,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&#x27;react-navigation&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> SearchScreen <span class="keyword">from</span> <span class="string">&#x27;./scenes/SearchScreen&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> RepoViewScreen <span class="keyword">from</span> <span class="string">&#x27;./scenes/RepoViewScreen&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> GitHubProjects = StackNavigator(&#123;</span><br><span class="line">  Search: &#123;</span><br><span class="line">    screen: SearchScreen,</span><br><span class="line">    navigationOptions: &#123;</span><br><span class="line">      title: <span class="string">&#x27;GitHub Search&#x27;</span></span><br><span class="line">    &#125;&#125;,</span><br><span class="line">  RepoView: &#123;</span><br><span class="line">    screen: RepoViewScreen</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> GitHubProjects;</span><br></pre></td></tr></table></figure>
+
+<p>The index.android.js and index.ios.js will now import the app&#39;s primary component and register it:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; AppRegistry &#125; <span class="keyword">from</span> <span class="string">&#x27;react-native&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> GitHubProjects <span class="keyword">from</span> <span class="string">&#x27;./src&#x27;</span>;</span><br><span class="line"></span><br><span class="line">AppRegistry.registerComponent(<span class="string">&#x27;GitHubProjects&#x27;</span>, <span class="function">() =&gt;</span> GitHubProjects);</span><br></pre></td></tr></table></figure>
+
+<p>The index file isn&#39;t explicitly referenced because it&#39;s placed in the src directory. This worked well for my example app as it didn&#39;t have any platform specific setup to do. At worst it would have platform specific componenents which could be easily segmented at the component level using the Platform module.</p>
+<h2 id="Application-Structure"><a href="#Application-Structure" class="headerlink" title="Application Structure"></a>Application Structure</h2><p>Ionic and Xamarin have strong opinions about how applications should be developed, your app&#39;s structure comes as part of the package in a way. React has a philosophy which applies to both the DOM and Native elements but does not impose an application structure with a heavy hand. I didn&#39;t want this app to be one page magic wand. I wanted a structure that was scalable, facilitates component reusability and wouldn&#39;t be alien to the community.</p>
+<p>After my fair share of reading I felt the best match for my requirements were described in a <a target="_blank" rel="noopener" href="https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1">blog post by JS developer Alex Mangin</a>.</p>
+<p>I can&#39;t encourage you enough to have a look. In summary, I stuck with the following architecture and will continue to do so for React and React Native applications:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">|-index.android.js</span><br><span class="line">|-index.ios.js</span><br><span class="line">|-all other top-level files&#x2F;directories</span><br><span class="line">|-src</span><br><span class="line">  |-components</span><br><span class="line">    |-Component1</span><br><span class="line">      |-components</span><br><span class="line">      |-index.js</span><br><span class="line">      |-styles.js</span><br><span class="line">  |-scenes</span><br><span class="line">    |-Scene1</span><br><span class="line">      |-components</span><br><span class="line">      |-services</span><br><span class="line">      |-styles.js</span><br><span class="line">      |-index.js</span><br><span class="line">  |-services</span><br><span class="line">    |-service</span><br><span class="line">      |-index.js</span><br></pre></td></tr></table></figure>
+
+<p>The top-level components are global ones that can be reused anywhere in the app. Scenes refer to a page in the application and could have components, services and styles that are specific to it. Services would contain your APIs.</p>
+<h2 id="Theming"><a href="#Theming" class="headerlink" title="Theming"></a>Theming</h2><p>One of the things I really liked about Ionic was its natural beauty. A default app looked georgous and that made the whole world happy. There&#39;s no real escaping from styling an application but there can be better foundations than a blank palette. While searching for what&#39;s out there I came across this neat list of UI component kits for RN on <a target="_blank" rel="noopener" href="https://www.quora.com/What-is-the-best-UI-Kit-for-react-native">Quora</a>.</p>
+<p>I gave <a target="_blank" rel="noopener" href="https://react-native-training.github.io/react-native-elements/">React Native Elements</a> a go but after a closer look at each I&#39;m gravitating towards <a target="_blank" rel="noopener" href="https://nativebase.io/">NativeBase</a> more and and more.</p>
+<h3 id="React-Native-Elements-And-Lists"><a href="#React-Native-Elements-And-Lists" class="headerlink" title="React Native Elements And Lists"></a>React Native Elements And Lists</h3><p>So if you use React Native Elements you&#39;ll be happy to see how much easier it is to populate a list compared to the default ListView that was standard before version 0.45 came out with FlatList components. The ListView component inherited from the ScrollView component but React Native Elements&#39; List component inherits from View. So if you want that scroll be sure to wrap it around the List:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ScrollView</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">List</span>&gt;</span></span><br><span class="line">    ...amazing ListItem stuff here</span><br><span class="line">  <span class="tag">&lt;/<span class="name">List</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ScrollView</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Event-Handlers"><a href="#Event-Handlers" class="headerlink" title="Event Handlers"></a>Event Handlers</h2><p>If a parent component passes down a function to child component for an event handler, React would not <a target="_blank" rel="noopener" href="https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding">automatically bind &#39;this&#39;</a>. Many a blog posts and tutorials would show you event handlers like the following: <code>onPress=&#123;() =&gt; doSomething()&#125;</code>. It&#39;s been noted by many that creating functions in a component&#39;s render function is a bad idea for <a target="_blank" rel="noopener" href="https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f">performance reasons</a>.</p>
+<p>Unfortunately I did not read the lovely React blog early enough and as much I could I manually bind the event handlers in the component&#39;s constructor. Your best bet is to use ES7&#39;s class properties with the arrow function which would automatically bind &#39;this&#39; for you.</p>
+<h2 id="So-Much-More-To-Go"><a href="#So-Much-More-To-Go" class="headerlink" title="So Much More To Go"></a>So Much More To Go</h2><p>Even though I&#39;d like for this information to be useful I&#39;m hoping that it&#39;s really obvious to you because that means I&#39;m on the right path. React and React Native are fun but the rabbit hole goes deep. But sure to read the myriad of blogs out there as you&#39;re probably not the first person facing your problem.</p>
+<p>Happy React Nativing!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-Sharing-Across-Platforms"><span class="toc-number">1.</span> <span class="toc-text">Code Sharing Across Platforms</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Application-Structure"><span class="toc-number">2.</span> <span class="toc-text">Application Structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Theming"><span class="toc-number">3.</span> <span class="toc-text">Theming</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#React-Native-Elements-And-Lists"><span class="toc-number">3.1.</span> <span class="toc-text">React Native Elements And Lists</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Event-Handlers"><span class="toc-number">4.</span> <span class="toc-text">Event Handlers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#So-Much-More-To-Go"><span class="toc-number">5.</span> <span class="toc-text">So Much More To Go</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&text=React Native: Lessons From First App"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&is_video=false&description=React Native: Lessons From First App"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React Native: Lessons From First App&body=Check out this article: https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&title=React Native: Lessons From First App"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&name=React Native: Lessons From First App&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2017/06/18/react-native-lessons-from-first-app/&t=React Native: Lessons From First App"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

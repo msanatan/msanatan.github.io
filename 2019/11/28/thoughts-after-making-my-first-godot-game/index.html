@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Godot is a 2D and 3D game engine that has been on my radar for quite some time. Reviews for it are mostly positive, the scripting language is similar to Python (yay), and it&#39;s open source. The ope">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thoughts After Making My First Godot Game">
+<meta property="og:url" content="https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="Godot is a 2D and 3D game engine that has been on my radar for quite some time. Reviews for it are mostly positive, the scripting language is similar to Python (yay), and it&#39;s open source. The ope">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://msanatan.com/images/av-execute.png">
+<meta property="article:published_time" content="2019-11-28T11:12:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="godot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://msanatan.com/images/av-execute.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Thoughts After Making My First Godot Game</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2019/12/02/how-to-create-a-node-js-module/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2019/11/26/how-to-use-node-js-modules-with-npm-and-package-json/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&text=Thoughts After Making My First Godot Game"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&is_video=false&description=Thoughts After Making My First Godot Game"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Thoughts After Making My First Godot Game&body=Check out this article: https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&name=Thoughts After Making My First Godot Game&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&t=Thoughts After Making My First Godot Game"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Learning-Path"><span class="toc-number">1.</span> <span class="toc-text">Learning Path</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blogs-and-YouTube-Videos"><span class="toc-number">1.1.</span> <span class="toc-text">Blogs and YouTube Videos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Udemy-Course-Discovering-Godot-Make-Video-Games-in-Python-like-GDScript"><span class="toc-number">1.2.</span> <span class="toc-text">Udemy Course - Discovering Godot: Make Video Games in Python-like GDScript</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#November-Game-Project-2019-AV-Execute"><span class="toc-number">2.</span> <span class="toc-text">November Game Project 2019 - AV: Execute</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Things-I-Loved"><span class="toc-number">3.</span> <span class="toc-text">Things I Loved</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Software-Itself"><span class="toc-number">3.1.</span> <span class="toc-text">The Software Itself</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scenes-and-Nodes"><span class="toc-number">3.2.</span> <span class="toc-text">Scenes and Nodes</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Save-a-Scene-Separately-After-Creation"><span class="toc-number">3.2.1.</span> <span class="toc-text">Save a Scene Separately After Creation</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GD-Script"><span class="toc-number">3.3.</span> <span class="toc-text">GD Script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Intuitive-Menu-Design"><span class="toc-number">3.4.</span> <span class="toc-text">Intuitive Menu Design</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Controller-Support"><span class="toc-number">3.5.</span> <span class="toc-text">Controller Support!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Version-Control-Everything-Is-Text"><span class="toc-number">3.6.</span> <span class="toc-text">Version Control: Everything Is Text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exports-to-All-Major-Platforms"><span class="toc-number">3.7.</span> <span class="toc-text">Exports to All Major Platforms</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Things-I-Did-Not-Love-As-Much"><span class="toc-number">4.</span> <span class="toc-text">Things I Did Not Love As Much</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#macOS-Catalina-Bloody-Hell"><span class="toc-number">4.1.</span> <span class="toc-text">macOS Catalina - Bloody Hell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Version-Control-GUIs"><span class="toc-number">4.1.1.</span> <span class="toc-text">Version Control GUIs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Freezes-When-Moving-Between-Screens"><span class="toc-number">4.1.2.</span> <span class="toc-text">Freezes When Moving Between Screens</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#No-Windows-Taskbar-Icons-Wine-Doesn-39-t-Work"><span class="toc-number">4.1.3.</span> <span class="toc-text">No Windows Taskbar Icons - Wine Doesn&#39;t Work</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exported-PCK-Files"><span class="toc-number">4.2.</span> <span class="toc-text">Exported PCK Files</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">5.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Thoughts After Making My First Godot Game
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-11-28T11:12:00.000Z" itemprop="datePublished">2019-11-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/game-development/">game development</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/godot/" rel="tag">godot</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><a target="_blank" rel="noopener" href="https://godotengine.org/">Godot</a> is a 2D and 3D game engine that has been on my radar for quite some time. Reviews for it are mostly positive, the scripting language is similar to Python (yay), and it&#39;s open source.</p>
+<p>The open source bit is pretty cool not just for philosophical reasons. It reduces your cost of development. For those living in countries with currencies weaker than USD, what may be a low monthly subscription or generous revenue cap still makes a sizeable dent in disposable income.</p>
+<p>This post is just a write up on what I liked about Godot, what I didn&#39;t like about Godot; all the interesting experiences that came up while creating my first game.</p>
+<p>To start this journey, I first determined a structured way to learn the engine.</p>
+<h2 id="Learning-Path"><a href="#Learning-Path" class="headerlink" title="Learning Path"></a>Learning Path</h2><p>I&#39;m a web developer, hence why most of my previous ventures into game development have come through <a target="_blank" rel="noopener" href="https://phaser.io/">Phaser</a>. I did tutorials for Unity and Unreal before, but those were a couple of years back so using Godot felt as close to a brand new experience as it could have been.</p>
+<p>As with most new Godot users, my starting point was their <a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/3.1/getting_started/step_by_step/index.html">getting started</a> guide. I read everything from the introduction to my first Godot game tutorial. It&#39;s necessary reading to get an understanding of the engine&#39;s design and key features. Admittedly, it took me a while to truly understand all the information.</p>
+<p>I enjoyed the tutorial game that was created, it&#39;s casual enough to be fun. The export section also shows you how to make it Android friendly - you create an app on your first try!</p>
+<p>However, after finishing that game I did not feel confident enough to go on a project of my own. Even after looking at the <a target="_blank" rel="noopener" href="https://github.com/godotengine/godot-demo-projects">example games created by the Godot team</a>, I felt as if I needed a guiding hand.</p>
+<h3 id="Blogs-and-YouTube-Videos"><a href="#Blogs-and-YouTube-Videos" class="headerlink" title="Blogs and YouTube Videos"></a>Blogs and YouTube Videos</h3><p>I scoured the internet for tutorials. The community seemed popular enough that I was pretty sure there would be a haven for Godot related resources. A lot of resources are available for version 2.1 and 3.0 - I used 3.1, the latest stable version at the time of writing, so they weren&#39;t immediately useful.</p>
+<p>I looked at a few YouTube videos and read a few blogs. For the level and confidence I had, the best resource seemed to be <a target="_blank" rel="noopener" href="https://fornclake.com/category/tutorials/asteroids">Fornclake&#39;s Asteroids tutorial</a>. Small in scope and very well written - it was perfect. Well, almost perfect. It&#39;s incomplete... the bits where you destroy the asteroids were never written. To its credit, I felt it gave me the tools to work on that myself. I opted not to as it would probably take me more time than it should to get it done.</p>
+<p>I had a positive experience with Udemy when learning React, Phaser, and Unity. I saw some Godot courses when I bought a recent TypeScript course, it was time to have a second look.</p>
+<h3 id="Udemy-Course-Discovering-Godot-Make-Video-Games-in-Python-like-GDScript"><a href="#Udemy-Course-Discovering-Godot-Make-Video-Games-in-Python-like-GDScript" class="headerlink" title="Udemy Course - Discovering Godot: Make Video Games in Python-like GDScript"></a>Udemy Course - Discovering Godot: Make Video Games in Python-like GDScript</h3><p>This course is done by two people who are super popular on Udemy and other platforms - Ben Tristem and Yann Burrett. They both made careers out of teaching people how to create games with different engines, they do a good job at it too. After looking at the alternatives I figured this course was the best bit.</p>
+<p>Having read the Godot tutorial and other blogs, and coupled with my familiarity with Python, it may be too basic at times. I found myself skipping over things like what are if-statements. It&#39;s not a problem that&#39;s it there, it was meant for beginners after all. But you have a similar Python background you may find yourself skipping over those bits too.</p>
+<p>However, don&#39;t make a habit of skipping over things. The details about Godot were invaluable. As much as I read about the framework, this course does a great job of at least reinforcing how the engine works.</p>
+<p>The first tutorial was to build a game called Loony Lips. It&#39;s a simple game that generates a random sentence given 4 user inputs. It was super simple, the small scope was perfect. After that tutorial, Godot finally clicked for me.</p>
+<p>The next tutorial for the course was a platformer. I always like to create something after completing a section in an online course, it&#39;s a nice way to validate what I learned. So before moving onto the next class, I decided to make <strong>AV: Execute</strong>.</p>
+<h2 id="November-Game-Project-2019-AV-Execute"><a href="#November-Game-Project-2019-AV-Execute" class="headerlink" title="November Game Project 2019 - AV: Execute"></a>November Game Project 2019 - AV: Execute</h2><p>I began playing Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would have its 8-directional movement. Heck, let&#39;s just make it a game about viruses. In the end, I came up with <a target="_blank" rel="noopener" href="https://msanatan.itch.io/av-execute">AV: Execute</a>.</p>
+<p><img src="/images/av-execute.png" alt="Screenshot of AV Execute"></p>
+<p>It&#39;s your standard fare swarm shooter - you&#39;re in an arena and your goal is to derezz as many viruses that come your way. The last high score I recall getting was 400, not bad. All the code is available on <a target="_blank" rel="noopener" href="https://github.com/msanatan/AV-Execute">GitHub</a> and the super basic artwork was done by yours truly.</p>
+<p>Making this game was fun. Godot is a good example of high quality open source software. From the start of the project, there were a lot of things I liked about this experience. Let&#39;s have a look!</p>
+<h2 id="Things-I-Loved"><a href="#Things-I-Loved" class="headerlink" title="Things I Loved"></a>Things I Loved</h2><h3 id="The-Software-Itself"><a href="#The-Software-Itself" class="headerlink" title="The Software Itself"></a>The Software Itself</h3><p>My experience with Unity was so annoying at times. Crashes were not so frequent that I couldn&#39;t learn how to make games with Unity. It did happen enough times for me to notice it, and to be annoyed with it. Godot doesn&#39;t give me any problems while running. I&#39;m sure Unity in 2019 is probably much more stable now than a couple of years back, will let you know when I get into it again :-).</p>
+<p>Godot is extremely lightweight, compared to Unity and Unreal at least. The application takes up about 68 MB of space! Unity after installing took up close to 1GB. Unreal I believe came up to roughly 8GB. For comparative features, this is simply marvellous. It&#39;s also not a RAM hog like the others. So yes, you can use Godot with your 1 million Chrome tabs and it will be fine.</p>
+<h3 id="Scenes-and-Nodes"><a href="#Scenes-and-Nodes" class="headerlink" title="Scenes and Nodes"></a>Scenes and Nodes</h3><p><strong>Nodes</strong> are like the atomic properties of an object. A <strong>scene</strong> is a group of nodes organised in a tree. Scenes can also instance other scenes. Godot games are made up of scenes, which in turn are made of other scenes and nodes.</p>
+<p>This might be better illustrated. In Phaser, I would create a Player class that extends from a Sprite. I&#39;ll add all the extra properties I need, like a score for example.</p>
+<p>In this game, I created a new Player scene by first having an Area2D node. This node can detect collisions with ease. To make my root node, and therefore my Player scene functional, I attached the following nodes one level below:</p>
+<ul>
+<li>Sprite - primarily contains the image used for the Player</li>
+<li>CollisionShape2D - the collision boundaries for the Player</li>
+<li>CannonPosition - predefined position where the projectiles come from</li>
+<li>ShootTimer - predefined wait period between firing a projectile</li>
+<li>Identifier - a basic node I created to help manage collisions</li>
+<li>Blink (AnimationPlayer) - the animation that&#39;s seen when a player is hit</li>
+</ul>
+<p>That Player scene, as you can imagine, was instanced in my main game scene along with the Heads Up Display and others.</p>
+<p>This system is super intuitive, and well explained in the main tutorial. I think most Godot users with a programming background would easily take to it. I would say the Udemy course gave more details on what each node was doing, and how to search the docs for the appropriate node.</p>
+<h4 id="Save-a-Scene-Separately-After-Creation"><a href="#Save-a-Scene-Separately-After-Creation" class="headerlink" title="Save a Scene Separately After Creation"></a>Save a Scene Separately After Creation</h4><p>Let&#39;s say you&#39;ve created a scene for a particular component, and parts of your scene needs to be reused. Godot makes it super simple to take a collection of one or more nodes and save it as a separate scene.</p>
+<p>Godot will automatically instance the newly branched scene so everything would continue working as expected.</p>
+<p>This is cool because it allows us to keep our project structured and modular at different stages of development. It&#39;s not a groundbreaking feature, but it&#39;s nice to have.</p>
+<h3 id="GD-Script"><a href="#GD-Script" class="headerlink" title="GD Script"></a>GD Script</h3><p>If you know Python, you&#39;re fine to get going with GD Script. Worried about performance? Don&#39;t be, it&#39;s pretty quick. The Godot developers <a target="_blank" rel="noopener" href="http://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#history">first tried to use Lua, then Python</a>. From those suboptimal experiences, they then made GD Script to take full advantage of Godot&#39;s design.</p>
+<p>What I love about the scripts is that they are embedded into nodes. This makes the nodes/scene system so much more powerful as scripts are used to extend a node&#39;s functionality. Add to that the seamless integration between the editor&#39;s UI and the scripts, what you get is a fairly flexible way to create a game.</p>
+<p>Some things I prefer to code with GD Script. Other things I prefer to set in the UI. It doesn&#39;t matter, it&#39;s all fine. Having options is a good thing.</p>
+<p>The Mono bindings are in development and the game developer community is pretty excited about coding with C#. That&#39;s likely due to Unity&#39;s popularity. I&#39;ll most likely stick with GD Script.</p>
+<h3 id="Intuitive-Menu-Design"><a href="#Intuitive-Menu-Design" class="headerlink" title="Intuitive Menu Design"></a>Intuitive Menu Design</h3><p>The GUI controls are super intuitive. Hierarchies are usually obvious with some basic UI planning. Mapping my design to the scene system felt straightforward.</p>
+<h3 id="Controller-Support"><a href="#Controller-Support" class="headerlink" title="Controller Support!"></a>Controller Support!</h3><p>This is fairly standard in other game engines. As I mentioned earlier, my background is in Phaser, so I am accustomed to writing extra logic to get controllers to work. I was very pleasantly surprised to plug in my PS4 controller and play this game as expected, without any code or configuration. The controller settings have sensible defaults for the major brands - good job Godot team!</p>
+<h3 id="Version-Control-Everything-Is-Text"><a href="#Version-Control-Everything-Is-Text" class="headerlink" title="Version Control: Everything Is Text"></a>Version Control: Everything Is Text</h3><p>I use Git all the time. Godot developers were playing chess instead of checkers here, all scenes are saved as text files. Therefore, version control systems play nicely with Godot from your first commit to your last. For reference, with Unity and Unreal there are extra steps to make it play well (pesky binary files):</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://thoughtbot.com/blog/how-to-git-with-unity">https://thoughtbot.com/blog/how-to-git-with-unity</a></li>
+<li><a target="_blank" rel="noopener" href="https://wiki.unrealengine.com/Git_source_control_(Tutorial)">https://wiki.unrealengine.com/Git_source_control_(Tutorial)</a></li>
+</ul>
+<h3 id="Exports-to-All-Major-Platforms"><a href="#Exports-to-All-Major-Platforms" class="headerlink" title="Exports to All Major Platforms"></a>Exports to All Major Platforms</h3><p>Electron and Cordova do a job of export HTML5 games to desktop and mobile apps respectively. Even so, they can&#39;t beat this experience. Exporting to all desktop applications was painless. So was creating an Android APK for the tutorial game. I haven&#39;t created an iOS app as yet, but I don&#39;t imagine that it&#39;ll be painful.</p>
+<p>Those were the key benefits for me. Let&#39;s have a look at some of the pain points, thankfully there are not as extensive!</p>
+<h2 id="Things-I-Did-Not-Love-As-Much"><a href="#Things-I-Did-Not-Love-As-Much" class="headerlink" title="Things I Did Not Love As Much"></a>Things I Did Not Love As Much</h2><p>Unfortunately, not everything was sunshine and rainbows. The positives certainly outweighed the negatives, but you might want to keep this in mind when considering Godot. As per usual, your mileage may vary.</p>
+<h3 id="macOS-Catalina-Bloody-Hell"><a href="#macOS-Catalina-Bloody-Hell" class="headerlink" title="macOS Catalina - Bloody Hell"></a>macOS Catalina - Bloody Hell</h3><p>My experience with Godot before upgrading to Catalina and after upgrading were remarkably different. I did the tutorials in Mojave and experienced little to no problems. These are some issues that Mac users may encounter when using Godot 3.1 on Catalina.</p>
+<h4 id="Version-Control-GUIs"><a href="#Version-Control-GUIs" class="headerlink" title="Version Control GUIs"></a>Version Control GUIs</h4><p>I usually favour making small commit messages with descriptions of what changed and why. This helps to provide context when looking at why your code behaves a certain way and makes reverting less daunting. That doesn&#39;t change with Godot.</p>
+<p>However, as I make various configuration changes alongside code changes, using the command line to make granular commits became tedious at times. I&#39;m very comfortable with the command line, I figured I would be more efficient with a GUI.</p>
+<p>I downloaded <a target="_blank" rel="noopener" href="https://www.sourcetreeapp.com/">SourceTree</a> and <a target="_blank" rel="noopener" href="https://desktop.github.com/">GitHub Desktop</a>, hoping to do a quick evaluation of the two so I can get to the main task at hand. Unfortunately, I could not run either of them.</p>
+<p>I got the &quot;can’t be opened because Apple cannot check it for malicious software&quot;. My settings allow me to run software from anywhere, and I did not see the usual &quot;Open Anyway&quot; button in the security settings. They should sign their apps when making releases so this would never be a problem.</p>
+<p>In the end, I used my default code editor, <a target="_blank" rel="noopener" href="https://vscodium.com/">VSCodium</a> - VS Code without Microsoft&#39;s telemetry. It worked for the project and the time. I believe new releases of SourceTree and GitHub Desktop are signed, so I&#39;ll give them a sometime soon.</p>
+<h4 id="Freezes-When-Moving-Between-Screens"><a href="#Freezes-When-Moving-Between-Screens" class="headerlink" title="Freezes When Moving Between Screens"></a>Freezes When Moving Between Screens</h4><p>I work with an extra monitor, on a great day two extra monitors. Life is better with more monitors! Godot looks great on each screen when it loads. Usually, I have my code on one screen, and I have the game running on the other. This allows me to see the debug messages I play with a scene.</p>
+<p>Life after Catalina brought inconsistency to that flow. There are times I drag the running game to the second screen and it suddenly appears all blacked out. Restarting the player seems to fix it, but I rather not perform this ritual when debugging my game.</p>
+<h4 id="No-Windows-Taskbar-Icons-Wine-Doesn-39-t-Work"><a href="#No-Windows-Taskbar-Icons-Wine-Doesn-39-t-Work" class="headerlink" title="No Windows Taskbar Icons - Wine Doesn&#39;t Work"></a>No Windows Taskbar Icons - Wine Doesn&#39;t Work</h4><p>Windows taskbar icon needs images in the special <code>.ico</code> format. That&#39;s fine, <a target="_blank" rel="noopener" href="https://imagemagick.org/index.php">imagemagick</a> makes it easy to create those files from a PNG. However, for that .ico to be used when exporting, you will need to point Godot to your installation of <a target="_blank" rel="noopener" href="https://github.com/electron/rcedit">rcedit</a> - a tool that can change resources in an <code>.exe</code> file. Godot has a helpful <a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/3.1/getting_started/workflow/export/changing_application_icon_for_windows.html#doc-changing-application-icon-for-windows">guide</a> on this process.</p>
+<p>On Mac and Linux, to install and use rcedit we need to have <a target="_blank" rel="noopener" href="https://www.winehq.org/">wine</a> installed. Wine may be fully working in Catalina hopefully by January 2020, you can read this <a target="_blank" rel="noopener" href="https://forum.winehq.org/viewtopic.php?f=9&t=32590">thread</a> for more information.</p>
+<p>Till then, to get Windows taskbar icons on Mac you&#39;ll need a Linux desktop VM or access to a Windows machine.</p>
+<h3 id="Exported-PCK-Files"><a href="#Exported-PCK-Files" class="headerlink" title="Exported PCK Files"></a>Exported PCK Files</h3><p>Admittedly this is not the end of the world. Linux and Window exports in Godot come with a <code>.pck</code> file, which contains the resources for the game. It&#39;s also meant to facilitate updates to a released game, for example, DLC.</p>
+<p>For a small project like this, I felt it should be fine for Godot to embed the PCK in the executable binary. I imagine a user would prefer seeing one <code>.exe</code> file instead of two files to run a game. This feature used to be available in Godot 2.0.</p>
+<p>It was intentionally removed in version 3.0 onwards for simplicity reasons. However, one GitHub <a target="_blank" rel="noopener" href="https://github.com/godotengine/godot/issues/14471">issue</a> led to a <a target="_blank" rel="noopener" href="https://github.com/godotengine/godot/pull/24086">pull request</a>, and it seems that version 3.2 will re-enable this feature.</p>
+<p>For now, I export my Windows and Linux builds as a zip file that contains the executable and the PCK.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>I enjoyed building this game with Godot. I was able to get into the paradigm of how things work quickly. I felt as if the engine gives me a lot of ways to make a polished game that can be shared on many platforms.</p>
+<p>It&#39;s also a nice sign that the pain points are specific to Mac, and will be resolved soon if not resolved already.</p>
+<p>Going forward, I would like to finish my course to learn more fundamental Godot concepts. I also want to make games specifically for the iOS and Android, and have them on their stores.</p>
+<p>Happy game developing!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Learning-Path"><span class="toc-number">1.</span> <span class="toc-text">Learning Path</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blogs-and-YouTube-Videos"><span class="toc-number">1.1.</span> <span class="toc-text">Blogs and YouTube Videos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Udemy-Course-Discovering-Godot-Make-Video-Games-in-Python-like-GDScript"><span class="toc-number">1.2.</span> <span class="toc-text">Udemy Course - Discovering Godot: Make Video Games in Python-like GDScript</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#November-Game-Project-2019-AV-Execute"><span class="toc-number">2.</span> <span class="toc-text">November Game Project 2019 - AV: Execute</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Things-I-Loved"><span class="toc-number">3.</span> <span class="toc-text">Things I Loved</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Software-Itself"><span class="toc-number">3.1.</span> <span class="toc-text">The Software Itself</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scenes-and-Nodes"><span class="toc-number">3.2.</span> <span class="toc-text">Scenes and Nodes</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Save-a-Scene-Separately-After-Creation"><span class="toc-number">3.2.1.</span> <span class="toc-text">Save a Scene Separately After Creation</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GD-Script"><span class="toc-number">3.3.</span> <span class="toc-text">GD Script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Intuitive-Menu-Design"><span class="toc-number">3.4.</span> <span class="toc-text">Intuitive Menu Design</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Controller-Support"><span class="toc-number">3.5.</span> <span class="toc-text">Controller Support!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Version-Control-Everything-Is-Text"><span class="toc-number">3.6.</span> <span class="toc-text">Version Control: Everything Is Text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exports-to-All-Major-Platforms"><span class="toc-number">3.7.</span> <span class="toc-text">Exports to All Major Platforms</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Things-I-Did-Not-Love-As-Much"><span class="toc-number">4.</span> <span class="toc-text">Things I Did Not Love As Much</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#macOS-Catalina-Bloody-Hell"><span class="toc-number">4.1.</span> <span class="toc-text">macOS Catalina - Bloody Hell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Version-Control-GUIs"><span class="toc-number">4.1.1.</span> <span class="toc-text">Version Control GUIs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Freezes-When-Moving-Between-Screens"><span class="toc-number">4.1.2.</span> <span class="toc-text">Freezes When Moving Between Screens</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#No-Windows-Taskbar-Icons-Wine-Doesn-39-t-Work"><span class="toc-number">4.1.3.</span> <span class="toc-text">No Windows Taskbar Icons - Wine Doesn&#39;t Work</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exported-PCK-Files"><span class="toc-number">4.2.</span> <span class="toc-text">Exported PCK Files</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">5.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&text=Thoughts After Making My First Godot Game"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&is_video=false&description=Thoughts After Making My First Godot Game"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Thoughts After Making My First Godot Game&body=Check out this article: https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&title=Thoughts After Making My First Godot Game"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&name=Thoughts After Making My First Godot Game&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2019/11/28/thoughts-after-making-my-first-godot-game/&t=Thoughts After Making My First Godot Game"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

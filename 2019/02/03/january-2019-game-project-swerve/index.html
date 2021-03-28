@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="While in a car on one of T&amp;T&#39;s many bad roads, we had to immediately dodge a deep pothole. I thought I should make a quick game about dodging potholes - and Kontra was just the tool for throwi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="January 2019 Game Project: Swerve">
+<meta property="og:url" content="https://msanatan.com/2019/02/03/january-2019-game-project-swerve/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="While in a car on one of T&amp;T&#39;s many bad roads, we had to immediately dodge a deep pothole. I thought I should make a quick game about dodging potholes - and Kontra was just the tool for throwi">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://msanatan.com/images/swerve-chrome-dev-tools.png">
+<meta property="article:published_time" content="2019-02-04T00:30:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="kontra">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://msanatan.com/images/swerve-chrome-dev-tools.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>January 2019 Game Project: Swerve</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2019/02/05/functional-programming-in-python/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2019/02/03/adding-posts-from-another-site-to-hexo/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&text=January 2019 Game Project: Swerve"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&is_video=false&description=January 2019 Game Project: Swerve"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=January 2019 Game Project: Swerve&body=Check out this article: https://msanatan.com/2019/02/03/january-2019-game-project-swerve/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&name=January 2019 Game Project: Swerve&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&t=January 2019 Game Project: Swerve"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Premise"><span class="toc-number">1.</span> <span class="toc-text">Premise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kontra-Setup"><span class="toc-number">2.</span> <span class="toc-text">Kontra Setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scaling"><span class="toc-number">3.</span> <span class="toc-text">Scaling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Adding-a-Menu"><span class="toc-number">4.</span> <span class="toc-text">Adding a Menu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bonus-Making-an-App"><span class="toc-number">5.</span> <span class="toc-text">Bonus: Making an App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reflections"><span class="toc-number">6.</span> <span class="toc-text">Reflections</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        January 2019 Game Project: Swerve
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-02-04T00:30:00.000Z" itemprop="datePublished">2019-02-03</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/game-development/">game development</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link-link" href="/tags/kontra/" rel="tag">kontra</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>While in a car on one of T&amp;T&#39;s many bad roads, we had to immediately dodge a deep pothole. I thought I should make a quick game about dodging potholes - and <a target="_blank" rel="noopener" href="https://straker.github.io/kontra/">Kontra</a> was just the tool for throwing it out quickly.</p>
+<p>I&#39;ve been familiar with Kontra.js <a href="/2018/08/31/micro-games-with-kontrajs/">before</a> so it was easy to create a working game in 2 hours late at night. In the end it&#39;s called Swerve (I think some hip-hop I was listening kept saying that word) and you can play it here: <a href="https://msanatan.com/swerve/">https://msanatan.com/swerve/</a>.</p>
+<h2 id="Premise"><a href="#Premise" class="headerlink" title="Premise"></a>Premise</h2><p>I wanted to a mobile game where players would dodge objects via touch. The longer you don&#39;t get hit, the higher the score. No need for graphics, I&#39;ll just draw shapes on the canvas.</p>
+<h2 id="Kontra-Setup"><a href="#Kontra-Setup" class="headerlink" title="Kontra Setup"></a>Kontra Setup</h2><p>Kontra is very lightweight, and highly modular. The default configurations come up to 3.5KB at the time of writing, if we want touch controls then we need to add the <code>Pointer</code> code to our download.</p>
+<h2 id="Scaling"><a href="#Scaling" class="headerlink" title="Scaling"></a>Scaling</h2><p>The game is being developed on my laptop, but designed for mobile phones. Thankfully Chrome dev tools allows us to switch the view of our work in progress game as if we were viewing it from various phones:</p>
+<p><img src="/images/swerve-chrome-dev-tools.png" alt="Swerve in Chrome Dev Tools"></p>
+<p>This was my first attempt to scaling a game since Phaser 2&#39;s scale manager which made it dead simple. Essentially I chose a base resolution, 800 x 640, and got the dimensions of the screen. I think chose the minimum ratio of each dimension with:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;game&#x27;</span>).width = <span class="built_in">window</span>.innerWidth;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;game&#x27;</span>).height = <span class="built_in">window</span>.innerHeight;</span><br><span class="line"><span class="comment">// Set resolution of canvas</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;game&#x27;</span>).style.width = <span class="built_in">window</span>.innerWidth + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;game&#x27;</span>).style.height = <span class="built_in">window</span>.innerHeight + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> nativeWidth = <span class="number">800</span>;</span><br><span class="line"><span class="keyword">const</span> nativeHeight = <span class="number">640</span>;</span><br><span class="line"><span class="keyword">const</span> scaleRatio = <span class="built_in">Math</span>.min(<span class="built_in">window</span>.innerWidth / nativeWidth, <span class="built_in">window</span>.innerHeight / nativeHeight);</span><br></pre></td></tr></table></figure>
+
+<p>And now every single sprite and movement would be multiplied by the scale ratio. Scaling works when everything is position relatively. I got this solution from <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/33515707/scaling-a-javascript-canvas-game-properly">https://stackoverflow.com/questions/33515707/scaling-a-javascript-canvas-game-properly</a>. I don&#39;t like how manual this scaling is, the ideal solution would be to have the scale ratio applied throughout. For a game with this small scope it suffices.</p>
+<h2 id="Adding-a-Menu"><a href="#Adding-a-Menu" class="headerlink" title="Adding a Menu"></a>Adding a Menu</h2><p>Managing states or scenes is a typical activity. Different levels for your platformer? They&#39;re different scenes. Game menu with options? Probably a scene too.</p>
+<p>The first 2 hour hack basically threw a player into the game to dodge balls. Not says user friendly like absolutely no introduction. I coded a simple menu that&#39;ll allow the player to determine where it begins by pressing the play button:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create a sprite to manage button clicks to start game</span></span><br><span class="line"><span class="keyword">let</span> playButton = kontra.sprite(&#123;</span><br><span class="line">  x: kontra.canvas.width / <span class="number">2</span>,</span><br><span class="line">  y: kontra.canvas.height / <span class="number">2</span> + (<span class="number">100</span> * scaleRatio),</span><br><span class="line">  color: <span class="string">&#x27;red&#x27;</span>,</span><br><span class="line">  radius: <span class="number">100</span> * scaleRatio,</span><br><span class="line">  textFontSize: <span class="number">80</span> * scaleRatio,</span><br><span class="line">  <span class="comment">// Keep a flag so that we know when the button is pressed</span></span><br><span class="line">  pointerUp: <span class="literal">false</span>,</span><br><span class="line">  <span class="function"><span class="title">onUp</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.pointerUp = <span class="literal">true</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Required for non-rectangular sprites to have accurate collisions</span></span><br><span class="line">  <span class="function"><span class="title">collidesWithPointer</span>(<span class="params">pointer</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// perform a circle v circle collision test</span></span><br><span class="line">    <span class="keyword">let</span> dx = pointer.x - <span class="built_in">this</span>.x;</span><br><span class="line">    <span class="keyword">let</span> dy = pointer.y - <span class="built_in">this</span>.y;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.sqrt(dx * dx + dy * dy) &lt; <span class="built_in">this</span>.radius * <span class="number">2</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">update</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// Exit thsos loop and start the game loop</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.pointerUp) &#123;</span><br><span class="line">      menuLoop.stop();</span><br><span class="line">      gameLoop.start();</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// Draw a red circle</span></span><br><span class="line">    kontra.context.fillStyle = <span class="built_in">this</span>.color;</span><br><span class="line">    kontra.context.beginPath();</span><br><span class="line">    kontra.context.arc(<span class="built_in">this</span>.x, <span class="built_in">this</span>.y, <span class="built_in">this</span>.radius, <span class="number">0</span>, <span class="number">2</span> * <span class="built_in">Math</span>.PI, <span class="literal">false</span>);</span><br><span class="line">    kontra.context.fill();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// And write the word &#x27;Play&#x27; in it</span></span><br><span class="line">    kontra.context.fillStyle = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">    kontra.context.font = <span class="string">`<span class="subst">$&#123;<span class="built_in">this</span>.textFontSize&#125;</span>px Verdana, Geneva, sans-serif`</span>;</span><br><span class="line">    kontra.context.textBaseline = <span class="string">&#x27;middle&#x27;</span>;</span><br><span class="line">    kontra.context.textAlign = <span class="string">&#x27;center&#x27;</span>;</span><br><span class="line">    kontra.context.fillText(<span class="string">&#x27;Play&#x27;</span>, <span class="built_in">this</span>.x, <span class="built_in">this</span>.y);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Track player with pointer</span></span><br><span class="line">kontra.pointer.track(playButton);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> menuLoop = kontra.gameLoop(&#123;</span><br><span class="line">  update: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    playButton.update();</span><br><span class="line">  &#125;,</span><br><span class="line">  render: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// Render the game title</span></span><br><span class="line">    kontra.context.fillStyle = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">    kontra.context.font = <span class="string">`<span class="subst">$&#123;textFontSizes.title&#125;</span>px &quot;Comic Sans MS&quot;, cursive, sans-serif`</span>;</span><br><span class="line">    kontra.context.textBaseline = <span class="string">&#x27;middle&#x27;</span>;</span><br><span class="line">    kontra.context.textAlign = <span class="string">&#x27;center&#x27;</span>;</span><br><span class="line">    kontra.context.fillText(<span class="string">&#x27;Swerve&#x27;</span>, kontra.canvas.width / <span class="number">2</span>, <span class="number">150</span> * scaleRatio);</span><br><span class="line">    <span class="comment">// Render the &#x27;Play&#x27; button</span></span><br><span class="line">    playButton.render();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Start the menu loop</span></span><br><span class="line">menuLoop.start();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Bonus-Making-an-App"><a href="#Bonus-Making-an-App" class="headerlink" title="Bonus: Making an App"></a>Bonus: Making an App</h2><p>This game is just a small website, and can be wrapped up like any other website to become an app. With the most basic <code>config.xml</code> I used <a target="_blank" rel="noopener" href="https://build.phonegap.com/">https://build.phonegap.com</a> to build an APK for it. This Adobe service is free for public repos. It&#39;s just a convenient, proprietary tool built on top of <a target="_blank" rel="noopener" href="https://cordova.apache.org/">Cordova</a>, which is also free but open source to boot.</p>
+<h2 id="Reflections"><a href="#Reflections" class="headerlink" title="Reflections"></a>Reflections</h2><p>This was a fun exercise, and I really got even more respect for Kontra. It&#39;s super lightweight with enough baked in to give me a game in under 8 hours that&#39;s mobile friendly. Scaling is something I&#39;d prefer to automatically managed, Phaser 2&#39;s Scale Manager has got me properly spoilt.</p>
+<p>There are tons that can be improved with this mini-game: add music, collect items for more points, use graphics instead of just pixels. Kontra also comes with optional modules to make those upgrades straightforward. But I&#39;m satisfied with this random creation I call Swerve. You can get the code here: <a target="_blank" rel="noopener" href="https://github.com/msanatan/swerve">https://github.com/msanatan/swerve</a></p>
+<p>Happy game developing!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Premise"><span class="toc-number">1.</span> <span class="toc-text">Premise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kontra-Setup"><span class="toc-number">2.</span> <span class="toc-text">Kontra Setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scaling"><span class="toc-number">3.</span> <span class="toc-text">Scaling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Adding-a-Menu"><span class="toc-number">4.</span> <span class="toc-text">Adding a Menu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bonus-Making-an-App"><span class="toc-number">5.</span> <span class="toc-text">Bonus: Making an App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reflections"><span class="toc-number">6.</span> <span class="toc-text">Reflections</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&text=January 2019 Game Project: Swerve"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&is_video=false&description=January 2019 Game Project: Swerve"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=January 2019 Game Project: Swerve&body=Check out this article: https://msanatan.com/2019/02/03/january-2019-game-project-swerve/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&title=January 2019 Game Project: Swerve"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&name=January 2019 Game Project: Swerve&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2019/02/03/january-2019-game-project-swerve/&t=January 2019 Game Project: Swerve"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

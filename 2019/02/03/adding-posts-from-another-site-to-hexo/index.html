@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Hey everyone! In my last post I wrote about scraping another website I write articles for, which I include here https:&#x2F;&#x2F;msanatan.com&#x2F;categories&#x2F;other&#x2F;. This is how I integrated them in the site. First">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Add Posts from Another Site to Hexo">
+<meta property="og:url" content="https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/index.html">
+<meta property="og:site_name" content="Marcus Sanatan">
+<meta property="og:description" content="Hey everyone! In my last post I wrote about scraping another website I write articles for, which I include here https:&#x2F;&#x2F;msanatan.com&#x2F;categories&#x2F;other&#x2F;. This is how I integrated them in the site. First">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-02-03T18:14:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T02:24:06.539Z">
+<meta property="article:author" content="Marcus Sanatan">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/custom/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/custom/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/custom/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Add Posts from Another Site to Hexo</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Marcus Sanatan" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2019/02/03/january-2019-game-project-swerve/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2019/01/30/understanding-recursive-functions-with-python/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&text=Add Posts from Another Site to Hexo"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&is_video=false&description=Add Posts from Another Site to Hexo"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Add Posts from Another Site to Hexo&body=Check out this article: https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&name=Add Posts from Another Site to Hexo&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&t=Add Posts from Another Site to Hexo"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#First-Attempt-with-JSON"><span class="toc-number">1.</span> <span class="toc-text">First Attempt with JSON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stick-with-Markdown-for-Posts"><span class="toc-number">2.</span> <span class="toc-text">Stick with Markdown for Posts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Adding-a-Page-for-Linked-Posts"><span class="toc-number">3.</span> <span class="toc-text">Adding a Page for Linked Posts</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Add Posts from Another Site to Hexo
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Marcus Sanatan</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-02-03T18:14:00.000Z" itemprop="datePublished">2019-02-03</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/web/">web</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/hexo/" rel="tag">hexo</a>, <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Hey everyone!</p>
+<p>In my last post I wrote about scraping another website I write articles for, which I include here <a href="https://msanatan.com/categories/other/">https://msanatan.com/categories/other/</a>. This is how I integrated them in the site.</p>
+<h2 id="First-Attempt-with-JSON"><a href="#First-Attempt-with-JSON" class="headerlink" title="First Attempt with JSON"></a>First Attempt with JSON</h2><p>I first tried to load the extra blog posts as a <a target="_blank" rel="noopener" href="https://hexo.io/docs/data-files.html">data file</a>. Hexo allows content stored as JSON or YAML in the <code>source/_data</code> directory to be loaded in templates. The scraper I built orginally stored the articles as JSON, and it worked. However, there were a couple of things I didn&#39;t like.</p>
+<p>I needed to create new templates to load from the data files. This is added maintenance for my theme. If I write for more than one external site, I would have to scrape the other sites and integrate each site&#39;s blog posts into one JSON blob. While not a herculean effort, data files for such dynamic thing like posts do not feel intuitive.</p>
+<p>Themes paginate easily for markdown files processed as posts. If you&#39;re reading from a data file, you&#39;ll have to implement pagination yourself. Doable, but I couldn&#39;t help but think there was a better way.</p>
+<h2 id="Stick-with-Markdown-for-Posts"><a href="#Stick-with-Markdown-for-Posts" class="headerlink" title="Stick with Markdown for Posts"></a>Stick with Markdown for Posts</h2><p>If you look at the Hexo docs for <a target="_blank" rel="noopener" href="https://hexo.io/docs/variables.html">variables</a>, you can see two things:</p>
+<ul>
+<li>Pages have a <code>link</code> attribute that&#39;s described as &quot;The external link of the article (Used in link posts)&quot;</li>
+<li>Posts have all the variables Pages have</li>
+</ul>
+<p>Therfore, we can link to an external post by the setting the appropriate markdown variable like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Your blog title</span><br><span class="line">date: 2019-02-03</span><br><span class="line">categories: [other]</span><br><span class="line">link: https:&#x2F;&#x2F;example.com&#x2F;other-post-from-you&#x2F;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h2 id="Adding-a-Page-for-Linked-Posts"><a href="#Adding-a-Page-for-Linked-Posts" class="headerlink" title="Adding a Page for Linked Posts"></a>Adding a Page for Linked Posts</h2><p>The next time you run <code>hexo g</code> the posts would appear on your page just like the posts you write on your blog.</p>
+<p>In my example, I used the &#39;other&#39; as the category for the external post. That was intentional. If I&#39;d like to create a page for those articles I just need to add <code>Other Writing: /categories/other/</code> to my theme&#39;s <code>_config.yml</code> navigation section:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">nav:</span></span><br><span class="line">  <span class="attr">Home:</span> <span class="string">/</span></span><br><span class="line">  <span class="attr">About:</span> <span class="string">/about/</span></span><br><span class="line">  <span class="attr">Archives:</span> <span class="string">/archives/</span></span><br><span class="line">  <span class="attr">Other Writing:</span> <span class="string">/categories/other/</span></span><br><span class="line">  <span class="attr">Search:</span> <span class="string">/search/</span></span><br><span class="line">  <span class="attr">Contact:</span> <span class="string">/contact/</span></span><br></pre></td></tr></table></figure>
+
+<p>Each theme has it&#39;s own way to define navigation, in my experience they&#39;re usually a configuration. The key thing is that it links to the <code>/categories/other/</code>. In my theme, a category page uses the archive template, something common in most themes as well. The archive template has pagination! So there&#39;s no need to recreate the same functionality for data files.</p>
+<p>As the posts are markdown files, integrating blogs from different websites is easy. There&#39;s no need for consolidation into one file as I would have done with the JSON blob. This setup bypasses my 2 gripes with data files.</p>
+<p>I didn&#39;t figure this out on my own, major thanks to <a target="_blank" rel="noopener" href="https://github.com/tcrowe">Tony Crowe</a> for dealing with my GitHub <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/3423">issue</a>. He also gave me some pointers on how to filter posts with links and even highlight them with icons. The Hexo community is pretty helpful, when in doubt just give a shout.</p>
+<p>Happy blogging!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#First-Attempt-with-JSON"><span class="toc-number">1.</span> <span class="toc-text">First Attempt with JSON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stick-with-Markdown-for-Posts"><span class="toc-number">2.</span> <span class="toc-text">Stick with Markdown for Posts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Adding-a-Page-for-Linked-Posts"><span class="toc-number">3.</span> <span class="toc-text">Adding a Page for Linked Posts</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&text=Add Posts from Another Site to Hexo"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&is_video=false&description=Add Posts from Another Site to Hexo"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Add Posts from Another Site to Hexo&body=Check out this article: https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&title=Add Posts from Another Site to Hexo"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&name=Add Posts from Another Site to Hexo&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://msanatan.com/2019/02/03/adding-posts-from-another-site-to-hexo/&t=Add Posts from Another Site to Hexo"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Marcus Sanatan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/categories/other/">Other Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84079011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-84079011-1');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
