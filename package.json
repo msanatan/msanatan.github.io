@@ -1,0 +1,25 @@
+{
+  "name": "msanatan.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marcus Sanatan's website",
+  "main": "src/pages/index.js",
+  "repository": "git@github.com:msanatan/msanatan.github.io.git",
+  "author": "Marcus Sanatan <msanatan@gmail.com>",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^3.6.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
