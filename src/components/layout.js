@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Helmet } from 'react-helmet'
 import { menuItem } from './layout.module.css'
 
 const Layout = ({ pageTitle, children }) => {
@@ -18,6 +19,10 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div className='container h-100 d-flex flex-column'>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{pageTitle} | {siteTitleText}</title>
+      </Helmet>
       <div className='row'>
         <header>
           <nav className='navbar navbar-expand-lg navbar-light'>
