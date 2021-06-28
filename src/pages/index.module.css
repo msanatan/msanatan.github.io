@@ -1,0 +1,57 @@
+.hero-title {
+  font-family: Montserrat, Roboto, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hero-name {
+  color:#00cdac;
+}
+
+.subtitle {
+  font-family: Montserrat, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+@media (max-width: 544px) {
+  .hero-title {
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+}
+
+@media (min-width: 544px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
