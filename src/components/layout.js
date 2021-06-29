@@ -45,6 +45,11 @@ const Layout = ({ pageTitle, children }) => {
       <div className='row flex-grow-1'>
         {children}
       </div>
+      <div className='row'>
+        <footer>
+          &copy; {new Date().getFullYear()} Marcus Sanatan
+        </footer>
+      </div>
     </div >
   )
 }

@@ -4,3 +4,9 @@ body,
 #gatsby-focus-wrapper {
   height: 100%;
 }
+
+footer {
+  text-align: center;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+}
