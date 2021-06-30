@@ -1,5 +1,5 @@
 ---
-title: Phase GameObject Input Events
+title: Phaser GameObject Input Events
 date: 2020-12-19 20:50:00
 categories:
 - [game development]
