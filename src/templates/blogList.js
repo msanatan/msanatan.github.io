@@ -23,6 +23,7 @@ const BlogListTemplate = ({ data }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
+          const postMetadata = post.frontmatter.updated ? `${post.frontmatter.date} (updated: ${post.frontmatter.updated}) - ${post.frontmatter.tags.join(', ')}` : `${post.frontmatter.date} - ${post.frontmatter.tags.join(', ')}`
 
           if (!post.frontmatter.link) {
             return (
@@ -38,7 +39,7 @@ const BlogListTemplate = ({ data }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
-                    <small>{post.frontmatter.date} - {post.frontmatter.tags.join(', ')}</small>
+                    <small>{postMetadata}</small>
                   </header>
                   <section>
                     <p
