@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { pageTitle } from '../styles/page.module.css'
 
-const BlogPage = ({ data }) => {
+const BlogListTemplate = ({ data }) => {
 
   const posts = data.allMarkdownRemark.nodes
 
@@ -59,26 +59,26 @@ const BlogPage = ({ data }) => {
 }
 
 export const query = graphql`
-query AllBlogPosts {
-  site {
-    siteMetadata {
-      title
-    }
-  }
-  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+query AllBlogPostsForList($skip: Int!, $limit: Int!) {
+  allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }
+    filter: {frontmatter: {link: {eq: null}}}
+    limit: $limit
+    skip: $skip
+    ) {
     nodes {
-      excerpt
       fields {
         slug
       }
       frontmatter {
         title
-        link
-        date(formatString: "DD-MM-YYYY")
+        date(formatString: "YYYY-MM-DD")
+        updated(formatString: "YYYY-MM-DD")
+        tags
       }
     }
   }
 }
 `
 
-export default BlogPage
+export default BlogListTemplate
