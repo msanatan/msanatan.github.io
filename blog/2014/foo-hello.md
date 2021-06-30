@@ -3,6 +3,8 @@ title: foo = 'Hello'
 date: 2014/10/16 21:19
 categories:
 - [personal]
+tags:
+- personal
 ---
 
 Hi everyone,

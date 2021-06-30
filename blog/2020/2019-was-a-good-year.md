@@ -3,6 +3,8 @@ title: 2019 Was a Good Year
 date: 2020-01-01 22:45:00
 categories:
 - [personal]
+tags:
+- personal
 ---
 
 Every New Year my brother and I look at each other and say, "this is going to be our year". It's not that we are unsatisfied with the cards life has dealt us, nor do we think we are making bad plays. We just know that there's more to come, and we have so much more to give.
