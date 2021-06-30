@@ -38,7 +38,7 @@ const BlogListTemplate = ({ data }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
-                    <small>{post.frontmatter.date}</small>
+                    <small>{post.frontmatter.date} - {post.frontmatter.tags.join(', ')}</small>
                   </header>
                   <section>
                     <p
