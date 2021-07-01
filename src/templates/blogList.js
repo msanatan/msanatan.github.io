@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { pageTitle } from '../styles/page.module.css'
+import { postLink } from './blogList.module.css'
 
 const BlogListTemplate = ({ data }) => {
 
@@ -19,42 +20,48 @@ const BlogListTemplate = ({ data }) => {
 
   return (
     <Layout pageTitle='Blog'>
-      <h1 className={pageTitle}>Blog</h1>
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-          const postMetadata = post.frontmatter.updated ? `${post.frontmatter.date} (updated: ${post.frontmatter.updated}) - ${post.frontmatter.tags.join(', ')}` : `${post.frontmatter.date} - ${post.frontmatter.tags.join(', ')}`
+      <div className={`${pageTitle} row`}>
+        <h1>Blog</h1>
+      </div>
+      <div className='row align-self-center'>
+        <div className='col-sm-6 offset-sm-3'>
+          <ol style={{ listStyle: `none` }}>
+            {posts.map(post => {
+              const title = post.frontmatter.title || post.fields.slug
+              const postMetadata = post.frontmatter.updated ? `${post.frontmatter.date} (updated: ${post.frontmatter.updated}) - ${post.frontmatter.tags.join(', ')}` : `${post.frontmatter.date} - ${post.frontmatter.tags.join(', ')}`
 
-          if (!post.frontmatter.link) {
-            return (
-              <li key={post.fields.slug}>
-                <article
-                  className="post-list-item"
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
-                  <header>
-                    <h2>
-                      <Link to={post.fields.slug} itemProp="url">
-                        <span itemProp="headline">{title}</span>
-                      </Link>
-                    </h2>
-                    <small>{postMetadata}</small>
-                  </header>
-                  <section>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: post.frontmatter.description || post.excerpt,
-                      }}
-                      itemProp="description"
-                    />
-                  </section>
-                </article>
-              </li>
-            )
-          }
-        })}
-      </ol>
+              if (!post.frontmatter.link) {
+                return (
+                  <li key={post.fields.slug}>
+                    <article
+                      className="post-list-item"
+                      itemScope
+                      itemType="http://schema.org/Article"
+                    >
+                      <header>
+                        <h2>
+                          <Link to={post.fields.slug} itemProp="url" className={postLink}>
+                            <span itemProp="headline">{title}</span>
+                          </Link>
+                        </h2>
+                        <small>{postMetadata}</small>
+                      </header>
+                      <section>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: post.frontmatter.description || post.excerpt,
+                          }}
+                          itemProp="description"
+                        />
+                      </section>
+                    </article>
+                  </li>
+                )
+              }
+            })}
+          </ol>
+        </div>
+      </div>
     </Layout>
   )
 }
