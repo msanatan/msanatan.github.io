@@ -7,7 +7,7 @@ const IndexPage = () => {
   return (
     <Layout pageTitle='Home'>
       <div className='container-fluid align-self-center'>
-        <div className='row justify-content-center '>
+        <div className='row justify-content-center'>
           <div className='col-sm-4 d-flex justify-content-center py-5 py-md-0'>
             <StaticImage
               alt='Pixel avatar of Marcus'
