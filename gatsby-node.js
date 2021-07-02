@@ -38,7 +38,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
-  const postsPerPage = 5
+  const postsPerPage = 10
   const numPages = Math.ceil(posts.length / postsPerPage)
 
   // Create blog posts pages
