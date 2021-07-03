@@ -1,6 +1,6 @@
 ---
-title: Small Website? Go Flask, And Use Blueprints
-date: 2014/10/31 23:40
+title: "Small Website? Go Flask, and Use Blueprints"
+date: 2014-10-31 23:40
 categories:
 - [web]
 - [tutorial]

@@ -1,6 +1,6 @@
 ---
-title: Demo Your Dev App With Ngrok
-date: 2018/01/01
+title: "Demo Your Dev App with Ngrok"
+date: 2018-01-01
 categories:
 - [web]
 tags:

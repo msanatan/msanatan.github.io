@@ -1,5 +1,5 @@
 ---
-title: Lessons from Creating My First Godot Game
+title: "Lessons from Creating My First Godot Game"
 date: 2019-12-17 22:45:00
 categories:
 - [game development]
@@ -17,7 +17,7 @@ Since my last project, here are some technical bits I've picked up on that I'll 
 
 In all development languages/frameworks, structure is a matter of personal taste and project size. For very small games or quick prototypes, you can get by with a flat structure. The one I've settled with for my small projects is:
 
-```
+```plaintext
 |- assets
  |- audio
  |- fonts
@@ -32,13 +32,13 @@ In whatever way it's done, the majority of the community prefers to separate the
 
 This is nothing big but it's something I'll probably forget. If you want to check if a node exists in a scene, use this code snippet:
 
-```python
+```gdscript
 if some_cool_node.has_node("node_that_might_exist"):
 ```
 
 But to check if a node has a property, like one you'll edit in the GUI, simply do this:
 
-```python
+```gdscript
 if some_cool_node.property_that_might_exist:
 ```
 
@@ -46,7 +46,7 @@ if some_cool_node.property_that_might_exist:
 
 A YouTube video I can't find anymore :-( showed me this awesome technique for making menu buttons. After creating a basic menu button scene, attach this script to it:
 
-```python
+```gdscript
 extends TextureButton
 
 export (String) var scene_to_load
@@ -60,7 +60,7 @@ We add two variables that can be configured in the GUI for menu buttons. The `sc
 
 Then, attach a script similar to this for your menu scene:
 
-```python
+```gdscript
 extends MarginContainer
 
 var scene_path_to_load : String

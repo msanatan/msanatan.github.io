@@ -1,5 +1,5 @@
 ---
-title: Update-Join Statements To The MySQL Rescue
+title: "Update-Join Statements to the MySQL Rescue"
 date: 2018-03-01 00:07:58
 categories:
 - [database]

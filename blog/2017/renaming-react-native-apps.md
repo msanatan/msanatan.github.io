@@ -1,6 +1,6 @@
 ---
-title: Renaming React Native Apps
-date: 2017/05/10
+title: "Renaming React Native Apps"
+date: 2017-05-10
 categories:
 - [mobile]
 - [tutorial]

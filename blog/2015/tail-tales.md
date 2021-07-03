@@ -1,6 +1,6 @@
 ---
-title: Tail Tales
-date: 2015/12/26 14:12
+title: "Tail Tales"
+date: 2015-12-26 14:12
 categories:
 - [linux]
 tags:

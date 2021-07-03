@@ -1,5 +1,5 @@
 ---
-title: Easy Emails With SendGrid
+title: "Easy Emails with SendGrid"
 date: 2014-11-09 12:32
 categories:
 - [web]

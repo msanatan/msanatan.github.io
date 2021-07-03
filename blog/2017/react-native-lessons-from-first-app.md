@@ -1,6 +1,6 @@
 ---
-title: 'React Native: Lessons From First App'
-date: 2017/06/18
+title: "React Native: Lessons from First App"
+date: 2017-06-18
 categories:
 - [mobile]
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Add Posts from Another Site to Hexo
+title: "Add Posts from Another Site to Hexo"
 date: 2019-02-03 14:14:00
 categories:
 - [web]

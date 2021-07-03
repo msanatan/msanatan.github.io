@@ -1,5 +1,5 @@
 ---
-title: 'Phaser, ES2015 And Breakout'
+title: "Phaser, ES2015 and Breakout"
 date: 2017-11-06 23:52:01
 categories:
 - [game development]

@@ -1,5 +1,5 @@
 ---
-title: Loading Fonts in Phaser with FontFace
+title: "Loading Fonts in Phaser with FontFace"
 date: 2020-11-08 9:20:00
 categories:
 - [game development]

@@ -1,6 +1,6 @@
 ---
-title: Switching To A Static Website
-date: 2016/09/27
+title: "Switching to a Static Website"
+date: 2016-09-27
 categories:
 - [web]
 tags:

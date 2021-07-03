@@ -1,6 +1,6 @@
 ---
-title: Death To The Buzzword, Long Live Development
-date: 2016/03/17 22:09
+title: "Death to the Buzzword, Long Live Development"
+date: 2016-03-17 22:09
 categories:
 - [personal]
 tags:

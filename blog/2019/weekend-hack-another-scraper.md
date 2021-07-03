@@ -1,5 +1,5 @@
 ---
-title: Weekend Hack, Another Scraper
+title: "Weekend Hack, Another Scraper"
 date: 2019-01-20 21:38:00
 updated: 2019-02-02 01:04:00
 categories:

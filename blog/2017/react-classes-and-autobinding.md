@@ -1,5 +1,5 @@
 ---
-title: React Classes And Autobinding
+title: "React Classes and Autobinding"
 date: 2017-11-03 09:51:49
 categories:
 - [web]

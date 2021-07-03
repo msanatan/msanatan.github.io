@@ -1,6 +1,6 @@
 ---
-title: My First Startup Weekend TT - Improving Lives
-date: 2015/06/20 22:41
+title: "My First Startup Weekend TT - Improving Lives"
+date: 2015-06-20 22:41
 categories:
 - [community]
 tags:

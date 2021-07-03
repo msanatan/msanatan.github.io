@@ -1,6 +1,6 @@
 ---
-title: Fun With Pygame
-date: 2017/10/05
+title: "Fun with Pygame"
+date: 2017-10-05
 categories:
 - [game development]
 - [tutorial]

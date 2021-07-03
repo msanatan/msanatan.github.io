@@ -1,6 +1,6 @@
 ---
-title: Drinking Coffee/JavaScript? Sip On Mocha And Chai For testing
-date: 2015/04/08 21:19
+title: "Drinking Coffee/JavaScript? Sip on Mocha and Chai for testing"
+date: 2015-04-08 21:19
 categories:
 - [web]
 - [tutorial]

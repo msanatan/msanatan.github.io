@@ -1,5 +1,5 @@
 ---
-title: Cuadrado's Trials, an Overdue Recap
+title: "Cuadrado's Trials, an Overdue Recap"
 date: 2020-10-20 9:15:00
 categories:
 - [game development]

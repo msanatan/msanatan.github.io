@@ -1,6 +1,6 @@
 ---
-title: Kraken.js And PayPal's Open Source Revolution
-date: 2014/11/10 22:32
+title: "Kraken.js and PayPal's Open Source Revolution"
+date: 2014-11-10 22:32
 categories:
 - [web]
 tags:

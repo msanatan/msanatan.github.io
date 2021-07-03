@@ -1,5 +1,5 @@
 ---
-title: Things To Do After Setting Up Hexo
+title: "Things to Do After Setting up Hexo"
 date: 2017-10-31 23:38:00
 updated: 2017-11-02 13:13:00
 categories:

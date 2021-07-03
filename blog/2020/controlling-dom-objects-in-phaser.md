@@ -1,5 +1,5 @@
 ---
-title: Controlling DOM Objects in Phaser
+title: "Controlling DOM Objects in Phaser"
 date: 2020-12-15 10:00:00
 categories:
 - [game development]
