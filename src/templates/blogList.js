@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { pageTitle } from '../styles/page.module.css'
-import { postLink } from './blogList.module.css'
+import { postLink, btnNav } from './blogList.module.css'
 
 const BlogListTemplate = ({ data }) => {
 
@@ -64,11 +64,11 @@ const BlogListTemplate = ({ data }) => {
           </div>
         </div>
         <div className='row my-1'>
-          <div className='col-4 d-flex justify-content-end'>
-            <button type='button' className='btn btn-dark'>Previous</button>
+          <div className='col-6 d-flex justify-content-end'>
+            <button type='button' className={`btn ${btnNav}`}>Previous</button>
           </div>
-          <div className='offset-4 col-4 d-flex justify-content-start'>
-            <button type='button' className='btn btn-dark'>Next</button>
+          <div className='col-6 d-flex justify-content-start'>
+            <button type='button' className={`btn ${btnNav}`}>Next</button>
           </div>
         </div>
       </div>
