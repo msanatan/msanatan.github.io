@@ -7,6 +7,8 @@ const BlogPostTemplate = ({ data }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
+  const postMetadata = post.frontmatter.updated ? `${post.frontmatter.date} (updated: ${post.frontmatter.updated}) - ${post.frontmatter.tags.join(', ')}` : `${post.frontmatter.date} - ${post.frontmatter.tags.join(', ')}`
+
   return (
     <Layout pageTitle={siteTitle}>
       <div className='container d-flex flex-column'>
@@ -18,7 +20,7 @@ const BlogPostTemplate = ({ data }) => {
           >
             <header>
               <h1 itemProp='headline'>{post.frontmatter.title}</h1>
-              <p>{post.frontmatter.date}</p>
+              <p>{postMetadata}</p>
             </header>
             <section
               dangerouslySetInnerHTML={{ __html: post.html }}
@@ -79,8 +81,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         link
-        date(formatString: "DD-MM-YYYY")
-        updated(formatString: "DD-MM-YYYY")
+        tags
+        date(formatString: "YYYY-MM-DD")
+        updated(formatString: "YYYY-MM-DD")
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
