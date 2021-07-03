@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data }) => {
             />
           </article>
         </div>
-        <div className='row'>
+        <div className='row my-3'>
           <nav className='blog-post-nav'>
             <ul
               style={{
