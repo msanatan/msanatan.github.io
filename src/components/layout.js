@@ -59,7 +59,7 @@ const Layout = ({ pageTitle, children }) => {
       <main className='flex-grow-1 d-flex'>
         {children}
       </main>
-      <footer className='footer mt-auto'>
+      <footer className='footer mt-auto py-2'>
         <div className='container'>
           <span>&copy; {new Date().getFullYear()} Marcus Sanatan</span>
         </div>
