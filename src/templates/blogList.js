@@ -4,8 +4,9 @@ import Layout from '../components/layout'
 import { pageTitle } from '../styles/page.module.css'
 import { postLink, btnNav } from './blogList.module.css'
 
-const BlogListTemplate = ({ data }) => {
+const BlogListTemplate = ({ data, pageContext }) => {
 
+  const { currentPage, numPages } = pageContext
   const posts = data.allMarkdownRemark.nodes
 
   if (posts.length === 0) {
@@ -15,6 +16,20 @@ const BlogListTemplate = ({ data }) => {
           No blog posts found. Get to writing asap!
         </p>
       </Layout >
+    )
+  }
+
+  let navButtons;
+  if (numPages !== 1) {
+    navButtons = (
+      <div className='row my-1'>
+        <div className='col-6 d-flex justify-content-end' >
+          {currentPage > 1 ? <button type='button' className={`btn ${btnNav}`}>Previous</button> : null}
+        </div >
+        <div className='col-6 d-flex justify-content-start'>
+          {currentPage < numPages ? <button type='button' className={`btn ${btnNav}`}>Next</button> : null}
+        </div>
+      </div >
     )
   }
 
@@ -63,40 +78,33 @@ const BlogListTemplate = ({ data }) => {
             </ol>
           </div>
         </div>
-        <div className='row my-1'>
-          <div className='col-6 d-flex justify-content-end'>
-            <button type='button' className={`btn ${btnNav}`}>Previous</button>
-          </div>
-          <div className='col-6 d-flex justify-content-start'>
-            <button type='button' className={`btn ${btnNav}`}>Next</button>
-          </div>
-        </div>
+        {navButtons}
       </div>
     </Layout>
   )
 }
 
 export const query = graphql`
-query AllBlogPostsForList($skip: Int!, $limit: Int!) {
-  allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }
-    filter: {frontmatter: {link: {eq: null}}}
-    limit: $limit
-    skip: $skip
-    ) {
-    nodes {
-      fields {
+      query AllBlogPostsForList($skip: Int!, $limit: Int!) {
+        allMarkdownRemark(
+          sort: {fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: {link: {eq: null}}}
+      limit: $limit
+      skip: $skip
+      ) {
+        nodes {
+        fields {
         slug
       }
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
-        updated(formatString: "YYYY-MM-DD")
-        tags
+      updated(formatString: "YYYY-MM-DD")
+      tags
       }
     }
   }
 }
-`
+      `
 
 export default BlogListTemplate
