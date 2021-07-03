@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { postContainer } from './blogPost.module.css'
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
@@ -11,7 +12,7 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout pageTitle={siteTitle}>
-      <div className='container d-flex flex-column'>
+      <div className={`container d-flex flex-column ${postContainer}`}>
         <div className='row'>
           <article
             className='blog-post'
