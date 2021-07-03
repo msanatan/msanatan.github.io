@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { postContainer } from './blogPost.module.css'
+import { postContainer, header } from './blogPost.module.css'
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
@@ -19,9 +19,9 @@ const BlogPostTemplate = ({ data }) => {
             itemScope
             itemType='http://schema.org/Article'
           >
-            <header>
+            <header className={`${header} my-3`}>
               <h1 itemProp='headline'>{post.frontmatter.title}</h1>
-              <p>{postMetadata}</p>
+              <small>{postMetadata}</small>
             </header>
             <section
               dangerouslySetInnerHTML={{ __html: post.html }}
