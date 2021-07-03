@@ -2,7 +2,8 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { pageTitle } from '../styles/page.module.css'
-import { postLink, btnNav } from './blogList.module.css'
+import { postLink } from './blogList.module.css'
+import BlogListButton from '../components/blogButton'
 
 const BlogListTemplate = ({ data, pageContext }) => {
 
@@ -24,10 +25,10 @@ const BlogListTemplate = ({ data, pageContext }) => {
     navButtons = (
       <div className='row my-1'>
         <div className='col-6 d-flex justify-content-end' >
-          {currentPage > 1 ? <button type='button' className={`btn ${btnNav}`}>Previous</button> : null}
+          {currentPage > 1 ? <BlogListButton text='Previous' link={currentPage > 2 ? `/blog/${currentPage - 1}` : `/blog`} /> : null}
         </div >
         <div className='col-6 d-flex justify-content-start'>
-          {currentPage < numPages ? <button type='button' className={`btn ${btnNav}`}>Next</button> : null}
+          {currentPage < numPages ? <BlogListButton text='Next' link={`/blog/${currentPage + 1}`} /> : null}
         </div>
       </div >
     )
