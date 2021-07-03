@@ -24,7 +24,7 @@ Kontra is very lightweight, and highly modular. The default configurations come 
 
 The game is being developed on my laptop, but designed for mobile phones. Thankfully Chrome dev tools allows us to switch the view of our work in progress game as if we were viewing it from various phones:
 
-![Swerve in Chrome Dev Tools](/images/swerve-chrome-dev-tools.png)
+![Swerve in Chrome Dev Tools](./swerve-chrome-dev-tools.png)
 
 This was my first attempt to scaling a game since Phaser 2's scale manager which made it dead simple. Essentially I chose a base resolution, 800 x 640, and got the dimensions of the screen. I think chose the minimum ratio of each dimension with:
 

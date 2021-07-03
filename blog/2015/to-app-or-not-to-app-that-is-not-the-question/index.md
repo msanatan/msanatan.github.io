@@ -26,7 +26,7 @@ One issue I have with this mobile app development bombardment is thatit's a pr
 
 "Hey, hear me out. I got this cool idea for an app that does something another pretty well known app most likely created in the USA already does, but the company isn't registered here yet so I think I have a chance of being a better hustler for their market". Many don't even mention why they think their solution would be better. I just can't anymore
 
-![No Thanks](/images/seinfeld_no_thanks.gif)
+![No Thanks](./seinfeld_no_thanks.gif)
 
 ## I Am Not Ranting... Not Purposefully, I Think
 

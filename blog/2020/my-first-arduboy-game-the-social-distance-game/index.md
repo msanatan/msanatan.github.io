@@ -12,7 +12,7 @@ It's a pretty strange time all around the world as we manoeuvre through the COVI
 
 I guess this game's idea was natural. You play as an adorable sprite called Ghostie (why not?) and try your best to avoid contact with the various pedestrians. Here's a screenshot of my first Arduboy game \- The Social Distance Game:
 
-![Screenshot of Social Distance Game](/images/my-first-arduboy-game-the-social-distance-game/screenshot01.png)
+![Screenshot of Social Distance Game](./screenshot01.png)
 
 Like life, it's unfair so don't stress about racking up high points. We should try to stay home as well!
 

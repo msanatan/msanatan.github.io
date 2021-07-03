@@ -184,7 +184,7 @@ npm run app-dev
 
 This is what we see:
 
-![Screenshot of running Electron app with debugger](/images/accessing-nodejs-modules-with-create-react-app-and-electron/screenshot01.png)
+![Screenshot of running Electron app with debugger](./screenshot01.png)
 
 Success! It has the same live reloading you have when developing in the browser. As you make changes to your code, your app is updated. When I develop, I usually have my debugger in a separate window so that my app has all of its real estate.
 
@@ -262,7 +262,7 @@ fs.readdir('./').
 
 In our app, our debugger should now look like this:
 
-![Screenshot of running Electron app using the fs Node.js module to list files and folders in the current directory](/images/accessing-nodejs-modules-with-create-react-app-and-electron/screenshot02.png)
+![Screenshot of running Electron app using the fs Node.js module to list files and folders in the current directory](./screenshot02.png)
 
 Sweet! The debugger shows the logs of the files and folders in the current directory, proving we got Node.js integration working as we need it to.
 

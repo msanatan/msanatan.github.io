@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
 ## Blueprints For Large Projects, Blueprints For Small Projects
 
-![Organise - Flask Todo App](/images/organise_flask_todo.png)
+![Organise - Flask Todo App](./organise_flask_todo.png)
 
 In this post I'll show you how you can apply blueprints to small projects, like the todo example you go through in the Flask tutorial. Blueprints allow for a more modular Flask app, they can encapsulate related tasks and be reused in an application by changing URL prefixes. The Flask docs do a great job of explaining it!
 

@@ -189,7 +189,7 @@ const game = new Game('100', '100', Phaser.AUTO);
 ```
 
 Works just like the original!
-![Phaser Breakout](/images/phaser-breakout.png)
+![Phaser Breakout](./phaser-breakout.png)
 
 A major difference with my code is the use of a state, more than likely unnecessary but I just love using states even for small projects. I used this [repo](https://github.com/lean/phaser-es6-webpack) to setup webpack to transpile the code. You probably noticed from the GameState constructor that the repo does not allow me to use later ESnext features - I had to bind the object's functions to preserve the context of `this` instead of defining the function as a class property. It's my first time using that repository for ES2015 but I'd prefer a tool that includes ESnext out of the box and makes less assumptions about how my code is structured. Also, as we have to clone the repo we have to readjust the git remotes if we use version control for everything (and we really should!). Someone made a [Phaser CLI](https://github.com/nerdenough/phaser-cli) to fill that need but only one developer is working on it and it's not updated frequently so I'm not basing my future work on it in this current state.
 

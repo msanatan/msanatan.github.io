@@ -16,7 +16,7 @@ Once it kicked off on Friday, it kept going until the very end on Sunday night.�
 
 Did I mention that a lot of people came out? Apparently on the first day there were over one hundred people participating!
 
-![La gente de Startup Weekend](/images/startup_weekend_networking.jpg)
+![La gente de Startup Weekend](./startup_weekend_networking.jpg)
 
 That alone made it seem worth it to me. I met new people who do really different and interesting things. Most importantly, they're willing to try something new. They got the attitude, they're the kind of people who would say "why not?" and give it a go. That's why they're at Startup Weekend anyway. It's refreshing to meet so many people like that!
 
@@ -30,7 +30,7 @@ Well we didn't work long hours for nothing. I did settle down with a team on S
 
 The teams that placed were really cool. The idea that came third was an online travel service that would hook you up with people who would want to do things together. In second place came Nourish, a company that wants to link food distributors with charities and compost heaps to help better manage their waste. And in first place there was Mobile Donate - a company that allows you to donate to charities locally with your phone credit! It's a pretty cool idea, especially given how much money we spend to use our phones and the few credit card holders in the country. They even had a sexy website to demo to crowd - really impressive stuff. Big up [David Charles](https://tt.linkedin.com/pub/david-charles/b2/172/b82) and the rest of the squad for coming first and more importantly for a job well done!
 
-![Mobile Donate swag team](/images/startup_weekend_winners.jpg)
+![Mobile Donate swag team](./startup_weekend_winners.jpg)
 
 ## What About You
 
@@ -38,6 +38,6 @@ After I recovered (I can't stress how tired I was!) I had some talks with friend
 
 And of course, the token group selfie
 
-![Startup Weekend 2015 Selfie!](/images/startup_weekend_selfie.jpg)
+![Startup Weekend 2015 Selfie!](./startup_weekend_selfie.jpg)
 
 We're missing a couple of soldiers (Super Make It Happen Person - Lekha and Philosopher - Anton), should have taken that selfie earlier! It's all good though, we're still in it and the real work begins now. Happy startuping everyone!

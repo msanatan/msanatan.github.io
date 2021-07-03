@@ -49,7 +49,7 @@ The next tutorial for the course was a platformer. I always like to create somet
 
 I began playing Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would have its 8-directional movement. Heck, let's just make it a game about viruses. In the end, I came up with [AV: Execute](https://msanatan.itch.io/av-execute).
 
-![Screenshot of AV Execute](/images/av-execute.png)
+![Screenshot of AV Execute](./av-execute.png)
 
 It's your standard fare swarm shooter - you're in an arena and your goal is to derezz as many viruses that come your way. The last high score I recall getting was 400, not bad. All the code is available on [GitHub](https://github.com/msanatan/AV-Execute) and the super basic artwork was done by yours truly.
 
