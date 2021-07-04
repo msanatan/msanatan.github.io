@@ -21,6 +21,7 @@
     "@popperjs/core": "^2.5.4",
     "bootstrap": "^5.0.0",
     "gatsby": "^3.6.2",
+    "gatsby-plugin-feed": "^3.8.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-manifest": "^3.8.0",

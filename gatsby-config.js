@@ -77,5 +77,82 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                let rssProperties
+                if (edge.node.frontmatter.link) {
+                  rssProperties = {
+                    description: edge.node.excerpt,
+                    date: edge.node.frontmatter.date,
+                    updated: edge.node.frontmatter.updated,
+                    link: edge.node.frontmatter.link,
+                    url: edge.node.frontmatter.link,
+                    guid: edge.node.frontmatter.link,
+                    categories: edge.node.frontmatter.tags,
+                    language: 'en',
+                  }
+                } else {
+                  rssProperties = {
+                    description: edge.node.excerpt,
+                    date: edge.node.frontmatter.date,
+                    updated: edge.node.frontmatter.updated,
+                    link: edge.node.frontmatter.link,
+                    url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                    guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                    custom_elements: [{ "content:encoded": edge.node.html }],
+                    categories: edge.node.frontmatter.tags,
+                    language: 'en',
+                  }
+                }
+                return Object.assign({}, edge.node.frontmatter, rssProperties)
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        link
+                        tags
+                        updated
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Marcus Sanatan's RSS Feed",
+          },
+        ],
+      },
+    },
   ],
 };
