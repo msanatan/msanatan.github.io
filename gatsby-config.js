@@ -1,6 +1,18 @@
 module.exports = {
   siteMetadata: {
     title: `Marcus Sanatan`,
+    description: `The personal website for Marcus Sanatan, who sometimes blogs about tech things`,
+    author: {
+      name: `Marcus Sanatan`,
+      summary: `A creative coder from the Caribbean who loves building things`
+    },
+    siteUrl: `https://msanatan.com`,
+    social: {
+      twitter: `marcussanatan`,
+      github: `msanatan`,
+      linkedin: `msanatan`,
+      itchio: `msanatan`
+    },
   },
   plugins: [
     `gatsby-plugin-image`,
