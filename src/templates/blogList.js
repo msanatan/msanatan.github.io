@@ -13,7 +13,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
 
   if (posts.length === 0) {
     return (
-      <Layout pageTitle={title}>
+      <Layout title={title}>
         <p>
           No blog posts found. Get to writing asap!
         </p>
@@ -36,7 +36,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
   }
 
   return (
-    <Layout pageTitle={title}>
+    <Layout title={title}>
       <div className='container-fluid d-flex flex-column'>
         <div className={pageTitle}>
           <h1>Blog</h1>

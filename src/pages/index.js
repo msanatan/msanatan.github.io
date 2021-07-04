@@ -5,7 +5,7 @@ import { heroTitle, subtitle, heroName } from './index.module.css'
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle='Home'>
+    <Layout title='Home'>
       <div className='flex-grow-1 d-flex align-items-center'>
         <div className='container'>
           <div className='row'>

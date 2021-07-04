@@ -1,22 +1,9 @@
 import * as React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import { menuItem } from './layout.module.css'
 import Seo from './seo'
 
-const Layout = ({ pageTitle, description, meta, children }) => {
-  const data = useStaticQuery(graphql`
-  query GetBuildInfo {
-    site {
-      buildTime
-      siteMetadata {
-        title
-      }
-    }
-  }
-  `)
-
-  const title = `${pageTitle}`
-
+const Layout = ({ title, description, meta, children }) => {
   return (
     <div className='container d-flex flex-column min-vh-100'>
       <Seo title={title} description={description} meta={meta} />

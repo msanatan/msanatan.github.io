@@ -12,7 +12,7 @@ const BlogPostTemplate = ({ data }) => {
   const postMetadata = post.frontmatter.updated ? `${post.frontmatter.date} (updated: ${post.frontmatter.updated}) - ${post.frontmatter.tags.join(', ')}` : `${post.frontmatter.date} - ${post.frontmatter.tags.join(', ')}`
 
   return (
-    <Layout pageTitle={siteTitle} description={description} meta={[{ keywords: post.frontmatter.tags }]}>
+    <Layout title={siteTitle} description={description} meta={[{ keywords: post.frontmatter.tags }]}>
       <div className={`container d-flex flex-column ${postContainer}`}>
         <div className='row'>
           <article
