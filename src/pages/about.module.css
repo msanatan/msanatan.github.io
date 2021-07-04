@@ -1,0 +1,9 @@
+.social-link {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  color: black;
+}
+
+.social-link:hover {
+  color: black;
+  text-decoration-color: #00cdac;
+}
