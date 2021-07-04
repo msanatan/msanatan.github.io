@@ -5,13 +5,14 @@ import { postContainer, header, navLink } from './blogPost.module.css'
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = post.frontmatter.title
+  const description = post.frontmatter.description || post.excerpt
   const { previous, next } = data
 
   const postMetadata = post.frontmatter.updated ? `${post.frontmatter.date} (updated: ${post.frontmatter.updated}) - ${post.frontmatter.tags.join(', ')}` : `${post.frontmatter.date} - ${post.frontmatter.tags.join(', ')}`
 
   return (
-    <Layout pageTitle={siteTitle}>
+    <Layout pageTitle={siteTitle} description={description} meta={[{ keywords: post.frontmatter.tags }]}>
       <div className={`container d-flex flex-column ${postContainer}`}>
         <div className='row'>
           <article

@@ -9,10 +9,11 @@ const BlogListTemplate = ({ data, pageContext }) => {
 
   const { currentPage, numPages } = pageContext
   const posts = data.allMarkdownRemark.nodes
+  const title = currentPage > 1 ? `Blog pg. ${currentPage}` : `Blog`
 
   if (posts.length === 0) {
     return (
-      <Layout pageTitle='Blog'>
+      <Layout pageTitle={title}>
         <p>
           No blog posts found. Get to writing asap!
         </p>
@@ -35,7 +36,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
   }
 
   return (
-    <Layout pageTitle='Blog'>
+    <Layout pageTitle={title}>
       <div className='container-fluid d-flex flex-column'>
         <div className={pageTitle}>
           <h1>Blog</h1>
