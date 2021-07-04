@@ -53,5 +53,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Marcus Sanatan's Website`,
+        short_name: `msanatan`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#00cdac`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`,
+      },
+    },
   ],
 };
