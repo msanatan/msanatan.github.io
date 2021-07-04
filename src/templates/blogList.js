@@ -38,7 +38,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
   return (
     <Layout title={title}>
       <div className='container-fluid d-flex flex-column'>
-        <div className={pageTitle}>
+        <div className={`row ${pageTitle}`}>
           <h1>Blog</h1>
         </div>
         <div className='row py-3'>
