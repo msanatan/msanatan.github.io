@@ -14,3 +14,8 @@
     font-size: 2rem;
   }
 }
+
+.menu-item-active {
+  text-decoration: solid underline #00cdac 3px;
+  text-underline-position: under;
+}

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { menuItem } from './layout.module.css'
+import { menuItem, menuItemActive } from './layout.module.css'
 import Seo from './seo'
 
 const Layout = ({ title, description, meta, children }) => {
@@ -15,10 +15,25 @@ const Layout = ({ title, description, meta, children }) => {
           <div className='collapse navbar-collapse justify-content-lg-center' id='navBarTogglerMenu'>
             <ul className='navbar-nav mr-auto mb-2 mb-lg-0'>
               <li className='nav-item'>
-                <Link to='/' className={`nav-link ${menuItem}`}>Home</Link>
+                <Link
+                  to='/'
+                  className={`nav-link ${menuItem}`}
+                  activeClassName={menuItemActive}
+                >Home</Link>
               </li>
               <li className='nav-item'>
-                <Link to='/blog' className={`nav-link ${menuItem}`}>Blog</Link>
+                <Link
+                  to='/about'
+                  className={`nav-link ${menuItem}`}
+                  activeClassName={menuItemActive}
+                >About</Link>
+              </li>
+              <li className='nav-item'>
+                <Link
+                  to='/blog'
+                  className={`nav-link ${menuItem}`}
+                  activeClassName={menuItemActive}
+                >Blog</Link>
               </li>
             </ul>
           </div>
