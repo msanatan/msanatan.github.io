@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { postContainer, header } from './blogPost.module.css'
+import { postContainer, header, navLink } from './blogPost.module.css'
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
@@ -42,14 +42,14 @@ const BlogPostTemplate = ({ data }) => {
             >
               <li>
                 {previous && (
-                  <Link to={previous.fields.slug} rel='prev'>
+                  <Link to={previous.fields.slug} rel='prev' className={navLink}>
                     ← {previous.frontmatter.title}
                   </Link>
                 )}
               </li>
               <li>
                 {next && (
-                  <Link to={next.fields.slug} rel='next'>
+                  <Link to={next.fields.slug} rel='next' className={navLink}>
                     {next.frontmatter.title} →
                   </Link>
                 )}
