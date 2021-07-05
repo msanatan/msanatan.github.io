@@ -12,9 +12,9 @@ Hola Go devs!
 
 Golang has an amazing compile experience. It's quick, a lot of errors are caught because of static typing, cross-compilation is effortless and the binary just works. Not having to install a runtime is the way it should be.
 
-At [wepala](https://wepala.com/) where I currently work, we use Golang a lot. When it comes to deploying Go binaries, we opt for [Linux Alpine](https://alpinelinux.org/) docker images as they're pretty small. Who doesn't love a container that's 25MB?
+At <a href="https://wepala.com" target="_blank" rel="nofollow noopener noreferrer">Wepala</a> where I currently work, we use Golang a lot. When it comes to deploying Go binaries, we opt for <a href="https://alpinelinux.org" target="_blank" rel="nofollow noopener noreferrer">Linux Alpine</a> docker images as they're pretty small. Who doesn't love a container that's 25MB?
 
-I don't usually encounter a problem with this setup, but a recent project requires me to use [Go plugins](https://golang.org/pkg/plugin/). With plugins, instead of an executable, I create an `.so` (shared object) file when I compile my Go code.
+I don't usually encounter a problem with this setup, but a recent project requires me to use <a href="https://golang.org/pkg/plugin/" target="_blank" rel="nofollow noopener noreferrer">Go plugins</a>. With plugins, instead of an executable, I create an `.so` (shared object) file when I compile my Go code.
 
 When I first tried to load my plugin with a Go app in an Alpine container, I get this error message:
 

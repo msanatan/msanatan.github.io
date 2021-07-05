@@ -9,7 +9,7 @@ tags:
 
 Hello aspiring game devs! As you know from my previous post I've been getting into Godot, and I'm pretty excited.
 
-As I follow this [course on Udemy](https://www.udemy.com/course/godot/), after every tutorial I try to make a game. I always make a game that's harder than what I just worked on. This way, I get to practice what I learn but I'm also forced to learn new things without a guided hand. While painful, it deepens my understanding of what's going on.
+As I follow this <a href="https://www.udemy.com/course/godot/" target="_blank" rel="nofollow noopener noreferrer">course on Udemy</a>, after every tutorial I try to make a game. I always make a game that's harder than what I just worked on. This way, I get to practice what I learn but I'm also forced to learn new things without a guided hand. While painful, it deepens my understanding of what's going on.
 
 Since my last project, here are some technical bits I've picked up on that I'll carry with me for future projects.
 

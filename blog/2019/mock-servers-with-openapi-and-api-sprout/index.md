@@ -10,7 +10,7 @@ tags:
 
 Hey API developers!
 
-This is a pretty quick post that could save you time like it did for me! In my current job we develop a lot of microservices, the majority being RESTful. For each microservice we define an [OpenAPI specification](https://swagger.io/specification/) \- a YAML file that describes the API. This is useful because we can think about our services at a pretty high level and figure out how they can communicate with each other without writing a line of code.
+This is a pretty quick post that could save you time like it did for me! In my current job we develop a lot of microservices, the majority being RESTful. For each microservice we define an <a href="https://swagger.io/specification/" target="_blank" rel="nofollow noopener noreferrer">OpenAPI specification</a> \- a YAML file that describes the API. This is useful because we can think about our services at a pretty high level and figure out how they can communicate with each other without writing a line of code.
 
 Large problems like the one we're tackling may require many microservices. There are merits and downsides for this architecture but those can be discussed in a different post. With limited resources, not all microservices can be developed at the same time.  Luckily with our OpenAPI file, it's easy to mock them!
 
@@ -86,7 +86,7 @@ components:
         - ip
 ```
 
-We can use [APISprout](https://github.com/danielgtaylor/apisprout) to parse our swagger file and create a server we can use for testing. We define examples in our OpenAPI specification so our mock server can have set data. If you don't define examples, it would generate dummy data by inspecting the schema. I prefer to use it via the docker container because that makes it deployable in my work environment.
+We can use <a href="https://github.com/danielgtaylor/apisprout" target="_blank" rel="nofollow noopener noreferrer">APISprout</a> to parse our swagger file and create a server we can use for testing. We define examples in our OpenAPI specification so our mock server can have set data. If you don't define examples, it would generate dummy data by inspecting the schema. I prefer to use it via the docker container because that makes it deployable in my work environment.
 
 Once the server is up and running \(don't forget to add a Docker volume with the full path if you're referencing a local YAML file\), we can send requests to it like normal:
 

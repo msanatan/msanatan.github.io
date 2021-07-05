@@ -20,10 +20,10 @@ At the very least, you need a page with a form in it, pretty straigthforward. If
 
 ## Formspree
 
-So there's a "Contact page as a Service" called [Formspree](https://formspree.io). It saves you from having to build and deploy an app that processes post data, and sends you an email via SendGrid/MailChimp/mail server. It has a free tier that'll suit the needs of most personal blogs and it's also [open source](https://github.com/formspree/formspree).
+So there's a "Contact page as a Service" called <a href="https://formspree.io" target="_blank" rel="nofollow noopener noreferrer">Formspree</a>. It saves you from having to build and deploy an app that processes post data, and sends you an email via SendGrid/MailChimp/mail server. It has a free tier that'll suit the needs of most personal blogs and it's also <a href="https://github.com/formspree/formspree" target="_blank" rel="nofollow noopener noreferrer">open source</a>.
 
 There's isn't much to it aside from adding their URL with your email to the form's action, and naming a couple of `input` fields. No registration required, you're just assumed to be in the free tier until you sign up for the paid one. It's built with Flask and is pretty easy to get a hold on if required.
 
-They're not the only one though, [formcarry](https://formcarry.com/) and [Formspark](https://formspark.io/) offer similar services with prices that might be better suited for certain business cases. In any case, don't let your theme be the only thing that lets a static site fly, APIs give you wings!
+They're not the only one though, <a href="https://formcarry.com" target="_blank" rel="nofollow noopener noreferrer">formcarry</a> and <a href="https://formspark.io" target="_blank" rel="nofollow noopener noreferrer">Formspark</a> offer similar services with prices that might be better suited for certain business cases. In any case, don't let your theme be the only thing that lets a static site fly, APIs give you wings!
 
 Happy forming!

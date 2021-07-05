@@ -9,7 +9,7 @@ tags:
 - pygame
 ---
 
-Hey everyone! A lot of you don't know but I'm involved with an educational NGO called [Click To Start](http://www.clicktostart.org/). Click To Start provides free digital literacy classes for senior citizens, and in 2017 it provided its first programming class aimed at teenagers! Programming is as rewarding as it is challenging so we tried to incentivise the students by teaching them how to make games - which we all love to do. Python was chosen as the language of instruction as it's one of the more English-like options out there. We then settled on Pygame to teach them game development, as it's pretty straightforward to get into once you know Python. The plus side of helping out was that I had to create games myself! I mean, we need to give them exercises that'll push and entertain them, right? One of the games they worked on was Tic Tac Toe. Creating it in Pygame was fun, so I thought I'd share how to do it.
+Hey everyone! A lot of you don't know but I'm involved with an educational NGO called <a href="https://www.clicktostart.org" target="_blank" rel="nofollow noopener noreferrer">Click To Start</a>. Click To Start provides free digital literacy classes for senior citizens, and in 2017 it provided its first programming class aimed at teenagers! Programming is as rewarding as it is challenging so we tried to incentivise the students by teaching them how to make games - which we all love to do. Python was chosen as the language of instruction as it's one of the more English-like options out there. We then settled on Pygame to teach them game development, as it's pretty straightforward to get into once you know Python. The plus side of helping out was that I had to create games myself! I mean, we need to give them exercises that'll push and entertain them, right? One of the games they worked on was Tic Tac Toe. Creating it in Pygame was fun, so I thought I'd share how to do it.
 
 ## Simple Design
 
@@ -40,7 +40,7 @@ BLUE = (50, 50, 255)
 RED = (255, 50, 50)
 ```
 
-The imports and variables are fine for those who used Pygame before; the interesting bit is `os.environ['SDL_VIDEO_CENTERED'] = '1'`. SDL, the library which Pygame started off being a wrapper for, uses environment variables for window positioning <https://www.libsdl.org/release/SDL-1.2.15/docs/html/sdlenvvars.html>.
+The imports and variables are fine for those who used Pygame before; the interesting bit is `os.environ['SDL_VIDEO_CENTERED'] = '1'`. SDL, the library which Pygame started off being a wrapper for, uses environment variables for window positioning <a href="https://www.libsdl.org/release/SDL-1.2.15/docs/html/sdlenvvars.html" target="_blank" rel="nofollow noopener noreferrer">https://www.libsdl.org/release/SDL-1.2.15/docs/html/sdlenvvars.html</a>.
 
 ```python
 pygame.init()
@@ -97,7 +97,7 @@ if __name__ == '__main__':
     main()
 ```
 
-In case you don't know, yes you do have to poll for events even though we're not processing any input as yet. Pygame must make a call to the event queue for each frame displayed. If you're writing code that doesn't need to accept events, you may want to consider the `pump` function. Check the [documentation](https://www.pygame.org/docs/ref/event.html#pygame.event.pump) which talks more about polling events.
+In case you don't know, yes you do have to poll for events even though we're not processing any input as yet. Pygame must make a call to the event queue for each frame displayed. If you're writing code that doesn't need to accept events, you may want to consider the `pump` function. Check the <a href="https://www.pygame.org/docs/ref/event.html#pygame.event.pump" target="_blank" rel="nofollow noopener noreferrer">documentation</a> which talks more about polling events.
 
 ## Drawing Letters
 
@@ -447,11 +447,11 @@ def main():
                 game['player'] = 'X'
 ```
 
-We only allow the spacebar to reset the game when it's over and to ensure that the user can't play while the game is over we add some checks by the update function and the player switch logic. Without resetting the game with spacebar, the game would not update. And that's our game! If in doubt, you can compare your source code to [mine](https://gist.github.com/msanatan/fc7eb982e3f7f5842f19c8e6d5a3759d). There are slight differences in the order but this is everything.
+We only allow the spacebar to reset the game when it's over and to ensure that the user can't play while the game is over we add some checks by the update function and the player switch logic. Without resetting the game with spacebar, the game would not update. And that's our game! If in doubt, you can compare your source code to <a href="https://gist.github.com/msanatan/fc7eb982e3f7f5842f19c8e6d5a3759d" target="_blank" rel="nofollow noopener noreferrer">mine</a>. There are slight differences in the order but this is everything.
 
 ## One More Thing
 
-I'm sure the vast majority of your friends won't be going on the command line to run Python files and play your game. Let's package it in a format they can easily use. [cx_Freeze](https://anthony-tuininga.github.io/cx_Freeze/) takes your Python scripts and makes them into executables. It's perfect for what we want. Install with pip `pip install cx_Freeze` and create a *setup.py* file in your directory with the following content:
+I'm sure the vast majority of your friends won't be going on the command line to run Python files and play your game. Let's package it in a format they can easily use. <a href="https://anthony-tuininga.github.io/cx_Freeze/" target="_blank" rel="nofollow noopener noreferrer">cx_Freeze</a> takes your Python scripts and makes them into executables. It's perfect for what we want. Install with pip `pip install cx_Freeze` and create a *setup.py* file in your directory with the following content:
 
 ```python
 import cx_Freeze

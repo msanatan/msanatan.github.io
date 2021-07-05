@@ -7,7 +7,7 @@ tags:
 - godot
 ---
 
-[Godot](https://godotengine.org/) is a 2D and 3D game engine that has been on my radar for quite some time. Reviews for it are mostly positive, the scripting language is similar to Python (yay), and it's open source.
+<a href="https://godotengine.org" target="_blank" rel="nofollow noopener noreferrer">Godot</a> is a 2D and 3D game engine that has been on my radar for quite some time. Reviews for it are mostly positive, the scripting language is similar to Python (yay), and it's open source.
 
 The open source bit is pretty cool not just for philosophical reasons. It reduces your cost of development. For those living in countries with currencies weaker than USD, what may be a low monthly subscription or generous revenue cap still makes a sizeable dent in disposable income.
 
@@ -17,19 +17,19 @@ To start this journey, I first determined a structured way to learn the engine.
 
 ## Learning Path
 
-I'm a web developer, hence why most of my previous ventures into game development have come through [Phaser](https://phaser.io/). I did tutorials for Unity and Unreal before, but those were a couple of years back so using Godot felt as close to a brand new experience as it could have been.
+I'm a web developer, hence why most of my previous ventures into game development have come through <a href="https://phaser.io" target="_blank" rel="nofollow noopener noreferrer">Phaser</a>. I did tutorials for Unity and Unreal before, but those were a couple of years back so using Godot felt as close to a brand new experience as it could have been.
 
-As with most new Godot users, my starting point was their [getting started](https://docs.godotengine.org/en/3.1/getting_started/step_by_step/index.html) guide. I read everything from the introduction to my first Godot game tutorial. It's necessary reading to get an understanding of the engine's design and key features. Admittedly, it took me a while to truly understand all the information.
+As with most new Godot users, my starting point was their <a href="https://docs.godotengine.org/en/3.1/getting_started/step_by_step/index.html" target="_blank" rel="nofollow noopener noreferrer">getting started</a> guide. I read everything from the introduction to my first Godot game tutorial. It's necessary reading to get an understanding of the engine's design and key features. Admittedly, it took me a while to truly understand all the information.
 
 I enjoyed the tutorial game that was created, it's casual enough to be fun. The export section also shows you how to make it Android friendly - you create an app on your first try!
 
-However, after finishing that game I did not feel confident enough to go on a project of my own. Even after looking at the [example games created by the Godot team](https://github.com/godotengine/godot-demo-projects), I felt as if I needed a guiding hand.
+However, after finishing that game I did not feel confident enough to go on a project of my own. Even after looking at the <a href="https://github.com/godotengine/godot-demo-projects" target="_blank" rel="nofollow noopener noreferrer">example games created by the Godot team</a>, I felt as if I needed a guiding hand.
 
 ### Blogs and YouTube Videos
 
 I scoured the internet for tutorials. The community seemed popular enough that I was pretty sure there would be a haven for Godot related resources. A lot of resources are available for version 2.1 and 3.0 - I used 3.1, the latest stable version at the time of writing, so they weren't immediately useful.
 
-I looked at a few YouTube videos and read a few blogs. For the level and confidence I had, the best resource seemed to be [Fornclake's Asteroids tutorial](https://fornclake.com/category/tutorials/asteroids). Small in scope and very well written - it was perfect. Well, almost perfect. It's incomplete... the bits where you destroy the asteroids were never written. To its credit, I felt it gave me the tools to work on that myself. I opted not to as it would probably take me more time than it should to get it done.
+I looked at a few YouTube videos and read a few blogs. For the level and confidence I had, the best resource seemed to be <a href="https://fornclake.com/category/tutorials/asteroids" target="_blank" rel="nofollow noopener noreferrer">Fornclake's Asteroids tutorial</a>. Small in scope and very well written - it was perfect. Well, almost perfect. It's incomplete... the bits where you destroy the asteroids were never written. To its credit, I felt it gave me the tools to work on that myself. I opted not to as it would probably take me more time than it should to get it done.
 
 I had a positive experience with Udemy when learning React, Phaser, and Unity. I saw some Godot courses when I bought a recent TypeScript course, it was time to have a second look.
 
@@ -47,11 +47,11 @@ The next tutorial for the course was a platformer. I always like to create somet
 
 ## November Game Project 2019 - AV: Execute
 
-I began playing Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would have its 8-directional movement. Heck, let's just make it a game about viruses. In the end, I came up with [AV: Execute](https://msanatan.itch.io/av-execute).
+I began playing Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would have its 8-directional movement. Heck, let's just make it a game about viruses. In the end, I came up with <a href="https://msanatan.itch.io/av-execute" target="_blank" rel="nofollow noopener noreferrer">AV: Execute</a>.
 
 ![Screenshot of AV Execute](./av-execute.png)
 
-It's your standard fare swarm shooter - you're in an arena and your goal is to derezz as many viruses that come your way. The last high score I recall getting was 400, not bad. All the code is available on [GitHub](https://github.com/msanatan/AV-Execute) and the super basic artwork was done by yours truly.
+It's your standard fare swarm shooter - you're in an arena and your goal is to derezz as many viruses that come your way. The last high score I recall getting was 400, not bad. All the code is available on <a href="https://github.com/msanatan/AV-Execute" target="_blank" rel="nofollow noopener noreferrer">GitHub</a> and the super basic artwork was done by yours truly.
 
 Making this game was fun. Godot is a good example of high quality open source software. From the start of the project, there were a lot of things I liked about this experience. Let's have a look!
 
@@ -92,7 +92,7 @@ This is cool because it allows us to keep our project structured and modular at 
 
 ### GD Script
 
-If you know Python, you're fine to get going with GD Script. Worried about performance? Don't be, it's pretty quick. The Godot developers [first tried to use Lua, then Python](http://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#history). From those suboptimal experiences, they then made GD Script to take full advantage of Godot's design.
+If you know Python, you're fine to get going with GD Script. Worried about performance? Don't be, it's pretty quick. The Godot developers <a href="http://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#history" target="_blank" rel="nofollow noopener noreferrer">first tried to use Lua, then Python</a>. From those suboptimal experiences, they then made GD Script to take full advantage of Godot's design.
 
 What I love about the scripts is that they are embedded into nodes. This makes the nodes/scene system so much more powerful as scripts are used to extend a node's functionality. Add to that the seamless integration between the editor's UI and the scripts, what you get is a fairly flexible way to create a game.
 
@@ -135,11 +135,11 @@ I usually favour making small commit messages with descriptions of what changed 
 
 However, as I make various configuration changes alongside code changes, using the command line to make granular commits became tedious at times. I'm very comfortable with the command line, I figured I would be more efficient with a GUI.
 
-I downloaded [SourceTree](https://www.sourcetreeapp.com/) and [GitHub Desktop](https://desktop.github.com/), hoping to do a quick evaluation of the two so I can get to the main task at hand. Unfortunately, I could not run either of them.
+I downloaded <a href="https://www.sourcetreeapp.com" target="_blank" rel="nofollow noopener noreferrer">SourceTree</a> and <a href="https://desktop.github.com" target="_blank" rel="nofollow noopener noreferrer">GitHub Desktop</a>, hoping to do a quick evaluation of the two so I can get to the main task at hand. Unfortunately, I could not run either of them.
 
 I got the "can’t be opened because Apple cannot check it for malicious software". My settings allow me to run software from anywhere, and I did not see the usual "Open Anyway" button in the security settings. They should sign their apps when making releases so this would never be a problem.
 
-In the end, I used my default code editor, [VSCodium](https://vscodium.com/) - VS Code without Microsoft's telemetry. It worked for the project and the time. I believe new releases of SourceTree and GitHub Desktop are signed, so I'll give them a sometime soon.
+In the end, I used my default code editor, <a href="https://vscodium.com" target="_blank" rel="nofollow noopener noreferrer">VSCodium</a> - VS Code without Microsoft's telemetry. It worked for the project and the time. I believe new releases of SourceTree and GitHub Desktop are signed, so I'll give them a sometime soon.
 
 #### Freezes When Moving Between Screens
 
@@ -149,9 +149,9 @@ Life after Catalina brought inconsistency to that flow. There are times I drag t
 
 #### No Windows Taskbar Icons - Wine Doesn't Work
 
-Windows taskbar icon needs images in the special `.ico` format. That's fine, [imagemagick](https://imagemagick.org/index.php) makes it easy to create those files from a PNG. However, for that .ico to be used when exporting, you will need to point Godot to your installation of [rcedit](https://github.com/electron/rcedit) - a tool that can change resources in an `.exe` file. Godot has a helpful [guide](https://docs.godotengine.org/en/3.1/getting_started/workflow/export/changing_application_icon_for_windows.html#doc-changing-application-icon-for-windows) on this process.
+Windows taskbar icon needs images in the special `.ico` format. That's fine, <a href="https://imagemagick.org/index.php" target="_blank" rel="nofollow noopener noreferrer">imagemagick</a> makes it easy to create those files from a PNG. However, for that .ico to be used when exporting, you will need to point Godot to your installation of <a href="https://github.com/electron/rcedit" target="_blank" rel="nofollow noopener noreferrer">rcedit</a> - a tool that can change resources in an `.exe` file. Godot has a helpful <a href="https://docs.godotengine.org/en/3.1/getting_started/workflow/export/changing_application_icon_for_windows.html#doc-changing-application-icon-for-windows" target="_blank" rel="nofollow noopener noreferrer">guide</a> on this process.
 
-On Mac and Linux, to install and use rcedit we need to have [wine](https://www.winehq.org/) installed. Wine may be fully working in Catalina hopefully by January 2020, you can read this [thread](https://forum.winehq.org/viewtopic.php?f=9&t=32590) for more information.
+On Mac and Linux, to install and use rcedit we need to have <a href="https://www.winehq.org" target="_blank" rel="nofollow noopener noreferrer">wine</a> installed. Wine may be fully working in Catalina hopefully by January 2020, you can read this <a href="https://forum.winehq.org/viewtopic.php?f=9&t=32590" target="_blank" rel="nofollow noopener noreferrer">thread</a> for more information.
 
 Till then, to get Windows taskbar icons on Mac you'll need a Linux desktop VM or access to a Windows machine.
 
@@ -161,7 +161,7 @@ Admittedly this is not the end of the world. Linux and Window exports in Godot c
 
 For a small project like this, I felt it should be fine for Godot to embed the PCK in the executable binary. I imagine a user would prefer seeing one `.exe` file instead of two files to run a game. This feature used to be available in Godot 2.0.
 
-It was intentionally removed in version 3.0 onwards for simplicity reasons. However, one GitHub [issue](https://github.com/godotengine/godot/issues/14471) led to a [pull request](https://github.com/godotengine/godot/pull/24086), and it seems that version 3.2 will re-enable this feature.
+It was intentionally removed in version 3.0 onwards for simplicity reasons. However, one GitHub <a href="https://github.com/godotengine/godot/issues/14471" target="_blank" rel="nofollow noopener noreferrer">issue</a> led to a <a href="https://github.com/godotengine/godot/pull/24086" target="_blank" rel="nofollow noopener noreferrer">pull request</a>, and it seems that version 3.2 will re-enable this feature.
 
 For now, I export my Windows and Linux builds as a zip file that contains the executable and the PCK.
 

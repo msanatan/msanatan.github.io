@@ -13,13 +13,13 @@ So I recently started to write programming articles for another website. I thoug
 
 The first thing I needed to do was get all my articles in one go. The scraper consists 3 parts:
 
-* Parse the HTML to get the articles from my user page \- <https://stackabuse.com/author/marcus>
+* Parse the HTML to get the articles from my user page \- <a href="https://stackabuse.com/author/marcus" target="_blank" rel="nofollow noopener noreferrer">https://stackabuse.com/author/marcus</a>
 * Save each article as Markdown files with a `link` property
 * Allow users to specify which author to scrape via command line arguments
 
 ## Parsing
 
-For parsing I used [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/), definitely one of the most popular scarping libraries for Python. I skipped on `lxml` as the page is very simple, there was no need for fancy XPath. This function returns all the posts in a list of dictionaries. I'm not copying the content, so all I need are the names, links and dates.
+For parsing I used <a href="https://www.crummy.com/software/BeautifulSoup" target="_blank" rel="nofollow noopener noreferrer">Beautiful Soup</a>, definitely one of the most popular scarping libraries for Python. I skipped on `lxml` as the page is very simple, there was no need for fancy XPath. This function returns all the posts in a list of dictionaries. I'm not copying the content, so all I need are the names, links and dates.
 
 ```python
 def parse_posts(author_url):
@@ -174,6 +174,6 @@ When I run `python3 stackabuse_scraper.py -a marcus --markdown` I get the follow
     link: https://stackabuse.com/building-a-graphql-api-with-django/
     ---
 
-Exactly what I wanted and usable with Hexo! This was just some of the annotated code, you can find the full script at <https://github.com/msanatan/stackabuse_scraper>. That's all I got through to this weekend, till next time
+Exactly what I wanted and usable with Hexo! This was just some of the annotated code, you can find the full script at <a href="https://github.com/msanatan/stackabuse_scraper" target="_blank" rel="nofollow noopener noreferrer">https://github.com/msanatan/stackabuse_scraper</a>. That's all I got through to this weekend, till next time
 
 Happy Hacking!

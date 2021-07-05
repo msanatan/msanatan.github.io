@@ -19,11 +19,11 @@ There is a toll when creating and sending large amounts of data. Here are some o
 
 > "Premature optimization is the root of all evil" - Donald Knuth (supposedly)
 
-Don't spend time on optimising how your JSON is encoded unless you know for certain that it's a problem. The app I was working on was one of many microservices that leveraged <a rel="nofollow noopener" target="_blank" href="https://www.datadoghq.com/">Datadog</a> an expensive but useful monitoring tool. With Datadog we traced each request to give us insight on all the microservices that were used.
+Don't spend time on optimising how your JSON is encoded unless you know for certain that it's a problem. The app I was working on was one of many microservices that leveraged <a rel="nofollow noopener noreferrer" target="_blank" href="https://www.datadoghq.com/">Datadog</a> an expensive but useful monitoring tool. With Datadog we traced each request to give us insight on all the microservices that were used.
 
 Datadog also has a neat ability called *spans*. Spans allow us to tag blocks of code as we see fit, further refining the metrics we have. I added spans for validating the request, performing the SQL query, encoding it as JSON and returning the response. Only then I decided to make a concerted effort into how JSON was encoded, as it took up nearly as much time as the SQL query itself.
 
-There are many other alternatives to Datadog. You can use <a rel="nofollow noopener" target="_blank" href="https://prometheus.io/">Promethues</a>, a popular Open Source metrics and monitoring tool. Go's built in <a a rel="nofollow noopener" href="https://golang.org/doc/diagnostics.html#tracing">tracer</a> is quite useful as well. I didn't really know where to begin with the tracer but <a rel="nofollow noopener" target="_blank" href="https://about.sourcegraph.com/go/an-introduction-to-go-tool-trace-rhys-hiltner">this article</a> really helped me understand how to use it.
+There are many other alternatives to Datadog. You can use <a rel="nofollow noopener noreferrer" target="_blank" href="https://prometheus.io/">Promethues</a>, a popular Open Source metrics and monitoring tool. Go's built in <a a rel="nofollow noopener noreferrer" href="https://golang.org/doc/diagnostics.html#tracing">tracer</a> is quite useful as well. I didn't really know where to begin with the tracer but <a rel="nofollow noopener noreferrer" target="_blank" href="https://about.sourcegraph.com/go/an-introduction-to-go-tool-trace-rhys-hiltner">this article</a> really helped me understand how to use it.
 
 Get your metrics first! Every time you iterate on a fix, use the metrics to confirm that an improvement was made.
 
@@ -33,7 +33,7 @@ Now let's look at some strategies we could use, starting with how we create our 
 
 One of the quickest fixes would be to omit empty fields. When you have thousands of JSON objects in an array, it became a lot cheaper to omit null and default values (empty strings, integers that are 0 by default, etc). All it requires is adding `omitempty` to the JSON tag in the struct.
 
-Nested structs cannot be omitted with `omitempty` when encoded. If the data you're marshalling has nested structs that you want to omit, you have to make the pointers. If the pointer to the struct is `nil`, it will be omitted. If you'd like to learn more about this behaviour, check out this useful <a rel="nofollow noopener" target="_blank" href="https://www.sohamkamani.com/golang/2018-07-19-golang-omitempty/">blog post</a>.
+Nested structs cannot be omitted with `omitempty` when encoded. If the data you're marshalling has nested structs that you want to omit, you have to make the pointers. If the pointer to the struct is `nil`, it will be omitted. If you'd like to learn more about this behaviour, check out this useful <a rel="nofollow noopener noreferrer" target="_blank" href="https://www.sohamkamani.com/golang/2018-07-19-golang-omitempty/">blog post</a>.
 
 Of course, the caveat is that the client application needs to be built so it can process the data even with missing fields. Once that's in your realm of customization, this can be some low hanging fruit.
 
@@ -43,11 +43,11 @@ In my case, the client was as flexible as I'd hope for it to be. There was a sma
 
 As the default encoder has some trouble, I turned to other encoders that make optimisations for large JSON. The most common optimisation tradeoff is easy of use. The most popular ones I looked at were:
 
-- <a rel="nofollow noopener" target="_blank" href="https://github.com/mailru/easyjson">easyjson</a>
-- <a rel="nofollow noopener" target="_blank" href="https://github.com/valyala/fastjson">fastjson</a>
-- <a rel="nofollow noopener" target="_blank" href="https://github.com/json-iterator/go">jsoniter</a>
+- <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/mailru/easyjson">easyjson</a>
+- <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/valyala/fastjson">fastjson</a>
+- <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/json-iterator/go">jsoniter</a>
 
-They all do a good job, and you can check out <a rel="nofollow noopener" target="_blank" href="https://yalantis.com/blog/speed-up-json-encoding-decoding/">this article</a> which does a comparison for those interested. I'd recommend doing your comparison, optimise for your use case.
+They all do a good job, and you can check out <a rel="nofollow noopener noreferrer" target="_blank" href="https://yalantis.com/blog/speed-up-json-encoding-decoding/">this article</a> which does a comparison for those interested. I'd recommend doing your comparison, optimise for your use case.
 
 I chose jsoniter as it provided a marked improvement and was very easy to use. They have a mode that's completely compatible with the Go's default JSON encoder, so you can quickly get performance gains with these two lines of code:
 
@@ -103,7 +103,7 @@ JSON data that was once megabytes became kilobytes. Compressing your data is one
 
 The collective performance gains were pretty good after compression. There are many other ways to improve performance.
 
-For example, using jsoniter's fastest configuration, you can write your encoded data as a stream. This greatly reduces how much memory is used and overall performance as the data is sent in chunks. You can read more <a rel="nofollow noopener" target="_blank" href="https://jsoniter.com/migrate-from-go-std.html#best-performance">here</a>.
+For example, using jsoniter's fastest configuration, you can write your encoded data as a stream. This greatly reduces how much memory is used and overall performance as the data is sent in chunks. You can read more <a rel="nofollow noopener noreferrer" target="_blank" href="https://jsoniter.com/migrate-from-go-std.html#best-performance">here</a>.
 
 Do your research, get metrics, test and deploy.
 

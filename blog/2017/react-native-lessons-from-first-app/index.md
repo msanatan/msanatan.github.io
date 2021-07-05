@@ -9,7 +9,7 @@ tags:
 - react native
 ---
 
-React is pretty easy to get into and the community tends to encourage intelligent design principles for highly reusable code. Coming from a background in Ionic and Xamarin, I had high standards for what a cross-platform solution needs to provide to get me using it. React Native can more than match up with the other frameworks. I created another [GitHub API interfacing app](https://github.com/msanatan/GitHubProjects) which simply allows you to search for GitHub users, select a repository and view the README for that repo. As I'm still learning RN I've been focusing on developing the right way. While I don't have all the answers to my questions just yet, here are some concerns and issues I had and the decisions I made to address them.
+React is pretty easy to get into and the community tends to encourage intelligent design principles for highly reusable code. Coming from a background in Ionic and Xamarin, I had high standards for what a cross-platform solution needs to provide to get me using it. React Native can more than match up with the other frameworks. I created another <a href="https://github.com/msanatan/GitHubProjects" target="_blank" rel="nofollow noopener noreferrer">GitHub API interfacing app</a> which simply allows you to search for GitHub users, select a repository and view the README for that repo. As I'm still learning RN I've been focusing on developing the right way. While I don't have all the answers to my questions just yet, here are some concerns and issues I had and the decisions I made to address them.
 
 ## Code Sharing Across Platforms
 
@@ -54,7 +54,7 @@ The index file isn't explicitly referenced because it's placed in the src direct
 
 Ionic and Xamarin have strong opinions about how applications should be developed, your app's structure comes as part of the package in a way. React has a philosophy which applies to both the DOM and Native elements but does not impose an application structure with a heavy hand. I didn't want this app to be one page magic wand. I wanted a structure that was scalable, facilitates component reusability and wouldn't be alien to the community.
 
-After my fair share of reading I felt the best match for my requirements were described in a [blog post by JS developer Alex Mangin](https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1).
+After my fair share of reading I felt the best match for my requirements were described in a <a href="https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1" target="_blank" rel="nofollow noopener noreferrer">blog post by JS developer Alex Mangin</a>.
 
 I can't encourage you enough to have a look. In summary, I stuck with the following architecture and will continue to do so for React and React Native applications:
 
@@ -83,9 +83,9 @@ The top-level components are global ones that can be reused anywhere in the app.
 
 ## Theming
 
-One of the things I really liked about Ionic was its natural beauty. A default app looked georgous and that made the whole world happy. There's no real escaping from styling an application but there can be better foundations than a blank palette. While searching for what's out there I came across this neat list of UI component kits for RN on [Quora](https://www.quora.com/What-is-the-best-UI-Kit-for-react-native).
+One of the things I really liked about Ionic was its natural beauty. A default app looked georgous and that made the whole world happy. There's no real escaping from styling an application but there can be better foundations than a blank palette. While searching for what's out there I came across this neat list of UI component kits for RN on <a href="https://www.quora.com/What-is-the-best-UI-Kit-for-react-native" target="_blank" rel="nofollow noopener noreferrer">Quora</a>.
 
-I gave [React Native Elements](https://react-native-training.github.io/react-native-elements/) a go but after a closer look at each I'm gravitating towards [NativeBase](https://nativebase.io/) more and and more.
+I gave <a href="https://react-native-training.github.io/react-native-elements" target="_blank" rel="nofollow noopener noreferrer">React Native Elements</a> a go but after a closer look at each I'm gravitating towards <a href="https://nativebase.io" target="_blank" rel="nofollow noopener noreferrer">NativeBase</a> more and and more.
 
 ### React Native Elements And Lists
 
@@ -101,7 +101,7 @@ So if you use React Native Elements you'll be happy to see how much easier it is
 
 ## Event Handlers
 
-If a parent component passes down a function to child component for an event handler, React would not [automatically bind 'this'](https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding). Many a blog posts and tutorials would show you event handlers like the following: `onPress={() => doSomething()}`. It's been noted by many that creating functions in a component's render function is a bad idea for [performance reasons](https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f).
+If a parent component passes down a function to child component for an event handler, React would not <a href="https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding" target="_blank" rel="nofollow noopener noreferrer">automatically bind 'this'</a>. Many a blog posts and tutorials would show you event handlers like the following: `onPress={() => doSomething()}`. It's been noted by many that creating functions in a component's render function is a bad idea for <a href="https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f" target="_blank" rel="nofollow noopener noreferrer">performance reasons</a>.
 
 Unfortunately I did not read the lovely React blog early enough and as much I could I manually bind the event handlers in the component's constructor. Your best bet is to use ES7's class properties with the arrow function which would automatically bind 'this' for you.
 

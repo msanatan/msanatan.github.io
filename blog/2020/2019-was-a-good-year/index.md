@@ -25,7 +25,7 @@ It feels like 7/10 Caribbean software developers I speak with got into the field
 
 There was a game development scene happening in Trinidad and Tobago, and Jamaica. Like most good things in the Caribbean, it stopped abruptly and without finished products to show for it. So I thought I'd play my part to fill that gap.
 
-As part of Caribbean Developers, I hosted our very first game jam: [Jammin](https://itch.io/jam/jammin-2019)! This game jam was small but I'm so proud.
+As part of Caribbean Developers, I hosted our very first game jam: <a href="https://itch.io/jam/jammin-2019" target="_blank" rel="nofollow noopener noreferrer">Jammin</a>! This game jam was small but I'm so proud.
 
 We probably got 5 participants actively making an effort and 3 submissions. The games were fun!
 
@@ -43,9 +43,9 @@ Thankfully, preparing for those game jams got me to release 3 games in 2019. No 
 
 ### Swerve
 
-The first was the most basic JavaScript game I made \- Swerve. This was built with [Kontra.js](https://straker.github.io/kontra/) that I started learning for the 2018 iteration of [JS13kGames](https://js13kgames.com/). It's a microframework that was built for the JS13k competition which requires games to built under 13kb.
+The first was the most basic JavaScript game I made \- Swerve. This was built with <a href="https://straker.github.io/kontra" target="_blank" rel="nofollow noopener noreferrer">Kontra.js</a> that I started learning for the 2018 iteration of <a href="https://js13kgames.com" target="_blank" rel="nofollow noopener noreferrer">JS13kGames</a>. It's a microframework that was built for the JS13k competition which requires games to built under 13kb.
 
-You can play the game at <https://msanatan.com/swerve/> and read more about how I created it on this [blog post](/2019/02/03/january-2019-game-project-swerve/).
+You can play the game at <https://msanatan.com/swerve> and read more about how I created it on this [blog post](/blog/2019/02/03/january-2019-game-project-swerve).
 
 I wanted this game to be a first-class citizen on mobile devices. It was the first time I put a concerted effort into getting one of my HTML5 mini-games scaled and working well on my phone. I tested it on iPads as well, I was pretty happy with it.
 
@@ -53,11 +53,11 @@ I wanted this game to be a first-class citizen on mobile devices. It was the fir
 
 This game was meant to be my Jammin entry. Due to the timing I mentioned earlier, it just could not happen. After the jam was over some other commitments really took off and I just didn't have the time to get it done in 2 weeks.
 
-Of course, this wasn't the year for abandonment! I made Approximately with [Phaser](http://phaser.io/) using [TypeScript](https://www.typescriptlang.org/). I've been doing more experiments with Phaser and even wrote a couple of articles for it on Stack Abuse. I figured it would be the easiest framework for me to make any game with at that time.
+Of course, this wasn't the year for abandonment! I made Approximately with <a href="https://phaser.io" target="_blank" rel="nofollow noopener noreferrer">Phaser</a> using <a href="https://www.typescriptlang.org" target="_blank" rel="nofollow noopener noreferrer">TypeScript</a>. I've been doing more experiments with Phaser and even wrote a couple of articles for it on Stack Abuse. I figured it would be the easiest framework for me to make any game with at that time.
 
 This game I really wanted to nail scaling with Phaser 3. Phaser 2 scaling was pretty easy, but for a while scaling with version 3 was not straightforward. By the time I started this game, the new scale manager was out so I thought I should see it for myself.
 
-This was my first game on [itch.io](https://msanatan.itch.io/approximately)! It's a platform I love with all my indie game-playing heart. I was super stoked finally upload something on it. And yes, there's a [blog post](/2019/10/06/october-2019-game-project-approximately/) for this game too!
+This was my first game on <a href="https://msanatan.itch.io/approximately" target="_blank" rel="nofollow noopener noreferrer">itch.io</a>! It's a platform I love with all my indie game-playing heart. I was super stoked finally upload something on it. And yes, there's a [blog post](/blog/2019/10/06/october-2019-game-project-approximately) for this game too!
 
 ### AV: Execute
 
@@ -67,9 +67,9 @@ This is definitely the biggest project I've worked on thus far. After looking at
 
 Godot is amazing and will be my primary game development framework for the foreseeable future. It makes designing a game easy and natural with its node and scene system. Check it out for yourself if you're interested.
 
-Be sure to [play the game](https://msanatan.itch.io/av-execute) as well! It works on the 3 major desktop operating systems and doesn't require much from your hardware.
+Be sure to <a href="https://msanatan.itch.io/av-execute" target="_blank" rel="nofollow noopener noreferrer">play the game</a> as well! It works on the 3 major desktop operating systems and doesn't require much from your hardware.
 
-This experience was so massive for me I created 2 blog posts for it. The first was more about [how I got into Godot](/2019/11/28/thoughts-after-making-my-first-godot-game/) while the second describes some [technical bits I rather not forget](/2019/12/17/lessons-from-creating-my-first-godot-game/).
+This experience was so massive for me I created 2 blog posts for it. The first was more about [how I got into Godot](/blog/2019/11/28/thoughts-after-making-my-first-godot-game) while the second describes some [technical bits I rather not forget](/blog/2019/12/17/lessons-from-creating-my-first-godot-game).
 
 I'm looking forward to some small Phaser projects on the web and more Godot games in the wild. Definitely aiming for a mobile app with Godot.
 
@@ -161,29 +161,29 @@ After my left my job at a telecoms company, I decided to be a full-time software
 In 2017, I did quite a few before landing my current job:
 
 * Making Games With Phaser 2.X
-  * <https://www.udemy.com/course/making-games-with-phaser/>
+  * <a href="https://www.udemy.com/course/making-games-with-phaser" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/making-games-with-phaser</a>
 * Make a Unity 2D Physics Game \- For Beginners!
-  * <https://www.udemy.com/course/draft/412034/>
+  * <a href="https://www.udemy.com/course/draft/412034" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/draft/412034</a>
 * Getting Started as a Web Developer
-  * <https://www.udemy.com/course/refactoru-getting-started-as-a-web-developer/>
+  * <a href="https://www.udemy.com/course/refactoru-getting-started-as-a-web-developer" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/refactoru-getting-started-as-a-web-developer</a>
 * Create An HTML5 Video Player From Scratch
-  * <https://www.udemy.com/course/draft/294794/>
+  * <a href="https://www.udemy.com/course/draft/294794" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/draft/294794</a>
 * React JS Web Development \- The Essentials Bootcamp
-  * <https://www.udemy.com/course/react-js-and-redux-mastering-web-apps/>
+  * <a href="https://www.udemy.com/course/react-js-and-redux-mastering-web-apps" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/react-js-and-redux-mastering-web-apps</a>
 
 2018 was less productive as a lot of my learning was on the job of course. Online courses are not the only resources I use to learn, I never stay stagnant. Anyway, this is what I completed:
 
 * Web Design for Web Developers: Build Beautiful Websites!
-  * <https://www.udemy.com/course/web-design-secrets/>
+  * <a href="https://www.udemy.com/course/web-design-secrets" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/web-design-secrets</a>
 
 And in 2019, I completed **nothing**... Zilch. I did start some that I expect to finish this year. Here's to a better 2020:
 
 * Discovering Godot: Make Video Games in Python-like GDScript
-  * <https://www.udemy.com/course/godot/>
+  * <a href="https://www.udemy.com/course/godot" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/godot</a>
 * Typescript: The Complete Developer's Guide [2020]
-  * <https://www.udemy.com/course/typescript-the-complete-developers-guide/>
+  * <a href="https://www.udemy.com/course/typescript-the-complete-developers-guide" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/typescript-the-complete-developers-guide</a>
 * React JS Web Development \- The Essentials Bootcamp
-  * <https://www.udemy.com/course/react-js-and-redux-mastering-web-apps/>
+  * <a href="https://www.udemy.com/course/react-js-and-redux-mastering-web-apps" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/react-js-and-redux-mastering-web-apps</a>
   * You're not seeing things, I completed this course in 2017. New content was added in 2019, so it wouldn't hurt to refresh my skills.
 
 The bulk of programming I do is in Golang. The courses I take will really cover my gaps: games and front-end things.

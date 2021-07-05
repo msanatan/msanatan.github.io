@@ -16,23 +16,23 @@ I guess this game's idea was natural. You play as an adorable sprite called Ghos
 
 Like life, it's unfair so don't stress about racking up high points. We should try to stay home as well!
 
-You can check out the game on <a rel="nofollow noopener" target="_blank" href="https://msanatan.itch.io/the-social-distance-game">itch.io</a>, or just play it on this emulator:
+You can check out the game on <a rel="nofollow noopener noreferrer" target="_blank" href="https://msanatan.itch.io/the-social-distance-game">itch.io</a>, or just play it on this emulator:
 
-<https://felipemanga.github.io/ProjectABE/?url=https://community.arduboy.com/uploads/short-url/tDhSFHoyFSrMawGHAXNMEYPkgs5.hex>
+<a href="https://felipemanga.github.io/ProjectABE/?url=https://community.arduboy.com/uploads/short-url/tDhSFHoyFSrMawGHAXNMEYPkgs5.hex" target="_blank" rel="nofollow noopener noreferrer">https://felipemanga.github.io/ProjectABE/?url=https://community.arduboy.com/uploads/short-url/tDhSFHoyFSrMawGHAXNMEYPkgs5.hex</a>
 
 This was my first game for the Arduboy. While simple to conceive and execute, I've learnt a lot. If you're new or considering getting the Arduboy, I hope my reflections will help out!
 
 ## Setting up on Mac
 
-When I first got the Arduboy, it came loaded with a really fun game called <a rel="nofollow noopener" target="_blank" href="https://community.arduboy.com/t/sirene-tenth-team-a-r-g-game/2206">Sirène</a>. I wanted to play a few other games as the catalogue really impressed me.
+When I first got the Arduboy, it came loaded with a really fun game called <a rel="nofollow noopener noreferrer" target="_blank" href="https://community.arduboy.com/t/sirene-tenth-team-a-r-g-game/2206">Sirène</a>. I wanted to play a few other games as the catalogue really impressed me.
 
-On the main website it has a <a rel="nofollow noopener" target="_blank" href="https://arduboy.com/upload-games/">list of software</a> to upload Arduboy binaries (a .hex file or the community created .arduboy file).
+On the main website it has a <a rel="nofollow noopener noreferrer" target="_blank" href="https://arduboy.com/upload-games/">list of software</a> to upload Arduboy binaries (a .hex file or the community created .arduboy file).
 
-Unfortunately, at this point in time I can only use the <a rel="nofollow noopener" target="_blank" href="https://www.arduino.cc/en/Main/Software#download">Arduino IDE</a>. The IDE is easy to use and works well but I imagine it's a lot less convenient than the dedicated loaders.
+Unfortunately, at this point in time I can only use the <a rel="nofollow noopener noreferrer" target="_blank" href="https://www.arduino.cc/en/Main/Software#download">Arduino IDE</a>. The IDE is easy to use and works well but I imagine it's a lot less convenient than the dedicated loaders.
 
 Well, I'm experimenting with a Python and Node.js script to see which works better for me. If either works out, I'll make a small GUI for it.
 
-In any case, <a rel="nofollow noopener" target="_blank" href="https://community.arduboy.com/t/arduboy-uploader-for-mac/8728">I asked the community about it</a>. Seems that with a bit of patience I'll have my game loader on Mac!
+In any case, <a rel="nofollow noopener noreferrer" target="_blank" href="https://community.arduboy.com/t/arduboy-uploader-for-mac/8728">I asked the community about it</a>. Seems that with a bit of patience I'll have my game loader on Mac!
 
 ## The Community and Github
 
@@ -58,23 +58,23 @@ If you don't mind having one big file with all your code.
 
 At most, my file was about 400 lines long which is pretty manageable. And yet, it still felt wrong. Admittedly I didn't spend a lot of time getting to know the IDE's short cuts and customizations. Truth is, I don't want to.
 
-I'm pretty happy with <a rel="nofollow noopener" target="_blank" href="https://vscodium.com/">VS Codium</a>(VS Code without the Microsoft tracking and other non-OSS bits). Thankfully, there's an excellent but preview VS Codium extension aptly called "Arduino". It can compile and upload your game (using the IDE it seems).
+I'm pretty happy with <a rel="nofollow noopener noreferrer" target="_blank" href="https://vscodium.com">VS Codium</a>(VS Code without the Microsoft tracking and other non-OSS bits). Thankfully, there's an excellent but preview VS Codium extension aptly called "Arduino". It can compile and upload your game (using the IDE it seems).
 
 The extension was created by Microsoft, they're doing a good job! What about the reason for switching to VS Codium? Well, the extension is under the MIT license. The privacy policy...
 
 ## Art and Sound
 
-Pixel art is fun, and the sprites for this game were pretty simple. However, the standard for art and music is <a rel="nofollow noopener" target="_blank" href="https://www.youtube.com/watch?v=bSXqe7TXcM8">pretty darn high</a>.
+Pixel art is fun, and the sprites for this game were pretty simple. However, the standard for art and music is <a rel="nofollow noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=bSXqe7TXcM8">pretty darn high</a>.
 
-This game I used a lot of different things. The sprites were created in <a rel="nofollow noopener" target="_blank" href="https://www.piskelapp.com/">Piskel</a>. It's free, online and easy to use. Animations are quite cool too.
+This game I used a lot of different things. The sprites were created in <a rel="nofollow noopener noreferrer" target="_blank" href="https://www.piskelapp.com">Piskel</a>. It's free, online and easy to use. Animations are quite cool too.
 
 However, it's a bit hard to manage when you got a lot of sprites. Piskel would do a lot better by being able to create folders. I guess that's where we come in and help out in OSS right?
 
 I also looked away from Piskel because writing text was hard. Fonts that work for a screen that's 128px wide and 64px long are few and far between. Drawing letters are a bit tricky for me right now.
 
-At this time I went back to <a rel="nofollow noopener" target="_blank" href="https://www.gimp.org/">Gimp</a>, which I experimented with for pixel art a bit over a year ago. I used the monospace fonts to write the text for my basic title screen. Given the scope of this mini-game, it was fine.
+At this time I went back to <a rel="nofollow noopener noreferrer" target="_blank" href="https://www.gimp.org">Gimp</a>, which I experimented with for pixel art a bit over a year ago. I used the monospace fonts to write the text for my basic title screen. Given the scope of this mini-game, it was fine.
 
-Art is one part of a good game. Music is right up there as well! I have the least amount of experience in this domain. Thankfully some good folks created a track editor for Arduboy games: <http://teamarg.github.io/trackerEditor/>. I only wanted one sound effect and got it pretty easily. It didn't' work in Chrome but all was well in Firefox.
+Art is one part of a good game. Music is right up there as well! I have the least amount of experience in this domain. Thankfully some good folks created a track editor for Arduboy games: <a href="http://teamarg.github.io/trackerEditor" target="_blank" rel="nofollow noopener noreferrer">http://teamarg.github.io/trackerEditor</a>. I only wanted one sound effect and got it pretty easily. It didn't' work in Chrome but all was well in Firefox.
 
 ## Another One
 

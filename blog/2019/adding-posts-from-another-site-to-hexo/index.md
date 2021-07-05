@@ -14,7 +14,7 @@ In my last post I wrote about scraping another website I write articles for, whi
 
 ## First Attempt with JSON
 
-I first tried to load the extra blog posts as a [data file](https://hexo.io/docs/data-files.html). Hexo allows content stored as JSON or YAML in the `source/_data` directory to be loaded in templates. The scraper I built orginally stored the articles as JSON, and it worked. However, there were a couple of things I didn't like.
+I first tried to load the extra blog posts as a <a href="https://hexo.io/docs/data-files.html" target="_blank" rel="nofollow noopener noreferrer">data file</a>. Hexo allows content stored as JSON or YAML in the `source/_data` directory to be loaded in templates. The scraper I built orginally stored the articles as JSON, and it worked. However, there were a couple of things I didn't like.
 
 I needed to create new templates to load from the data files. This is added maintenance for my theme. If I write for more than one external site, I would have to scrape the other sites and integrate each site's blog posts into one JSON blob. While not a herculean effort, data files for such dynamic thing like posts do not feel intuitive.
 
@@ -22,7 +22,7 @@ Themes paginate easily for markdown files processed as posts. If you're reading 
 
 ## Stick with Markdown for Posts
 
-If you look at the Hexo docs for [variables](https://hexo.io/docs/variables.html), you can see two things:
+If you look at the Hexo docs for <a href="https://hexo.io/docs/variables.html" target="_blank" rel="nofollow noopener noreferrer">variables</a>, you can see two things:
 
 * Pages have a `link` attribute that's described as "The external link of the article (Used in link posts)"
 * Posts have all the variables Pages have
@@ -58,6 +58,6 @@ Each theme has it's own way to define navigation, in my experience they're usual
 
 As the posts are markdown files, integrating blogs from different websites is easy. There's no need for consolidation into one file as I would have done with the JSON blob. This setup bypasses my 2 gripes with data files.
 
-I didn't figure this out on my own, major thanks to [Tony Crowe](https://github.com/tcrowe) for dealing with my GitHub [issue](https://github.com/hexojs/hexo/issues/3423). He also gave me some pointers on how to filter posts with links and even highlight them with icons. The Hexo community is pretty helpful, when in doubt just give a shout.
+I didn't figure this out on my own, major thanks to <a href="https://github.com/tcrowe" target="_blank" rel="nofollow noopener noreferrer">Tony Crowe</a> for dealing with my GitHub <a href="https://github.com/hexojs/hexo/issues/3423" target="_blank" rel="nofollow noopener noreferrer">issue</a>. He also gave me some pointers on how to filter posts with links and even highlight them with icons. The Hexo community is pretty helpful, when in doubt just give a shout.
 
 Happy blogging!

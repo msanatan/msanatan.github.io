@@ -21,7 +21,7 @@ Here's the scenario:
   * We'll override the current list with the one we provide
 * This logic will be used in a lambda written in Go for some preprocessing of data
 
-I found this following helpful guide online that showed how to update a list contained in a type like Item using the `SET` operator: <https://medium.com/@joshua.a.kahn/building-a-dynamodb-list-resolver-for-aws-appsync-eb42d30a8791>. Naturally, I thought it should be a simple matter of recreating the Velocity logic in Go and I'd be OK.
+I found this following helpful guide online that showed how to update a list contained in a type like Item using the `SET` operator: <a href="https://medium.com/@joshua.a.kahn/building-a-dynamodb-list-resolver-for-aws-appsync-eb42d30a8791" target="_blank" rel="nofollow noopener noreferrer">https://medium.com/@joshua.a.kahn/building-a-dynamodb-list-resolver-for-aws-appsync-eb42d30a8791</a>. Naturally, I thought it should be a simple matter of recreating the Velocity logic in Go and I'd be OK.
 
 ## Problema Numero Uno
 
@@ -41,7 +41,7 @@ Our attribute values are `:subItem`, a list with the new element, and `:emptyLis
 
 ## Problema Numero Dos
 
-If you're using the AWS Go SDK, you'll probably think to create an attribute value that's an empty Go slice. Trust me, wont' work. By default, the SDK sets empty lists to NULL (see here <https://github.com/aws/aws-sdk-go/issues/682>). After playing around for a bit I was able to get an empty slice accepted:
+If you're using the AWS Go SDK, you'll probably think to create an attribute value that's an empty Go slice. Trust me, wont' work. By default, the SDK sets empty lists to NULL (see here <a href="https://github.com/aws/aws-sdk-go/issues/682" target="_blank" rel="nofollow noopener noreferrer">https://github.com/aws/aws-sdk-go/issues/682</a>). After playing around for a bit I was able to get an empty slice accepted:
 
 ```go
 itemsArray := make([]SubItems, 1)

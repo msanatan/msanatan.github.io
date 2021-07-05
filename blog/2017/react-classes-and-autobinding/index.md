@@ -43,7 +43,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-If you set up your component like this it won't work as you'd expect because of context. You see, the onClick handler is being called outside of the context of the MyComponent object and in this case `this` will be undefined. You can see with this [fiddle](https://jsfiddle.net/69z2wepo/90354/). Many early React tutorials came out not long after ES2015 was defined. As such, there are still many resources that suggest solutions that can potentially be detrimental to performance or not aligned with current conventions. As you read you'll come to appreciate how the developments in ECMAScript help us write succinct, declarative code.
+If you set up your component like this it won't work as you'd expect because of context. You see, the onClick handler is being called outside of the context of the MyComponent object and in this case `this` will be undefined. You can see with this <a href="https://jsfiddle.net/69z2wepo/90354" target="_blank" rel="nofollow noopener noreferrer">fiddle</a>. Many early React tutorials came out not long after ES2015 was defined. As such, there are still many resources that suggest solutions that can potentially be detrimental to performance or not aligned with current conventions. As you read you'll come to appreciate how the developments in ECMAScript help us write succinct, declarative code.
 
 ## Execute The Function In The Render Method
 
@@ -80,7 +80,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-See working fiddle [here](https://jsfiddle.net/69z2wepo/90357/). Notice that an anonymous function is created every time the render function is called. For one small component this may seem fine but in a large scale app with multiple components rendering fairly complex changes, the garbage collector would be quite busy.
+See working fiddle <a href="https://jsfiddle.net/69z2wepo/90357" target="_blank" rel="nofollow noopener noreferrer">here</a>. Notice that an anonymous function is created every time the render function is called. For one small component this may seem fine but in a large scale app with multiple components rendering fairly complex changes, the garbage collector would be quite busy.
 
 ## Bind The Function In The Render Method
 
@@ -117,7 +117,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-Here's your working [fiddle](https://jsfiddle.net/69z2wepo/90358/). Unfortunately, this suffers from the same issue as the previous solution. The `bind` function creates a new function when called, so every render we'll be giving the garbage collector more dishes to wash.
+Here's your working <a href="https://jsfiddle.net/69z2wepo/90358" target="_blank" rel="nofollow noopener noreferrer">fiddle</a>. Unfortunately, this suffers from the same issue as the previous solution. The `bind` function creates a new function when called, so every render we'll be giving the garbage collector more dishes to wash.
 
 ## Bind The Function In The Constructor
 
@@ -155,7 +155,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-Awesome! You can check that it works [here](https://jsfiddle.net/69z2wepo/90360/). While this is a fine, working solution we can do better and keep up with modern JavaScript improvements and conventions.
+Awesome! You can check that it works <a href="https://jsfiddle.net/69z2wepo/90360" target="_blank" rel="nofollow noopener noreferrer">here</a>. While this is a fine, working solution we can do better and keep up with modern JavaScript improvements and conventions.
 
 ## Class Properties
 
@@ -194,9 +194,9 @@ class MyComponent extends React.Component {
 }
 ```
 
-Class Properties is part of a [stage 3 proposal](https://github.com/tc39/proposal-class-fields), yet to belong to the official ECMAScript specification at the time of writing. Stage 3 means that the API is fully fleshed out but the implementation is under heavy testing. I encourage you to read more about the [4 stages](https://tc39.github.io/process-document/) to adding features.
+Class Properties is part of a <a href="https://github.com/tc39/proposal-class-fields" target="_blank" rel="nofollow noopener noreferrer">stage 3 proposal</a>, yet to belong to the official ECMAScript specification at the time of writing. Stage 3 means that the API is fully fleshed out but the implementation is under heavy testing. I encourage you to read more about the <a href="https://tc39.github.io/process-document/" target="_blank" rel="nofollow noopener noreferrer">4 stages</a> to adding features.
 
-This proposal allows us to declare certain fields up front. Actually, this post has been using it while defining the `state` object. It's much cleaner to define a state object for all instances using this new syntax compared to the more usual way of writing `this.state = ...` in the constructor. Class properties help solve our problem in an elegant way when we combine them with Arrow functions. Arrow functions bind `this` depending on **where it's defined**, not where it's called. That's why `this` will always refer to the instance of the class. Check out the [fiddle](https://jsfiddle.net/69z2wepo/90392/) and see that it's working for yourself.
+This proposal allows us to declare certain fields up front. Actually, this post has been using it while defining the `state` object. It's much cleaner to define a state object for all instances using this new syntax compared to the more usual way of writing `this.state = ...` in the constructor. Class properties help solve our problem in an elegant way when we combine them with Arrow functions. Arrow functions bind `this` depending on **where it's defined**, not where it's called. That's why `this` will always refer to the instance of the class. Check out the <a href="https://jsfiddle.net/69z2wepo/90392" target="_blank" rel="nofollow noopener noreferrer">fiddle</a> and see that it's working for yourself.
 
 ### Event Handlers And Arguments
 

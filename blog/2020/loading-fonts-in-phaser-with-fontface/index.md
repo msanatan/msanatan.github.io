@@ -9,13 +9,13 @@ tags:
 - typescript
 ---
 
-For the [Devtober](https://itch.io/jam/devtober-2020) I made a casual mobile game \- [Hyper Match](https://itch.io/jam/devtober-2020). I built it with Phaser 3 and TypeScript, and learned quite a few new skills in the process.
+For the <a href="https://itch.io/jam/devtober-2020" target="_blank" rel="nofollow noopener noreferrer">Devtober</a> I made a casual mobile game \- <a href="https://itch.io/jam/devtober-2020" target="_blank" rel="nofollow noopener noreferrer">Hyper Match</a>. I built it with Phaser 3 and TypeScript, and learned quite a few new skills in the process.
 
-In my last Phaser game, I used the popular but old [Web Font Loader](https://github.com/typekit/webfontloader) to load all my custom fonts. I didn't like that experience, and it's age isn't boding well my modern TypeScript support for all other libraries I use.
+In my last Phaser game, I used the popular but old <a href="https://github.com/typekit/webfontloader" target="_blank" rel="nofollow noopener noreferrer">Web Font Loader</a> to load all my custom fonts. I didn't like that experience, and it's age isn't boding well my modern TypeScript support for all other libraries I use.
 
 ## FontFace Object
 
-After some reading I came across the [FontFace](https://developer.mozilla.org/en-US/docs/Web/API/FontFace) interface, what I assume is the JS counterpart for CSS' `@font-face` rule. Like the CSS rule, it needs a name to identify the font family and the URL of the font file.
+After some reading I came across the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace" target="_blank" rel="nofollow noopener noreferrer">FontFace</a> interface, what I assume is the JS counterpart for CSS' `@font-face` rule. Like the CSS rule, it needs a name to identify the font family and the URL of the font file.
 
 This object is not part of any ECMAScript standard as yet. While unlikely, it's still possible for the API might change. However, most major browsers have supported it for some time now.
 

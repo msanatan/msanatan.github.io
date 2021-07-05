@@ -15,7 +15,7 @@ This is a pretty simple install:
 sudo apt-get install --no-install-recommends ubuntu-desktop
 ```
 
-The 'no-install-recommends' only installs the dependencies of the package (Ubuntu installs the recommended packages by default, list of packages [here](https://packages.ubuntu.com/precise/ubuntu-desktop "ubuntu-desktop packages")). That simple command failed horribly with this message:
+The 'no-install-recommends' only installs the dependencies of the package (Ubuntu installs the recommended packages by default, list of packages <a href="https://packages.ubuntu.com/precise/ubuntu-desktop" target="_blank" rel="nofollow noopener noreferrer">here</a>. That simple command failed horribly with this message:
 
 ```sh
 E: Unable to correct problems, you have held broken packages.

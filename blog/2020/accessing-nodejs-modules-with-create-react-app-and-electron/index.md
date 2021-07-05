@@ -9,9 +9,9 @@ tags:
 - electron
 ---
 
-I recently got an <a rel="nofollow noopener" target="_blank" href="https://arduboy.com/">Arduboy</a>, a hackable handheld that I can make games for. There are a lot of awesome games as well, and as an inconsistent but avid gamer, I do want to play the best ones. Unfortunately at the time, the only way for me to do so on a Mac was to clone a game from Github and compile it with the <a rel="nofollow noopener" target="_blank" href="https://www.arduino.cc/en/main/software">Arduino IDE</a>.
+I recently got an <a rel="nofollow noopener noreferrer" target="_blank" href="https://arduboy.com">Arduboy</a>, a hackable handheld that I can make games for. There are a lot of awesome games as well, and as an inconsistent but avid gamer, I do want to play the best ones. Unfortunately at the time, the only way for me to do so on a Mac was to clone a game from Github and compile it with the <a rel="nofollow noopener noreferrer" target="_blank" href="https://www.arduino.cc/en/main/software">Arduino IDE</a>.
 
-I asked the Arduboy community, and it seems that some software is coming for Mac but I don't know when. I found some libraries that I could use to upload games to the Arduboy, the easiest one was <a rel="nofollow noopener" target="_blank" href="https://github.com/noopkat/avrgirl-arduino">avrgirl-arduino</a>. Writing a script to do it via the CLI was easy thanks to this awesome library. I figured I'd make an app for it as well.
+I asked the Arduboy community, and it seems that some software is coming for Mac but I don't know when. I found some libraries that I could use to upload games to the Arduboy, the easiest one was <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/noopkat/avrgirl-arduino">avrgirl-arduino</a>. Writing a script to do it via the CLI was easy thanks to this awesome library. I figured I'd make an app for it as well.
 
 The app was made with React using the `create-react-app` tool, and bundled with Electron. The tricky part was setting it up so that I could develop the app in Electron rather than in the browser. The next hurdle was getting the app to access Node.js modules like `fs` and `avrgirl-arduino`. If you're a similar situation, this bit of info might help.
 
@@ -37,19 +37,19 @@ When I first did that, the scrips were completed but none of the React code was 
 
 Now in your app directory, let's install a few more packages:
 
-<a rel="nofollow noopener" target="_blank" href="https://www.electronjs.org/">Electron</a> which is used to build the app
+<a rel="nofollow noopener noreferrer" target="_blank" href="https://www.electronjs.org">Electron</a> which is used to build the app
 
 ```console
 npm i --save-dev electron
 ```
 
-<a rel="nofollow noopener" target="_blank" href="https://github.com/kimmobrunfeldt/concurrently">Concurrently</a> and <a rel="nofollow noopener" target="_blank" href="https://github.com/jeffbski/wait-on">Wait-on</a> which are helper utilities we use in our scripts to develop Electron apps with a debugger.
+<a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/kimmobrunfeldt/concurrently">Concurrently</a> and <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/jeffbski/wait-on">Wait-on</a> which are helper utilities we use in our scripts to develop Electron apps with a debugger.
 
 ```console
 npm i --save-dev concurrently wait-on
 ```
 
-<a rel="nofollow noopener" target="_blank" href="https://github.com/harrysolovay/rescripts">Rescripts</a> which is used to modify `create-react-app`'s webpack configuration, without ejecting the app. We need this to access Node.js libraries.
+<a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/harrysolovay/rescripts">Rescripts</a> which is used to modify `create-react-app`'s webpack configuration, without ejecting the app. We need this to access Node.js libraries.
 
 ```console
 npm i --save-dev @rescripts/cli @rescripts/rescript-env
@@ -114,7 +114,7 @@ app.on('activate', () => {
 });
 ```
 
-For those curious, I created the `isDev` function based on <a rel="nofollow noopener" target="_blank" href="https://github.com/electron/electron/issues/7714#issuecomment-310885608">this response</a> to a Github issue.
+For those curious, I created the `isDev` function based on <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/electron/electron/issues/7714#issuecomment-310885608">this response</a> to a Github issue.
 
 So far so good! Let's continue by making two edits to your `package.json`. The first is to make the `electron.js` file we just created the starting point of our app. In `package.json`, add a `main` property like this:
 
@@ -268,6 +268,6 @@ Sweet! The debugger shows the logs of the files and folders in the current direc
 
 ## Moving Forward
 
-This got me into a pretty happy place. It's helping me build my Arduboy game uploader and I'll probably continue to use this setup for future Desktop apps I'm building with React. You can see the code for this tutorial here: <a rel="nofollow noopener" target="_blank" href="https://github.com/msanatan/react-electron-app">https://github.com/msanatan/react-electron-app</a>.
+This got me into a pretty happy place. It's helping me build my Arduboy game uploader and I'll probably continue to use this setup for future Desktop apps I'm building with React. You can see the code for this tutorial here: <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/msanatan/react-electron-app">https://github.com/msanatan/react-electron-app</a>.
 
 Happy app developing!

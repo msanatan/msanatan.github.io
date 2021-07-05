@@ -13,7 +13,7 @@ I had an interesting code challenge where I needed to do a few non-gamey things 
 
 ## DOMElement
 
-The [DOMElement](https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.DOMElement.html) is a game object that can control HTML elements. You need to include this configuration to work with them:
+The <a href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.DOMElement.html" target="_blank" rel="nofollow noopener noreferrer">DOMElement</a> is a game object that can control HTML elements. You need to include this configuration to work with them:
 
 ```javascript
 dom: {
@@ -52,6 +52,6 @@ export default class DOMSprite extends Phaser.GameObjects.DOMElement {
 }
 ```
 
-That's all there is to it! If you'd like a working example, check out this repl: <https://repl.it/@MarcusSanatan/Control-DOM-Objects-in-Phaser>.
+That's all there is to it! If you'd like a working example, check out this repl: <a href="https://repl.it/@MarcusSanatan/Control-DOM-Objects-in-Phaser" target="_blank" rel="nofollow noopener noreferrer">https://repl.it/@MarcusSanatan/Control-DOM-Objects-in-Phaser</a>.
 
 Happy game deving!

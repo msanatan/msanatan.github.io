@@ -25,8 +25,8 @@ this.input.on('gameobjectover', eventHandler);
 
 I really like having the actual GameObject in the function as I'll have access to much more interesting properties than the pointer object can provide by itself. One thing to note, if you listening to a pointer event on a game object, that event will fire before this one fires.
 
-Here's a quick example where I used the `gameobject` events to increase and decrease the size of a couple of sprites: <https://repl.it/@MarcusSanatan/GameObject-Listeners>.
+Here's a quick example where I used the `gameobject` events to increase and decrease the size of a couple of sprites: <a href="https://repl.it/@MarcusSanatan/GameObject-Listeners" target="_blank" rel="nofollow noopener noreferrer">https://repl.it/@MarcusSanatan/GameObject-Listeners</a>.
 
-Be sure to read the docs and see [all possible events](https://photonstorm.github.io/phaser3-docs/Phaser.Input.Events.html) at your disposal.
+Be sure to read the docs and see <a href="https://photonstorm.github.io/phaser3-docs/Phaser.Input.Events.html" target="_blank" rel="nofollow noopener noreferrer">all possible events</a> at your disposal.
 
 Happy game deving!

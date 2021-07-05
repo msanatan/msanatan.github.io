@@ -8,9 +8,9 @@ tags:
 - kontra
 ---
 
-While in a car on one of T&T's many bad roads, we had to immediately dodge a deep pothole. I thought I should make a quick game about dodging potholes \- and [Kontra](https://straker.github.io/kontra/) was just the tool for throwing it out quickly.
+While in a car on one of T&T's many bad roads, we had to immediately dodge a deep pothole. I thought I should make a quick game about dodging potholes \- and <a href="https://straker.github.io/kontra/" target="_blank" rel="nofollow noopener noreferrer">Kontra</a> was just the tool for throwing it out quickly.
 
-I've been familiar with Kontra.js [before](/2018/08/31/micro-games-with-kontrajs/) so it was easy to create a working game in 2 hours late at night. In the end it's called Swerve \(I think some hip-hop I was listening kept saying that word\) and you can play it here: <https://msanatan.com/swerve/>.
+I've been familiar with Kontra.js [before](/blog/2018/08/31/micro-games-with-kontrajs) so it was easy to create a working game in 2 hours late at night. In the end it's called Swerve \(I think some hip-hop I was listening kept saying that word\) and you can play it here: <https://msanatan.com/swerve>.
 
 ## Premise
 
@@ -39,7 +39,7 @@ const nativeHeight = 640;
 const scaleRatio = Math.min(window.innerWidth / nativeWidth, window.innerHeight / nativeHeight);
 ```
 
-And now every single sprite and movement would be multiplied by the scale ratio. Scaling works when everything is position relatively. I got this solution from <https://stackoverflow.com/questions/33515707/scaling-a-javascript-canvas-game-properly>. I don't like how manual this scaling is, the ideal solution would be to have the scale ratio applied throughout. For a game with this small scope it suffices.
+And now every single sprite and movement would be multiplied by the scale ratio. Scaling works when everything is position relatively. I got this solution from <a href="https://stackoverflow.com/questions/33515707/scaling-a-javascript-canvas-game-properly" target="_blank" rel="nofollow noopener noreferrer">https://stackoverflow.com/questions/33515707/scaling-a-javascript-canvas-game-properly</a>. I don't like how manual this scaling is, the ideal solution would be to have the scale ratio applied throughout. For a game with this small scope it suffices.
 
 ## Adding a Menu
 
@@ -116,12 +116,12 @@ menuLoop.start();
 
 ## Bonus: Making an App
 
-This game is just a small website, and can be wrapped up like any other website to become an app. With the most basic `config.xml` I used <https://build.phonegap.com> to build an APK for it. This Adobe service is free for public repos. It's just a convenient, proprietary tool built on top of [Cordova](https://cordova.apache.org/), which is also free but open source to boot.
+This game is just a small website, and can be wrapped up like any other website to become an app. With the most basic `config.xml` I used <a href="https://build.phonegap.com" target="_blank" rel="nofollow noopener noreferrer">https://build.phonegap.com</a> to build an APK for it. This Adobe service is free for public repos. It's just a convenient, proprietary tool built on top of <a href="https://cordova.apache.org" target="_blank" rel="nofollow noopener noreferrer">Cordova</a>, which is also free but open source to boot.
 
 ## Reflections
 
 This was a fun exercise, and I really got even more respect for Kontra. It's super lightweight with enough baked in to give me a game in under 8 hours that's mobile friendly. Scaling is something I'd prefer to automatically managed, Phaser 2's Scale Manager has got me properly spoilt.
 
-There are tons that can be improved with this mini-game: add music, collect items for more points, use graphics instead of just pixels. Kontra also comes with optional modules to make those upgrades straightforward. But I'm satisfied with this random creation I call Swerve. You can get the code here: <https://github.com/msanatan/swerve>
+There are tons that can be improved with this mini-game: add music, collect items for more points, use graphics instead of just pixels. Kontra also comes with optional modules to make those upgrades straightforward. But I'm satisfied with this random creation I call Swerve. You can get the code here: <a href="https://github.com/msanatan/swerve" target="_blank" rel="nofollow noopener noreferrer">https://github.com/msanatan/swerve</a>
 
 Happy game developing!

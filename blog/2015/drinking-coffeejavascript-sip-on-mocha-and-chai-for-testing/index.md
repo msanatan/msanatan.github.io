@@ -15,9 +15,9 @@ So on the road to deeper JavaScript use and appreciation (the latter is the tri
 
 ## All These Drinks Are Keeping Me Warm
 
-[Mocha](http://mochajs.org/ "Mocha") seems the be on top of the food chain when it comes to testing frameworks for JavaScript. It's a test runner - a healthy dose of automation that allows you to focus on writing and running test cases. It has a pretty neat way of dealing with asynchronous code by adding a callback and function call that lets it know to wait for a result. You can find similar behaviour and features with the [Jasmine](http://jasmine.github.io/ "Jasmine") testing framework (which has a nearly identical API).
+<a href="https://mochajs.org" target="_blank" rel="nofollow noopener noreferrer">Mocha</a> seems the be on top of the food chain when it comes to testing frameworks for JavaScript. It's a test runner - a healthy dose of automation that allows you to focus on writing and running test cases. It has a pretty neat way of dealing with asynchronous code by adding a callback and function call that lets it know to wait for a result. You can find similar behaviour and features with the <a href="https://jasmine.github.io" target="_blank" rel="nofollow noopener noreferrer">Jasmine</a> testing framework (which has a nearly identical API).
 
-[Chai](http://chaijs.com/ "Chai") is an assertion library that can be used with testing frameworks. Assertion libraries are what you write the tests with. If you're following the links you'll notice that Chai calls itself a "BDD / TDD assertion library". While Test Driven Development is pretty well-known, not so much is known about Behaviour Driven Development.
+<a href="https://chaijs.com" target="_blank" rel="nofollow noopener noreferrer">Chai</a> is an assertion library that can be used with testing frameworks. Assertion libraries are what you write the tests with. If you're following the links you'll notice that Chai calls itself a "BDD / TDD assertion library". While Test Driven Development is pretty well-known, not so much is known about Behaviour Driven Development.
 
 ### Detour - TDD &amp; BDD
 
@@ -28,9 +28,9 @@ As a recap with TDD you:
 3. Implement those features until you get to the point of passing those tests
 4. Clean up the code, for example refactoring to the original/ideal design while running those test to make sure nothing broke. Rinse and repeat!
 
-With BDD you do the same thing... uhhh what? Of course it's not just that, the Agile Alliance has [a lot more to say](http://guide.agilealliance.org/guide/bdd.html "BDD - Agile Alliance") about their differences. The idea is that BDD describes the behaviour of the feature being implemented, not just its result. The requirements of the project map more closely to the tests you'll write in BDD than in TDD. So while testing we're actually thinking about how the system works. The most salient visible change you'll see is how you write tests, BDD testing tools use more natural language syntax than their TDD counterparts.
+With BDD you do the same thing... uhhh what? Of course it's not just that, the Agile Alliance has <a href="https://guide.agilealliance.org/guide/bdd.html" target="_blank" rel="nofollow noopener noreferrer">a lot more to say</a> about their differences. The idea is that BDD describes the behaviour of the feature being implemented, not just its result. The requirements of the project map more closely to the tests you'll write in BDD than in TDD. So while testing we're actually thinking about how the system works. The most salient visible change you'll see is how you write tests, BDD testing tools use more natural language syntax than their TDD counterparts.
 
-## Do You Even Code? ([Gym Prank Voice](https://youtu.be/H2Diy0RNe_c?t=103))
+## Do You Even Code? (<a href="https://youtu.be/H2Diy0RNe_c?t=103" target="_blank" rel="nofollow noopener noreferrer">Gym Prank Voice</a>)
 
 These days I've been working with CoffeeScript because it makes me smile :). Since I can't release every bit of code I write (secret agent coder) I decided to do some testing for a Finite State Machine (FSM) acceptor I wrote not too long ago. For those not familiar with FSMs (or FSA, A for Automata) here's a quick primer:
 
@@ -103,17 +103,17 @@ describe 'FSM accept', ->
     expect(-> fsm1.accept 2, 'A').to.throw BadInputError
 ```
 
-I wanted to test that the error is thrown when it should. Note that I wrap the fsm1.accept 2, 'A' in a function (using `->` for those not CoffeeScript savvy). That's because Chai tests if a function returns an error; just putting fsm1.accept would in essence make Chai test the result. This seems to be a common thing many people overlook, do yourself a favour and read them docs! [Here](https://gist.github.com/msanatan/1588c51ea0b71b3fc823 "FSM Gist")'s the gist with all this code.
+I wanted to test that the error is thrown when it should. Note that I wrap the fsm1.accept 2, 'A' in a function (using `->` for those not CoffeeScript savvy). That's because Chai tests if a function returns an error; just putting fsm1.accept would in essence make Chai test the result. This seems to be a common thing many people overlook, do yourself a favour and read them docs! <a href="https://gist.github.com/msanatan/1588c51ea0b71b3fc823" target="_blank" rel="nofollow noopener noreferrer">Here</a>'s the gist with all this code.
 
-Don't think that this elegant testing is just for elegant mathematical models. Chai has some useful [plugins](http://chaijs.com/plugins "Chai Plugins") that could help you test your server HTTP responses. It helped me feel better about my express app's behaviour.
+Don't think that this elegant testing is just for elegant mathematical models. Chai has some useful <a href="https://chaijs.com/plugins" target="_blank" rel="nofollow noopener noreferrer">plugins</a> that could help you test your server HTTP responses. It helped me feel better about my express app's behaviour.
 
 ## Some Useful Reading
 
 I'm quite happy with my experience of testing with Mocha and Chai. Now remember these are just tools for a software development methodology. Let's try digging deeper into TDD and BDD. I'm particularly interested in BDD as it's newer to me. Here are some links that may be useful to you:
 
-* Introducing BDD - <https://dannorth.net/introducing-bdd/>
-* What's in a Story - <https://dannorth.net/whats-in-a-story/>
-* Behaviour Driven Development with Javascript - <https://github.com/gajus/gajus.com-blog/blob/master/posts/behaviour-driven-development-with-javascript/index.md>
-* 3 misconceptions about BDD - <https://www.thoughtworks.com/insights/blog/3-misconceptions-about-bdd>
+* Introducing BDD - <a href="https://dannorth.net/introducing-bdd/" target="_blank" rel="nofollow noopener noreferrer">https://dannorth.net/introducing-bdd/</a>
+* What's in a Story - <a href="https://dannorth.net/whats-in-a-story/" target="_blank" rel="nofollow noopener noreferrer">https://dannorth.net/whats-in-a-story/</a>
+* Behaviour Driven Development with Javascript - <a href="https://github.com/gajus/gajus.com-blog/blob/master/posts/behaviour-driven-development-with-javascript/index.md" target="_blank" rel="nofollow noopener noreferrer">https://github.com/gajus/gajus.com-blog/blob/master/posts/behaviour-driven-development-with-javascript/index.md</a>
+* 3 misconceptions about BDD - <a href="https://www.thoughtworks.com/insights/blog/3-misconceptions-about-bdd" target="_blank" rel="nofollow noopener noreferrer">https://www.thoughtworks.com/insights/blog/3-misconceptions-about-bdd</a>
 
-My next step is to use the BDD development paradigm from project start to completion, I've only used testing tools after substantial code was already written. The requirements aware approach of BDD appeals to me more than TDD, which has come has come under lots of criticism. David Hansson, creator of Ruby on Rails, has an interesting blog post on [why he came off TDD](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html). Would BDD eliminate his problems? Probably not, its TDD roots are the core of his issues. Even so, I'll keep his qualms in mind and try it out myself! In any case, getting our hands dirty with testing would only help our software development processes and results. Happy hacking :).
+My next step is to use the BDD development paradigm from project start to completion, I've only used testing tools after substantial code was already written. The requirements aware approach of BDD appeals to me more than TDD, which has come has come under lots of criticism. David Hansson, creator of Ruby on Rails, has an interesting blog post on <a href="https://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html" target="_blank" rel="nofollow noopener noreferrer">why he came off TDD</a>. Would BDD eliminate his problems? Probably not, its TDD roots are the core of his issues. Even so, I'll keep his qualms in mind and try it out myself! In any case, getting our hands dirty with testing would only help our software development processes and results. Happy hacking :).

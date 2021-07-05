@@ -9,7 +9,7 @@ tags:
 - flask
 ---
 
-It seems I've got into web development more and more. As I'm sticking to a language [I know and love](https://www.python.org/ "Python"), I'm using [Flask](http://flask.pocoo.org/ "Flask") - a super awesome microframework  based on the powerful Werkzeug and Jinja2 libraries. Why not [Django](https://www.djangoproject.com/ "Django")? No particular reason, I've used it before and just prefer how easy it is to get up and running with Flask!
+It seems I've got into web development more and more. As I'm sticking to a language I know and love, I'm using <a href="http://flask.pocoo.org" target="_blank" rel="nofollow noopener noreferrer">Flask</a> - a super awesome microframework  based on the powerful Werkzeug and Jinja2 libraries. Why not Django? No particular reason, I've used it before and just prefer how easy it is to get up and running with Flask!
 
 For those too lazy to follow the links (shame on you!) here's a basic Hello World in Flask to make you excited:
 
@@ -76,7 +76,7 @@ def delete_todo(t_id):
     return redirect(url_for('todos.index'))
 ```
 
-I also created a blueprint to handle static pages, like the home and about page. If you structure your Flask app [like a package](http://flask.pocoo.org/docs/0.10/patterns/packages/#larger-applications "Large Flask Application Patterns"), then in your **init.py** of your views module you can define your 404 view function as follows:
+I also created a blueprint to handle static pages, like the home and about page. If you structure your Flask app <a href="http://flask.pocoo.org/docs/0.10/patterns/packages/#larger-applications" target="_blank" rel="nofollow noopener noreferrer">like a package</a>, then in your **init.py** of your views module you can define your 404 view function as follows:
 
 ```python
 @app.errorhandler(404)
@@ -88,6 +88,6 @@ All in all, you got a well organised flask app!
 
 ## Random Notes
 
-I'm no web designer, and that site is somehow visually tolerable. Checkout [Bootswatch](https://bootswatch.com/ "Bootswatch") for some free themes that replaces Bootstrap's standard ones. Technically this was supposed to be a weekend hack... but a great El Clásico occurred and life drove me in other directions, until about Sunday evening when I finally started coding this up!
+I'm no web designer, and that site is somehow visually tolerable. Checkout <a href="https://bootswatch.com" target="_blank" rel="nofollow noopener noreferrer">Bootswatch</a> for some free themes that replaces Bootstrap's standard ones. Technically this was supposed to be a weekend hack... but a great El Clásico occurred and life drove me in other directions, until about Sunday evening when I finally started coding this up!
 
-Lastly, you can get the complete source code right here: <https://github.com/msanatan/organise>
+Lastly, you can get the complete source code right here: <a href="https://github.com/msanatan/organise" target="_blank" rel="nofollow noopener noreferrer">https://github.com/msanatan/organise</a>
