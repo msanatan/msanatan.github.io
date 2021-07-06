@@ -35,6 +35,13 @@ const Layout = ({ title, description, meta, children }) => {
                   activeClassName={menuItemActive}
                 >Blog</Link>
               </li>
+              <li className='nav-item'>
+                <Link
+                  to='/contact'
+                  className={`nav-link ${menuItem}`}
+                  activeClassName={menuItemActive}
+                >Contact</Link>
+              </li>
             </ul>
           </div>
         </nav>

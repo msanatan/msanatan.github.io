@@ -1,0 +1,21 @@
+.contact-form {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+.contact-form label {
+  color: #212529;
+  font-size: 1.25rem;
+}
+
+.btn-submit {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  color: #212529;
+  font-size: 1rem;
+  border: 2px solid #212529;
+  border-radius: 5%;
+}
+
+.btn-submit:hover {
+  color: #00cdac;
+  border-color: #00cdac;
+}
