@@ -23,8 +23,12 @@ const ContactPage = () => {
               <input type='text' className='form-control' id='name' name='name' required />
             </div>
             <div className='mb-3'>
-              <label htmlFor='email' className='form-label'>Email</label>
-              <input type='email' className='form-control' id='email' name='email' placeholder='name@example.com' required />
+              <label htmlFor='_replyto' className='form-label'>Email</label>
+              <input type='email' className='form-control' id='email' name='_replyto' placeholder='name@example.com' required />
+            </div>
+            <div className='mb-3'>
+              <label htmlFor='_subject' className='form-label'>Subject</label>
+              <input type='text' className='form-control' id='email' name='_subject' required />
             </div>
             <div className='mb-3'>
               <label htmlFor='message' className='form-label'>Message</label>
