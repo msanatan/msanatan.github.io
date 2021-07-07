@@ -87,22 +87,22 @@ const BlogListTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-      query AllBlogPostsForList($skip: Int!, $limit: Int!) {
-        allMarkdownRemark(
-          sort: {fields: [frontmatter___date], order: DESC }
-      filter: {frontmatter: {link: {eq: null}}}
+  query AllBlogPostsForList($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: {link: {eq: null}, draft: {eq: null}}}
       limit: $limit
       skip: $skip
-      ) {
-        nodes {
+    ) {
+      nodes {
         fields {
         slug
       }
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
-      updated(formatString: "YYYY-MM-DD")
-      tags
+        updated(formatString: "YYYY-MM-DD")
+        tags
       }
     }
   }
