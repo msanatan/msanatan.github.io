@@ -128,7 +128,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {frontmatter: {draft: {eq: null}, editor: {ne: "Marcus Sanatan"}}}
+                  filter: {frontmatter: {editor: {ne: "Marcus Sanatan"}}}
                 ) {
                   edges {
                     node {

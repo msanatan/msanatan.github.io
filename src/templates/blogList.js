@@ -90,7 +90,7 @@ export const query = graphql`
   query AllBlogPostsForList($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: {fields: [frontmatter___date], order: DESC }
-      filter: {frontmatter: {link: {eq: null}, draft: {eq: null}}}
+      filter: {frontmatter: {link: {eq: null}}}
       limit: $limit
       skip: $skip
     ) {
