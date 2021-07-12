@@ -5,5 +5,4 @@ categories:
 - [personal]
 tags:
 - personal
-draft: true
 ---
