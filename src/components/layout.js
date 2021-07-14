@@ -29,6 +29,15 @@ const Layout = ({ title, description, meta, children }) => {
                 >About</Link>
               </li>
               <li className='nav-item'>
+                <a
+                  href='https://msanatan.itch.io'
+                  target='_blank'
+                  rel='nofollow noopener noreferrer'
+                  className={`nav-link ${menuItem}`}
+                  activeClassName={menuItemActive}
+                >Games</a>
+              </li>
+              <li className='nav-item'>
                 <Link
                   to='/blog'
                   className={`nav-link ${menuItem}`}
