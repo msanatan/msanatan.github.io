@@ -60,18 +60,18 @@ Here's the list of games I played and finished in 2020:
 
 Well, that was an abysmal return of games. When you spend time doing game dev, you have less time playing games. But it wasn't all bad, lots of games were started and are continuing into 2021:
 
-* Oxenfree \- Now on Windows, as I changed my laptop
+* Oxenfree \- Now on PC, as I changed my laptop
 * Untitled Goose Game \- Nintendo Switch
 * Lego City Undercover \- Nintendo Switch
 * Zelda: Breath of the Wild \- Nintendo Switch (making lots of progress, I just get distracted by the world)
 * The Touryst \- Nintendo Switch
-* Kentucky Route Zero \- Mac
+* Kentucky Route Zero \- PC
 * Shadow of the Colossus \- PS4
 * Nier Automata \- PS4
 * God of War \- PS4
 * Uncharted Collection \- PS4
 * Octopath Traveler \- Nintendo Switch
-* Cyberpunk 2077 \- PS4
+* Cyberpunk 2077 \- PC
 * Pokemon Sword \- Nintendo Switch
 
 ## Books
@@ -113,7 +113,7 @@ For 2021, here are my new course goals:
   * <a href="https://www.udemy.com/course/unitycourse2" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/unitycourse2</a>
 * Unity Mobile C# Developer Course
   * <a href="https://www.gamedev.tv/p/unity-mobile-c-developer-course" target="_blank" rel="nofollow noopener noreferrer">https://www.gamedev.tv/p/unity-mobile-c-developer-course</a>
-  * How To Get A Job In The Video Game Industry
+* How To Get A Job In The Video Game Industry
   * <a href="https://www.udemy.com/course/gameindustryjobs" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/gameindustryjobs</a>
 * Finish It! Motivation & Processes For Game Developers Course
   * <a href="https://www.gamedev.tv/p/finish-it-motivation-processes-for-game-app-development" target="_blank" rel="nofollow noopener noreferrer">https://www.gamedev.tv/p/finish-it-motivation-processes-for-game-app-development</a>
