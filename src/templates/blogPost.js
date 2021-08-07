@@ -15,48 +15,52 @@ const BlogPostTemplate = ({ data }) => {
     <Layout title={siteTitle} description={description} meta={[{ keywords: post.frontmatter.tags }]}>
       <div className={`container d-flex flex-column ${postContainer}`}>
         <div className='row'>
-          <article
-            className='blog-post'
-            itemScope
-            itemType='http://schema.org/Article'
-          >
-            <header className={`${header} my-3`}>
-              <h1 itemProp='headline'>{post.frontmatter.title}</h1>
-              <small>{postMetadata}</small>
-            </header>
-            <section
-              dangerouslySetInnerHTML={{ __html: post.html }}
-              itemProp='articleBody'
-            />
-          </article>
+          <div className='offset-lg-1 col-lg-10'>
+            <article
+              className='blog-post'
+              itemScope
+              itemType='http://schema.org/Article'
+            >
+              <header className={`${header} my-3`}>
+                <h1 itemProp='headline'>{post.frontmatter.title}</h1>
+                <small>{postMetadata}</small>
+              </header>
+              <section
+                dangerouslySetInnerHTML={{ __html: post.html }}
+                itemProp='articleBody'
+              />
+            </article>
+          </div>
         </div>
         <div className='row my-3'>
-          <nav className='blog-post-nav'>
-            <ul
-              style={{
-                display: `flex`,
-                flexWrap: `wrap`,
-                justifyContent: `space-between`,
-                listStyle: `none`,
-                padding: 0,
-              }}
-            >
-              <li>
-                {previous && (
-                  <Link to={previous.fields.slug} rel='prev' className={navLink}>
-                    ← {previous.frontmatter.title}
-                  </Link>
-                )}
-              </li>
-              <li>
-                {next && (
-                  <Link to={next.fields.slug} rel='next' className={navLink}>
-                    {next.frontmatter.title} →
-                  </Link>
-                )}
-              </li>
-            </ul>
-          </nav>
+          <div className='offset-lg-1 col-lg-10'>
+            <nav className='blog-post-nav'>
+              <ul
+                style={{
+                  display: `flex`,
+                  flexWrap: `wrap`,
+                  justifyContent: `space-between`,
+                  listStyle: `none`,
+                  padding: 0,
+                }}
+              >
+                <li>
+                  {previous && (
+                    <Link to={previous.fields.slug} rel='prev' className={navLink}>
+                      ← {previous.frontmatter.title}
+                    </Link>
+                  )}
+                </li>
+                <li>
+                  {next && (
+                    <Link to={next.fields.slug} rel='next' className={navLink}>
+                      {next.frontmatter.title} →
+                    </Link>
+                  )}
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </Layout>
