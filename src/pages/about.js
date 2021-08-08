@@ -18,6 +18,7 @@ const AboutPage = () => {
               <li>Backend Development with Node.js (Express.js, Nest.js, Strapi) and Golang</li>
               <li>Frontend Development with React.js. I like TypeScript as well</li>
             </ul>
+            <p>I host <a href='https://itch.io/jams/hosted-by-msanatan' target='_blank' rel='noopener nofollow noreferrer'>game jams</a> for Caribbean game developers! Feel free to join us on <a href='https://discord.gg/axGtfrk' target='_blank' rel='noopener nofollow noreferrer'>Discord</a> as well.</p>
             <p>I'm an editor and author for programming tutorials on <a href='https://stackabuse.com/author/marcus?ref=https://msanatan.com/about' target='_blank' rel='noopener nofollow noreferrer'>Stack Abuse</a>, check them out!</p>
             <p>Unless otherwise mentioned, all views expressed on this website are my own and do not represent the views of my employer or any organisation I am affiliated with.</p>
           </div>
