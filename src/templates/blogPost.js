@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { slugify } from '../utils/slugify'
 import { postContainer, header, navLink } from './blogPost.module.css'
+import { tagLink } from './blogList.module.css'
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
@@ -9,7 +11,16 @@ const BlogPostTemplate = ({ data }) => {
   const description = post.frontmatter.description || post.excerpt
   const { previous, next } = data
 
-  const postMetadata = post.frontmatter.updated ? `${post.frontmatter.date} (updated: ${post.frontmatter.updated}) - ${post.frontmatter.tags.join(', ')}` : `${post.frontmatter.date} - ${post.frontmatter.tags.join(', ')}`
+  const postMetadata = post.frontmatter.updated ? `${post.frontmatter.date} (updated: ${post.frontmatter.updated})` : `${post.frontmatter.date}`
+  const postTags = (
+    <p>
+      {post.frontmatter.tags.map((tag, i) => {
+        return i < post.frontmatter.tags.length - 1
+          ? (<span><Link to={`/tags/${slugify(tag)}`} itemProp="url" className={tagLink}>{tag}</Link>, </span>)
+          : (<Link to={`/tags/${slugify(tag)}`} itemProp="url" className={tagLink}>{tag}</Link>)
+      })}
+    </p>
+  )
 
   return (
     <Layout title={siteTitle} description={description} meta={[{ keywords: post.frontmatter.tags }]}>
@@ -24,6 +35,7 @@ const BlogPostTemplate = ({ data }) => {
               <header className={`${header} my-3`}>
                 <h1 itemProp='headline'>{post.frontmatter.title}</h1>
                 <small>{postMetadata}</small>
+                {postTags}
               </header>
               <section
                 dangerouslySetInnerHTML={{ __html: post.html }}
@@ -86,7 +98,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        link
         tags
         date(formatString: "YYYY-MM-DD")
         updated(formatString: "YYYY-MM-DD")
