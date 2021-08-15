@@ -8,14 +8,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blogPost.js`)
   const blogList = path.resolve(`./src/templates/blogList.js`)
+  const tagPage = path.resolve(`./src/templates/tagPage.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
+        posts: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: ASC }
-          filter: {frontmatter: {link: {eq: null}}}
           limit: 1000
         ) {
           nodes {
@@ -23,6 +23,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fields {
               slug
             }
+          }
+        }
+        tagsGroup: allMarkdownRemark(
+          limit: 1000
+        ) {
+          group(field: frontmatter___tags) {
+            fieldValue
+            totalCount
           }
         }
       }
@@ -37,22 +45,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
+  const posts = result.data.posts.nodes
   const postsPerPage = 10
-  const numPages = Math.ceil(posts.length / postsPerPage)
+  const numPagesForPosts = Math.ceil(posts.length / postsPerPage)
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
-  Array.from({ length: numPages }).forEach((_, i) => {
+  Array.from({ length: numPagesForPosts }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
       component: blogList,
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,
-        numPages,
+        numPages: numPagesForPosts,
         currentPage: i + 1,
       },
     })
@@ -74,6 +82,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  const tags = result.data.tagsGroup.group
+
+  tags.forEach(tag => {
+    const numPagesForTag = Math.ceil(tag.totalCount / postsPerPage)
+    console.log(tag)
+
+    Array.from({ length: numPagesForTag }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/tags/${slugify(tag.fieldValue)}` : `/tags/${slugify(tag.fieldValue)}/${i + 1}`,
+        component: tagPage,
+        context: {
+          tag: tag.fieldValue,
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages: numPagesForTag,
+          currentPage: i + 1,
+        },
+      })
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -140,4 +169,23 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+function slugify(str) {
+  str = str.replace(/^\s+|\s+$/g, ''); // trim
+  str = str.toLowerCase();
+
+  // remove accents, swap ñ for n, etc
+  const from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+  const to = "aaaaeeeeiiiioooouuuunc------";
+
+  for (let i = 0, l = from.length; i < l; i++) {
+    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+  }
+
+  str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+    .replace(/-+/g, '-'); // collapse dashes
+
+  return str;
 }
