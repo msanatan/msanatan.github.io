@@ -14,3 +14,20 @@
     font-size: 1.25rem;
   }
 }
+
+.tag-link {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 1rem;
+}
+
+.tag-link:hover {
+  color: black;
+  text-decoration-color: #00cdac;
+}
+
+@media (max-width: 544px) {
+  .tag-link {
+    font-size: 0.75rem;
+  }
+}
