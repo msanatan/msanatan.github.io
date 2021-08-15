@@ -77,17 +77,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField, createRedirect } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode }).split('/')[2]
     const postDate = moment(node.frontmatter.date)
-    const url = `/blog/${postDate.format('YYYY/MM/DD')}/${value}`
+    const legacyBlogUrl = `/${postDate.format('YYYY/MM/DD')}/${value}`
+    const url = `/blog${legacyBlogUrl}`
 
     createNodeField({
       name: `slug`,
       node,
       value: url,
+    })
+
+    createRedirect({
+      fromPath: legacyBlogUrl,
+      toPath: url,
+      redirectInBrowser: true,
+      isPermanent: true,
     })
   }
 }
