@@ -82,8 +82,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode }).split('/')[2]
     const postDate = moment(node.frontmatter.date)
-    const legacyBlogUrl = `/${postDate.format('YYYY/MM/DD')}/${value}`
-    const url = `/blog${legacyBlogUrl}`
+    const legacyBlogUrl = `${postDate.format('YYYY/MM/DD')}/${value}`
+    const url = `/blog/${legacyBlogUrl}`
 
     createNodeField({
       name: `slug`,
@@ -92,7 +92,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
 
     createRedirect({
-      fromPath: legacyBlogUrl,
+      fromPath: `/${legacyBlogUrl}/`,
       toPath: url,
       redirectInBrowser: true,
       isPermanent: true,
