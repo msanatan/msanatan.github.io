@@ -87,7 +87,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   tags.forEach(tag => {
     const numPagesForTag = Math.ceil(tag.totalCount / postsPerPage)
-    console.log(tag)
 
     Array.from({ length: numPagesForTag }).forEach((_, i) => {
       createPage({
