@@ -96,30 +96,15 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
-                let rssProperties
-                if (edge.node.frontmatter.link) {
-                  rssProperties = {
-                    description: edge.node.excerpt,
-                    date: edge.node.frontmatter.date,
-                    updated: edge.node.frontmatter.updated,
-                    link: edge.node.frontmatter.link,
-                    url: edge.node.frontmatter.link,
-                    guid: edge.node.frontmatter.link,
-                    categories: edge.node.frontmatter.tags,
-                    language: 'en',
-                  }
-                } else {
-                  rssProperties = {
-                    description: edge.node.excerpt,
-                    date: edge.node.frontmatter.date,
-                    updated: edge.node.frontmatter.updated,
-                    link: edge.node.frontmatter.link,
-                    url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                    guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                    custom_elements: [{ "content:encoded": edge.node.html }],
-                    categories: edge.node.frontmatter.tags,
-                    language: 'en',
-                  }
+                const rssProperties = {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  updated: edge.node.frontmatter.updated,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  categories: edge.node.frontmatter.tags,
+                  language: 'en',
                 }
                 return Object.assign({}, edge.node.frontmatter, rssProperties)
               })
@@ -128,7 +113,6 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {frontmatter: {editor: {ne: "Marcus Sanatan"}}}
                 ) {
                   edges {
                     node {
@@ -140,7 +124,6 @@ module.exports = {
                       frontmatter {
                         title
                         date
-                        link
                         tags
                         updated
                       }
