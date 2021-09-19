@@ -28,10 +28,10 @@ const TagsTemplate = ({ data, pageContext }) => {
     navButtons = (
       <div className='row my-1'>
         <div className='col-6 d-flex justify-content-end' >
-          {currentPage > 1 ? <BlogListButton text='Previous' link={currentPage > 2 ? `/tags/${tag}/${currentPage - 1}` : `/tags/${tag}`} /> : null}
+          {currentPage > 1 ? <BlogListButton text='Previous' link={currentPage > 2 ? `/tags/${slugify(tag)}/${currentPage - 1}` : `/tags/${slugify(tag)}`} /> : null}
         </div >
         <div className='col-6 d-flex justify-content-start'>
-          {currentPage < numPages ? <BlogListButton text='Next' link={`/tags/${tag}/${currentPage + 1}`} /> : null}
+          {currentPage < numPages ? <BlogListButton text='Next' link={`/tags/${slugify(tag)}/${currentPage + 1}`} /> : null}
         </div>
       </div >
     )
