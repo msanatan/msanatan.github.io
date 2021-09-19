@@ -7,6 +7,7 @@ tags:
 - javascript
 - typescript
 - phaser
+- game development
 ---
 
 To be honest, this is really more of an August \- October game project. It started at the end of <a href="https://itch.io/jam/jammin-2019" target="_blank" rel="nofollow noopener noreferrer">Jammin 2019</a> and I was finally able to close it off in October. The theme for that jam was Growth, so the game plays on that concept with a super simple puzzler.

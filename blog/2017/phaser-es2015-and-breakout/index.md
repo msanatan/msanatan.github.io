@@ -7,6 +7,7 @@ categories:
 tags:
 - javascript
 - phaser
+- game development
 ---
 
 So I'm entering the <a href="https://github.com/blog/2459-and-the-theme-for-game-off-2017-is" target="_blank" rel="nofollow noopener noreferrer">GitHub Game Off 2017</a> to level up my game development skills in a short space of time. As I'm immersed in JavaScript, I'm sticking with <a href="https://phaser.io" target="_blank" rel="nofollow noopener noreferrer">Phaser</a> for development \- an awesome HTML5 game framework. Phaser, including the upcoming version 3 due later this year, is built with ES5. I'm trying to standardize my workflow with ES2015+ for all projects, so to test how that'll work with Phaser I followed the Mozilla Development Network's <a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser" target="_blank" rel="nofollow noopener noreferrer">breakout tutorial</a> while translating the code to ES2015. For those absolutely new to Phaser, I definitely recommend the tutorial but using ES2015+ isn't necessary at all. If you choose, you can look at my code below for reference:

@@ -6,6 +6,7 @@ categories:
 tags:
 - javascript
 - kontra
+- game development
 ---
 
 While in a car on one of T&T's many bad roads, we had to immediately dodge a deep pothole. I thought I should make a quick game about dodging potholes \- and <a href="https://straker.github.io/kontra/" target="_blank" rel="nofollow noopener noreferrer">Kontra</a> was just the tool for throwing it out quickly.

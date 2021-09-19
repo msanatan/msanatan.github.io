@@ -7,6 +7,7 @@ tags:
 - phaser
 - javascript
 - typescript
+- game development
 ---
 
 Usually when you got pointer interaction with sprites, `pointerevents` come to mind. They're mouse and touch friendly plus they're familiar outside of the Phaser context. Less mentioned in tutorials but incredibly useful are the `gameobjectevents`. These events are fired for all interactive game objects in a scene.

@@ -7,6 +7,7 @@ tags:
 - phaser
 - javascript
 - typescript
+- game development
 ---
 
 I had an interesting code challenge where I needed to do a few non-gamey things with Phaser. One of them neeed me to control some DOM nodes in Phaser like sprites. As with most things, Phaser has out-of-the box support for that scenario.

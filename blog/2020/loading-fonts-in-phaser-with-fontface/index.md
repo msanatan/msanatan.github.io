@@ -7,6 +7,7 @@ tags:
 - phaser
 - javascript
 - typescript
+- game development
 ---
 
 For the <a href="https://itch.io/jam/devtober-2020" target="_blank" rel="nofollow noopener noreferrer">Devtober</a> I made a casual mobile game \- <a href="https://itch.io/jam/devtober-2020" target="_blank" rel="nofollow noopener noreferrer">Hyper Match</a>. I built it with Phaser 3 and TypeScript, and learned quite a few new skills in the process.

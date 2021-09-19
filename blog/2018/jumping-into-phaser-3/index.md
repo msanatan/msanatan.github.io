@@ -6,6 +6,7 @@ categories:
 tags:
 - javascript
 - phaser
+- game development
 ---
 
 <a href="https://phaser.io" target="_blank" rel="nofollow noopener noreferrer">Phaser 3</a> is a popular HTML5 game framework. The new version brings massive changes to key elements of version 2's API and to the credit of the developers, made a lot of the underlying architecture and code simpler and more efficient. Since its launch February 13th 2018, a whopping 10 new feature updates have been released, excluding bug fixes, at the time of writing. The good news is that things are fairly settled now and with docs covering more and more of the API it's really the best time to get started!

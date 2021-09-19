@@ -6,6 +6,7 @@ categories:
 tags:
 - phaser
 - javascript
+- game development
 ---
 
 Way back in May I participated in a <a href="https://itch.io/jam/gamedevtv-community-jam" target="_blank" rel="nofollow noopener noreferrer">Game Jam</a>. It was run by people who created my <a href="https://www.udemy.com/course/godot" target="_blank" rel="nofollow noopener noreferrer">Godot course on Udemy</a>. While I made lots of progress in that course, I felt that there was still a lot more content to cover before I could make a game that I like. Starting the game jam over a week late, I figure I'd stick with Phaser which I'm pretty comfortable with!

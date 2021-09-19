@@ -7,6 +7,7 @@ categories:
 tags:
 - python
 - pygame
+- game development
 ---
 
 Hey everyone! A lot of you don't know but I'm involved with an educational NGO called <a href="https://www.clicktostart.org" target="_blank" rel="nofollow noopener noreferrer">Click To Start</a>. Click To Start provides free digital literacy classes for senior citizens, and in 2017 it provided its first programming class aimed at teenagers! Programming is as rewarding as it is challenging so we tried to incentivise the students by teaching them how to make games - which we all love to do. Python was chosen as the language of instruction as it's one of the more English-like options out there. We then settled on Pygame to teach them game development, as it's pretty straightforward to get into once you know Python. The plus side of helping out was that I had to create games myself! I mean, we need to give them exercises that'll push and entertain them, right? One of the games they worked on was Tic Tac Toe. Creating it in Pygame was fun, so I thought I'd share how to do it.

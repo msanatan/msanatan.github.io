@@ -7,6 +7,7 @@ tags:
 - javascript
 - kontra
 - js13k
+- game development
 ---
 
 Hello game developers,

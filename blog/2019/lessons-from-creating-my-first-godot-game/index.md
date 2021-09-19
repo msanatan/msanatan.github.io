@@ -5,6 +5,7 @@ categories:
 - [game development]
 tags:
 - godot
+- game development
 ---
 
 Hello aspiring game devs! As you know from my previous post I've been getting into Godot, and I'm pretty excited.

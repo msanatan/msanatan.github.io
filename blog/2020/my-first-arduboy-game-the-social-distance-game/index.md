@@ -6,6 +6,7 @@ categories:
 tags:
 - c++
 - arduboy
+- game development
 ---
 
 It's a pretty strange time all around the world as we manoeuvre through the COVID-19 pandemic. Right before my country's lockdown began, I collected my long-awaited Arduboy.
