@@ -92,9 +92,9 @@ No books this year! A bit of a shame, so my list from last year transfers over.
 
 ## Online Courses
 
-This year was as rough for online courses as it was for books. Unlike books, I didn't complete any in 2019 either... Thankfully this isn't the narrative for 2021, quite a few things have changed.
+This year was as rough for online courses as it was for books. Like books, I didn't complete any in 2019 either... Thankfully this isn't the narrative for 2021, quite a few things have changed.
 
-That being said, these were my original goals for 2020:
+These were my original goals for 2020:
 
 * Discovering Godot: Make Video Games in Python-like GDScript
   * <a href="https://www.udemy.com/course/godot" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/godot</a>
