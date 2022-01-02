@@ -14,8 +14,8 @@ const AboutPage = () => {
           <div className='offset-2 col-8'>
             <p>Hi! I'm Marcus Sanatan, a software developer from Trinidad and Tobago. Here are my current tech stacks:</p>
             <ul>
-              <li>Game Development with Unity</li>
-              <li>Backend Development with Node.js (Express.js, Nest.js, Strapi) and Golang</li>
+              <li>Game Development with Godot</li>
+              <li>Backend Development with Node.js (Express.js, Nest.js, Strapi), Python (AWS Chalice, Flask) and Golang</li>
               <li>Frontend Development with React.js. I like TypeScript as well</li>
             </ul>
             <p>I host <a href='https://itch.io/jams/hosted-by-msanatan' target='_blank' rel='noopener nofollow noreferrer'>game jams</a> for Caribbean game developers! Feel free to join us on <a href='https://discord.gg/axGtfrk' target='_blank' rel='noopener nofollow noreferrer'>Discord</a> as well.</p>
@@ -43,6 +43,12 @@ const AboutPage = () => {
                 <i className='bi bi-linkedin'></i>
                 <div className='d-inline-block px-3'>
                   <a href='https://www.linkedin.com/in/msanatan/' target='_blank' rel='noopener nofollow noreferrer' className={socialLink}>LinkedIn</a>
+                </div>
+              </li>
+              <li>
+                <i className='bi bi-youtube'></i>
+                <div className='d-inline-block px-3'>
+                  <a href='https://www.youtube.com/c/MarcusSanatan' target='_blank' rel='noopener nofollow noreferrer' className={socialLink}>YouTube</a>
                 </div>
               </li>
             </ul>
