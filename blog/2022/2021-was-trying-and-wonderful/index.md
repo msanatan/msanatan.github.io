@@ -2,9 +2,9 @@
 title: "2021 Was Trying and Wonderful"
 date: 2022-01-02 19:10:00
 categories:
-  - [personal]
+- [personal]
 tags:
-  - personal
+- personal
 ---
 
 I wish the situation with the pandemic was better than it was. There's seemingly no end in sight. Like every show about a zombie apocalypse, humans are their own enemies. Despite what's yet another year we're looking to move on from, it was great for me.

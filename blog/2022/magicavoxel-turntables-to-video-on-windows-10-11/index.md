@@ -2,14 +2,10 @@
 title: "MagicaVoxel Turntables to Video on Windows 10/11"
 date: 2022-03-06 21:25:00
 tags:
-  - 3dgraphics
-  - magicavoxel
+- 3dgraphics
+- magicavoxel
 ---
 
-<!-- <video>
- <source src="chicken1.mp4" type="video/mp4">
- Your browser does not support HTML5 video.
-</video> -->
 ![Voxel models of chicken and chicks](chicken1.mp4)
 
 I've recently been using <a href="https://ephtracy.github.io/" target="_blank" rel="noopener nofollow noreferrer">MagicaVoxel</a> to create voxel art (pixel art but 3D, think Minecraft) and I love it! It's so simple and it has a lot of power.
@@ -52,7 +48,4 @@ For an MP4 onn Windows, I was only successful with the `mpeg4` codec. I'm no exp
 
 And that's all, have fun showing off your work with cool videos!
 
-<!-- <video>
- <source src="./nintendoswitch.mp4" type="video/mp4">
-</video> -->
 ![Nintendo Switch](./nintendoswitch.mp4)

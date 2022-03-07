@@ -2,8 +2,8 @@
 title: "Devlog for The Elf Job: Making The Elf Job"
 date: 2021-12-31 11:15:00
 tags:
-  - godot
-  - game development
+- godot
+- game development
 ---
 
 > This article was originally posted here: <https://msanatan.itch.io/the-elf-job/devlog/330254/making-the-elf-job>
