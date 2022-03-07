@@ -16,8 +16,8 @@ const BlogPostTemplate = ({ data }) => {
     <p>
       {post.frontmatter.tags.map((tag, i) => {
         return i < post.frontmatter.tags.length - 1
-          ? (<span><Link to={`/tags/${slugify(tag)}`} itemProp="url" className={tagLink}>{tag}</Link>, </span>)
-          : (<Link to={`/tags/${slugify(tag)}`} itemProp="url" className={tagLink}>{tag}</Link>)
+          ? (<span key={i}><Link to={`/tags/${slugify(tag)}`} itemProp="url" className={tagLink}>{tag}</Link>, </span>)
+          : (<Link to={`/tags/${slugify(tag)}`} itemProp="url" className={tagLink} key={i}>{tag}</Link>)
       })}
     </p>
   )
