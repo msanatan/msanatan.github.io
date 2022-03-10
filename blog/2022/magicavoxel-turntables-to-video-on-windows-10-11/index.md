@@ -24,7 +24,7 @@ sudo apt-get install ffmpeg
 
 If you're not using WSL, you can follow the instructions on their <a href="https://www.ffmpeg.org/" target="_blank" rel="noopener nofollow noreferrer">homepage</a> to install directly on Windows.
 
-The next step is to change the file names to make it easier for MagicaVoxel. You may not have to do this if you choose an easy file name while exporting, unlike a certain developer... To change the names of all my tunrtable images in a folder, I ran this script I created:
+The next step is to change the file names to make it easier for MagicaVoxel. You may not have to do this if you choose an easy file name while exporting, unlike a certain developer... To change the names of all my turntable images in a folder, I ran this script I created:
 
 ```python
 from os import listdir, rename
@@ -44,7 +44,7 @@ Now all the files would be like `img000.png`, `img001.png`, etc. In your termina
 ffmpeg -r 30 -s 960x800 -i img%03d.png -codec:v mpeg4 -flags:v +qscale -global_quality:v 0 -codec:a libmp3lame nintendoswitch.mp4
 ```
 
-For an MP4 onn Windows, I was only successful with the `mpeg4` codec. I'm no export on `ffmpeg` by a longshot, but after reading in forums and trying things out - the above command gives me the best video quality.
+For an MP4 on Windows, I was only successful with the `mpeg4` codec. I'm no export on `ffmpeg` by a longshot, but after reading in forums and trying things out - the above command gives me the best video quality.
 
 And that's all, have fun showing off your work with cool videos!
 
