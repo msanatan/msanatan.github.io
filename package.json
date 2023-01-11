@@ -37,7 +37,7 @@
     "gatsby-remark-smartypants": "^5.9.0",
     "gatsby-remark-videos": "^0.5.0",
     "gatsby-source-filesystem": "^4.0.0",
-    "gatsby-transformer-remark": "^5.9.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.0.0",
     "moment": "^2.29.1",
     "prismjs": "^1.23.0",
