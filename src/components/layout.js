@@ -1,12 +1,10 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { menuItem, menuItemActive } from './layout.module.css'
-import Seo from './seo'
 
 const Layout = ({ title, description, meta, children }) => {
   return (
     <div className='container d-flex flex-column min-vh-100'>
-      <Seo title={title} description={description} meta={meta} />
       <header>
         <nav className='navbar navbar-expand-lg navbar-light'>
           <button className='navbar-toggler' type='button' data-bs-toggle="collapse" data-bs-target="#navBarTogglerMenu" aria-controls="navBarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation">

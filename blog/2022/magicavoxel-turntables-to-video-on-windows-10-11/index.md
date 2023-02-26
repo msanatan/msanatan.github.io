@@ -6,7 +6,7 @@ tags:
 - magicavoxel
 ---
 
-![Voxel models of chicken and chicks](chicken1.mp4)
+`youtube: https://youtu.be/hKrD1xWQAew`
 
 I've recently been using <a href="https://ephtracy.github.io/" target="_blank" rel="noopener nofollow noreferrer">MagicaVoxel</a> to create voxel art (pixel art but 3D, think Minecraft) and I love it! It's so simple and it has a lot of power.
 
@@ -48,4 +48,4 @@ For an MP4 on Windows, I was only successful with the `mpeg4` codec. I'm no expo
 
 And that's all, have fun showing off your work with cool videos!
 
-![Nintendo Switch](./nintendoswitch.mp4)
+`youtube: https://youtu.be/Vn0Ki_b-qzg`

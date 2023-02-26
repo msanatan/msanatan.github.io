@@ -5,6 +5,18 @@ import BlogListButton from '../components/blogButton'
 import { slugify } from '../utils/slugify'
 import { pageTitle } from '../styles/page.module.css'
 import { postLink, tagLink } from './blogList.module.css'
+import PageHead from '../components/pageHead'
+
+export function Head({ location, params, data, pageContext }) {
+  return (
+    <PageHead
+      meta={{
+        title: "Blog",
+        description: "A collection of my blog posts.",
+      }}
+    />
+  );
+}
 
 const BlogListTemplate = ({ data, pageContext }) => {
 
@@ -97,11 +109,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
 
 export const query = graphql`
   query AllBlogPostsForList($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: {fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
+    allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: $limit, skip: $skip) {
       nodes {
         fields {
           slug

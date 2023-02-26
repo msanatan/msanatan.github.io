@@ -2,7 +2,18 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { contactForm, btnSubmit } from './contact.module.css'
 import { pageTitle } from '../styles/page.module.css'
+import PageHead from '../components/pageHead'
 
+export function Head({ location, params, data, pageContext }) {
+  return (
+    <PageHead
+      meta={{
+        title: "Contact",
+        description: "Want to get in touch? Enter your details below",
+      }}
+    />
+  );
+}
 
 const ContactPage = () => {
   return (

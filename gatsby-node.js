@@ -14,10 +14,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        posts: allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
+        posts: allMarkdownRemark(sort: {frontmatter: {date: ASC}}, limit: 1000) {
           nodes {
             id
             fields {
@@ -25,10 +22,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
           }
         }
-        tagsGroup: allMarkdownRemark(
-          limit: 1000
-        ) {
-          group(field: frontmatter___tags) {
+        tagsGroup: allMarkdownRemark(limit: 1000) {
+          group(field: {frontmatter: {tags: SELECT}}) {
             fieldValue
             totalCount
           }

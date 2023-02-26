@@ -2,6 +2,18 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { pageTitle } from '../styles/page.module.css'
 import { socialLink } from './about.module.css'
+import PageHead from '../components/pageHead'
+
+export function Head({ location, params, data, pageContext }) {
+  return (
+    <PageHead
+      meta={{
+        title: "About",
+        description: "Hi! I'm Marcus Sanatan, a software developer from Trinidad and Tobago",
+      }}
+    />
+  );
+}
 
 const AboutPage = () => {
   return (
