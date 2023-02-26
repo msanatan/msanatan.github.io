@@ -2,6 +2,18 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import { heroTitle, subtitle, heroName } from './index.module.css'
+import PageHead from '../components/pageHead'
+
+export function Head({ location, params, data, pageContext }) {
+  return (
+    <PageHead
+      meta={{
+        title: "Not Found",
+        description: "Sorry, seems like you were trying to visit a page that doesn't exist! Maybe go back home?",
+      }}
+    />
+  );
+}
 
 const NotFoundPage = () => {
   return (

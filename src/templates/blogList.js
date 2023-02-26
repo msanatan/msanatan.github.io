@@ -5,6 +5,18 @@ import BlogListButton from '../components/blogButton'
 import { slugify } from '../utils/slugify'
 import { pageTitle } from '../styles/page.module.css'
 import { postLink, tagLink } from './blogList.module.css'
+import PageHead from '../components/pageHead'
+
+export function Head({ location, params, data, pageContext }) {
+  return (
+    <PageHead
+      meta={{
+        title: "Blog",
+        description: "A collection of my blog posts.",
+      }}
+    />
+  );
+}
 
 const BlogListTemplate = ({ data, pageContext }) => {
 

@@ -4,6 +4,23 @@ import Layout from '../components/layout'
 import { slugify } from '../utils/slugify'
 import { postContainer, header, navLink } from './blogPost.module.css'
 import { tagLink } from './blogList.module.css'
+import PageHead from '../components/pageHead'
+
+export function Head({ location, params, data, pageContext }) {
+  console.log('location', location)
+  console.log('params', params)
+  console.log('data', data)
+  console.log('pageContext', pageContext)
+
+  return (
+    <PageHead
+      meta={{
+        title: data.markdownRemark.frontmatter.title,
+        description: `A collection of my blog posts tagged with ${pageContext.tag}`,
+      }}
+    />
+  );
+}
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark

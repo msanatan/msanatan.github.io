@@ -2,6 +2,17 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import { heroTitle, subtitle, heroName } from './index.module.css'
+import PageHead from '../components/pageHead'
+
+export function Head({ location, params, data, pageContext }) {
+  return (
+    <PageHead
+      meta={{
+        description: "I build webapps, games, content and communities.",
+      }}
+    />
+  );
+}
 
 const IndexPage = () => {
   return (

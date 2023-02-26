@@ -5,9 +5,20 @@ import BlogListButton from '../components/blogButton'
 import { slugify } from '../utils/slugify'
 import { pageTitle } from '../styles/page.module.css'
 import { postLink, tagLink } from './blogList.module.css'
+import PageHead from '../components/pageHead'
+
+export function Head({ location, params, data, pageContext }) {
+  return (
+    <PageHead
+      meta={{
+        title: pageContext.tag,
+        description: `A collection of my blog posts tagged with ${pageContext.tag}`,
+      }}
+    />
+  );
+}
 
 const TagsTemplate = ({ data, pageContext }) => {
-
   const { currentPage, numPages, tag } = pageContext
   const posts = data.allMarkdownRemark.nodes
   console.log(posts)
