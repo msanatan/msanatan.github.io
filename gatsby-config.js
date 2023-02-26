@@ -7,6 +7,7 @@ module.exports = {
       summary: `A creative coder from the Caribbean who loves building things`
     },
     siteUrl: `https://msanatan.com`,
+    siteLang: `en`,
     social: {
       twitter: `marcussanatan`,
       github: `msanatan`,
@@ -18,7 +19,6 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
