@@ -1,6 +1,8 @@
 ---
 title: "Devlog for Dodge: Becoming Touch Friendly"
 date: 2021-09-19 10:05:00
+categories:
+- game development
 tags:
 - unity
 - game development

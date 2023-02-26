@@ -2,7 +2,7 @@
 title: "React Native: Lessons from First App"
 date: 2017-06-18
 categories:
-- [mobile]
+- mobile
 tags:
 - javascript
 - react

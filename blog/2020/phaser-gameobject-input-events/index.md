@@ -2,7 +2,7 @@
 title: "Phaser GameObject Input Events"
 date: 2020-12-19 20:50:00
 categories:
-- [game development]
+- game development
 tags:
 - phaser
 - javascript

@@ -2,7 +2,7 @@
 title: "Removing Terraform Orphan Resource Bug"
 date: 2020-02-18 20:15:00
 categories:
-- [server]
+- server
 tags:
 - terraform
 - aws

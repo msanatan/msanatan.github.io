@@ -1,6 +1,8 @@
 ---
 title: "Fixing AWS Chalice's Cognito CORS Errors"
 date: 2022-03-06 23:00:00
+categories:
+- serverless
 tags:
 - python
 - aws chalice

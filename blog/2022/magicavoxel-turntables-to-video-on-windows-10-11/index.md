@@ -1,6 +1,8 @@
 ---
 title: "MagicaVoxel Turntables to Video on Windows 10/11"
 date: 2022-03-06 21:25:00
+categories:
+- 3d graphics
 tags:
 - 3dgraphics
 - magicavoxel

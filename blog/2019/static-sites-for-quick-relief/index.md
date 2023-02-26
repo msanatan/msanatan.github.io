@@ -2,7 +2,7 @@
 title: "Static Sites for Quick Relief"
 date: 2019-01-14 18:00:00
 categories:
-- [web]
+- web
 tags:
 - javascript
 - hexo

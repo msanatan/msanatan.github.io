@@ -2,7 +2,7 @@
 title: "Demo Your Dev App with Ngrok"
 date: 2018-01-01
 categories:
-- [web]
+- web
 tags:
 - bash
 ---

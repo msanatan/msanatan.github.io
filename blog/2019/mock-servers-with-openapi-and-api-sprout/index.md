@@ -2,7 +2,7 @@
 title: "Mock Servers with OpenAPI and API Sprout"
 date: 2019-07-18 00:36:00
 categories:
-- [web]
+- web
 tags:
 - golang
 - openapi

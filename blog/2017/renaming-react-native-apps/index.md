@@ -2,8 +2,8 @@
 title: "Renaming React Native Apps"
 date: 2017-05-10
 categories:
-- [mobile]
-- [tutorial]
+- mobile
+- tutorial
 tags:
 - javascript
 - react

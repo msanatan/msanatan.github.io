@@ -1,7 +1,8 @@
 ---
 title: "Throwing 2015 Into Chaos with Goals"
 date: 2015-01-11 15:13
-categories: [personal]
+categories:
+- personal
 tags:
 - personal
 ---

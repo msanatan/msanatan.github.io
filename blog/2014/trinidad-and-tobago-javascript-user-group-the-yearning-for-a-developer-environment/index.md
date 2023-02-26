@@ -2,7 +2,7 @@
 title: "Trinidad and Tobago JavaScript User Group & The Yearning for a Developer Environment"
 date: 2014-12-07 15:49
 categories:
-- [community]
+- community
 tags:
 - developers
 - trinidad and tobago

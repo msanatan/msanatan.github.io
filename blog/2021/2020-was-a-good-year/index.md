@@ -2,7 +2,7 @@
 title: "2020 Was a Good Year"
 date: 2021-07-11 22:45:00
 categories:
-- [personal]
+- personal
 tags:
 - personal
 ---

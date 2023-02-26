@@ -2,7 +2,7 @@
 title: "More About My Nerd Side"
 date: 2014-10-25 21:18
 categories:
-- [personal]
+- personal
 tags:
 - personal
 ---

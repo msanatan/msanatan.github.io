@@ -2,7 +2,7 @@
 title: "Error After Error Installing Ubuntu Desktop on 12.04 Server Edition"
 date: 2015-04-20 18:47
 categories:
-- [server]
+- server
 tags:
 - linux
 ---

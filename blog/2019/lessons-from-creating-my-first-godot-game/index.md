@@ -2,7 +2,7 @@
 title: "Lessons from Creating My First Godot Game"
 date: 2019-12-17 22:45:00
 categories:
-- [game development]
+- game development
 tags:
 - godot
 - game development

@@ -1,6 +1,8 @@
 ---
 title: "Jammin 2021"
 date: 2021-07-11 21:00:00
+categories:
+- game development
 tags:
 - caribbean
 - game development

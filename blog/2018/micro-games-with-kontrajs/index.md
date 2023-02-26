@@ -2,7 +2,7 @@
 title: "Micro Games with Kontra.js"
 date: 2018-08-31 20:40:00
 categories:
-- [game development]
+- game development
 tags:
 - javascript
 - kontra

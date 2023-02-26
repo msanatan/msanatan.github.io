@@ -2,8 +2,8 @@
 title: "Revert MySQL from 8 to 5.7 with Homebrew"
 date: 2018-08-15 12:30:00
 categories:
-- [mac]
-- [database]
+- mac
+- database
 tags:
 - bash
 - homebrew

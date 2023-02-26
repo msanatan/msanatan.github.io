@@ -2,7 +2,7 @@
 title: "2019 Was a Good Year"
 date: 2020-01-01 22:45:00
 categories:
-- [personal]
+- personal
 tags:
 - personal
 ---

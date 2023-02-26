@@ -2,7 +2,7 @@
 title: "To App, or not to App? That is not the Question"
 date: 2015-11-07 14:55
 categories:
-- [community]
+- community
 tags:
 - developers
 - trinidad and tobago

@@ -2,7 +2,7 @@
 title: "YoPro & Caribbean Ideas Hackathon 2015"
 date: 2015-05-24 15:48
 categories:
-- [community]
+- community
 tags:
 - developers
 - trinidad and tobago

@@ -1,6 +1,8 @@
 ---
 title: "Devlog for Dodge: Kicking off Dodge"
 date: 2021-09-19 10:00:00
+categories:
+- game development
 tags:
 - unity
 - game development

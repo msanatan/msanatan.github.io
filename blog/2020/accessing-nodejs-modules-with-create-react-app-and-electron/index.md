@@ -2,7 +2,7 @@
 title: "Accessing Node.js Modules with Create React App and Electron"
 date: 2020-04-19 10:45:00
 categories:
-- [desktop]
+- desktop
 tags:
 - javascript
 - react

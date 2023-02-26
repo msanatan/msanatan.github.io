@@ -2,7 +2,7 @@
 title: "Thoughts After Making My First Godot Game"
 date: 2019-11-28 07:12:00
 categories:
-- [game development]
+- game development
 tags:
 - godot
 - game development

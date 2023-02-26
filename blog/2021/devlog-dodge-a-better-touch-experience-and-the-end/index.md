@@ -1,6 +1,8 @@
 ---
 title: "Devlog for Dodge: A Better Touch Experience, and the End"
 date: 2021-11-10 23:25:00
+categories:
+- game development
 tags:
 - unity
 - game development

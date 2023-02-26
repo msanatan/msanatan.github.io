@@ -2,7 +2,7 @@
 title: "2021 Was Trying and Wonderful"
 date: 2022-01-02 19:10:00
 categories:
-- [personal]
+- personal
 tags:
 - personal
 ---

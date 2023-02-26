@@ -2,7 +2,7 @@
 title: "Of Context, Animations and Pong"
 date: 2015-08-26 19:48
 categories:
-- [web]
+- web
 tags:
 - html5
 - javascript

@@ -2,7 +2,7 @@
 title: "October 2019 Game Project: Approximately"
 date: 2019-10-06 14:45:00
 categories:
-- [game development]
+- game development
 tags:
 - javascript
 - typescript

@@ -2,8 +2,8 @@
 title: "Fun with Pygame"
 date: 2017-10-05
 categories:
-- [game development]
-- [tutorial]
+- game development
+- tutorial
 tags:
 - python
 - pygame

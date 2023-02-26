@@ -2,7 +2,7 @@
 title: "I'll Open My Own Data, Thank You Very Much"
 date: 2015-02-21 09:37
 categories:
-- [personal]
+- personal
 tags:
 - open data
 - python

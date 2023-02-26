@@ -2,7 +2,7 @@
 title: "Tail Tales"
 date: 2015-12-26 14:12
 categories:
-- [linux]
+- linux
 tags:
 - bash
 ---

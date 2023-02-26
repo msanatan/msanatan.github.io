@@ -1,6 +1,8 @@
 ---
 title: "Devlog for MeTwo: The Journey From Prototype to MVP"
 date: 2021-09-19 09:55:00
+categories:
+- game development
 tags:
 - unity
 - game development

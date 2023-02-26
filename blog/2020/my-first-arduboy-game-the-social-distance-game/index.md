@@ -2,7 +2,7 @@
 title: "My First Arduboy Game - The Social Distance Game"
 date: 2020-04-13 10:30:00
 categories:
-- [game development]
+- game development
 tags:
 - c++
 - arduboy

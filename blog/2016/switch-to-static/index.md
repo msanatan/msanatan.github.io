@@ -2,7 +2,7 @@
 title: "Switching to a Static Website"
 date: 2016-09-27
 categories:
-- [web]
+- web
 tags:
 - python
 - pelican

@@ -2,7 +2,7 @@
 title: "Golang Shared Objects in Docker Alpine Containers"
 date: 2020-02-19 08:00:00
 categories:
-- [web]
+- web
 tags:
 - golang
 - docker

@@ -1,6 +1,8 @@
 ---
 title: "Interview with Leann Sterling - Winner of Jammin 2021"
 date: 2021-08-06 23:00:00
+categories:
+- game development
 tags:
 - caribbean
 - game development

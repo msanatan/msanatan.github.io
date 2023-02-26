@@ -2,7 +2,7 @@
 title: "DynamoDB, Lamdbas, Go and an Empty List"
 date: 2018-08-31 17:45:00
 categories:
-- [web]
+- web
 tags:
 - golang
 - aws

@@ -1,6 +1,8 @@
 ---
 title: "Awesome Unity Resources to Get You Started"
 date: 2021-07-12 22:00:00
+categories:
+- game development
 tags:
 - unity
 - game development

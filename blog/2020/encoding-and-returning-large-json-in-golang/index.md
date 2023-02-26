@@ -2,7 +2,7 @@
 title: "Encoding and Returning Large JSON in Golang"
 date: 2020-04-19 16:30:00
 categories:
-- [web]
+- web
 tags:
 - golang
 ---

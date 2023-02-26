@@ -1,6 +1,8 @@
 ---
 title: "Switching From Hexo to Gatsby"
 date: 2021-08-15 17:53:00
+categories:
+- web
 tags:
 - react
 - gatsby
