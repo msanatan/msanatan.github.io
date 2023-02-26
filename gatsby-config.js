@@ -122,7 +122,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
-                  categories: edge.node.frontmatter.tags,
+                  categories: edge.node.frontmatter.categories,
+                  tags: edge.node.frontmatter.tags,
                   language: 'en',
                 }
                 return Object.assign({}, edge.node.frontmatter, rssProperties)
