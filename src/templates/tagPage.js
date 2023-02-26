@@ -99,8 +99,8 @@ const TagsTemplate = ({ data, pageContext }) => {
 export const query = graphql`
   query AllBlogPostsForTags($tag: String, $skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: {fields: [frontmatter___date], order: DESC }
-      filter: {frontmatter: {tags: {in: [$tag]}}},
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {tags: {in: [$tag]}}}
       limit: $limit
       skip: $skip
     ) {

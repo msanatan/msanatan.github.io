@@ -97,11 +97,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
 
 export const query = graphql`
   query AllBlogPostsForList($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: {fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
+    allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: $limit, skip: $skip) {
       nodes {
         fields {
           slug
