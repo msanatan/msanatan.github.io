@@ -30,6 +30,7 @@
     "gatsby-plugin-react-helmet": "^6.0.0",
     "gatsby-plugin-sharp": "^5.0.0",
     "gatsby-remark-copy-linked-files": "^6.0.0",
+    "gatsby-remark-embed-video": "^3.2.1",
     "gatsby-remark-images": "^7.0.0",
     "gatsby-remark-prismjs": "^7.0.0",
     "gatsby-remark-responsive-iframe": "^6.0.0",

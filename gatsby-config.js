@@ -50,7 +50,26 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 600,
+            },
+          },
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: 600,
+              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+              related: false,
+              noIframeBorder: true,
+              loadingStrategy: 'lazy',
+              urlOverrides: [
+                {
+                  id: "youtube",
+                  embedURL: videoId =>
+                    `https://www.youtube-nocookie.com/embed/${videoId}`,
+                },
+              ],
+              containerClass: "embedVideo-container",
+              iframeId: false,
             },
           },
           {
