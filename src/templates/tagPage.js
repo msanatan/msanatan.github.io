@@ -21,7 +21,6 @@ export function Head({ location, params, data, pageContext }) {
 const TagsTemplate = ({ data, pageContext }) => {
   const { currentPage, numPages, tag } = pageContext
   const posts = data.allMarkdownRemark.nodes
-  console.log(posts)
   const title = currentPage > 1 ? `${tag} pg. ${currentPage}` : `${tag}`
 
   if (posts.length === 0) {

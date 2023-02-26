@@ -7,11 +7,6 @@ import { tagLink } from './blogList.module.css'
 import PageHead from '../components/pageHead'
 
 export function Head({ location, params, data, pageContext }) {
-  console.log('location', location)
-  console.log('params', params)
-  console.log('data', data)
-  console.log('pageContext', pageContext)
-
   return (
     <PageHead
       meta={{
