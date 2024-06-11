@@ -5,7 +5,7 @@ categories:
 - serverless
 tags:
 - python
-- aws chalice
+- aws
 ---
 
 <a href="https://aws.github.io/chalice/" target="_blank" rel="nofollow noopener noreferrer">AWS Chalice</a> is an interesting Python serverless framework. It's similar to using Flask or other microframeworks, but it deploys Lambdas instead. As you'd expect, there are nice integrations with other AWS services, like AWS Cognito.
