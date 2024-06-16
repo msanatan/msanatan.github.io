@@ -5,7 +5,6 @@ categories:
   - software development
 tags:
   - software development
-  - game development
   - ai
   - thoughts
 ---
