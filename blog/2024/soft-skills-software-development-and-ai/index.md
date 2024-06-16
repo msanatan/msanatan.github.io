@@ -22,8 +22,6 @@ This habit is now super powered with LLMs. No less than 5 times I've been able t
 
 What are the hard parts of software development? Knowing what the problem is. Knowing what the solution is. Designing the solution. Executing the solution. AI gives me a shortcut, I can figure out the problem and what the solution looks like, it can design and develop it for me.
 
-Admittedly, there are problems I can quicker solve by coding myself instead of crafting an effective prompt. These LLMs hallucinate... a lot... Many times I turned off GitHub Copilot as it kept getting in my way with suggestions of little use.
-
-The current state of LLMs tend to write a lot of suboptimal garbage code, adding unnecessary complexity. There are days I don't use any of the AI tools at all.
+Admittedly, there are problems I can quicker solve by coding myself instead of crafting an effective prompt. These LLMs hallucinate... a lot... Many times I turned off GitHub Copilot as it kept getting in my way with suggestions of little use. The current state of LLMs tend to write a lot of suboptimal garbage code, adding unnecessary complexity. There are days I don't use any of the AI tools at all.
 
 Despite those limitations, these suite of tools are constantly improving. Leveraging human communication, soft skills married with technical know-how will elevate developers of today and tomorrow. Soft skills should never have been neglected, and now more than ever, they are necessary.
