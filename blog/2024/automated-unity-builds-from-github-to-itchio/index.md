@@ -1,11 +1,12 @@
 ---
 title: "Automated Unity Builds from GitHub to itch.io"
 date: 2024-07-23 20:30:00
-- game development
+categories:
+  - game development
 tags:
-- unity
-- game development
-- ci
+  - unity
+  - game development
+  - ci
 ---
 
 We're all too old to make manual builds over and over again. Let's free up some local computer resources and build in the cloud! Here's the YAML file that automatically uploads my Unity games to itch.io:
@@ -35,6 +36,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      # Unity builds take some time, so we do some caching to make builds faster
       - uses: actions/cache@v3
         with:
           path: ${{ matrix.projectPath }}/Library
@@ -45,6 +47,7 @@ jobs:
             Library-${{ matrix.projectPath }}-${{ matrix.targetPlatform }}-
             Library-${{ matrix.projectPath }}-
             Library-
+      # We use Game CI (https://game.ci/) to buld the project
       - uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -55,11 +58,7 @@ jobs:
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           buildName: Reduction
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Build
-          path: build
-          retention-days: 1
+      # Publish the build to itch.io
       - uses: manleydev/butler-publish-itchio-action@v1.0.3
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
