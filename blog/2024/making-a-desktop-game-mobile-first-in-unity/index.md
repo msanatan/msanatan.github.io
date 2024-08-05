@@ -1,10 +1,11 @@
 ---
 title: "Making a Desktop Game Mobile First in Unity"
 date: 2024-08-05 13:00:00
-- game development
+categories:
+  - game development
 tags:
-- unity
-- game development
+  - unity
+  - game development
 ---
 
 I recently learned how to move a player via touch screen swipes in Unity, and thought I'd share how and why I've done it!
