@@ -1,6 +1,6 @@
 ---
-title: "Making a Desktop Game Mobile First in Unity"
-date: 2024-08-05 13:00:00
+title: "Swipe to Move in Unity: Making a Desktop Game Mobile Friendly"
+date: 2024-08-05 17:35:00
 categories:
   - game development
 tags:
