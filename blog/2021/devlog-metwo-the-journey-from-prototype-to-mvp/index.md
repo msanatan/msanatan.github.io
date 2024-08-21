@@ -2,13 +2,13 @@
 title: "Devlog for MeTwo: The Journey From Prototype to MVP"
 date: 2021-09-19 09:55:00
 categories:
-- game development
+  - game development
 tags:
-- unity
-- game development
+  - unity
+  - game development
 ---
 
-> This article was originally posted here: <https://msanatan.itch.io/metwo/devlog/287367/the-journey-from-prototype-to-mvp>
+> This article was originally posted here: <https://gameboymarcus.itch.io/metwo/devlog/287367/the-journey-from-prototype-to-mvp>
 
 Hi everyone!
 

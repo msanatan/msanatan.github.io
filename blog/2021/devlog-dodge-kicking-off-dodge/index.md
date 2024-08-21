@@ -2,13 +2,13 @@
 title: "Devlog for Dodge: Kicking off Dodge"
 date: 2021-09-19 10:00:00
 categories:
-- game development
+  - game development
 tags:
-- unity
-- game development
+  - unity
+  - game development
 ---
 
-> This article was originally posted here: <https://msanatan.itch.io/dodge/devlog/280203/kicking-off-dodge>
+> This article was originally posted here: <https://gameboymarcus.itch.io/dodge/devlog/280203/kicking-off-dodge>
 
 Hi! This project is an interesting one - even though the gameplay loop is dead simple. So I love Godot! It has a low barrier to entry and a great 2D engine. They also have a really good tutorial to get you up and running on the website.
 
@@ -68,9 +68,9 @@ As a web developer and someone familiar with Godot's HTML5 builds, I can only sa
 
 A few things worked for me to improve this experience:
 
-* Optimise for size. I honestly couldn't finish a build that was optimised for speed, they were taking over 45 minutes. I don't have the fastest laptop but 16 GB RAM and an i7  processor should be enough for most operations.
-* Reuse the same build folder. Unity does incremental builds, so future build times are slower if you keep referencing the same build folder.
-* Use the <a href="https://github.com/greggman/better-unity-webgl-template" target="_blank" rel="nofollow noopener noreferrer">Better Unity WebGL Template</a>. This makes your game fullscreen by default. As I'm uploading to itch.io and embedding it into other places, this is perfect for me. When I first saw how Unity built my game, I started to modify the HTML file immediately. Then I read about creating templates and figured someone probably did the same thing I wanted to do. Turns out I was correct, and it's a great package.
+- Optimise for size. I honestly couldn't finish a build that was optimised for speed, they were taking over 45 minutes. I don't have the fastest laptop but 16 GB RAM and an i7 processor should be enough for most operations.
+- Reuse the same build folder. Unity does incremental builds, so future build times are slower if you keep referencing the same build folder.
+- Use the <a href="https://github.com/greggman/better-unity-webgl-template" target="_blank" rel="nofollow noopener noreferrer">Better Unity WebGL Template</a>. This makes your game fullscreen by default. As I'm uploading to itch.io and embedding it into other places, this is perfect for me. When I first saw how Unity built my game, I started to modify the HTML file immediately. Then I read about creating templates and figured someone probably did the same thing I wanted to do. Turns out I was correct, and it's a great package.
 
 And one note for anyone uploading to itch.io - change the compression format from "Brotli" to "Gzip" in your Player settings. The game didn't load with the former.
 

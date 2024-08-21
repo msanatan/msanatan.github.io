@@ -2,11 +2,11 @@
 title: "My First Arduboy Game - The Social Distance Game"
 date: 2020-04-13 10:30:00
 categories:
-- game development
+  - game development
 tags:
-- c++
-- arduboy
-- game development
+  - c++
+  - arduboy
+  - game development
 ---
 
 It's a pretty strange time all around the world as we manoeuvre through the COVID-19 pandemic. Right before my country's lockdown began, I collected my long-awaited Arduboy.
@@ -17,7 +17,7 @@ I guess this game's idea was natural. You play as an adorable sprite called Ghos
 
 Like life, it's unfair so don't stress about racking up high points. We should try to stay home as well!
 
-You can check out the game on <a rel="nofollow noopener noreferrer" target="_blank" href="https://msanatan.itch.io/the-social-distance-game">itch.io</a>, or just play it on this emulator:
+You can check out the game on <a rel="nofollow noopener noreferrer" target="_blank" href="https://gameboymarcus.itch.io/the-social-distance-game">itch.io</a>, or just play it on this emulator:
 
 <a href="https://felipemanga.github.io/ProjectABE/?url=https://community.arduboy.com/uploads/short-url/tDhSFHoyFSrMawGHAXNMEYPkgs5.hex" target="_blank" rel="nofollow noopener noreferrer">https://felipemanga.github.io/ProjectABE/?url=https://community.arduboy.com/uploads/short-url/tDhSFHoyFSrMawGHAXNMEYPkgs5.hex</a>
 

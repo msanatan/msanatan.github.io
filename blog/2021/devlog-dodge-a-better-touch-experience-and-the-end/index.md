@@ -2,13 +2,13 @@
 title: "Devlog for Dodge: A Better Touch Experience, and the End"
 date: 2021-11-10 23:25:00
 categories:
-- game development
+  - game development
 tags:
-- unity
-- game development
+  - unity
+  - game development
 ---
 
-> This article was originally posted here: <https://msanatan.itch.io/dodge/devlog/312065/a-better-touch-experience-and-the-end>
+> This article was originally posted here: <https://gameboymarcus.itch.io/dodge/devlog/312065/a-better-touch-experience-and-the-end>
 
 Hi everyone! What started as a quick experiment of making a Godot game in Unity turned out to be more of an introduction to mobile game development. Godot's tutorial project can be done in Unity, but not as easily. Unity for 2D seems much more difficult than the experience I had with Godot. That said, Unity's mobile game tools are really good, particularly getting on-screen touch controls.
 

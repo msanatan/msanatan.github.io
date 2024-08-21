@@ -2,11 +2,11 @@
 title: "Devlog for The Elf Job: Making The Elf Job"
 date: 2021-12-31 11:15:00
 tags:
-- godot
-- game development
+  - godot
+  - game development
 ---
 
-> This article was originally posted here: <https://msanatan.itch.io/the-elf-job/devlog/330254/making-the-elf-job>
+> This article was originally posted here: <https://gameboymarcus.itch.io/the-elf-job/devlog/330254/making-the-elf-job>
 
 Hello lovely people! I recently launched this short game, The Elf Job, and I'm pretty excited about it for many reasons. It was great to get back into Godot, and this is going to be my game engine of choice moving forward. It was the first time I made an adventure game, with dialogue like my favourite JRPGs.
 

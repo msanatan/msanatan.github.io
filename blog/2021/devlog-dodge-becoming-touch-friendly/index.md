@@ -2,13 +2,13 @@
 title: "Devlog for Dodge: Becoming Touch Friendly"
 date: 2021-09-19 10:05:00
 categories:
-- game development
+  - game development
 tags:
-- unity
-- game development
+  - unity
+  - game development
 ---
 
-> This article was originally posted here: <https://msanatan.itch.io/dodge/devlog/289626/becoming-touch-friendly>
+> This article was originally posted here: <https://gameboymarcus.itch.io/dodge/devlog/289626/becoming-touch-friendly>
 
 Hi everyone! This was a small update to make the game mobile friendly. Previously we could only use the keyboard to play, which isn't that great if someone is using their phone... After some initial feedback, this isn't the final update for mobile. But usable enough that we can put it on my website.
 

@@ -2,11 +2,11 @@
 title: "Devlog for MeTwo: Making MeTwo"
 date: 2021-09-19 09:50:00
 tags:
-- unity
-- game development
+  - unity
+  - game development
 ---
 
-> This article was originally posted here: <https://msanatan.itch.io/metwo/devlog/265917/making-metwo>
+> This article was originally posted here: <https://gameboymarcus.itch.io/metwo/devlog/265917/making-metwo>
 
 Hey everyone! Time for a long-overdue postmortem on MeTwo.
 

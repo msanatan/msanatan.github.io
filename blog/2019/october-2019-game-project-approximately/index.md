@@ -2,19 +2,19 @@
 title: "October 2019 Game Project: Approximately"
 date: 2019-10-06 14:45:00
 categories:
-- game development
+  - game development
 tags:
-- javascript
-- typescript
-- phaser
-- game development
+  - javascript
+  - typescript
+  - phaser
+  - game development
 ---
 
 To be honest, this is really more of an August \- October game project. It started at the end of <a href="https://itch.io/jam/jammin-2019" target="_blank" rel="nofollow noopener noreferrer">Jammin 2019</a> and I was finally able to close it off in October. The theme for that jam was Growth, so the game plays on that concept with a super simple puzzler.
 
 You'll be presented with a group of balls on the top half of the screen, and you'll need to guess their colletive size on the bottom half of the screen. You can increase/grow the size of the current ball you got, and add up to 2 more balls as well. Check it out!
 
-<a href="https://msanatan.itch.io/approximately" target="_blank" rel="nofollow noopener noreferrer">https://msanatan.itch.io/approximately</a>
+<a href="https://gameboymarcus.itch.io/approximately" target="_blank" rel="nofollow noopener noreferrer">https://gameboymarcus.itch.io/approximately</a>
 
 ## Tech Things
 
@@ -27,7 +27,6 @@ I used <a href="https://parceljs.org" target="_blank" rel="nofollow noopener nor
 Uploading the game to <a href="https://itch.io" target="_blank" rel="nofollow noopener noreferrer">https://itch.io</a> was pretty straightforward, at least for a free one. As itch provides a stream of just released games \(and there are many new indie games released all the time, what a beautiful platform\), I got a few more players than I expected. That was pretty cool.
 
 **Note**: If you're deploying a web game on itch then you'll have to add `--public-url '.'` when building the app. Itch can host your web games but they need to use relative URLs. By default, parcel builds with absolute URLs.
-
 
 ## Reflections
 

@@ -48,7 +48,7 @@ The next tutorial for the course was a platformer. I always like to create somet
 
 ## November Game Project 2019 - AV: Execute
 
-I began playing Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would have its 8-directional movement. Heck, let's just make it a game about viruses. In the end, I came up with <a href="https://msanatan.itch.io/av-execute" target="_blank" rel="nofollow noopener noreferrer">AV: Execute</a>.
+I began playing Megaman Battle Network again... it holds up so well after all these years &hearts;! So the game I created would have its 8-directional movement. Heck, let's just make it a game about viruses. In the end, I came up with <a href="https://gameboymarcus.itch.io/av-execute" target="_blank" rel="nofollow noopener noreferrer">AV: Execute</a>.
 
 ![Screenshot of AV Execute](./av-execute.png)
 
