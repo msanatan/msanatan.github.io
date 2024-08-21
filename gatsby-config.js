@@ -9,10 +9,10 @@ module.exports = {
     siteUrl: `https://msanatan.com`,
     siteLang: `en`,
     social: {
-      twitter: `marcussanatan`,
+      instagram: `gameboymarcus`,
       github: `msanatan`,
       linkedin: `msanatan`,
-      itchio: `msanatan`
+      itchio: `gameboymarcus`
     },
   },
   plugins: [
