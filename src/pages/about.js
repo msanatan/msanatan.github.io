@@ -26,12 +26,12 @@ const AboutPage = () => {
           <div className='offset-2 col-8'>
             <p>Hi! I'm Marcus Sanatan, a software developer from Trinidad and Tobago. Here are my current tech stacks:</p>
             <ul>
-              <li>Game Development with Godot</li>
-              <li>Backend Development with Node.js (Express.js, Nest.js, Strapi), Python (AWS Chalice, Flask) and Golang</li>
+              <li>Game Development with Unity</li>
+              <li>Backend Development with Golang, Node.js (Express.js, NestJS, Strapi), Python (AWS Chalice, Flask)</li>
               <li>Frontend Development with React.js. I like TypeScript as well</li>
+              <li>Mobile App Development with React Native</li>
             </ul>
-            <p>I host <a href='https://itch.io/jams/hosted-by-msanatan' target='_blank' rel='noopener nofollow noreferrer'>game jams</a> for Caribbean game developers! Feel free to join us on <a href='https://discord.gg/axGtfrk' target='_blank' rel='noopener nofollow noreferrer'>Discord</a> as well.</p>
-            <p>I'm an editor and author for programming tutorials on <a href='https://stackabuse.com/author/marcus?ref=https://msanatan.com/about' target='_blank' rel='noopener nofollow noreferrer'>Stack Abuse</a>, check them out!</p>
+            <p>I host <a href='https://itch.io/jams/hosted-by-gameboymarcus' target='_blank' rel='noopener nofollow noreferrer'>game jams</a> for Caribbean game developers! Feel free to join us on <a href='https://discord.gg/axGtfrk' target='_blank' rel='noopener nofollow noreferrer'>Discord</a></p>
             <p>Unless otherwise mentioned, all views expressed on this website are my own and do not represent the views of my employer or any organisation I am affiliated with.</p>
           </div>
         </div>
@@ -46,9 +46,9 @@ const AboutPage = () => {
                 </div>
               </li>
               <li>
-                <i className='bi bi-twitter'></i>
+                <i className='bi bi-instagram'></i>
                 <div className='d-inline-block px-3'>
-                  <a href='https://twitter.com/marcussanatan' target='_blank' rel='noopener nofollow noreferrer' className={socialLink}>Twitter</a>
+                  <a href='https://www.instagram.com/gameboymarcus/' target='_blank' rel='noopener nofollow noreferrer' className={socialLink}>Instagram</a>
                 </div>
               </li>
               <li>
