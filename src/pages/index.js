@@ -8,7 +8,7 @@ export function Head({ location, params, data, pageContext }) {
   return (
     <PageHead
       meta={{
-        description: "I build webapps, games, content and communities.",
+        description: "I build software, content and communities.",
       }}
     />
   );
@@ -30,7 +30,7 @@ const IndexPage = () => {
               <div className='jumbotron'>
                 <div className='container'>
                   <h1 className={heroTitle}>Hi, I'm <span className={heroName}>Marcus Sanatan</span></h1>
-                  <h3 className={subtitle}>I build webapps, games, content and communities.</h3>
+                  <h3 className={subtitle}>I build software, content and communities.</h3>
                 </div>
               </div>
             </div>
